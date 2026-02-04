@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Usman Abbas Adamu | Software Engineer • USYYTECH SOLUTIONS</title>
+  <meta name="description" content="Portfolio of Usman Abbas Adamu (Usyy) — Software Engineer building websites, web apps, systems, APIs, and payment-ready solutions under USYYTECH SOLUTIONS." />
+  <meta name="keywords" content="Usman Abbas Adamu, Usyy, USYYTECH SOLUTIONS, Software Engineer, Web Developer, Java, JSP, Servlets, MySQL, API, Firebase, Vercel, Paystack" />
+  <meta name="author" content="Usman Abbas Adamu" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <meta property="og:title" content="Usman Abbas Adamu | Software Engineer • USYYTECH SOLUTIONS" />
+  <meta property="og:description" content="Professional portfolio — web apps, dashboards, APIs, and payment-ready solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/usyy.jpg" />
+  <meta property="og:url" content="./" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Usman Abbas Adamu | Software Engineer" />
+  <meta name="twitter:description" content="Web apps, dashboards, APIs, and scalable systems." />
+  <meta name="twitter:image" content="assets/img/usyy.jpg" />
+
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="light">
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <!-- ANIMATED BACKGROUND CANVAS -->
+  <canvas id="backgroundCanvas" aria-hidden="true"></canvas>
+  
+  <!-- BACKGROUND ORBS -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <!-- Creative Reveal Dot -->
+  <div class="reveal-dot-container" id="revealDotContainer">
+    <div class="reveal-dot" id="revealDot">
+      <div class="dot-pulse"></div>
+      <div class="dot-pulse-2"></div>
+      <div class="dot-core"></div>
+      <div class="dot-text">Click to Enter</div>
+    </div>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-content-wrapper hidden" id="mainContentWrapper">
+
+  <!-- NAVBAR -->
+  <header class="header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="logo">
+        <img src="assets/img/logo.png" alt="USYYTECH Logo" class="logo-img" />
+        <span class="logo-text">USYYTECH</span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">☀️</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="btn btn-small">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-text">
+      <p class="tag">Software Engineer • Web Developer • Systems Builder</p>
+
+      <h1>
+        Hi, I’m <span class="accent">Usman Abbas Adamu</span> 👋 <br />
+        I build web systems that are <span class="accent">clean</span>, <span class="accent">scalable</span>, and <span class="accent">real-world ready</span>.
+      </h1>
+
+      <p class="subtitle">
+        Founder of <strong>USYYTECH SOLUTIONS</strong>. I build portals, dashboards, API-driven apps,
+        database systems, and payment-ready solutions for individuals and businesses.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn">See My Projects</a>
+        <a href="#contact" class="btn btn-ghost">Hire Me</a>
+        <a href="assets/Usman-Abbas-Adamu-Resume.pdf" class="btn btn-ghost" download>Download CV</a>
+      </div>
+
+      <div class="hero-links">
+        <a class="link" href="https://weather-hub-9c3f8.web.app/" target="_blank" rel="noreferrer">WeatherHub Live</a>
+        <a class="link" href="https://elitesoccerfeed.vercel.app/" target="_blank" rel="noreferrer">Elite Soccer Feed</a>
+        <a class="link" href="https://github.com/Fagacie" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+
+      <div class="trust-row">
+        <span class="trust-pill">✅ CAC Registered</span>
+        <span class="trust-pill">✅ Payment Integration Ready</span>
+        <span class="trust-pill">✅ Firebase + Vercel Hosting</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section container reveal" id="about">
+    <div class="section-head">
+      <h2>About</h2>
+      <p>
+        I’m a Software Engineering student who builds practical solutions and upgrades them into
+        clean, professional products. I enjoy working on systems that solve real problems.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="card">
+        <h3>What I do</h3>
+        <p class="muted">
+          I build websites, dashboards, admin panels, API apps, and database-driven platforms
+          with clean UI and strong logic.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>How I work</h3>
+        <p class="muted">
+          Fast MVP delivery, then polish into production-level structure: scalability, performance,
+          responsive design, and good UX.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Long-term vision</h3>
+        <p class="muted">
+          Grow <strong>USYYTECH SOLUTIONS</strong> into a real software business delivering high-value products
+          and services worldwide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="section container reveal" id="featured">
+    <div class="section-head">
+      <h2>Featured Projects</h2>
+      <p>My strongest, most portfolio-ready projects with real deployments.</p>
+    </div>
+
+    <div class="featured-grid">
+      <div class="featured card">
+        <p class="pill">FEATURED</p>
+        <h3>WeatherHub (Firebase Hosted)</h3>
+        <p class="muted">
+          API-based weather forecasting app deployed with Firebase Hosting.
+        </p>
+        <div class="project-actions">
+          <a class="btn btn-small" href="https://weather-hub-9c3f8.web.app/" target="_blank" rel="noreferrer">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="featured card">
+        <p class="pill">FEATURED</p>
+        <h3>Elite Soccer Feed</h3>
+        <p class="muted">
+          Football news homepage design deployed on Vercel with clean modern UI.
+        </p>
+        <div class="project-actions">
+          <a class="btn btn-small" href="https://elitesoccerfeed.vercel.app/" target="_blank" rel="noreferrer">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section container reveal" id="services">
+    <div class="section-head">
+      <h2>Services</h2>
+      <p>Professional, business-ready solutions focused on clarity, performance, and real-world impact.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="card service-card">
+        <h3>Web Apps & Portals</h3>
+        <p class="muted">Admin panels, dashboards, and portal systems built for speed, security, and growth.</p>
+        <ul class="service-list">
+          <li>Admin dashboards & analytics</li>
+          <li>Role-based access control</li>
+          <li>Responsive UI & clean UX</li>
+        </ul>
+      </article>
+
+      <article class="card service-card">
+        <h3>API-Driven Systems</h3>
+        <p class="muted">Integrations that connect payments, data services, and external platforms.</p>
+        <ul class="service-list">
+          <li>REST APIs & secure endpoints</li>
+          <li>Payments (Paystack/Flutterwave)</li>
+          <li>Automations & notifications</li>
+        </ul>
+      </article>
+
+      <article class="card service-card">
+        <h3>Business Websites</h3>
+        <p class="muted">Modern, branded websites that communicate trust and convert visitors into clients.</p>
+        <ul class="service-list">
+          <li>Professional design system</li>
+          <li>SEO-ready structure</li>
+          <li>Fast and mobile-first</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="process card">
+      <h3>Process</h3>
+      <div class="process-grid">
+        <div class="process-step">
+          <p class="step-title">1. Discovery</p>
+          <p class="muted">Understand goals, users, and core requirements.</p>
+        </div>
+        <div class="process-step">
+          <p class="step-title">2. Design</p>
+          <p class="muted">Structure the UI, workflows, and user experience.</p>
+        </div>
+        <div class="process-step">
+          <p class="step-title">3. Build</p>
+          <p class="muted">Develop with clean code, security, and best practices.</p>
+        </div>
+        <div class="process-step">
+          <p class="step-title">4. Launch</p>
+          <p class="muted">Deploy, test, and iterate for performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section container reveal" id="skills">
+    <div class="section-head">
+      <h2>Skills</h2>
+      <p>Tools and technologies I use to build production-style software projects.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Frontend</h3>
+        <div class="badges">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Bootstrap</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Backend</h3>
+        <div class="badges">
+          <span class="badge">Java (JSP/Servlet)</span>
+          <span class="badge">REST APIs</span>
+          <span class="badge">Auth</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Database</h3>
+        <div class="badges">
+          <span class="badge">MySQL</span>
+          <span class="badge">ERD</span>
+          <span class="badge">Normalization</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Services</h3>
+        <div class="badges">
+          <span class="badge">Websites</span>
+          <span class="badge">Web Apps</span>
+          <span class="badge">Admin Panels</span>
+          <span class="badge">Payment Integration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section container reveal" id="timeline">
+    <div class="section-head">
+      <h2>Timeline</h2>
+      <p>My learning journey and key milestones as a software engineer.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item card">
+        <p class="timeline-date">2024 – Present</p>
+        <h3>Software Engineering Student</h3>
+        <p class="muted">
+          Studying system development, databases, data structures, and real application development.
+        </p>
+      </div>
+
+      <div class="timeline-item card">
+        <p class="timeline-date">2025</p>
+        <h3>USYYTECH SOLUTIONS (Registered)</h3>
+        <p class="muted">
+          Officially registered business name and started building professional software solutions and portfolios.
+        </p>
+      </div>
+
+      <div class="timeline-item card">
+        <p class="timeline-date">2026</p>
+        <h3>Deployment & Growth</h3>
+        <p class="muted">
+          Deployed live projects on Firebase and Vercel, improved UI quality, and expanded project portfolio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section container reveal" id="projects">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <p>Filter by category and open details to see features + screenshots.</p>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="live">Live</button>
+      <button class="filter-btn" data-filter="api">API</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+      <button class="filter-btn" data-filter="github">GitHub</button>
+    </div>
+
+    <div class="project-grid" id="projectGrid">
+
+      <!-- Elite Soccer Feed -->
+      <article class="project card" data-tags="live github">
+        <div class="project-top">
+          <p class="pill">LIVE</p>
+          <h3>Elite Soccer Feed</h3>
+          <p class="project-desc">
+            A football news homepage with clean UI, modern spacing, and structured content layout.
+          </p>
+        </div>
+        <div class="project-meta">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Vercel</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-small" href="https://elitesoccerfeed.vercel.app/" target="_blank" rel="noreferrer">Live Demo</a>
+
+          <button class="btn btn-small btn-ghost open-modal"
+            data-title="Elite Soccer Feed"
+            data-role="Live Project"
+            data-stack="HTML • CSS • JavaScript • Vercel"
+            data-points="Modern sports homepage layout|Responsive UI structure|Clean navigation and sections|Portfolio-ready frontend design"
+            data-links="Live Demo:https://elitesoccerfeed.vercel.app/"
+            data-images="assets/img/elitesoccer-1.png|assets/img/elitesoccer-2.png"
+          >
+            Details
+          </button>
+        </div>
+      </article>
+
+      <!-- WeatherHub -->
+      <article class="project card" data-tags="live api github">
+        <div class="project-top">
+          <p class="pill">LIVE</p>
+          <h3>WeatherHub</h3>
+          <p class="project-desc">
+            Weather app powered by APIs and deployed live using Firebase Hosting.
+          </p>
+        </div>
+        <div class="project-meta">
+          <span class="badge">API</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Firebase</span>
+          <span class="badge">UI</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-small" href="https://weather-hub-9c3f8.web.app/" target="_blank" rel="noreferrer">Live Demo</a>
+
+          <button class="btn btn-small btn-ghost open-modal"
+            data-title="WeatherHub"
+            data-role="API Project • LIVE (Firebase Hosted)"
+            data-stack="JavaScript • API Integration • Firebase Hosting"
+            data-points="Real-time API integration|Search by location|Clean forecast UI|Deployed using Firebase Hosting"
+            data-links="Live Demo:https://weather-hub-9c3f8.web.app/"
+            data-images="assets/img/weatherhub-1.png|assets/img/weatherhub-2.png"
+          >
+            Details
+          </button>
+        </div>
+      </article>
+
+      <!-- Campus IoT Platform -->
+      <article class="project card" data-tags="live iot web">
+        <div class="project-top">
+          <p class="pill">LIVE</p>
+          <h3>Campus IoT Platform</h3>
+          <p class="project-desc">
+            A smart campus IoT web platform for monitoring and managing connected devices with a clean, responsive interface.
+          </p>
+        </div>
+        <div class="project-meta">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">IoT</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-small" href="https://campus-iot.me/" target="_blank" rel="noreferrer">Live Demo</a>
+
+          <button class="btn btn-small btn-ghost open-modal"
+            data-title="Campus IoT Platform"
+            data-role="Live Project • IoT Web Platform"
+            data-stack="HTML • CSS • JavaScript • Live Deployment"
+            data-points="Responsive dashboard-style layout|Clean navigation and section structure|IoT-focused UI design foundation|Scalable project structure for device control + monitoring modules"
+            data-links="Live Demo:https://campus-iot.me/"
+            data-images="assets/img/campusiot-1.png"
+          >
+            Details
+          </button>
+        </div>
+      </article>
+
+      <!-- Masakjerr -->
+      <article class="project card" data-tags="github">
+        <div class="project-top">
+          <p class="pill pill-muted">GITHUB</p>
+          <h3>Masakjerr (Food Recipe Website)</h3>
+          <p class="project-desc">
+            A food recipe web project focused on layout, UI styling, and content presentation.
+          </p>
+        </div>
+        <div class="project-meta">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-small btn-ghost" href="https://github.com/Fagacie/masakjerr-project1.git" target="_blank" rel="noreferrer">
+            GitHub Repo
+          </a>
+
+          <button class="btn btn-small btn-ghost open-modal"
+            data-title="Masakjerr (Food Recipe Website)"
+            data-role="GitHub Case Study"
+            data-stack="HTML • CSS • JavaScript"
+            data-points="Recipe-style website UI|Clean content structure|Responsive sections|Good frontend styling practice"
+            data-links="GitHub Repo:https://github.com/Fagacie/masakjerr-project1.git"
+            data-images="assets/img/masakjerr-1.png"
+          >
+            Details
+          </button>
+        </div>
+      </article>
+
+      <!-- PKU Management System -->
+      <article class="project card" data-tags="java github">
+        <div class="project-top">
+          <p class="pill pill-muted">GITHUB</p>
+          <h3>PKU Management System</h3>
+          <p class="project-desc">
+            Healthcare management system project designed for record handling and system workflows.
+          </p>
+        </div>
+        <div class="project-meta">
+          <span class="badge">Java</span>
+          <span class="badge">System Design</span>
+          <span class="badge">Database</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-small btn-ghost" href="https://github.com/Fagacie/pkumanagementsystem.git" target="_blank" rel="noreferrer">
+            GitHub Repo
+          </a>
+
+          <button class="btn btn-small btn-ghost open-modal"
+            data-title="PKU Management System"
+            data-role="Healthcare Web System • GitHub Case Study"
+            data-stack="Java • Backend Logic • Database-driven Design"
+            data-points="Structured workflow design|Healthcare system concept|Record management flow|Built as a serious system project"
+            data-links="GitHub Repo:https://github.com/Fagacie/pkumanagementsystem.git"
+            data-images="assets/img/pku-1.png"
+          >
+            Details
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- GITHUB SECTION -->
+  <section class="section container reveal" id="github">
+    <div class="section-head">
+      <h2>GitHub Activity</h2>
+      <p>My code, contributions, and open-source journey.</p>
+    </div>
+
+    <div class="github-header">
+      <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer" class="github-profile-link">
+        <span class="github-icon">🐙</span>
+        <span>github.com/Fagacie</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="github-showcase">
+      <div class="github-main">
+        <a href="https://github.com/Fagacie?tab=repositories" target="_blank" rel="noreferrer" class="github-stat-card primary">
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Public Repos</div>
+          <div class="stat-icon">📚</div>
+          <div class="card-glow"></div>
+        </a>
+
+        <a href="https://github.com/Fagacie?tab=followers" target="_blank" rel="noreferrer" class="github-stat-card secondary">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Followers</div>
+          <div class="stat-icon">👥</div>
+          <div class="card-glow"></div>
+        </a>
+      </div>
+
+      <div class="github-links">
+        <a href="https://github.com/Fagacie?tab=repositories" target="_blank" rel="noreferrer" class="github-link-item primary">
+          <span class="link-icon">⭐</span>
+          <span class="link-text">
+            <span class="link-label">Repositories</span>
+            <span class="link-desc">All my projects</span>
+          </span>
+        </a>
+
+        <a href="https://github.com/Fagacie?tab=projects" target="_blank" rel="noreferrer" class="github-link-item secondary">
+          <span class="link-icon">✅</span>
+          <span class="link-text">
+            <span class="link-label">Projects</span>
+            <span class="link-desc">Active workflows</span>
+          </span>
+        </a>
+
+        <a href="https://github.com/Fagacie?tab=stars" target="_blank" rel="noreferrer" class="github-link-item tertiary">
+          <span class="link-icon">🔥</span>
+          <span class="link-text">
+            <span class="link-label">Starred</span>
+            <span class="link-desc">Inspiring projects</span>
+          </span>
+        </a>
+
+        <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer" class="github-link-item accent">
+          <span class="link-icon">🔗</span>
+          <span class="link-text">
+            <span class="link-label">View Profile</span>
+            <span class="link-desc">Complete profile</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="github-contrib">
+      <div class="contrib-label">Recent Activity</div>
+      <div class="contrib-grid">
+        <div class="contrib-day" style="--intensity: 0.2;"></div>
+        <div class="contrib-day" style="--intensity: 0.5;"></div>
+        <div class="contrib-day" style="--intensity: 0.8;"></div>
+        <div class="contrib-day" style="--intensity: 1;"></div>
+        <div class="contrib-day" style="--intensity: 0.6;"></div>
+        <div class="contrib-day" style="--intensity: 0.9;"></div>
+        <div class="contrib-day" style="--intensity: 0.3;"></div>
+        <div class="contrib-day" style="--intensity: 0.7;"></div>
+        <div class="contrib-day" style="--intensity: 1;"></div>
+        <div class="contrib-day" style="--intensity: 0.4;"></div>
+        <div class="contrib-day" style="--intensity: 0.8;"></div>
+        <div class="contrib-day" style="--intensity: 0.9;"></div>
+        <div class="contrib-day" style="--intensity: 0.5;"></div>
+        <div class="contrib-day" style="--intensity: 1;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section container reveal" id="testimonials">
+    <div class="section-head">
+      <h2>Testimonials</h2>
+      <p>Feedback that reflects clarity, professionalism, and delivery quality.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <figure class="card testimonial">
+        <blockquote>
+          “Usyy delivered a clean dashboard with strong logic and an easy-to-use layout. The turnaround time was impressive.”
+        </blockquote>
+        <figcaption>
+          <strong>Project Client</strong>
+          <span class="muted">Admin Dashboard</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card testimonial">
+        <blockquote>
+          “Great communication, professional design, and reliable deployment. Highly recommended.”
+        </blockquote>
+        <figcaption>
+          <strong>Business Owner</strong>
+          <span class="muted">Company Website</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card testimonial">
+        <blockquote>
+          “Clean UI, fast performance, and strong attention to detail. The project feels production-ready.”
+        </blockquote>
+        <figcaption>
+          <strong>Startup Founder</strong>
+          <span class="muted">API Integration</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section container reveal" id="faq">
+    <div class="section-head">
+      <h2>FAQ</h2>
+      <p>Common questions about collaboration, delivery, and support.</p>
+    </div>
+
+    <div class="faq-grid">
+      <details class="faq-item card">
+        <summary>What type of projects do you accept?</summary>
+        <p class="muted">Web apps, dashboards, admin panels, portfolios, and payment-ready business websites.</p>
+      </details>
+      <details class="faq-item card">
+        <summary>How long does delivery take?</summary>
+        <p class="muted">It depends on scope. Typical MVPs take 1–3 weeks, larger systems take longer.</p>
+      </details>
+      <details class="faq-item card">
+        <summary>Do you provide maintenance?</summary>
+        <p class="muted">Yes. I offer support packages for updates, monitoring, and feature upgrades.</p>
+      </details>
+      <details class="faq-item card">
+        <summary>Can you deploy my project?</summary>
+        <p class="muted">Yes. I deploy to Firebase, Vercel, or other hosting based on project needs.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section container reveal" id="cta">
+    <div class="cta-inner card">
+      <div>
+        <h2>Ready to build a professional product?</h2>
+        <p class="muted">Let’s design and ship a system that looks clean and works reliably in the real world.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="#contact" class="btn">Start a Project</a>
+        <a href="#projects" class="btn btn-ghost">View Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section container reveal" id="contact">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p>Let’s build something real. Message me directly or use the form.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="card">
+        <h3>Quick Contact</h3>
+        <p><strong>Email:</strong> <a class="link" href="mailto:usyyy207@gmail.com">usyyy207@gmail.com</a></p>
+        <p><strong>Brand:</strong> USYYTECH SOLUTIONS</p>
+        <p><strong>WhatsApp:</strong> <span class="muted">+234 907 201 6396</span></p>
+
+        <a class="btn" target="_blank" rel="noreferrer"
+           href="https://wa.me/2349072016396?text=Hello%20Usyy,%20I%20want%20a%20website%20or%20system%20project.">
+          WhatsApp Me
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>Send a Message</h3>
+
+        <!-- Replace this Formspree endpoint with yours -->
+        <form class="form" id="contactForm" action="https://formspree.io/f/xxxxxxx" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+
+          <button class="btn" type="submit" id="sendBtn">Send Message</button>
+          <p class="form-hint" id="formHint"></p>
+        </form>
+
+        <p class="small-note">
+          ✅ Tip: Create your free Formspree form and paste your endpoint into the action.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> USYYTECH SOLUTIONS • Built by Usyy</p>
+      <a href="#top" class="link">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="modalTitle">Project Title</h3>
+        <button class="btn-icon" id="closeModal" aria-label="Close">✕</button>
+      </div>
+
+      <p class="modal-sub" id="modalRole">Role</p>
+      <p class="modal-stack" id="modalStack">Stack</p>
+
+      <div class="modal-gallery" id="modalGallery"></div>
+
+      <ul class="modal-points" id="modalPoints"></ul>
+
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+
+  </div> <!-- End Main Content Wrapper -->
+
+  <script src="js/canvas.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/reveal.js"></script>
+</body>
+</html>
