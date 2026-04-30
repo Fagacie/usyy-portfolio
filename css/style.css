@@ -180,16 +180,35 @@ ul{
 }
 
 .hero{
-  min-height:calc(88vh - 76px);
+  min-height:calc(78vh - 76px);
   display:grid;
-  grid-template-columns:1fr;
+  grid-template-columns:1fr 420px;
   align-items:center;
-  padding:clamp(64px, 10vw, 128px) 0 clamp(56px, 8vw, 96px);
+  gap:28px;
+  padding:clamp(48px, 8vw, 96px) 0 clamp(40px, 6vw, 72px);
 }
 
 .hero-copy{
-  max-width:900px;
+  max-width:760px;
   min-width:0;
+}
+
+.hero-visual{
+  width:100%;
+  height:360px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  overflow:hidden;
+  background:linear-gradient(180deg, rgba(23,107,99,0.06), rgba(247,244,238,0.4));
+  border:1px solid rgba(31,41,51,0.04);
+}
+
+.hero-visual canvas{
+  width:100%;
+  height:100%;
+  display:block;
 }
 
 .eyebrow{

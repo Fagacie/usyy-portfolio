@@ -156,3 +156,11 @@ if (contactForm && formHint) {
     formHint.textContent = "Sending message...";
   });
 }
+
+// Initialize lightweight hero visual if present
+(function(){
+  const script = document.createElement('script');
+  script.src = 'js/hero-visual.js';
+  script.defer = true;
+  document.body.appendChild(script);
+})();

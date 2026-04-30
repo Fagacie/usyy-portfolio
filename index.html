@@ -34,8 +34,8 @@
   <header class="header" id="top">
     <nav class="nav container" aria-label="Primary navigation">
       <a href="#top" class="logo" aria-label="Abbas Usman Adamu home">
-        <img src="assets/img/logo.png" alt="" class="logo-img" />
-        <span>Abbas Adamu</span>
+        
+        <span><h3>Abbas Usman Adamu</h3></span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -55,25 +55,23 @@
   </header>
 
   <main id="main">
-    <section class="hero container">
+    <section class="hero container" aria-labelledby="hero-heading">
       <div class="hero-copy">
-        <p class="eyebrow">Software Engineering Student</p>
-        <h1>Backend systems, IoT applications, and full-stack development.</h1>
-        <p class="hero-subtitle">
-          Final-year Software Engineering student with hands-on experience in backend systems, IoT applications,
-          and full-stack development. Skilled in Java, Spring Boot, and API integration.
-        </p>
-
+        <p class="eyebrow">Final Year Software Engineering Student</p>
+        <h1 id="hero-heading">Backend systems, IoT applications, and full-stack development</h1>
+        <p>Abbas Usman Adamu — focused on scalable backend architecture, real-time IoT systems, and API-driven applications using Java, Spring Boot, and modern web technologies.</p>
         <div class="hero-actions" aria-label="Primary actions">
           <a href="#projects" class="btn">View Projects</a>
-          <a href="assets/Usman-Abbas-Adamu-Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+          <a href="#contact" class="btn btn-secondary">Contact</a>
         </div>
 
-        <div class="hero-links" aria-label="External profile links">
+             <div class="hero-links" aria-label="External profile links">
           <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
+
+    
     </section>
 
     <section class="section container reveal" id="about">
@@ -117,12 +115,11 @@
     <section class="section container reveal" id="projects">
       <div class="section-head split">
         <div>
-          <p class="eyebrow">Selected Work</p>
-          <h2>Selected projects.</h2>
+          <p class="eyebrow">Projects</p>
+          <p>
+          A selection of projects showcasing my skills in backend development, IoT systems, and full-stack web applications.
         </div>
-        <p>
-          Resume-aligned work across IoT, Java systems, Spring Boot, and API integration.
-        </p>
+        
       </div>
 
       <div class="project-toolbar">
@@ -143,6 +140,38 @@
       </div>
 
       <div class="project-grid" id="projectGrid">
+
+        <article class="project card" tabindex="0" data-tags="java web" data-summary="E-learning platform / Java / MySQL / Payment integration" style="border: 1.5px solid #2563eb;">
+  <div class="project-top">
+    <div class="project-labels">
+      <p class="pill" style="background:#2563eb; color:#fff;">Final Year Project</p>
+      <span class="project-code">JSP / Servlet</span>
+    </div>
+    <h3>PSM E-Learning Management System</h3>
+    <p class="project-desc">
+      Scalable e-learning platform for managing courses, student enrollment, assessments, and secure online payments.
+    </p>
+  </div>
+
+  <ul class="project-points">
+    <li>Implemented authentication and role-based access for students, instructors and administrators</li>
+    <li>Developed course management system with materials, assignments, and assessments</li>
+    <li>Integrated payment gateway for secure online transactions</li>
+    <li>Built backend using Java JSP/Servlet with MySQL database</li>
+  </ul>
+
+  <div class="project-meta">
+    <span>Java</span>
+    <span>JSP/Servlet</span>
+    <span>MySQL</span>
+    <span>Payment Gateway</span>
+  </div>
+
+  <div class="project-actions">
+    <a class="text-btn" href="https://github.com/Fagacie/psm-elms" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</article>
+
         <article class="project card" tabindex="0" data-tags="live iot" data-summary="Water level, temperature, humidity, and air pressure / ThingSpeak API / Custom dashboard">
           <div class="project-top">
             <div class="project-labels">
