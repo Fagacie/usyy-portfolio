@@ -1,215 +1,158 @@
-// ============================
-// USYYTECH Portfolio JS
-// Light mode default ✅
-// ============================
+const year = document.getElementById("year");
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// ----------------------------
-// Mobile nav toggle
-// ----------------------------
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 
-navToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
-
-document.querySelectorAll("#navLinks a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("show");
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("show");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
   });
-});
 
-// ----------------------------
-// Active nav link on scroll
-// ----------------------------
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
 const navAnchors = document.querySelectorAll(".nav-links a[href^='#']");
-const sectionMap = Array.from(navAnchors)
-  .map((a) => document.querySelector(a.getAttribute("href")))
+const observedSections = Array.from(navAnchors)
+  .map((anchor) => document.querySelector(anchor.getAttribute("href")))
   .filter(Boolean);
 
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      navAnchors.forEach((a) => {
-        a.classList.toggle("active", a.getAttribute("href") === `#${entry.target.id}`);
-        if (a.classList.contains("active")) {
-          a.setAttribute("aria-current", "page");
-        } else {
-          a.removeAttribute("aria-current");
-        }
+if (observedSections.length) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        navAnchors.forEach((anchor) => {
+          const isActive = anchor.getAttribute("href") === `#${entry.target.id}`;
+          anchor.classList.toggle("active", isActive);
+
+          if (isActive) {
+            anchor.setAttribute("aria-current", "page");
+          } else {
+            anchor.removeAttribute("aria-current");
+          }
+        });
       });
-    });
-  },
-  { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
-);
+    },
+    { rootMargin: "-42% 0px -50% 0px", threshold: 0 }
+  );
 
-sectionMap.forEach((section) => sectionObserver.observe(section));
+  observedSections.forEach((section) => sectionObserver.observe(section));
+}
 
-// ----------------------------
-// Reveal animation on scroll
-// ----------------------------
-const reveals = document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver(
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add("show");
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        revealObserver.unobserve(entry.target);
+      }
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.14 }
 );
 
-reveals.forEach((el) => observer.observe(el));
+document.querySelectorAll(".reveal").forEach((element) => {
+  revealObserver.observe(element);
+});
 
-// ----------------------------
-// Theme toggle (Light default)
-// ----------------------------
-const themeToggle = document.getElementById("themeToggle");
+const aboutCards = document.querySelectorAll(".about-card");
+const aboutSignal = document.getElementById("aboutSignal");
 
-function setTheme(mode) {
-  if (mode === "dark") {
-    document.body.classList.remove("light");
-    themeToggle.textContent = "🌙";
-    localStorage.setItem("usyy_theme", "dark");
-  } else {
-    document.body.classList.add("light");
-    themeToggle.textContent = "☀️";
-    localStorage.setItem("usyy_theme", "light");
+if (aboutCards.length && aboutSignal) {
+  const defaultSignal = aboutSignal.textContent;
+
+  function setActiveAboutCard(card) {
+    aboutCards.forEach((item) => item.classList.toggle("is-active", item === card));
+    aboutSignal.textContent = card.dataset.signal || defaultSignal;
+  }
+
+  function clearActiveAboutCard() {
+    aboutCards.forEach((item) => item.classList.remove("is-active"));
+    aboutSignal.textContent = defaultSignal;
+  }
+
+  aboutCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => setActiveAboutCard(card));
+    card.addEventListener("focus", () => setActiveAboutCard(card));
+    card.addEventListener("click", () => setActiveAboutCard(card));
+  });
+
+  document.querySelector(".about-grid").addEventListener("mouseleave", clearActiveAboutCard);
+}
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projects = document.querySelectorAll(".project");
+const projectCount = document.getElementById("projectCount");
+const projectInsight = document.getElementById("projectInsight");
+const defaultProjectInsight = projectInsight?.textContent || "";
+
+function setActiveProject(project) {
+  projects.forEach((item) => item.classList.toggle("is-active", item === project));
+  if (projectInsight) {
+    projectInsight.textContent = project.dataset.summary || defaultProjectInsight;
   }
 }
 
-// Light mode default (unless user saved dark)
-const savedTheme = localStorage.getItem("usyy_theme") || "light";
-setTheme(savedTheme);
+function clearActiveProject() {
+  projects.forEach((item) => item.classList.remove("is-active"));
+  if (projectInsight) {
+    projectInsight.textContent = defaultProjectInsight;
+  }
+}
 
-themeToggle.addEventListener("click", () => {
-  const isLight = document.body.classList.contains("light");
-  setTheme(isLight ? "dark" : "light");
-});
+function updateProjectCount() {
+  if (!projectCount) return;
 
-// ----------------------------
-// Project filters
-// ----------------------------
-const filterButtons = document.querySelectorAll(".filter-btn");
-const projects = document.querySelectorAll(".project");
+  const visibleCount = Array.from(projects).filter((project) => !project.hidden).length;
+  projectCount.textContent = `${visibleCount} ${visibleCount === 1 ? "project" : "projects"}`;
+}
 
-filterButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    filterButtons.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
 
-    const filter = btn.dataset.filter;
+    filterButtons.forEach((item) => item.classList.remove("active"));
+    button.classList.add("active");
 
     projects.forEach((project) => {
       const tags = project.dataset.tags || "";
-
-      if (filter === "all" || tags.includes(filter)) {
-        project.style.display = "block";
-      } else {
-        project.style.display = "none";
-      }
+      const shouldShow = filter === "all" || tags.includes(filter);
+      project.hidden = !shouldShow;
     });
+
+    clearActiveProject();
+    updateProjectCount();
   });
 });
 
-// ----------------------------
-// Modal logic (with screenshots)
-// ----------------------------
-const modal = document.getElementById("projectModal");
-const closeModalBtn = document.getElementById("closeModal");
+updateProjectCount();
 
-const modalTitle = document.getElementById("modalTitle");
-const modalRole = document.getElementById("modalRole");
-const modalStack = document.getElementById("modalStack");
-const modalGallery = document.getElementById("modalGallery");
-const modalPoints = document.getElementById("modalPoints");
-const modalLinks = document.getElementById("modalLinks");
-
-document.querySelectorAll(".open-modal").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    // Header
-    modalTitle.textContent = btn.dataset.title || "Project";
-    modalRole.textContent = btn.dataset.role || "";
-    modalStack.textContent = "Stack: " + (btn.dataset.stack || "");
-
-    // Gallery
-    modalGallery.innerHTML = "";
-    const images = (btn.dataset.images || "").split("|").filter(Boolean);
-
-    if (images.length === 0) {
-      // show placeholder if no screenshots provided
-      const box = document.createElement("div");
-      box.style.border = "1px solid var(--border)";
-      box.style.borderRadius = "18px";
-      box.style.padding = "14px";
-      box.style.color = "var(--muted)";
-      box.style.fontWeight = "850";
-      box.style.gridColumn = "1 / -1";
-      box.textContent = "No screenshots uploaded yet ✅ Add images into assets/img/ to display here.";
-      modalGallery.appendChild(box);
-    } else {
-      images.forEach((src) => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = `${btn.dataset.title} screenshot`;
-        modalGallery.appendChild(img);
-      });
-    }
-
-    // Points
-    modalPoints.innerHTML = "";
-    const points = (btn.dataset.points || "").split("|").filter(Boolean);
-    points.forEach((p) => {
-      const li = document.createElement("li");
-      li.textContent = p;
-      modalPoints.appendChild(li);
-    });
-
-    // Links
-    modalLinks.innerHTML = "";
-    const links = (btn.dataset.links || "").split("|").filter(Boolean);
-    links.forEach((linkItem) => {
-      const [label, url] = linkItem.split(":");
-      const a = document.createElement("a");
-      a.className = "btn btn-small btn-ghost";
-      a.textContent = label?.trim() || "Link";
-      a.href = url?.trim() || "#";
-      a.target = "_blank";
-      a.rel = "noreferrer";
-      modalLinks.appendChild(a);
-    });
-
-    modal.classList.add("show");
-    modal.setAttribute("aria-hidden", "false");
-  });
+projects.forEach((project) => {
+  project.addEventListener("mouseenter", () => setActiveProject(project));
+  project.addEventListener("focus", () => setActiveProject(project));
+  project.addEventListener("click", () => setActiveProject(project));
 });
 
-function closeModal() {
-  modal.classList.remove("show");
-  modal.setAttribute("aria-hidden", "true");
+const projectGrid = document.getElementById("projectGrid");
+if (projectGrid) {
+  projectGrid.addEventListener("mouseleave", clearActiveProject);
 }
 
-closeModalBtn.addEventListener("click", closeModal);
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) closeModal();
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeModal();
-});
-
-// ----------------------------
-// Contact form UX (Formspree)
-// ----------------------------
 const contactForm = document.getElementById("contactForm");
 const formHint = document.getElementById("formHint");
 
-if (contactForm) {
+if (contactForm && formHint) {
   contactForm.addEventListener("submit", () => {
-    formHint.textContent = "Sending... ✅";
+    formHint.textContent = "Sending message...";
   });
 }

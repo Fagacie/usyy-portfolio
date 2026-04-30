@@ -5,707 +5,398 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Abbas Usman Adamu | Software Engineer</title>
-  <meta name="description" content="Portfolio of Abbas Usman Adamu — Final-year Software Engineering student. Backend systems, IoT applications, full-stack development. Skilled in Java, Spring Boot, and API integration." />
+  <meta name="description" content="Portfolio of Abbas Usman Adamu, a software engineering student focused on Java, Spring Boot, IoT systems, REST APIs, and full-stack web development." />
   <meta name="keywords" content="Abbas Usman Adamu, Software Engineer, Java, Spring Boot, IoT, Full-stack Developer, Backend Systems, API Integration" />
   <meta name="author" content="Usman Abbas Adamu" />
-  <meta name="theme-color" content="#2563eb" />
+  <meta name="theme-color" content="#f7f4ee" />
 
   <meta property="og:title" content="Abbas Usman Adamu | Software Engineer" />
-  <meta property="og:description" content="Final-year Software Engineering student. Backend systems, IoT, full-stack development, Spring Boot, API integration." />
+  <meta property="og:description" content="Software engineering student building backend systems, IoT platforms, and full-stack web applications." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/usyy.jpg" />
   <meta property="og:url" content="./" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Abbas Usman Adamu | Software Engineer" />
-  <meta name="twitter:description" content="Software Engineering student. IoT, backend systems, full-stack development." />
+  <meta name="twitter:description" content="Backend systems, IoT platforms, and full-stack web applications." />
   <meta name="twitter:image" content="assets/img/usyy.jpg" />
 
   <link rel="icon" href="assets/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="light">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
-  
-  <!-- ANIMATED BACKGROUND CANVAS -->
-  <canvas id="backgroundCanvas" aria-hidden="true"></canvas>
-  
-  <!-- BACKGROUND ORBS -->
-  <div class="bg-orbs" aria-hidden="true">
-    <span class="orb orb-1"></span>
-    <span class="orb orb-2"></span>
-    <span class="orb orb-3"></span>
-  </div>
 
-  <!-- NAVBAR -->
   <header class="header" id="top">
-    <nav class="nav container">
-      <a href="#top" class="logo">
-        <img src="assets/img/logo.png" alt="Abbas Adamu" class="logo-img" />
-        <span class="logo-text">Abbas</span>
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#top" class="logo" aria-label="Abbas Usman Adamu home">
+        <img src="assets/img/logo.png" alt="" class="logo-img" />
+        <span>Abbas Adamu</span>
       </a>
 
-      <div class="nav-actions">
-        <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">☀️</button>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
-      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact" class="btn btn-small">Contact</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Software Engineering Student</p>
+        <h1>Backend systems, IoT applications, and full-stack development.</h1>
+        <p class="hero-subtitle">
+          Final-year Software Engineering student with hands-on experience in backend systems, IoT applications,
+          and full-stack development. Skilled in Java, Spring Boot, and API integration.
+        </p>
 
-  <!-- HERO -->
-  <section class="hero container">
-    <div class="hero-text">
-      <p class="tag">Software Engineer • IoT Developer • Full-Stack Builder</p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="assets/Usman-Abbas-Adamu-Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+        </div>
 
-      <h1>
-        Hi, I'm <span class="accent">Abbas Usman Adamu</span> 👋 <br />
-        I build <span class="accent">backend systems</span>, <span class="accent">IoT applications</span>, and <span class="accent">scalable solutions</span>.
-      </h1>
-
-      <p class="subtitle">
-        Final-year Software Engineering student at UMT. Hands-on experience with Java, Spring Boot, IoT systems, and full-stack development.
-        I design and build systems that solve real-world problems.
-      </p>
-
-      <div class="hero-cta">
-        <a href="#projects" class="btn">View My Work</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-        <a href="assets/Usman-Abbas-Adamu-Resume.pdf" class="btn btn-ghost" download>Download Resume</a>
+        <div class="hero-links" aria-label="External profile links">
+          <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
       </div>
+    </section>
 
-      <div class="hero-links">
-        <a class="link" href="https://github.com/Fagacie" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="link" href="https://weather-hub-9c3f8.web.app/" target="_blank" rel="noreferrer">Live Projects</a>
-      </div>
-
-      <div class="trust-row">
-        <span class="trust-pill">✅ CGPA 3.33 • Dean's List</span>
-        <span class="trust-pill">✅ Java • Spring Boot • IoT</span>
-        <span class="trust-pill">✅ GitHub • Firebase • MySQL</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section container reveal" id="about">
-    <div class="section-head">
-      <h2>About</h2>
-      <p>
-        Final-year Software Engineering student with hands-on experience in backend systems, IoT applications, 
-        and full-stack development. I solve real problems through clean code and scalable architecture.
-      </p>
-    </div>
-
-    <div class="about-grid">
-      <div class="card">
-        <h3>Backend & Systems</h3>
-        <p class="muted">
-          Specialized in Java, Spring Boot, and REST APIs. I design database systems, 
-          build scalable backends, and create systems that handle real-world workflows.
+    <section class="section container reveal" id="about">
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2>Final-year Software Engineering student at UMT.</h2>
+        <p>
+          My work focuses on backend systems, IoT applications, API integration, and full-stack development.
         </p>
       </div>
 
-      <div class="card">
-        <h3>IoT & Innovation</h3>
-        <p class="muted">
-          Hands-on experience with MQTT, Raspberry Pi, ThingSpeak, and MicroPython. 
-          I build connected systems and IoT platforms for environmental monitoring and smart applications.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Full-Stack Ready</h3>
-        <p class="muted">
-          Comfortable across the stack: Frontend (HTML, CSS, JavaScript), Backend (Java, Spring Boot), 
-          and Database design. I build complete solutions from architecture to deployment.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section container reveal" id="skills">
-    <div class="section-head">
-      <h2>Technical Skills</h2>
-      <p>Tools and technologies I work with to build production-level software.</p>
-    </div>
-
-    <div class="skills-grid">
-      <div class="card">
-        <h3>Programming Languages</h3>
-        <div class="badges">
-          <span class="badge">Java</span>
-          <span class="badge">JavaScript</span>
-          <span class="badge">Python</span>
-          <span class="badge">MicroPython</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Backend & Web</h3>
-        <div class="badges">
-          <span class="badge">Spring Boot</span>
-          <span class="badge">JSP/Servlets</span>
-          <span class="badge">Node.js</span>
-          <span class="badge">REST APIs</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Frontend & Design</h3>
-        <div class="badges">
-          <span class="badge">HTML</span>
-          <span class="badge">CSS</span>
-          <span class="badge">Bootstrap</span>
-          <span class="badge">Responsive Design</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Database & Storage</h3>
-        <div class="badges">
-          <span class="badge">MySQL</span>
-          <span class="badge">SQL</span>
-          <span class="badge">ERD Design</span>
-          <span class="badge">Data Modeling</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>IoT & Systems</h3>
-        <div class="badges">
-          <span class="badge">MQTT</span>
-          <span class="badge">Raspberry Pi</span>
-          <span class="badge">ThingSpeak</span>
-          <span class="badge">IoT Architecture</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Tools & Deployment</h3>
-        <div class="badges">
-          <span class="badge">Git</span>
-          <span class="badge">Firebase Hosting</span>
-          <span class="badge">JUnit</span>
-          <span class="badge">Selenium</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TIMELINE -->
-  <section class="section container reveal" id="timeline">
-    <div class="section-head">
-      <h2>Education & Timeline</h2>
-      <p>My educational journey and professional milestones.</p>
-    </div>
-
-    <div class="timeline">
-      <div class="timeline-item card">
-        <p class="timeline-date">2023 – Present</p>
-        <h3>BSc Computer Science (Software Engineering)</h3>
-        <p class="muted">
-          Universiti Malaysia Terengganu (UMT). CGPA 3.33 | Dean's List (Semesters 3, 4, 5).
-          Studying system development, databases, data structures, IoT, and real-world application development.
-        </p>
-      </div>
-
-      <div class="timeline-item card">
-        <p class="timeline-date">2023 – 2025</p>
-        <h3>Certifications & Programs</h3>
-        <p class="muted">
-          Completed ASPIRE, IFuture, Autumn School, and VCLEP programs. Certified in Water Survival Programme.
-          Continuous learning and professional development in software engineering and leadership.
-        </p>
-      </div>
-
-      <div class="timeline-item card">
-        <p class="timeline-date">2024 – 2026</p>
-        <h3>Active Development & Deployment</h3>
-        <p class="muted">
-          Built and deployed live projects on Firebase and Vercel. Gained hands-on experience in backend systems,
-          IoT platforms, and full-stack development. Currently working on professional portfolio and final year project.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section container reveal" id="projects">
-    <div class="section-head">
-      <h2>Projects</h2>
-      <p>Filter by category and open details to see features + screenshots.</p>
-    </div>
-
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="live">Live</button>
-      <button class="filter-btn" data-filter="api">API</button>
-      <button class="filter-btn" data-filter="iot">IoT</button>
-      <button class="filter-btn" data-filter="java">Java</button>
-      <button class="filter-btn" data-filter="github">GitHub</button>
-    </div>
-
-    <div class="project-grid" id="projectGrid">
-
-      <!-- IoT Environmental Monitoring -->
-      <article class="project card" data-tags="live iot">
-        <div class="project-top">
-          <p class="pill">LIVE</p>
-          <h3>IoT-Based Environmental Monitoring</h3>
-          <p class="project-desc">
-            Real-time environmental monitoring system with MQTT data transmission to cloud dashboard.
+      <div class="about-grid">
+        <article class="card about-card" tabindex="0" data-signal="api.connect('Spring Boot', 'MySQL')">
+          <span class="card-kicker">&lt;api&gt;</span>
+          <h3>Backend Systems</h3>
+          <p class="muted">
+            Java, Spring Boot, JSP/Servlets, Node.js, REST APIs, and MySQL-backed application workflows.
           </p>
-        </div>
-        <div class="project-meta">
-          <span class="badge">MicroPython</span>
-          <span class="badge">MQTT</span>
-          <span class="badge">Raspberry Pi</span>
-          <span class="badge">ThingSpeak</span>
-        </div>
-        <div class="project-actions">
-          <button class="btn btn-small btn-ghost open-modal"
-            data-title="IoT-Based Environmental Monitoring System"
-            data-role="Live IoT Project"
-            data-stack="MicroPython • MQTT • Raspberry Pi Pico W • ThingSpeak"
-            data-points="Real-time environmental data collection|MQTT protocol implementation|Cloud dashboard integration|Deployed live system"
-            data-links="GitHub:https://github.com/Fagacie"
-            data-images="assets/img/iot-1.png"
-          >
-            Details
-          </button>
-        </div>
-      </article>
-
-      <!-- PKU Management System -->
-      <article class="project card" data-tags="java github">
-        <div class="project-top">
-          <p class="pill pill-muted">GITHUB</p>
-          <h3>PKU Management System</h3>
-          <p class="project-desc">
-            Healthcare system for managing patients, appointments, billing, and staff with role-based access.
+        </article>
+        <article class="card about-card" tabindex="0" data-signal="mqtt.publish('sensor/data')">
+          <span class="card-kicker">mqtt://</span>
+          <h3>IoT Applications</h3>
+          <p class="muted">
+            MicroPython, MQTT, Raspberry Pi Pico W, and ThingSpeak for real-time environmental monitoring.
           </p>
-        </div>
-        <div class="project-meta">
-          <span class="badge">Java</span>
-          <span class="badge">MySQL</span>
-          <span class="badge">JSP/Servlets</span>
-        </div>
-        <div class="project-actions">
-          <a class="btn btn-small btn-ghost" href="https://github.com/Fagacie/pkumanagementsystem.git" target="_blank" rel="noreferrer">
-            GitHub Repo
-          </a>
-
-          <button class="btn btn-small btn-ghost open-modal"
-            data-title="PKU Management System"
-            data-role="Healthcare Management System"
-            data-stack="Java • MySQL • JSP/Servlets • Database Design"
-            data-points="Patient record management|Appointment scheduling|Billing system|Role-based access control|Automated workflows"
-            data-links="GitHub:https://github.com/Fagacie/pkumanagementsystem.git"
-            data-images="assets/img/pku-1.png"
-          >
-            Details
-          </button>
-        </div>
-      </article>
-
-      <!-- Masakjerr System -->
-      <article class="project card" data-tags="github java">
-        <div class="project-top">
-          <p class="pill pill-muted">GITHUB</p>
-          <h3>Masakjerr System</h3>
-          <p class="project-desc">
-            Full-stack recipe management CRUD application with backend services and database design.
+        </article>
+        <article class="card about-card" tabindex="0" data-signal="deploy.to('Firebase Hosting')">
+          <span class="card-kicker">{ ui }</span>
+          <h3>Full-Stack Delivery</h3>
+          <p class="muted">
+            HTML, CSS, JavaScript, Firebase Hosting, database design, JUnit, and Selenium.
           </p>
-        </div>
-        <div class="project-meta">
-          <span class="badge">Java</span>
-          <span class="badge">Spring Boot</span>
-          <span class="badge">MySQL</span>
-        </div>
-        <div class="project-actions">
-          <a class="btn btn-small btn-ghost" href="https://github.com/Fagacie/masakjerr-project1.git" target="_blank" rel="noreferrer">
-            GitHub Repo
-          </a>
+        </article>
+      </div>
+      <div class="about-console" aria-live="polite">
+        <span>focus</span>
+        <code id="aboutSignal">hover or tap a card</code>
+      </div>
+    </section>
 
-          <button class="btn btn-small btn-ghost open-modal"
-            data-title="Masakjerr System"
-            data-role="Full-Stack CRUD Application"
-            data-stack="Java • Spring Boot • MySQL • Backend Services"
-            data-points="Complete CRUD operations|Recipe management|User data handling|Backend service design|Database architecture"
-            data-links="GitHub:https://github.com/Fagacie/masakjerr-project1.git"
-            data-images="assets/img/masakjerr-1.png"
-          >
-            Details
-          </button>
+    <section class="section container reveal" id="projects">
+      <div class="section-head split">
+        <div>
+          <p class="eyebrow">Selected Work</p>
+          <h2>Selected projects.</h2>
         </div>
-      </article>
+        <p>
+          Resume-aligned work across IoT, Java systems, Spring Boot, and API integration.
+        </p>
+      </div>
 
-      <!-- WeatherHub -->
-      <article class="project card" data-tags="live api">
-        <div class="project-top">
-          <p class="pill">LIVE</p>
-          <h3>WeatherHub</h3>
-          <p class="project-desc">
-            Real-time weather application with API integration deployed on Firebase Hosting.
+      <div class="project-toolbar">
+        <div class="filters" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="live">Live</button>
+          <button class="filter-btn" data-filter="api">API</button>
+          <button class="filter-btn" data-filter="iot">IoT</button>
+          <button class="filter-btn" data-filter="java">Java</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+        </div>
+        <p class="project-count" id="projectCount">5 projects</p>
+      </div>
+
+      <div class="project-insight" aria-live="polite">
+        <span>active.project</span>
+        <code id="projectInsight">select a project card</code>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <article class="project card" tabindex="0" data-tags="live iot" data-summary="Water level, temperature, humidity, and air pressure / ThingSpeak API / Custom dashboard">
+          <div class="project-top">
+            <div class="project-labels">
+              <p class="pill">Live IoT</p>
+              <span class="project-code">ThingSpeak API</span>
+            </div>
+            <h3>IoT-Based Environmental Monitoring</h3>
+            <p class="project-desc">
+              Custom dashboard for sensor readings sent to ThingSpeak and displayed through its API.
+            </p>
+          </div>
+          <ul class="project-points">
+            <li>Tracked water level, temperature, humidity, and air pressure</li>
+            <li>Sent sensor data to ThingSpeak and displayed it on a custom dashboard</li>
+          </ul>
+          <div class="project-meta">
+            <span>MicroPython</span>
+            <span>ThingSpeak API</span>
+            <span>Raspberry Pi Pico W</span>
+            <span>ThingSpeak</span>
+          </div>
+          <div class="project-actions">
+            <a class="text-btn" href="https://campus-iot.me/" target="_blank" rel="noreferrer">Live dashboard</a>
+            <a class="text-btn" href="https://github.com/Fagacie/IoT-Environmental-Monitor.git" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project card" tabindex="0" data-tags="java github" data-summary="Healthcare workflow / Java / MySQL">
+          <div class="project-top">
+            <div class="project-labels">
+              <p class="pill muted-pill">Java</p>
+              <span class="project-code">JSP / MySQL</span>
+            </div>
+            <h3>PKU Management System</h3>
+            <p class="project-desc">
+              System for managing patients, appointments, billing, and staff with role-based access.
+            </p>
+          </div>
+          <ul class="project-points">
+            <li>Managed patients, appointments, billing, and staff</li>
+            <li>Implemented role-based access workflows</li>
+          </ul>
+          <div class="project-meta">
+            <span>Java</span>
+            <span>MySQL</span>
+            <span>JSP/Servlets</span>
+          </div>
+          <div class="project-actions">
+            <a class="text-btn" href="https://github.com/Fagacie/pkumanagementsystem.git" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project card" tabindex="0" data-tags="github java" data-summary="Recipe CRUD / Spring Boot / MySQL">
+          <div class="project-top">
+            <div class="project-labels">
+              <p class="pill muted-pill">Full Stack</p>
+              <span class="project-code">Spring Boot</span>
+            </div>
+            <h3>Masakjerr System</h3>
+            <p class="project-desc">
+              Full-stack CRUD application for managing recipes and user data.
+            </p>
+          </div>
+          <ul class="project-points">
+            <li>Built CRUD features for recipes and user data</li>
+            <li>Designed backend services and database structure</li>
+          </ul>
+          <div class="project-meta">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>MySQL</span>
+          </div>
+          <div class="project-actions">
+            <a class="text-btn" href="https://github.com/Fagacie/masakjerr-project1.git" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project card" tabindex="0" data-tags="live api" data-summary="Weather API / JavaScript / Firebase">
+          <div class="project-top">
+            <div class="project-labels">
+              <p class="pill">Live API</p>
+              <span class="project-code">Firebase</span>
+            </div>
+            <h3>WeatherHub</h3>
+            <p class="project-desc">
+              Weather application using REST APIs, responsive interface, and Firebase Hosting.
+            </p>
+          </div>
+          <ul class="project-points">
+            <li>Integrated APIs for real-time weather data</li>
+            <li>Deployed responsive interface with Firebase Hosting</li>
+          </ul>
+          <div class="project-meta">
+            <span>JavaScript</span>
+            <span>REST API</span>
+            <span>Firebase</span>
+          </div>
+          <div class="project-actions">
+            <a class="text-btn" href="https://weather-hub-9c3f8.web.app/" target="_blank" rel="noreferrer">Live demo</a>
+          </div>
+        </article>
+
+        <article class="project card" tabindex="0" data-tags="live web github" data-summary="First project / Football news homepage and player page">
+          <div class="project-top">
+            <div class="project-labels">
+              <p class="pill">Live Web</p>
+              <span class="project-code">HTML / CSS / JS</span>
+            </div>
+            <h3>Elite Soccer Feed</h3>
+            <p class="project-desc">
+              Football news website built as my first project, focused on a homepage and player page experience.
+            </p>
+          </div>
+          <ul class="project-points">
+            <li>Created the homepage layout for football news browsing</li>
+            <li>Built a player page using HTML, CSS, and JavaScript</li>
+          </ul>
+          <div class="project-meta">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Vercel</span>
+          </div>
+          <div class="project-actions">
+            <a class="text-btn" href="https://elitesoccerfeed.vercel.app/" target="_blank" rel="noreferrer">Live site</a>
+            <a class="text-btn" href="https://github.com/Fagacie/ESFhomepage.git" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="skills">
+      <div class="section-head split">
+        <div>
+          <p class="eyebrow">Technical Skills</p>
+          <h2>Technical skills.</h2>
+        </div>
+        <p>
+          Skills listed in my latest resume.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-group">
+          <h3>Languages</h3>
+          <p>Java, JavaScript, Python, MicroPython</p>
+        </article>
+        <article class="skill-group">
+          <h3>Backend</h3>
+          <p>Spring Boot, JSP/Servlets, Node.js, REST APIs, HTML, CSS</p>
+        </article>
+        <article class="skill-group">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, Bootstrap, Responsive UI</p>
+        </article>
+        <article class="skill-group">
+          <h3>Data</h3>
+          <p>MySQL, SQL, ERD</p>
+        </article>
+        <article class="skill-group">
+          <h3>IoT</h3>
+          <p>MQTT, Raspberry Pi Pico W, ThingSpeak</p>
+        </article>
+        <article class="skill-group">
+          <h3>Tools</h3>
+          <p>Git, Firebase Hosting, JUnit, Selenium</p>
+        </article>
+        <article class="skill-group">
+          <h3>Languages Spoken</h3>
+          <p>English, Hausa, Malay, Arabic</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="timeline">
+      <div class="section-head">
+        <p class="eyebrow">Timeline</p>
+        <h2>Education and development.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <p class="timeline-date">2023 - Present</p>
+          <h3>BSc Computer Science (Software Engineering)</h3>
+          <p class="muted">
+            Universiti Malaysia Terengganu. CGPA 3.33. Dean's List, Semesters 3, 4, and 5.
           </p>
-        </div>
-        <div class="project-meta">
-          <span class="badge">JavaScript</span>
-          <span class="badge">REST API</span>
-          <span class="badge">Firebase</span>
-        </div>
-        <div class="project-actions">
-          <a class="btn btn-small" href="https://weather-hub-9c3f8.web.app/" target="_blank" rel="noreferrer">Live Demo</a>
-
-          <button class="btn btn-small btn-ghost open-modal"
-            data-title="WeatherHub"
-            data-role="API Project • Live Deployment"
-            data-stack="JavaScript • REST APIs • Firebase Hosting"
-            data-points="Real-time API integration|Location search functionality|Clean forecast UI|Firebase deployment|Responsive design"
-            data-links="Live Demo:https://weather-hub-9c3f8.web.app/|GitHub:https://github.com/Fagacie"
-            data-images="assets/img/weatherhub-1.png|assets/img/weatherhub-2.png"
-          >
-            Details
-          </button>
-        </div>
-      </article>
-
-      <!-- Campus IoT Platform -->
-      <article class="project card" data-tags="live iot">
-        <div class="project-top">
-          <p class="pill">LIVE</p>
-          <h3>Campus IoT Platform</h3>
-          <p class="project-desc">
-            Smart campus IoT web platform for monitoring and managing connected devices.
+        </article>
+        <article class="timeline-item">
+          <p class="timeline-date">2015 - 2021</p>
+          <h3>Senior Secondary School Certificate (WAEC)</h3>
+          <p class="muted">
+            First Grade Comprehensive School, Kano, Nigeria.
           </p>
+        </article>
+        <article class="timeline-item">
+          <p class="timeline-date">2025 - Present</p>
+          <h3>Treasurer, Nigerian Muslim Community</h3>
+          <p class="muted">
+            Manage financial records and support community operations.
+          </p>
+        </article>
+        <article class="timeline-item">
+          <p class="timeline-date">2023 - 2025</p>
+          <h3>Certifications & Programs</h3>
+          <p class="muted">
+            Completed ASPIRE, IFuture, Autumn School, VCLEP, and Water Survival Programme certifications.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section reveal" id="contact">
+      <div class="container contact-layout">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Contact</h2>
+          <p class="muted">
+            Open to software engineering opportunities, internships, and collaborations.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:abbasusman561@gmail.com">abbasusman561@gmail.com</a>
+            <a href="tel:+601157740062">+60 1157740062</a>
+            <a href="https://wa.me/60115774062?text=Hello%20Abbas,%20I%20would%20like%20to%20discuss%20a%20project%20opportunity." target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
         </div>
-        <div class="project-meta">
-          <span class="badge">HTML</span>
-          <span class="badge">CSS</span>
-          <span class="badge">JavaScript</span>
-          <span class="badge">IoT</span>
-        </div>
-        <div class="project-actions">
-          <a class="btn btn-small" href="https://campus-iot.me/" target="_blank" rel="noreferrer">Live Demo</a>
 
-          <button class="btn btn-small btn-ghost open-modal"
-            data-title="Campus IoT Platform"
-            data-role="Live IoT Web Platform"
-            data-stack="HTML • CSS • JavaScript • Live Deployment"
-            data-points="Responsive dashboard layout|IoT device monitoring|Clean navigation|Scalable architecture"
-            data-links="Live Demo:https://campus-iot.me/"
-            data-images="assets/img/campusiot-1.png"
-          >
-            Details
-          </button>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- GITHUB SECTION -->
-  <section class="section container reveal" id="certifications">
-    <div class="section-head">
-      <h2>Certifications & Awards</h2>
-      <p>Professional development, recognitions, and programs completed.</p>
-    </div>
-
-    <div class="certifications-grid">
-      <div class="card">
-        <h3>🏆 Dean's List</h3>
-        <p class="muted"><strong>Universiti Malaysia Terengganu</strong></p>
-        <p class="muted">Academic excellence recognition for semesters 3, 4, and 5.</p>
-      </div>
-
-      <div class="card">
-        <h3>📜 ASPIRE Program</h3>
-        <p class="muted"><strong>2025</strong></p>
-        <p class="muted">Professional development and skills enhancement program.</p>
-      </div>
-
-      <div class="card">
-        <h3>📜 IFuture Program</h3>
-        <p class="muted"><strong>2025</strong></p>
-        <p class="muted">Innovation and future-ready skills development.</p>
-      </div>
-
-      <div class="card">
-        <h3>📜 Autumn School</h3>
-        <p class="muted"><strong>2025</strong></p>
-        <p class="muted">Advanced technical training and workshops.</p>
-      </div>
-
-      <div class="card">
-        <h3>📜 VCLEP Program</h3>
-        <p class="muted"><strong>2023</strong></p>
-        <p class="muted">Vocational and career-linked educational program.</p>
-      </div>
-
-      <div class="card">
-        <h3>🏊 Water Survival Programme</h3>
-        <p class="muted"><strong>2025</strong></p>
-        <p class="muted">Certified in water safety and survival skills.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- GITHUB SECTION -->
-  <section class="section container reveal" id="github">
-    <div class="section-head">
-      <h2>GitHub Activity</h2>
-      <p>My code, contributions, and open-source journey.</p>
-    </div>
-
-    <div class="github-header">
-      <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer" class="github-profile-link">
-        <span class="github-icon">🐙</span>
-        <span>github.com/Fagacie</span>
-        <span class="arrow">→</span>
-      </a>
-    </div>
-
-    <div class="github-showcase">
-      <div class="github-main">
-        <a href="https://github.com/Fagacie?tab=repositories" target="_blank" rel="noreferrer" class="github-stat-card primary">
-          <div class="stat-number">25+</div>
-          <div class="stat-label">Public Repos</div>
-          <div class="stat-icon">📚</div>
-          <div class="card-glow"></div>
-        </a>
-
-        <a href="https://github.com/Fagacie?tab=followers" target="_blank" rel="noreferrer" class="github-stat-card secondary">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">Followers</div>
-          <div class="stat-icon">👥</div>
-          <div class="card-glow"></div>
-        </a>
-      </div>
-
-      <div class="github-links">
-        <a href="https://github.com/Fagacie?tab=repositories" target="_blank" rel="noreferrer" class="github-link-item primary">
-          <span class="link-icon">⭐</span>
-          <span class="link-text">
-            <span class="link-label">Repositories</span>
-            <span class="link-desc">All my projects</span>
-          </span>
-        </a>
-
-        <a href="https://github.com/Fagacie?tab=projects" target="_blank" rel="noreferrer" class="github-link-item secondary">
-          <span class="link-icon">✅</span>
-          <span class="link-text">
-            <span class="link-label">Projects</span>
-            <span class="link-desc">Active workflows</span>
-          </span>
-        </a>
-
-        <a href="https://github.com/Fagacie?tab=stars" target="_blank" rel="noreferrer" class="github-link-item tertiary">
-          <span class="link-icon">🔥</span>
-          <span class="link-text">
-            <span class="link-label">Starred</span>
-            <span class="link-desc">Inspiring projects</span>
-          </span>
-        </a>
-
-        <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer" class="github-link-item accent">
-          <span class="link-icon">🔗</span>
-          <span class="link-text">
-            <span class="link-label">View Profile</span>
-            <span class="link-desc">Complete profile</span>
-          </span>
-        </a>
-      </div>
-    </div>
-
-    <div class="github-contrib">
-      <div class="contrib-label">Recent Activity</div>
-      <div class="contrib-grid">
-        <div class="contrib-day" style="--intensity: 0.2;"></div>
-        <div class="contrib-day" style="--intensity: 0.5;"></div>
-        <div class="contrib-day" style="--intensity: 0.8;"></div>
-        <div class="contrib-day" style="--intensity: 1;"></div>
-        <div class="contrib-day" style="--intensity: 0.6;"></div>
-        <div class="contrib-day" style="--intensity: 0.9;"></div>
-        <div class="contrib-day" style="--intensity: 0.3;"></div>
-        <div class="contrib-day" style="--intensity: 0.7;"></div>
-        <div class="contrib-day" style="--intensity: 1;"></div>
-        <div class="contrib-day" style="--intensity: 0.4;"></div>
-        <div class="contrib-day" style="--intensity: 0.8;"></div>
-        <div class="contrib-day" style="--intensity: 0.9;"></div>
-        <div class="contrib-day" style="--intensity: 0.5;"></div>
-        <div class="contrib-day" style="--intensity: 1;"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section container reveal" id="testimonials">
-    <div class="section-head">
-      <h2>Testimonials</h2>
-      <p>Feedback that reflects clarity, professionalism, and delivery quality.</p>
-    </div>
-
-    <div class="testimonials-grid">
-      <figure class="card testimonial">
-        <blockquote>
-          “Usyy delivered a clean dashboard with strong logic and an easy-to-use layout. The turnaround time was impressive.”
-        </blockquote>
-        <figcaption>
-          <strong>Project Client</strong>
-          <span class="muted">Admin Dashboard</span>
-        </figcaption>
-      </figure>
-
-      <figure class="card testimonial">
-        <blockquote>
-          “Great communication, professional design, and reliable deployment. Highly recommended.”
-        </blockquote>
-        <figcaption>
-          <strong>Business Owner</strong>
-          <span class="muted">Company Website</span>
-        </figcaption>
-      </figure>
-
-      <figure class="card testimonial">
-        <blockquote>
-          “Clean UI, fast performance, and strong attention to detail. The project feels production-ready.”
-        </blockquote>
-        <figcaption>
-          <strong>Startup Founder</strong>
-          <span class="muted">API Integration</span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section container reveal" id="faq">
-    <div class="section-head">
-      <h2>FAQ</h2>
-      <p>Common questions about collaboration, delivery, and support.</p>
-    </div>
-
-    <div class="faq-grid">
-      <details class="faq-item card">
-        <summary>What type of projects do you accept?</summary>
-        <p class="muted">Web apps, dashboards, admin panels, portfolios, and payment-ready business websites.</p>
-      </details>
-      <details class="faq-item card">
-        <summary>How long does delivery take?</summary>
-        <p class="muted">It depends on scope. Typical MVPs take 1–3 weeks, larger systems take longer.</p>
-      </details>
-      <details class="faq-item card">
-        <summary>Do you provide maintenance?</summary>
-        <p class="muted">Yes. I offer support packages for updates, monitoring, and feature upgrades.</p>
-      </details>
-      <details class="faq-item card">
-        <summary>Can you deploy my project?</summary>
-        <p class="muted">Yes. I deploy to Firebase, Vercel, or other hosting based on project needs.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section container reveal" id="cta">
-    <div class="cta-inner card">
-      <div>
-        <h2>Ready to build a professional product?</h2>
-        <p class="muted">Let’s design and ship a system that looks clean and works reliably in the real world.</p>
-      </div>
-      <div class="cta-actions">
-        <a href="#contact" class="btn">Start a Project</a>
-        <a href="#projects" class="btn btn-ghost">View Work</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section container reveal" id="contact">
-    <div class="section-head">
-      <h2>Contact</h2>
-      <p>Let's connect. Feel free to reach out for opportunities, questions, or collaboration.</p>
-    </div>
-
-    <div class="contact-grid">
-      <div class="card">
-        <h3>Get in Touch</h3>
-        <p><strong>Email:</strong> <a class="link" href="mailto:abbasusman561@gmail.com">abbasusman561@gmail.com</a></p>
-        <p><strong>Phone:</strong> <span class="muted">+60 115 774 0062</span></p>
-        <p><strong>Location:</strong> <span class="muted">Terengganu, Malaysia</span></p>
-
-        <a class="btn" target="_blank" rel="noreferrer"
-           href="https://wa.me/60115774062?text=Hello%20Abbas,%20I%20would%20like%20to%20discuss%20a%20project%20opportunity.">
-          WhatsApp Me
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>Send a Message</h3>
-
-        <!-- Replace this Formspree endpoint with yours -->
         <form class="form" id="contactForm" action="https://formspree.io/f/xxxxxxx" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
-
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
           <button class="btn" type="submit" id="sendBtn">Send Message</button>
           <p class="form-hint" id="formHint"></p>
         </form>
-
-        <p class="small-note">
-          ✅ Tip: Create your free Formspree form and paste your endpoint into the action.
-        </p>
       </div>
-    </div>
-  </section>
-
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Abbas Usman Adamu • Software Engineer</p>
-      <a href="#top" class="link">Back to top ↑</a>
+      <p>&copy; <span id="year"></span> Abbas Usman Adamu</p>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 
-  <!-- MODAL -->
-  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-card">
-      <div class="modal-head">
-        <h3 id="modalTitle">Project Title</h3>
-        <button class="btn-icon" id="closeModal" aria-label="Close">✕</button>
-      </div>
-
-      <p class="modal-sub" id="modalRole">Role</p>
-      <p class="modal-stack" id="modalStack">Stack</p>
-
-      <div class="modal-gallery" id="modalGallery"></div>
-
-      <ul class="modal-points" id="modalPoints"></ul>
-
-      <div class="modal-links" id="modalLinks"></div>
-    </div>
-  </div>
-
-  <script src="js/canvas.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
 </body>
 </html>
