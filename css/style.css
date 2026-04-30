@@ -1153,67 +1153,6 @@ body:not(.light) .project.card{
   font-weight: 700;
   color: var(--text);
 }
-  background: linear-gradient(90deg, var(--accent), var(--purple));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-
-.skills-grid .card:hover::after{
-  transform: scaleX(1);
-}
-
-.skills-grid .card:nth-child(1)::after{ background: linear-gradient(90deg, var(--accent), var(--purple)); }
-.skills-grid .card:nth-child(2)::after{ background: linear-gradient(90deg, var(--purple), var(--pink)); }
-.skills-grid .card:nth-child(3)::after{ background: linear-gradient(90deg, var(--pink), var(--accent)); }
-.skills-grid .card:nth-child(4)::after{ background: linear-gradient(90deg, var(--accent), var(--purple)); }
-
-.skills-grid .card:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 8px 30px rgba(59,130,246,0.15);
-}
-
-.skills-grid .card h3{
-  font-size: clamp(18px, 2.5vw, 22px);
-  margin-bottom: 20px;
-  font-weight: 800;
-  position: relative;
-  padding-bottom: 12px;
-}
-
-.skills-grid .card h3::before{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: currentColor;
-  border-radius: 2px;
-}
-
-.badges{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.badge{
-  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.1));
-  color: var(--text);
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 700;
-  border: 1px solid rgba(59,130,246,0.2);
-  transition: all 0.2s ease;
-}
-
-.badge:hover{
-  background: linear-gradient(135deg, rgba(59,130,246,0.25), rgba(139,92,246,0.15));
-  border-color: rgba(59,130,246,0.4);
-  transform: scale(1.05);
-}
 
 /* Services */
 .services-grid{
@@ -1255,7 +1194,7 @@ body:not(.light) .project.card{
   box-shadow: 0 8px 24px rgba(59,130,246,0.1);
 }
 
-.service-card h3{ 
+.service-card h3{
   font-size: clamp(18px, 2.5vw, 22px);
   margin-bottom: 12px;
   position: relative;
@@ -1373,35 +1312,6 @@ body:not(.light) .process-step{
   font-size: clamp(16px, 2vw, 18px);
   margin: 24px 0 12px;
   color: var(--text);
-}
-
-/* Badges */
-.badges{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:12px;
-}
-
-.badge{
-  border:1px solid var(--border);
-  background: rgba(0,0,0,0.03);
-  padding:8px 10px;
-  border-radius:999px;
-  font-weight:900;
-  color: var(--muted);
-  font-size:13px;
-  transition: transform .2s ease, color .2s ease, border-color .2s ease;
-}
-
-.badge:hover{
-  transform: translateY(-1px);
-  color: var(--text);
-  border-color: rgba(37,99,235,0.35);
-}
-
-body:not(.light) .badge{
-  background: rgba(255,255,255,0.04);
 }
 
 /* Timeline - Modern Floating Panels */
