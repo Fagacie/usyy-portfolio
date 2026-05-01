@@ -12,8 +12,7 @@ It is designed to present real-world projects, demonstrate technical capabilitie
 
 ## 🌐 Live Demo
 
-👉 https://your-portfolio-link.com
-
+https://www.usyy-portfolio.tech/
 ---
 
 ## ⚙️ Features
