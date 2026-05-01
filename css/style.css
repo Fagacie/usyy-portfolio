@@ -668,29 +668,6 @@ h3{
   font-weight:600;
 }
 
-.timeline{
-  display:grid;
-  gap:14px;
-  max-width:900px;
-}
-
-.timeline-item{
-  display:grid;
-  grid-template-columns:160px minmax(0, 1fr);
-  gap:24px;
-  align-items:start;
-}
-
-.timeline-date{
-  margin:0;
-  color:var(--warm);
-  font-size:13px;
-  font-weight:800;
-}
-
-.timeline-item p:last-child{
-  margin-bottom:0;
-}
 
 .contact-section{
   background:var(--ink);
@@ -885,6 +862,7 @@ h3{
   }
 }
 
+
 @media (prefers-reduced-motion: reduce){
   *,
   *::before,
@@ -894,4 +872,78 @@ h3{
     scroll-behavior:auto !important;
     transition-duration:0.01ms !important;
   }
+}
+/* Timeline Wrapper */
+.timeline-wrapper {
+  overflow-x: auto;
+  padding-bottom: 10px;
+  cursor: grab;
+  position: relative;
+}
+
+.timeline-wrapper:active {
+  cursor: grabbing;
+}
+
+/* Timeline Layout */
+.timeline {
+  display: flex;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+/* Cards */
+.timeline-item {
+  min-width: 280px;
+  max-width: 300px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #eee;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+.timeline-item:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: #2563eb;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Date */
+.timeline-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+/* Tags */
+.timeline-tags {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #f3f4f6;
+  color: #333;
+}
+
+.tag.highlight {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Optional smooth scrolling */
+.timeline-wrapper {
+  scroll-behavior: smooth;
 }
