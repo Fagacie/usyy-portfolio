@@ -315,32 +315,53 @@
       </div>
 
       <div class="skills-grid">
-        <article class="skill-group">
-          <h3>Languages</h3>
+        <article class="skill-group" data-category="languages">
+          <div class="skill-header">
+            <span class="skill-icon">{ }</span>
+            <h3>Languages</h3>
+          </div>
           <p>Java, JavaScript, Python, MicroPython</p>
         </article>
-        <article class="skill-group">
-          <h3>Backend</h3>
+        <article class="skill-group" data-category="backend">
+          <div class="skill-header">
+            <span class="skill-icon">⚙</span>
+            <h3>Backend</h3>
+          </div>
           <p>Spring Boot, JSP/Servlets, Node.js, REST APIs, HTML, CSS</p>
         </article>
-        <article class="skill-group">
-          <h3>Frontend</h3>
+        <article class="skill-group" data-category="frontend">
+          <div class="skill-header">
+            <span class="skill-icon">◆</span>
+            <h3>Frontend</h3>
+          </div>
           <p>HTML, CSS, Bootstrap, Responsive UI</p>
         </article>
-        <article class="skill-group">
-          <h3>Data</h3>
+        <article class="skill-group" data-category="data">
+          <div class="skill-header">
+            <span class="skill-icon">◉</span>
+            <h3>Data</h3>
+          </div>
           <p>MySQL, SQL, ERD</p>
         </article>
-        <article class="skill-group">
-          <h3>IoT</h3>
+        <article class="skill-group" data-category="iot">
+          <div class="skill-header">
+            <span class="skill-icon">◆</span>
+            <h3>IoT</h3>
+          </div>
           <p>MQTT, Raspberry Pi Pico W, ThingSpeak</p>
         </article>
-        <article class="skill-group">
-          <h3>Tools</h3>
+        <article class="skill-group" data-category="tools">
+          <div class="skill-header">
+            <span class="skill-icon">⚒</span>
+            <h3>Tools</h3>
+          </div>
           <p>Git, Firebase Hosting, JUnit, Selenium</p>
         </article>
-        <article class="skill-group">
-          <h3>Languages Spoken</h3>
+        <article class="skill-group" data-category="languages">
+          <div class="skill-header">
+            <span class="skill-icon">◊</span>
+            <h3>Languages Spoken</h3>
+          </div>
           <p>English, Hausa, Malay, Arabic</p>
         </article>
       </div>
@@ -404,7 +425,7 @@
       <div class="container contact-layout">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Contact</h2>
+          <h2>Let's work together</h2>
           <p class="muted">
             Open to software engineering opportunities, internships, and collaborations.
           </p>
@@ -415,22 +436,18 @@
           </div>
         </div>
 
-        <form class="form" id="contactForm" action="https://formspree.io/f/xxxxxxx" method="POST">
-          <label>
-            <span>Name</span>
-            <input type="text" name="name" autocomplete="name" required />
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button class="btn" type="submit" id="sendBtn">Send Message</button>
-          <p class="form-hint" id="formHint"></p>
-        </form>
+        <div class="contact-info-box">
+          <h3>Let's build something great</h3>
+          <p>
+            I'm always interested in hearing about new projects, challenges, and opportunities. Whether you need a backend engineer, full-stack developer, or IoT specialist, I'm ready to collaborate.
+          </p>
+          <p>
+            <strong>Response time:</strong> I typically get back within 24 hours.
+          </p>
+          <p>
+            You can also connect with me on <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer">GitHub</a> or <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noreferrer">LinkedIn</a>.
+          </p>
+        </div>
       </div>
     </section>
   </main>
@@ -443,5 +460,7 @@
   </footer>
 
   <script src="js/main.js"></script>
+</body>
+  <script src="js/back-to-top.js"></script>
 </body>
 </html>
