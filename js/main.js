@@ -191,3 +191,68 @@ slider.addEventListener("mousemove", (e) => {
   const walk = (x - startX) * 1.5;
   slider.scrollLeft = scrollLeft - walk;
 });
+
+/* Project card embed behavior and hover hint */
+(function(){
+  const projects = document.querySelectorAll('.project');
+  if (!projects.length) return;
+
+  // create modal
+  const modal = document.createElement('div');
+  modal.className = 'embed-modal hidden';
+  modal.id = 'embedModal';
+  modal.innerHTML = `
+    <div class="embed-shell">
+      <button class="embed-close" aria-label="Close preview">Close</button>
+      <iframe class="embed-iframe" src="about:blank" title="Project preview" sandbox></iframe>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const iframe = modal.querySelector('.embed-iframe');
+  const closeBtn = modal.querySelector('.embed-close');
+
+  function openEmbed(url){
+    iframe.src = url;
+    modal.classList.remove('hidden');
+  }
+
+  function closeEmbed(){
+    iframe.src = 'about:blank';
+    modal.classList.add('hidden');
+  }
+
+  closeBtn.addEventListener('click', closeEmbed);
+  modal.addEventListener('click', (ev)=>{
+    if (ev.target === modal) closeEmbed();
+  });
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeEmbed(); });
+
+  projects.forEach((project)=>{
+    // add hover hint badge
+    const hint = document.createElement('div');
+    hint.className = 'project-hint';
+    hint.textContent = 'Click card to open';
+    project.appendChild(hint);
+
+    project.addEventListener('click', (ev)=>{
+      // allow direct link clicks to behave normally
+      if (ev.target.closest('a')) return;
+
+      // find a live/external link first (not github)
+      const links = Array.from(project.querySelectorAll('.project-actions a[href]'));
+      const external = links.find(a=>/https?:\/\//i.test(a.href) && !/github.com/i.test(a.href));
+      const first = external || links[0];
+      if (!first) return;
+
+      // if first is github, open in new tab; else embed
+      if (/github.com/i.test(first.href)){
+        window.open(first.href, '_blank', 'noreferrer');
+        return;
+      }
+
+      // embed the external link
+      openEmbed(first.href);
+    });
+  });
+})();
