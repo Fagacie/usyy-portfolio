@@ -167,13 +167,27 @@ if (contactForm && formHint) {
   });
 }
 
-// Initialize lightweight hero visual if present
+/* ── Copy email to clipboard ── */
 (function(){
-  const script = document.createElement('script');
-  script.src = 'js/hero-visual.js';
-  script.defer = true;
-  document.body.appendChild(script);
+  const emailLink = document.querySelector('a[href^="mailto:"]');
+  if (!emailLink) return;
+  emailLink.addEventListener('click', function(e){
+    e.preventDefault();
+    const email = this.href.replace('mailto:', '');
+    navigator.clipboard.writeText(email).then(() => {
+      const original = this.querySelector('span')?.textContent || email;
+      const span = this.querySelector('span');
+      if (span) {
+        span.textContent = '✓ Copied!';
+        setTimeout(() => { span.textContent = original; }, 2000);
+      }
+    }).catch(() => {
+      // fallback: open mail client
+      window.location.href = this.href;
+    });
+  });
 })();
+
 const slider = document.getElementById("timelineScroll");
 
 let isDown = false;

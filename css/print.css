@@ -1,0 +1,105 @@
+/* ── Print Stylesheet ── */
+@media print {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* Hide non-essential UI */
+  .header,
+  .footer,
+  .scroll-progress,
+  .skip-link,
+  .nav-toggle,
+  .filter-btn,
+  .project-toolbar,
+  .project-insight,
+  .hero-photo-wrap,
+  .pcard-links,
+  .timeline-hint,
+  .avail-badge,
+  .hero-actions .btn-secondary {
+    display: none !important;
+  }
+
+  /* Remove backgrounds and borders for print */
+  .hero,
+  .section,
+  .pcard,
+  .card,
+  .skill-group,
+  .timeline-item,
+  .contact-section,
+  .contact-info-box {
+    background: transparent !important;
+    border: 1px solid #ddd !important;
+    color: #111 !important;
+  }
+
+  /* Force single column layout */
+  .hero,
+  .about-grid,
+  .project-grid,
+  .skills-grid,
+  .contact-layout,
+  .section-head.split {
+    grid-template-columns: 1fr !important;
+    gap: 12pt !important;
+  }
+
+  /* Reset link colours */
+  a { color: #1a4a8f !important; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #555; }
+  a[href^="#"]::after,
+  a[href^="tel:"]::after { content: ""; }
+
+  /* Headings */
+  h1 { font-size: 22pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 13pt; }
+
+  /* Keep text readable */
+  .pcard-title,
+  .pcard-desc,
+  .pcard-points li,
+  .muted,
+  .eyebrow {
+    color: #333 !important;
+  }
+
+  .eyebrow { color: #555 !important; }
+
+  /* Chips in print */
+  .skchip,
+  .pchip {
+    background: #f0f0f0 !important;
+    border: 1px solid #ccc !important;
+    color: #333 !important;
+  }
+
+  /* Page breaks */
+  .section { page-break-before: auto; }
+  .pcard,
+  .timeline-item { page-break-inside: avoid; }
+
+  /* Timeline horizontal → vertical */
+  .timeline-wrapper { overflow: visible !important; }
+  .timeline {
+    flex-direction: column !important;
+    gap: 12pt !important;
+  }
+  .timeline-item {
+    min-width: auto !important;
+    max-width: 100% !important;
+  }
+}
