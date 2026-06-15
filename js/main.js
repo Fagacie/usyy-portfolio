@@ -17,6 +17,33 @@ if (year) {
   updateProgress();
 })();
 
+/* ── Typewriter animation on hero H1 ── */
+(function(){
+  const h1 = document.querySelector('h1[data-typewriter]');
+  if (!h1) return;
+
+  const text = h1.getAttribute('aria-label') || '';
+  if (!text) return;
+
+  let i = 0;
+  h1.textContent = '';
+  h1.classList.add('typing');
+
+  // Small delay so the page renders first
+  setTimeout(function type(){
+    if (i < text.length){
+      h1.textContent += text[i];
+      i++;
+      // Slight random jitter (40-70ms) for a realistic feel
+      setTimeout(type, 45 + Math.random() * 30);
+    } else {
+      // Done — swap class so cursor fades out
+      h1.classList.remove('typing');
+      h1.classList.add('done');
+    }
+  }, 320);
+})();
+
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -78,6 +105,72 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((element) => {
   revealObserver.observe(element);
 });
+
+/* ── Stagger animation engine ── */
+(function(){
+  // Map: parent selector → child selector → animation class
+  const groups = [
+    { parent: '.about-grid',    child: '.about-card',    cls: 'stagger-child', gap: 80  },
+    { parent: '.project-grid',  child: '.pcard',         cls: 'stagger-child', gap: 90  },
+    { parent: '.skills-grid',   child: '.skill-group',   cls: 'stagger-child', gap: 70  },
+    { parent: '.timeline',      child: '.timeline-item', cls: 'stagger-left',  gap: 100 },
+    { parent: '.contact-links', child: 'a',              cls: 'stagger-child', gap: 80  },
+  ];
+
+  const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const children = entry.target._staggerChildren;
+      if (!children) return;
+      children.forEach((el, i) => {
+        el.style.setProperty('--stagger-delay', Math.min(i * entry.target._staggerGap, 560) + 'ms');
+        // Small rAF so the browser registers the initial hidden state first
+        requestAnimationFrame(() => el.classList.add('s-visible'));
+      });
+      staggerObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.08 });
+
+  groups.forEach(({ parent, child, cls, gap }) => {
+    document.querySelectorAll(parent).forEach(container => {
+      const children = Array.from(container.querySelectorAll(child));
+      if (!children.length) return;
+      children.forEach(el => el.classList.add(cls));
+      container._staggerChildren = children;
+      container._staggerGap = gap;
+      staggerObserver.observe(container);
+    });
+  });
+
+  // Section heading cascade: eyebrow → h2 → p
+  document.querySelectorAll('.section-head').forEach(head => {
+    const eyebrow = head.querySelector('.eyebrow');
+    const h2 = head.querySelector('h2');
+    const p = head.querySelector('p:not(.eyebrow)');
+    if (eyebrow) eyebrow.classList.add('section-eyebrow-anim');
+    if (h2) h2.classList.add('section-h2-anim');
+    if (p) p.classList.add('section-p-anim');
+
+    const headObserver = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      [eyebrow, h2, p].forEach(el => { if (el) el.classList.add('s-visible'); });
+      headObserver.disconnect();
+    }, { threshold: 0.15 });
+    headObserver.observe(head);
+  });
+
+  // Contact info box
+  const infoBox = document.querySelector('.contact-info-box');
+  if (infoBox) {
+    infoBox.classList.add('contact-box-anim');
+    new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      infoBox.classList.add('s-visible');
+    }, { threshold: 0.1 }).observe(infoBox);
+  }
+})();
+
+
 
 const aboutCards = document.querySelectorAll(".about-card");
 const aboutSignal = document.getElementById("aboutSignal");
