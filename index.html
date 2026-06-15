@@ -145,170 +145,231 @@
 
       <div class="project-grid" id="projectGrid">
 
-        <article class="project card" tabindex="0" data-tags="java web live" data-summary="Final Year Project / E-learning platform / Java / MySQL / Docker / Live Demo">
-  <div class="project-top">
-    <div class="project-labels">
-      <p class="pill fyp-pill">⭐ Final Year Project</p>
-      <span class="project-code">JSP / Servlet</span>
-    </div>
-    <h3>PSM E-Learning Management System</h3>
-    <p class="project-desc">
-      Scalable e-learning platform for managing courses, student enrollment, assessments, and secure online payments.
-    </p>
-  </div>
+        <!-- ── Card 1: PSM ELMS (FYP) ─────────────────────────── -->
+        <article class="pcard" tabindex="0"
+          data-tags="java web live"
+          data-summary="Final Year Project / E-learning platform / Java / MySQL / Docker / Live Demo">
 
-  <ul class="project-points">
-    <li>Implemented authentication and role-based access for students, instructors and administrators</li>
-    <li>Developed course management system with materials, assignments, and assessments</li>
-    <li>Integrated payment gateway for secure online transactions</li>
-    <li>Built backend using Java JSP/Servlet with MySQL database</li>
-    <li>Containerized and deployed the application using Docker for improved portability and scalability.</li>
-  </ul>
+          <div class="pcard-header">
+            <span class="pcard-badge pcard-badge--fyp">⭐ Final Year Project</span>
+            <span class="pcard-stack">JSP / Servlet</span>
+          </div>
 
-  <div class="project-meta">
-    <span>Java</span>
-    <span>JSP/Servlet</span>
-    <span>MySQL</span>
-    <span>Payment Gateway</span>
-    <span>Docker</span>
-  </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">PSM E-Learning Management System</h3>
+            <p class="pcard-desc">Scalable e-learning platform for managing courses, student enrollment, assessments, and secure online payments.</p>
+            <ul class="pcard-points">
+              <li>Implemented authentication and role-based access for students, instructors and administrators</li>
+              <li>Developed course management system with materials, assignments, and assessments</li>
+              <li>Integrated payment gateway for secure online transactions</li>
+              <li>Built backend using Java JSP/Servlet with MySQL database</li>
+              <li>Containerized and deployed the application using Docker for improved portability and scalability</li>
+            </ul>
+          </div>
 
-  <div class="project-actions">
-    <a class="text-btn" href="https://psmels.software/landing" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Live Demo</span></a>
-    <a class="text-btn" href="https://github.com/Fagacie/psm-elms" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
-  </div>
-</article>
-
-        <article class="project card" tabindex="0" data-tags="live iot" data-summary="Water level, temperature, humidity, and air pressure / ThingSpeak API / Custom dashboard">
-          <div class="project-top">
-            <div class="project-labels">
-              <p class="pill">Live IoT</p>
-              <span class="project-code">ThingSpeak API</span>
+          <div class="pcard-footer">
+            <div class="pcard-chips">
+              <span class="pchip">Java</span>
+              <span class="pchip">JSP/Servlet</span>
+              <span class="pchip">MySQL</span>
+              <span class="pchip">Payment Gateway</span>
+              <span class="pchip pchip--docker">Docker</span>
             </div>
-            <h3>IoT-Based Environmental Monitoring</h3>
-            <p class="project-desc">
-              Custom dashboard for sensor readings sent to ThingSpeak and displayed through its API.
-            </p>
-          </div>
-          <ul class="project-points">
-            <li>Tracked water level, temperature, humidity, and air pressure</li>
-            <li>Sent sensor data to ThingSpeak and displayed it on a custom dashboard</li>
-          </ul>
-          <div class="project-meta">
-            <span>MicroPython</span>
-            <span>ThingSpeak API</span>
-            <span>Raspberry Pi Pico W</span>
-            <span>ThingSpeak</span>
-          </div>
-          <div class="project-actions">
-            <a class="text-btn" href="https://campus-iot.me/" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Live dashboard</span></a>
-            <a class="text-btn" href="https://github.com/Fagacie/IoT-Environmental-Monitor.git" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+            <div class="pcard-links">
+              <a class="pcard-link pcard-link--primary" href="https://psmels.software/landing" target="_blank" rel="noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/psm-elms" target="_blank" rel="noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="project card" tabindex="0" data-tags="java github" data-summary="Healthcare workflow / Java / MySQL">
-          <div class="project-top">
-            <div class="project-labels">
-              <p class="pill muted-pill">Java</p>
-              <span class="project-code">JSP / MySQL</span>
+        <!-- ── Card 2: IoT Monitoring ──────────────────────────── -->
+        <article class="pcard" tabindex="0"
+          data-tags="live iot"
+          data-summary="Water level, temperature, humidity, and air pressure / ThingSpeak API / Custom dashboard">
+
+          <div class="pcard-header">
+            <span class="pcard-badge pcard-badge--live">Live IoT</span>
+            <span class="pcard-stack">ThingSpeak API</span>
+          </div>
+
+          <div class="pcard-body">
+            <h3 class="pcard-title">IoT-Based Environmental Monitoring</h3>
+            <p class="pcard-desc">Custom dashboard for real-time sensor readings via ThingSpeak API — water level, temperature, humidity, and air pressure.</p>
+            <ul class="pcard-points">
+              <li>Tracked water level, temperature, humidity, and air pressure in real time</li>
+              <li>Sent sensor data to ThingSpeak and displayed it on a custom dashboard</li>
+            </ul>
+          </div>
+
+          <div class="pcard-footer">
+            <div class="pcard-chips">
+              <span class="pchip">MicroPython</span>
+              <span class="pchip">ThingSpeak API</span>
+              <span class="pchip">Raspberry Pi Pico W</span>
             </div>
-            <h3>PKU Management System</h3>
-            <p class="project-desc">
-              System for managing patients, appointments, billing, and staff with role-based access.
-            </p>
-          </div>
-          <ul class="project-points">
-            <li>Managed patients, appointments, billing, and staff</li>
-            <li>Implemented role-based access workflows</li>
-          </ul>
-          <div class="project-meta">
-            <span>Java</span>
-            <span>MySQL</span>
-            <span>JSP/Servlets</span>
-          </div>
-          <div class="project-actions">
-            <a class="text-btn" href="https://github.com/Fagacie/pkumanagementsystem.git" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+            <div class="pcard-links">
+              <a class="pcard-link pcard-link--primary" href="https://campus-iot.me/" target="_blank" rel="noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Dashboard
+              </a>
+              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/IoT-Environmental-Monitor.git" target="_blank" rel="noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="project card" tabindex="0" data-tags="github java" data-summary="Recipe CRUD / Spring Boot / MySQL">
-          <div class="project-top">
-            <div class="project-labels">
-              <p class="pill muted-pill">Full Stack</p>
-              <span class="project-code">Spring Boot</span>
+        <!-- ── Card 3: PKU Management ──────────────────────────── -->
+        <article class="pcard" tabindex="0"
+          data-tags="java github"
+          data-summary="Healthcare workflow / Java / MySQL">
+
+          <div class="pcard-header">
+            <span class="pcard-badge pcard-badge--muted">Java</span>
+            <span class="pcard-stack">JSP / MySQL</span>
+          </div>
+
+          <div class="pcard-body">
+            <h3 class="pcard-title">PKU Management System</h3>
+            <p class="pcard-desc">System for managing patients, appointments, billing, and staff with role-based access control.</p>
+            <ul class="pcard-points">
+              <li>Managed patients, appointments, billing, and staff records</li>
+              <li>Implemented role-based access workflows across user types</li>
+            </ul>
+          </div>
+
+          <div class="pcard-footer">
+            <div class="pcard-chips">
+              <span class="pchip">Java</span>
+              <span class="pchip">MySQL</span>
+              <span class="pchip">JSP/Servlets</span>
             </div>
-            <h3>Masakjerr System</h3>
-            <p class="project-desc">
-              Full-stack CRUD application for managing recipes and user data.
-            </p>
-          </div>
-          <ul class="project-points">
-            <li>Built CRUD features for recipes and user data</li>
-            <li>Designed backend services and database structure</li>
-          </ul>
-          <div class="project-meta">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>MySQL</span>
-          </div>
-          <div class="project-actions">
-            <a class="text-btn" href="https://github.com/Fagacie/masakjerr-project1.git" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+            <div class="pcard-links">
+              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/pkumanagementsystem.git" target="_blank" rel="noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="project card" tabindex="0" data-tags="live api" data-summary="Weather API / JavaScript / Firebase">
-          <div class="project-top">
-            <div class="project-labels">
-              <p class="pill">Live API</p>
-              <span class="project-code">Firebase</span>
+        <!-- ── Card 4: Masakjerr ───────────────────────────────── -->
+        <article class="pcard" tabindex="0"
+          data-tags="github java"
+          data-summary="Recipe CRUD / Spring Boot / MySQL">
+
+          <div class="pcard-header">
+            <span class="pcard-badge pcard-badge--muted">Full Stack</span>
+            <span class="pcard-stack">Spring Boot</span>
+          </div>
+
+          <div class="pcard-body">
+            <h3 class="pcard-title">Masakjerr System</h3>
+            <p class="pcard-desc">Full-stack CRUD application for managing recipes and user data with a Spring Boot backend and MySQL database.</p>
+            <ul class="pcard-points">
+              <li>Built CRUD features for recipes and user data</li>
+              <li>Designed backend services and relational database structure</li>
+            </ul>
+          </div>
+
+          <div class="pcard-footer">
+            <div class="pcard-chips">
+              <span class="pchip">Java</span>
+              <span class="pchip">Spring Boot</span>
+              <span class="pchip">MySQL</span>
             </div>
-            <h3>WeatherHub</h3>
-            <p class="project-desc">
-              Weather application using REST APIs, responsive interface, and Firebase Hosting.
-            </p>
-          </div>
-          <ul class="project-points">
-            <li>Integrated APIs for real-time weather data</li>
-            <li>Deployed responsive interface with Firebase Hosting</li>
-          </ul>
-          <div class="project-meta">
-            <span>JavaScript</span>
-            <span>REST API</span>
-            <span>Firebase</span>
-          </div>
-          <div class="project-actions">
-            <a class="text-btn" href="https://weather-hub-9c3f8.web.app/" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Live demo</span></a>
+            <div class="pcard-links">
+              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/masakjerr-project1.git" target="_blank" rel="noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="project card" tabindex="0" data-tags="live web github" data-summary="First project / Football news homepage and player page">
-          <div class="project-top">
-            <div class="project-labels">
-              <p class="pill">Live Web</p>
-              <span class="project-code">HTML / CSS / JS</span>
+        <!-- ── Card 5: WeatherHub ──────────────────────────────── -->
+        <article class="pcard" tabindex="0"
+          data-tags="live api"
+          data-summary="Weather API / JavaScript / Firebase">
+
+          <div class="pcard-header">
+            <span class="pcard-badge pcard-badge--live">Live API</span>
+            <span class="pcard-stack">Firebase</span>
+          </div>
+
+          <div class="pcard-body">
+            <h3 class="pcard-title">WeatherHub</h3>
+            <p class="pcard-desc">Weather application fetching real-time data via REST APIs with a responsive interface deployed on Firebase Hosting.</p>
+            <ul class="pcard-points">
+              <li>Integrated REST APIs for real-time weather data retrieval</li>
+              <li>Deployed responsive interface with Firebase Hosting</li>
+            </ul>
+          </div>
+
+          <div class="pcard-footer">
+            <div class="pcard-chips">
+              <span class="pchip">JavaScript</span>
+              <span class="pchip">REST API</span>
+              <span class="pchip">Firebase</span>
             </div>
-            <h3>Elite Soccer Feed</h3>
-            <p class="project-desc">
-              Football news website built as my first project, focused on a homepage and player page experience.
-            </p>
-          </div>
-          <ul class="project-points">
-            <li>Created the homepage layout for football news browsing</li>
-            <li>Built a player page using HTML, CSS, and JavaScript</li>
-          </ul>
-          <div class="project-meta">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Vercel</span>
-          </div>
-          <div class="project-actions">
-            <a class="text-btn" href="https://elitesoccerfeed.vercel.app/" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Live site</span></a>
-            <a class="text-btn" href="https://github.com/Fagacie/ESFhomepage.git" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+            <div class="pcard-links">
+              <a class="pcard-link pcard-link--primary" href="https://weather-hub-9c3f8.web.app/" target="_blank" rel="noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
           </div>
         </article>
+
+        <!-- ── Card 6: Elite Soccer Feed ──────────────────────── -->
+        <article class="pcard" tabindex="0"
+          data-tags="live web github"
+          data-summary="First project / Football news homepage and player page">
+
+          <div class="pcard-header">
+            <span class="pcard-badge pcard-badge--live">Live Web</span>
+            <span class="pcard-stack">HTML / CSS / JS</span>
+          </div>
+
+          <div class="pcard-body">
+            <h3 class="pcard-title">Elite Soccer Feed</h3>
+            <p class="pcard-desc">Football news website — my first full project, featuring a homepage layout and detailed player pages built from scratch.</p>
+            <ul class="pcard-points">
+              <li>Created the homepage layout for football news browsing</li>
+              <li>Built a player page using HTML, CSS, and JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="pcard-footer">
+            <div class="pcard-chips">
+              <span class="pchip">HTML</span>
+              <span class="pchip">CSS</span>
+              <span class="pchip">JavaScript</span>
+              <span class="pchip">Vercel</span>
+            </div>
+            <div class="pcard-links">
+              <a class="pcard-link pcard-link--primary" href="https://elitesoccerfeed.vercel.app/" target="_blank" rel="noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Site
+              </a>
+              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/ESFhomepage.git" target="_blank" rel="noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
-    </section>
+
+    
 
     <section class="section container reveal" id="skills">
       <div class="section-head split">

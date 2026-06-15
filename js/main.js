@@ -91,7 +91,7 @@ if (aboutCards.length && aboutSignal) {
 }
 
 const filterButtons = document.querySelectorAll(".filter-btn");
-const projects = document.querySelectorAll(".project");
+const projects = document.querySelectorAll(".pcard");
 const projectCount = document.getElementById("projectCount");
 const projectInsight = document.getElementById("projectInsight");
 const defaultProjectInsight = projectInsight?.textContent || "";
@@ -112,7 +112,6 @@ function clearActiveProject() {
 
 function updateProjectCount() {
   if (!projectCount) return;
-
   const visibleCount = Array.from(projects).filter((project) => !project.hidden).length;
   projectCount.textContent = `${visibleCount} ${visibleCount === 1 ? "project" : "projects"}`;
 }
@@ -120,16 +119,13 @@ function updateProjectCount() {
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
-
     filterButtons.forEach((item) => item.classList.remove("active"));
     button.classList.add("active");
-
     projects.forEach((project) => {
       const tags = project.dataset.tags || "";
       const shouldShow = filter === "all" || tags.includes(filter);
       project.hidden = !shouldShow;
     });
-
     clearActiveProject();
     updateProjectCount();
   });
@@ -192,67 +188,22 @@ slider.addEventListener("mousemove", (e) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
-/* Project card embed behavior and hover hint */
+/* Project card click — open external link in new tab (no embed modal, no hint badge) */
 (function(){
-  const projects = document.querySelectorAll('.project');
-  if (!projects.length) return;
+  const pcards = document.querySelectorAll('.pcard');
+  if (!pcards.length) return;
 
-  // create modal
-  const modal = document.createElement('div');
-  modal.className = 'embed-modal hidden';
-  modal.id = 'embedModal';
-  modal.innerHTML = `
-    <div class="embed-shell">
-      <button class="embed-close" aria-label="Close preview">Close</button>
-      <iframe class="embed-iframe" src="about:blank" title="Project preview" sandbox></iframe>
-    </div>
-  `;
-  document.body.appendChild(modal);
-
-  const iframe = modal.querySelector('.embed-iframe');
-  const closeBtn = modal.querySelector('.embed-close');
-
-  function openEmbed(url){
-    iframe.src = url;
-    modal.classList.remove('hidden');
-  }
-
-  function closeEmbed(){
-    iframe.src = 'about:blank';
-    modal.classList.add('hidden');
-  }
-
-  closeBtn.addEventListener('click', closeEmbed);
-  modal.addEventListener('click', (ev)=>{
-    if (ev.target === modal) closeEmbed();
-  });
-  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeEmbed(); });
-
-  projects.forEach((project)=>{
-    // add hover hint badge
-    const hint = document.createElement('div');
-    hint.className = 'project-hint';
-    hint.textContent = 'Click card to open';
-    project.appendChild(hint);
-
-    project.addEventListener('click', (ev)=>{
+  pcards.forEach((card)=>{
+    card.addEventListener('click', (ev)=>{
       // allow direct link clicks to behave normally
       if (ev.target.closest('a')) return;
 
       // find a live/external link first (not github)
-      const links = Array.from(project.querySelectorAll('.project-actions a[href]'));
+      const links = Array.from(card.querySelectorAll('.pcard-links a[href]'));
       const external = links.find(a=>/https?:\/\//i.test(a.href) && !/github.com/i.test(a.href));
       const first = external || links[0];
       if (!first) return;
-
-      // if first is github, open in new tab; else embed
-      if (/github.com/i.test(first.href)){
-        window.open(first.href, '_blank', 'noreferrer');
-        return;
-      }
-
-      // embed the external link
-      openEmbed(first.href);
+      window.open(first.href, '_blank', 'noreferrer');
     });
   });
 })();
