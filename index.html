@@ -30,13 +30,13 @@
 </head>
 
 <body>
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="header" id="top">
     <nav class="nav container" aria-label="Primary navigation">
       <a href="#top" class="logo" aria-label="Abbas Usman Adamu home">
-        
-        <span><h3>Abbas Usman Adamu</h3></span>
+        <span class="logo-name">Abbas Usman Adamu</span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -58,7 +58,7 @@
   <main id="main">
     <section class="hero container" aria-labelledby="hero-heading">
       <div class="hero-copy">
-        <p class="eyebrow">Final Year Software Engineering Student</p>
+        <p class="eyebrow">Final Year Software Engineering Student &nbsp;<span class="avail-badge"><span class="avail-dot"></span>Available Aug 2026</span></p>
         <h1 id="hero-heading">Backend systems, IoT applications, and full-stack development</h1>
         <p>Abbas Usman Adamu — focused on scalable backend architecture, real-time IoT systems, and API-driven applications using Java, Spring Boot, and modern web technologies.</p>
         <div class="hero-actions" aria-label="Primary actions">
@@ -81,7 +81,7 @@
     <section class="section container reveal" id="about">
       <div class="section-head">
         <p class="eyebrow">About</p>
-        <h2>Final-year Software Engineering student at UMT.</h2>
+        <h2>Final-year Software Engineering student at UMT</h2>
         <p>
           My work focuses on backend systems, IoT applications, API integration, and full-stack development.
         </p>
@@ -120,10 +120,9 @@
       <div class="section-head split">
         <div>
           <p class="eyebrow">Projects</p>
-          <p>
-          A selection of projects showcasing my skills in backend development, IoT systems, and full-stack web applications.
+          <h2>Projects.</h2>
+          <p>A selection of projects showcasing my skills in backend development, IoT systems, and full-stack web applications.</p>
         </div>
-        
       </div>
 
       <div class="project-toolbar">
@@ -135,7 +134,7 @@
           <button class="filter-btn" data-filter="java">Java</button>
           <button class="filter-btn" data-filter="web">Web</button>
         </div>
-        <p class="project-count" id="projectCount">5 projects</p>
+        <p class="project-count" id="projectCount">6 projects</p>
       </div>
 
       <div class="project-insight" aria-live="polite">
@@ -374,63 +373,85 @@
     <section class="section container reveal" id="skills">
       <div class="section-head split">
         <div>
-          <p class="eyebrow">Technical Skills</p>
-          <h2>Technical skills.</h2>
+          <p class="eyebrow">Skills</p>
+          <h2>Skills &amp; Technologies</h2>
         </div>
         <p>
-          Technical skills developed through academic projects, personal projects, and real-world system development.
+          Built through academic projects, personal builds, and real-world system development.
         </p>
       </div>
 
       <div class="skills-grid">
         <article class="skill-group" data-category="languages">
           <div class="skill-header">
-            <span class="skill-icon">{ }</span>
+            <span class="skill-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
             <h3>Languages</h3>
           </div>
-          <p>Java, JavaScript, Python, MicroPython</p>
+          <div class="skill-chips">
+            <span class="skchip">Java</span>
+            <span class="skchip">JavaScript</span>
+            <span class="skchip">Python</span>
+            <span class="skchip">MicroPython</span>
+          </div>
         </article>
         <article class="skill-group" data-category="backend">
           <div class="skill-header">
-            <span class="skill-icon">⚙</span>
+            <span class="skill-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
             <h3>Backend</h3>
           </div>
-          <p>Spring Boot, JSP/Servlets, REST APIs, Docker</p>
+          <div class="skill-chips">
+            <span class="skchip">Spring Boot</span>
+            <span class="skchip">JSP/Servlets</span>
+            <span class="skchip">REST APIs</span>
+            <span class="skchip">Docker</span>
+          </div>
         </article>
         <article class="skill-group" data-category="frontend">
           <div class="skill-header">
-            <span class="skill-icon">◆</span>
+            <span class="skill-icon"><i class="fa-solid fa-desktop" aria-hidden="true"></i></span>
             <h3>Frontend</h3>
           </div>
-          <p>HTML, CSS, Bootstrap, Responsive UI</p>
+          <div class="skill-chips">
+            <span class="skchip">HTML</span>
+            <span class="skchip">CSS</span>
+            <span class="skchip">Bootstrap</span>
+            <span class="skchip">Responsive UI</span>
+          </div>
         </article>
         <article class="skill-group" data-category="data">
           <div class="skill-header">
-            <span class="skill-icon">◉</span>
+            <span class="skill-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
             <h3>Data</h3>
           </div>
-          <p>MySQL, SQL, ERD</p>
+          <div class="skill-chips">
+            <span class="skchip">MySQL</span>
+            <span class="skchip">SQL</span>
+            <span class="skchip">ERD</span>
+          </div>
         </article>
         <article class="skill-group" data-category="iot">
           <div class="skill-header">
-            <span class="skill-icon">◆</span>
+            <span class="skill-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></span>
             <h3>IoT</h3>
           </div>
-          <p>MQTT, Raspberry Pi Pico W, ThingSpeak</p>
+          <div class="skill-chips">
+            <span class="skchip">MQTT</span>
+            <span class="skchip">Raspberry Pi Pico W</span>
+            <span class="skchip">ThingSpeak</span>
+          </div>
         </article>
         <article class="skill-group" data-category="tools">
           <div class="skill-header">
-            <span class="skill-icon">⚒</span>
+            <span class="skill-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></span>
             <h3>Tools</h3>
           </div>
-          <p>Git, Docker, Firebase Hosting, JUnit, Selenium</p>
-        </article>
-        <article class="skill-group" data-category="languages">
-          <div class="skill-header">
-            <span class="skill-icon">◊</span>
-            <h3>Languages Spoken</h3>
+          <div class="skill-chips">
+            <span class="skchip">Git</span>
+            <span class="skchip">Docker</span>
+            <span class="skchip">Firebase</span>
+            <span class="skchip">JUnit</span>
+            <span class="skchip">Selenium</span>
           </div>
-          <p>English, Hausa, Malay, Arabic</p>
         </article>
       </div>
     </section>
@@ -486,6 +507,7 @@
       </article>
 
     </div>
+    <p class="timeline-hint"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i> Scroll to explore</p>
   </div>
 </section>
 
@@ -499,8 +521,8 @@
           </p>
           <div class="contact-links">
             <a href="mailto:abbasusman561@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span>abbasusman561@gmail.com</span></a>
-            <a href="tel:+601157740062"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+60 1157740062</span></a>
-            <a href="https://wa.me/60115774062?text=Hello%20Abbas,%20I%20would%20like%20to%20discuss%20a%20project%20opportunity." target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+            <a href="tel:+601157740062"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+60 115 774 0062</span></a>
+            <a href="https://wa.me/60115774062?text=Hello%20Abbas,%20I%20would%20like%20to%20discuss%20a%20project%20opportunity." target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Message on WhatsApp</span></a>
           </div>
         </div>
 
@@ -510,7 +532,7 @@
             I'm always interested in hearing about new projects, challenges, and opportunities. Whether you need a backend engineer, full-stack developer, or IoT specialist, I'm ready to collaborate.
           </p>
           <p>
-            <strong>Response time:</strong> I typically get back within 24 hours.
+            <i class="fa-regular fa-clock" aria-hidden="true" style="color:var(--accent);margin-right:6px;"></i><strong>Response time:</strong> I typically get back within 24 hours.
           </p>
           <p>
             You can also connect with me on <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a> or <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>.
@@ -521,9 +543,24 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Abbas Usman Adamu</p>
-      <a href="#top">Back to top</a>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-bottom">
+        <div class="footer-credit">
+          <p>&copy; <span id="year"></span> Abbas Usman Adamu</p>
+          <p class="footer-tagline">Software Engineering Student &middot; UMT</p>
+        </div>
+        <a href="#top" class="footer-top-btn" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+          Back to top
+        </a>
+      </div>
     </div>
   </footer>
 

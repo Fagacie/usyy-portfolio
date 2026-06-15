@@ -3,6 +3,20 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+/* ── Scroll progress bar ── */
+(function(){
+  const bar = document.getElementById("scrollProgress");
+  if (!bar) return;
+  function updateProgress(){
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct.toFixed(2) + "%";
+  }
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
+})();
+
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 
