@@ -99,7 +99,7 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.14 }
+  { threshold: 0.02 }
 );
 
 document.querySelectorAll(".reveal").forEach((element) => {
@@ -129,7 +129,7 @@ document.querySelectorAll(".reveal").forEach((element) => {
       });
       staggerObserver.unobserve(entry.target);
     });
-  }, { threshold: 0.08 });
+  }, { threshold: 0.02 });
 
   groups.forEach(({ parent, child, cls, gap }) => {
     document.querySelectorAll(parent).forEach(container => {
@@ -155,7 +155,7 @@ document.querySelectorAll(".reveal").forEach((element) => {
       if (!entry.isIntersecting) return;
       [eyebrow, h2, p].forEach(el => { if (el) el.classList.add('s-visible'); });
       headObserver.disconnect();
-    }, { threshold: 0.15 });
+    }, { threshold: 0.05 });
     headObserver.observe(head);
   });
 
