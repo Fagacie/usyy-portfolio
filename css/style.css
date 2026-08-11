@@ -1662,11 +1662,9 @@ h3 {
 }
 
 .mega-footer-text {
-  font-size: clamp(4rem, 11.5vw, 15rem);
-  /* Scaled down slightly to fit ABBAS USMAN */
+  font-size: clamp(3rem, 10vw, 15rem);
   font-weight: 900;
   line-height: 1.1;
-  /* Prevent vertical clipping of text descenders */
   white-space: nowrap;
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
@@ -1675,14 +1673,34 @@ h3 {
 
 [data-theme="light"] .mega-footer-text {
   -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
-  /* Much stronger visibility for light mode */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .mega-footer-text {
+    font-size: 15vw; /* Perfectly scale to viewport width */
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  }
+  
+  [data-theme="light"] .mega-footer-text {
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+  }
+
   .footer-bottom-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 30px;
+  }
+  
+  .mega-footer-copyright {
+    position: static;
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+  
+  .mega-footer-text-container {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
+    align-items: center;
   }
 }
 
