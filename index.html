@@ -81,8 +81,8 @@
       <div class="hero-visual" data-aos="zoom-in" data-aos-delay="400" aria-hidden="true">
         <div class="hero-image-wrapper">
           <div class="hero-glow"></div>
-          <img src="assets/img/profile.png" alt="Professional portrait of Abbas Usman Adamu"
-            class="hero-image" id="heroImg" />
+          <img src="assets/img/profile.png" alt="Professional portrait of Abbas Usman Adamu" class="hero-image"
+            id="heroImg" />
         </div>
 
         <div class="hero-socials" aria-label="External profile links">
@@ -296,9 +296,34 @@
          CONTACT CTA
     ═══════════════════════════════════════ -->
     <section class="section contact-section" data-aos="fade-up" id="contact">
-      <!-- 3D Globe Backdrop -->
-      <div class="contact-globe-container">
-        <canvas id="cobe-globe" width="1600" height="1600"></canvas>
+      <!-- 3D Art Backdrop -->
+      <div class="contact-3d-container">
+        <div class="abstract-core">
+          <div class="cube cube-1">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+          </div>
+          <div class="cube cube-2">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+          </div>
+          <div class="cube cube-3">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+          </div>
+        </div>
       </div>
 
       <!-- Content Overlay -->
@@ -330,51 +355,7 @@
   <script src="js/components.js"></script>
   <script src="js/main.js?v=11"></script>
 
-  <script type="module">
-    import createGlobe from "https://cdn.skypack.dev/cobe";
 
-    const canvas = document.getElementById("cobe-globe");
-    if (canvas) {
-      let phi = 0;
-      let scrollY = window.scrollY;
-
-      window.addEventListener('scroll', () => {
-        scrollY = window.scrollY;
-      }, { passive: true });
-
-      const globe = createGlobe(canvas, {
-        devicePixelRatio: 1,
-        width: 1600,
-        height: 1600,
-        phi: 0,
-        theta: 0.3,
-        dark: 1,
-        diffuse: 1.2,
-        mapSamples: 16000,
-        mapBrightness: 6,
-        baseColor: [0.1, 0.1, 0.12],
-        markerColor: [0.54, 0.89, 0.83],
-        glowColor: [0.15, 0.15, 0.18],
-        markers: [
-          { location: [5.3302, 103.1408], size: 0.1 }
-        ],
-        onRender: (state) => {
-          const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-          state.dark = isLight ? 0 : 1;
-          state.baseColor = isLight ? [0.9, 0.9, 0.9] : [0.1, 0.1, 0.12];
-          state.glowColor = isLight ? [0.9, 0.9, 0.9] : [0.15, 0.15, 0.18];
-
-          state.phi = phi + (scrollY * 0.002);
-          phi += 0.002;
-        }
-      });
-
-      // Fade in once loaded
-      setTimeout(() => {
-        canvas.classList.add("is-loaded");
-      }, 500);
-    }
-  </script>
 </body>
 
 </html>

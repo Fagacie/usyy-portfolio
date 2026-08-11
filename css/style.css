@@ -369,12 +369,15 @@ ul {
 @media (max-width: 800px) {
 
   .nav-links,
-  .nav-resume-btn {
+  .nav-actions {
     display: none;
   }
 
   .floating-nav {
-    padding: 8px 16px 8px 20px;
+    padding: 12px 16px 12px 20px;
+    width: calc(100% - 48px);
+    max-width: 400px;
+    justify-content: space-between;
   }
 
   .nav-toggle {
@@ -3480,8 +3483,10 @@ body.page-visible {
 .hero-image-wrapper::before {
   content: "";
   position: absolute;
-  inset: -2px; /* Border thickness */
-  border-radius: 26px; /* Slightly larger than image radius */
+  inset: -2px;
+  /* Border thickness */
+  border-radius: 26px;
+  /* Slightly larger than image radius */
   padding: 2px;
   background: conic-gradient(from 0deg, transparent 70%, var(--accent) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -3492,8 +3497,13 @@ body.page-visible {
 }
 
 @keyframes rotateStick {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .hero-glow {
@@ -3677,12 +3687,19 @@ body.page-visible {
   margin-top: 40px;
 }
 
+/* Peer-Dimming Hover Logic */
+.overview-connected-grid:has(.interactive-card:hover) .interactive-card:not(:hover) {
+  opacity: 0.4;
+  transform: scale(0.95);
+  filter: grayscale(0.5);
+}
+
 .connection-line {
   position: absolute;
   top: 50%;
   left: 10%;
   right: 10%;
-  height: 1px;
+  height: 2px;
   background: var(--line);
   z-index: 0;
   display: none;
@@ -3696,13 +3713,13 @@ body.page-visible {
 
 .connection-flow {
   height: 100%;
-  width: 30px;
-  background: var(--accent);
-  box-shadow: 0 0 10px var(--accent);
-  animation: flow 4s linear infinite;
+  width: 100px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  box-shadow: 0 0 20px var(--accent);
+  animation: flowPulse 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-@keyframes flow {
+@keyframes flowPulse {
   0% {
     transform: translateX(0);
     opacity: 0;
@@ -3723,33 +3740,51 @@ body.page-visible {
 }
 
 .interactive-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius);
   padding: 30px;
   position: relative;
   z-index: 1;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
 }
 
+.interactive-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--glass-glow-1), transparent 50%, var(--glass-glow-2));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
 .interactive-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent);
-  box-shadow: var(--shadow);
-  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-strong) 100%);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+  /* Let the ::before gradient show */
+}
+
+.interactive-card:hover::before {
+  opacity: 1;
 }
 
 .icard-icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--accent);
   margin-bottom: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .interactive-card:hover .icard-icon {
-  transform: scale(1.1);
+  transform: scale(1.15) translateY(-5px);
+  filter: drop-shadow(0 0 15px var(--accent));
 }
 
 .icard-indicator {
@@ -3767,10 +3802,18 @@ body.page-visible {
 }
 
 /* Featured Projects Redesign */
+/* Featured Projects Redesign */
 .featured-project-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 60px;
+}
+
+/* Peer-Dimming for Projects */
+.featured-project-list:has(.feat-project:hover) .feat-project:not(:hover) {
+  opacity: 0.3;
+  transform: scale(0.98);
+  filter: grayscale(0.6);
 }
 
 .feat-project {
@@ -3778,51 +3821,35 @@ body.page-visible {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   background: var(--glass-bg);
-  /* Glassmorphism */
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--glass-border);
-  /* Subtle border */
-  border-radius: 24px;
+  border-radius: 32px;
   overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
   text-decoration: none;
   color: var(--text);
   transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 /* Glowing Animated Border */
 .feat-project::before {
   content: '';
   position: absolute;
-  inset: -2px;
-  border-radius: 26px;
-  background: linear-gradient(45deg, transparent, var(--glass-glow-1), transparent, var(--glass-glow-2));
-  background-size: 200% 200%;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--glass-glow-1), transparent 50%, var(--glass-glow-2));
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.4s ease;
-  animation: borderRotate 4s linear infinite;
-}
-
-@keyframes borderRotate {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  transition: opacity 0.5s ease;
 }
 
 .feat-project:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--glass-hover-shadow);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
 }
 
 .feat-project:hover::before {
@@ -3830,18 +3857,20 @@ body.page-visible {
 }
 
 .feat-project-visual {
-  background: var(--surface-strong);
+  background: rgba(255, 255, 255, 0.02);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  border-right: 1px solid var(--glass-border);
 }
 
 .feat-project-content {
-  padding: 40px 40px 40px 0;
+  padding: 50px 50px 50px 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .feat-project-meta {
@@ -3902,16 +3931,19 @@ body.page-visible {
 
 /* Abstract UI for PSM */
 .abstract-ui {
-  width: 80%;
-  height: 70%;
-  background: var(--bg);
+  width: 75%;
+  height: 65%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--ui-shadow);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.6s ease;
   animation: floatUI 6s ease-in-out infinite;
+  transform-style: preserve-3d;
 }
 
 @keyframes floatUI {
@@ -3920,7 +3952,7 @@ body.page-visible {
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 
   100% {
@@ -3929,37 +3961,52 @@ body.page-visible {
 }
 
 .feat-project:hover .abstract-ui {
-  /* Combine VanillaTilt parallax translateZ with scale */
-  transform: scale(1.05) translateZ(30px);
-  box-shadow: var(--ui-shadow-hover);
+  transform: scale(1.05) translateZ(40px) rotateX(5deg) rotateY(-5deg);
+  box-shadow: -20px 30px 50px rgba(139, 227, 212, 0.15);
 }
 
 .ui-nav {
-  height: 20px;
-  background: var(--line);
+  height: 24px;
+  background: rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid var(--glass-border);
+  border-radius: 12px 12px 0 0;
 }
 
 .ui-body {
-  padding: 10px;
+  padding: 16px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
+  transform-style: preserve-3d;
 }
 
 .ui-card {
   width: 45%;
   height: 40px;
-  background: var(--surface);
-  border-radius: 4px;
+  background: var(--surface-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.feat-project:hover .ui-card {
+  transform: translateZ(20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .ui-qr {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: repeating-linear-gradient(45deg, var(--accent) 0 2px, transparent 2px 4px);
-  border: 2px solid var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
   margin-left: auto;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.feat-project:hover .ui-qr {
+  transform: translateZ(30px) rotate(10deg);
+  box-shadow: 0 0 20px rgba(139, 227, 212, 0.3);
 }
 
 /* Abstract IoT for Campus */
@@ -3978,28 +4025,35 @@ body.page-visible {
   border-radius: 50%;
   position: absolute;
   box-shadow: 0 0 10px transparent;
-  animation: nodePulse 3s infinite alternate;
+  animation: nodePulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @keyframes nodePulse {
   to {
-    box-shadow: 0 0 20px var(--node-glow);
+    box-shadow: 0 0 25px var(--accent);
   }
 }
 
 .iot-node.core {
-  width: 40px;
-  height: 40px;
-  background: var(--surface);
+  width: 44px;
+  height: 44px;
+  background: var(--surface-strong);
   border: 2px solid var(--accent);
   z-index: 2;
   transform: translateZ(20px);
 }
 
+.feat-project:hover .iot-node.core {
+  transform: translateZ(50px) scale(1.1);
+  box-shadow: 0 0 40px var(--accent);
+}
+
 .iot-node.sensor {
-  width: 20px;
-  height: 20px;
-  background: var(--line);
+  width: 24px;
+  height: 24px;
+  background: var(--glass-border);
+  border: 1px solid var(--accent);
   z-index: 2;
 }
 
@@ -4015,12 +4069,27 @@ body.page-visible {
   transform: translateZ(15px);
 }
 
+.feat-project:hover .sensor.s1 {
+  transform: translateZ(30px) translate(-10px, -10px);
+}
+
+.feat-project:hover .sensor.s2 {
+  transform: translateZ(35px) translate(10px, 10px);
+}
+
 .iot-connection {
   position: absolute;
-  background: linear-gradient(90deg, var(--data-flow-1) 0%, var(--data-flow-2) 50%, var(--data-flow-1) 100%);
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
   background-size: 200% 100%;
-  animation: flowData 2s linear infinite;
+  animation: flowData 1.5s linear infinite;
   z-index: 1;
+  opacity: 0.6;
+}
+
+.feat-project:hover .iot-connection {
+  opacity: 1;
+  animation-duration: 0.8s;
+  /* speed up on hover */
 }
 
 @keyframes flowData {
@@ -4568,30 +4637,117 @@ body.page-visible {
   min-height: 80vh;
 }
 
-.contact-globe-container {
+.contact-3d-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 800px;
-  aspect-ratio: 1;
+  height: 100%;
+  perspective: 1200px;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.8;
-  /* Subtle backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.contact-globe-container canvas {
-  width: 100% !important;
-  height: 100% !important;
-  contain: layout paint size;
-  opacity: 0;
-  transition: opacity 1.5s ease;
+.abstract-core {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotateCore 20s infinite linear;
 }
 
-.contact-globe-container canvas.is-loaded {
-  opacity: 1;
+@keyframes rotateCore {
+  0% {
+    transform: rotateX(45deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(45deg) rotateY(360deg);
+  }
+}
+
+.cube {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  transform-style: preserve-3d;
+}
+
+.cube-1 {
+  transform: translateZ(50px) rotateX(15deg);
+  animation: float1 4s ease-in-out infinite alternate;
+}
+
+.cube-2 {
+  transform: translateZ(-50px) rotateY(45deg) scale(0.6);
+  animation: float2 5s ease-in-out infinite alternate;
+}
+
+.cube-3 {
+  transform: translateX(80px) translateZ(20px) rotateZ(30deg) scale(0.8);
+  animation: float3 6s ease-in-out infinite alternate;
+}
+
+@keyframes float1 {
+  to {
+    transform: translateZ(70px) rotateX(-10deg);
+  }
+}
+
+@keyframes float2 {
+  to {
+    transform: translateZ(-70px) rotateY(60deg) scale(0.6);
+  }
+}
+
+@keyframes float3 {
+  to {
+    transform: translateX(100px) translateZ(40px) rotateZ(10deg) scale(0.8);
+  }
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--accent);
+  box-shadow: inset 0 0 20px rgba(139, 227, 212, 0.2);
+}
+
+.face.front {
+  transform: rotateY(0deg) translateZ(50px);
+}
+
+.face.back {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.face.right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.face.left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.face.top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.face.bottom {
+  transform: rotateX(-90deg) translateZ(50px);
 }
 
 .contact-content-overlay {
@@ -4630,11 +4786,6 @@ body.page-visible {
 @media (max-width: 768px) {
   .contact-section {
     min-height: 600px;
-  }
-
-  .contact-globe-container {
-    width: 800px;
-    height: 800px;
   }
 
   .contact-content-overlay {
