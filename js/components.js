@@ -45,10 +45,10 @@
     }).join('\n        ');
 
     // Build Mobile Links
-    const mobileHTML = navItems.map(item => {
+    const mobileHTML = navItems.map((item, index) => {
       const isCurrent = item.id === activeId;
       const href = BASE + item.href;
-      return `<li><a href="${href}" class="mobile-link ${isCurrent ? 'active' : ''}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a></li>`;
+      return `<li style="--delay: ${index * 0.1}s"><a href="${href}" class="mobile-link ${isCurrent ? 'active' : ''}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a></li>`;
     }).join('\n          ');
 
     header.innerHTML = `

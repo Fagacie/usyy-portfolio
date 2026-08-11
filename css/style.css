@@ -294,43 +294,47 @@ ul {
    MOBILE OVERLAY MENU
 ══════════════════════════════════════════ */
 .mobile-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(6, 11, 20, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  position: absolute;
+  top: 85px; /* Sits just below the floating nav pill */
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  width: calc(100% - 32px);
+  max-width: 400px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
   z-index: 1500;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  visibility: hidden;
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.4s;
 }
 
 [data-theme="light"] .mobile-overlay {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-overlay.show {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .mobile-overlay-content {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  transform: translateY(20px);
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.mobile-overlay.show .mobile-overlay-content {
-  transform: translateY(0);
+  gap: 32px;
+  width: 100%;
 }
 
 .mobile-links {
@@ -342,17 +346,33 @@ ul {
   gap: 24px;
 }
 
+.mobile-links li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-delay: 0s;
+}
+
+.mobile-overlay.show .mobile-links li {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(0.1s + var(--delay, 0s));
+}
+
 .mobile-link {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--muted);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.3s, transform 0.3s;
+  display: block;
+  padding: 8px 0;
 }
 
 .mobile-link:hover,
 .mobile-link.active {
   color: var(--ink);
+  transform: scale(1.02);
 }
 
 .mobile-resume-btn {
