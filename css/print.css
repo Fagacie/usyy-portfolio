@@ -28,6 +28,7 @@
   .pcard-links,
   .timeline-hint,
   .avail-badge,
+  .achieve-icon,
   .hero-actions .btn-secondary {
     display: none !important;
   }
@@ -39,6 +40,7 @@
   .card,
   .skill-group,
   .timeline-item,
+  .achieve-card,
   .contact-section,
   .contact-info-box {
     background: transparent !important;
@@ -51,6 +53,7 @@
   .about-grid,
   .project-grid,
   .skills-grid,
+  .achieve-grid,
   .contact-layout,
   .section-head.split {
     grid-template-columns: 1fr !important;

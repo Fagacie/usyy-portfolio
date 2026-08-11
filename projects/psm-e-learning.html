@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSM E-Learning System | Abbas Usman Adamu</title>
+  <meta name="description" content="Final Year Project: A full-stack e-learning platform built with Java JSP/Servlets and MySQL." />
+  <link rel="icon" href="../assets/img/logo.png" type="image/png" sizes="512x512" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css?v=18" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" id="site-header"></header>
+
+  <main id="main">
+    <section class="project-detail-hero container reveal">
+      <div class="project-detail-grid">
+        <div class="project-detail-content">
+          <p class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> E-Learning</p>
+          <h1 class="project-detail-title">PSM E-Learning Management System</h1>
+          <p class="muted" style="font-size:1.25rem; max-width: 600px;">
+            A comprehensive educational platform designed to streamline course delivery, assessments, and verifiable certification.
+          </p>
+          <div class="project-detail-stack" style="justify-content: flex-start; margin-top:0;">
+            <span class="pchip">Java</span>
+            <span class="pchip">JSP/Servlets</span>
+            <span class="pchip">MySQL</span>
+            <span class="pchip">Docker</span>
+          </div>
+          <div style="margin-top:30px; display:flex; gap:15px;">
+            <a href="https://psmels.software/landing" target="_blank" rel="noreferrer" class="btn"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right:8px;"></i> Live Demo</a>
+            <a href="https://github.com/Fagacie/psm-elms" target="_blank" rel="noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github" style="margin-right:8px;"></i> View Code</a>
+          </div>
+        </div>
+
+        <div class="project-stats-card">
+          <div class="stat-item">
+            <span class="label">Project Type</span>
+            <span class="value"><span class="pcard-badge pcard-badge--fyp" style="padding:4px 8px; font-size:12px;">⭐ Final Year Project</span></span>
+          </div>
+          <div class="stat-item">
+            <span class="label">My Role</span>
+            <span class="value">Full-Stack Developer</span>
+          </div>
+          <div class="stat-item">
+            <span class="label">Timeline</span>
+            <span class="value">August 2025 - Jan 2026</span>
+          </div>
+          <div class="stat-item">
+            <span class="label">Status</span>
+            <span class="value" style="color: var(--accent);"><i class="fa-solid fa-circle-check"></i> Completed & Deployed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-section container reveal">
+      <div style="max-width:900px; margin:0 auto;">
+        
+        <h2><i class="fa-regular fa-compass"></i> Overview</h2>
+        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
+          The PSM E-Learning Management System was developed as my Final Year Project. It is a full-stack educational platform built from the ground up to solve the challenges of managing online learning resources, tracking student progress, and issuing verifiable credentials.
+        </p>
+
+        <h2 style="margin-top:80px;"><i class="fa-solid fa-layer-group"></i> Key Features</h2>
+        <div class="bento-grid">
+          <div class="bento-card bento-span-2">
+            <div class="bento-icon"><i class="fa-solid fa-users-gear"></i></div>
+            <h4>Role-Based Access Control</h4>
+            <p>Distinct, secure workflows and dashboards for Students, Instructors, and Administrators, ensuring data isolation and privacy.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon"><i class="fa-solid fa-book-open"></i></div>
+            <h4>Course Management</h4>
+            <p>Instructors can seamlessly upload materials, create assignments, and deploy structured assessments.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon"><i class="fa-solid fa-credit-card"></i></div>
+            <h4>Payment Gateway</h4>
+            <p>Secure gateway integration for processing course enrollment fees via Stripe.</p>
+          </div>
+          <div class="bento-card bento-span-2">
+            <div class="bento-icon"><i class="fa-solid fa-qrcode"></i></div>
+            <h4>QR-Verified Certificates</h4>
+            <p>Automated PDF certificate generation upon course completion, featuring cryptographic, scannable QR codes for verifiable authenticity by employers.</p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:80px;"><i class="fa-solid fa-code"></i> Technical Architecture</h2>
+        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
+          The backend architecture relies on Java Servlets and JSP running on Apache Tomcat. The entire application is containerized using Docker to ensure consistency across development, testing, and production.
+        </p>
+        
+        <div class="tech-flow">
+          <div class="tech-node">
+            <i class="fa-brands fa-html5"></i>
+            <span>JSP Views</span>
+          </div>
+          <div class="tech-connector"></div>
+          <div class="tech-node">
+            <i class="fa-brands fa-java"></i>
+            <span>Java Servlets</span>
+          </div>
+          <div class="tech-connector"></div>
+          <div class="tech-node">
+            <i class="fa-solid fa-database"></i>
+            <span>MySQL DB</span>
+          </div>
+        </div>
+
+        <div class="pcard" style="margin-top:80px; padding:30px; display:flex; align-items:center; gap:20px; border-color:var(--warm);">
+          <div class="bento-icon" style="background:rgba(246, 196, 122, 0.15); color:var(--warm);"><i class="fa-solid fa-trophy"></i></div>
+          <div>
+            <h3 style="margin:0 0 5px; color:var(--warm);">Consolation Prize — PAMERKOM 2026</h3>
+            <p class="muted" style="margin:0;">This project was officially recognized and awarded at the PAMERKOM 2026 final year project exhibition.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

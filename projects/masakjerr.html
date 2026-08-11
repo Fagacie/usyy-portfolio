@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MasakJerr! | Abbas Usman Adamu</title>
+  <meta name="description" content="Recipe management platform built with Spring Boot and MySQL." />
+  <link rel="icon" href="../assets/img/logo.png" type="image/png" sizes="512x512" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css?v=18" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" id="site-header"></header>
+
+  <main id="main">
+    <section class="project-detail-hero container reveal">
+      <div class="project-detail-grid">
+        <div class="project-detail-content">
+          <p class="eyebrow"><i class="fa-solid fa-utensils"></i> Full-Stack Java</p>
+          <h1 class="project-detail-title">MasakJerr!</h1>
+          <p class="muted" style="font-size:1.25rem; max-width: 600px;">
+            A full-stack CRUD application for managing recipes and user data with a robust Spring Boot backend and MySQL.
+          </p>
+          <div class="project-detail-stack" style="justify-content: flex-start; margin-top:0;">
+            <span class="pchip">Java</span>
+            <span class="pchip">Spring Boot</span>
+            <span class="pchip">MySQL</span>
+          </div>
+          <div style="margin-top:30px; display:flex; gap:15px;">
+            <a href="https://github.com/Fagacie/masakjerr-project1.git" target="_blank" rel="noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github" style="margin-right:8px;"></i> View Code</a>
+          </div>
+        </div>
+
+        <div class="project-stats-card">
+          <div class="stat-item">
+            <span class="label">Project Type</span>
+            <span class="value"><span class="pcard-badge pcard-badge--muted" style="padding:4px 8px; font-size:12px;">Full Stack</span></span>
+          </div>
+          <div class="stat-item">
+            <span class="label">My Role</span>
+            <span class="value">Backend Engineer</span>
+          </div>
+          <div class="stat-item">
+            <span class="label">Status</span>
+            <span class="value" style="color: var(--muted);"><i class="fa-solid fa-box-archive"></i> Archived</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-section container reveal">
+      <div style="max-width:900px; margin:0 auto;">
+        
+        <h2><i class="fa-regular fa-compass"></i> Overview</h2>
+        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
+          MasakJerr! is a recipe management platform designed to help users organize, share, and discover culinary creations. It demonstrates standard full-stack development patterns by implementing complete CRUD (Create, Read, Update, Delete) workflows powered by a reliable Spring Boot architecture.
+        </p>
+
+        <h2 style="margin-top:80px;"><i class="fa-solid fa-layer-group"></i> Key Features</h2>
+        <div class="bento-grid">
+          <div class="bento-card bento-span-2">
+            <div class="bento-icon"><i class="fa-solid fa-book-journal-whills"></i></div>
+            <h4>Recipe Management (CRUD)</h4>
+            <p>Users can seamlessly create new recipes, upload instructions, update ingredients, and delete entries from their cookbook.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon"><i class="fa-solid fa-database"></i></div>
+            <h4>Data Persistence</h4>
+            <p>Reliable and normalized data storage using relational mapping against a MySQL database.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon"><i class="fa-solid fa-users"></i></div>
+            <h4>User Profiles</h4>
+            <p>Registration and login flows to keep user data isolated and private.</p>
+          </div>
+          <div class="bento-card bento-span-2">
+            <div class="bento-icon"><i class="fa-solid fa-server"></i></div>
+            <h4>Spring Boot Backend</h4>
+            <p>Leverages the Spring framework for dependency injection, REST controller routing, and JPA/Hibernate object-relational mapping.</p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:80px;"><i class="fa-solid fa-code"></i> Technical Architecture</h2>
+        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
+          The system uses Spring Boot to handle routing, business logic, and database interactions. Thymeleaf (or standard REST responses) handles presentation, while Spring Data JPA communicates securely with MySQL.
+        </p>
+        
+        <div class="tech-flow">
+          <div class="tech-node">
+            <i class="fa-brands fa-html5"></i>
+            <span>Client View</span>
+          </div>
+          <div class="tech-connector"></div>
+          <div class="tech-node">
+            <i class="fa-brands fa-java"></i>
+            <span>Spring Boot API</span>
+          </div>
+          <div class="tech-connector"></div>
+          <div class="tech-node">
+            <i class="fa-solid fa-database"></i>
+            <span>MySQL Relational DB</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

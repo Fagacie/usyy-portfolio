@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Abbas Usman Adamu | Software Engineer</title>
-  <meta name="description" content="Portfolio of Abbas Usman Adamu, a software engineering student focused on Java, Spring Boot, IoT systems, REST APIs, and full-stack web development." />
-  <meta name="keywords" content="Abbas Usman Adamu, Software Engineer, Java, Spring Boot, IoT, Full-stack Developer, Backend Systems, API Integration" />
-  <meta name="author" content="Usman Abbas Adamu" />
+  <meta name="description"
+    content="Portfolio of Abbas Usman Adamu — software engineering student building backend systems, full-stack web applications, and IoT platforms." />
+  <meta name="keywords"
+    content="Abbas Usman Adamu, Software Engineer, Java, JSP, Servlets, MySQL, Docker, IoT, Full-stack Developer, Backend Systems, Artificial Intelligence" />
+  <meta name="author" content="Abbas Usman Adamu" />
   <meta name="theme-color" content="#060b14" />
 
   <meta property="og:title" content="Abbas Usman Adamu | Software Engineer" />
-  <meta property="og:description" content="Software engineering student building backend systems, IoT platforms, and full-stack web applications." />
+  <meta property="og:description"
+    content="Software engineering student building backend systems, IoT platforms, and full-stack web applications." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/og-preview.png" />
   <meta property="og:url" content="./" />
@@ -25,547 +29,352 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css?v=17" />
   <link rel="stylesheet" href="css/print.css" media="print" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
+  <!-- Ambient responsive grid background -->
+  <div class="ambient-grid" id="ambientGrid" aria-hidden="true"></div>
+
   <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="header" id="top">
-    <nav class="nav container" aria-label="Primary navigation">
-      <a href="#top" class="logo" aria-label="Abbas Usman Adamu home">
-        <span class="logo-name">Abbas Usman Adamu</span>
-      </a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#timeline">Timeline</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Injected by components.js -->
+  <header class="header" id="site-header"></header>
 
   <main id="main">
-    <section class="hero container" aria-labelledby="hero-heading">
-      <div class="hero-copy">
-        <p class="eyebrow">Final Year Software Engineering Student &nbsp;<span class="avail-badge"><span class="avail-dot"></span>Available Aug 2026</span></p>
-        <h1 id="hero-heading" data-typewriter aria-label="Backend systems, IoT applications, and full-stack development"></h1>
-        <p>Abbas Usman Adamu — focused on scalable backend architecture, real-time IoT systems, and API-driven applications using Java, Spring Boot, and modern web technologies.</p>
-        <div class="hero-actions" aria-label="Primary actions">
-          <a href="#projects" class="btn">View Projects</a>
-          <a href="assets/Abbas-Usman-Adamu-Resume.pdf" class="btn btn-secondary" download="Abbas-Usman-Adamu-Resume.pdf"><i class="fa-solid fa-file-arrow-down" aria-hidden="true" style="margin-right:6px;"></i>Download Resume (PDF)</a>
+    <!-- ═══════════════════════════════════════
+         HERO (Two-column)
+    ═══════════════════════════════════════ -->
+    <section class="hero-split container" aria-labelledby="hero-heading">
+      <!-- Interactive Data Field Canvas -->
+      <canvas id="heroCanvas" class="hero-canvas-bg"></canvas>
+
+      <div class="hero-content">
+        <div class="status-badge" aria-label="Current status">
+          <span class="status-dot"></span>
+          Software Engineering Intern · EHS / INOS UMT
         </div>
 
-        <div class="hero-links" aria-label="External profile links">
-          <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
-          <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
-        </div>
-      </div>
+        <h1 id="hero-heading" class="split-text">Building Software Systems<br>for a More Intelligent World.</h1>
 
-      <div class="hero-photo-wrap" aria-hidden="true">
-        <img src="assets/img/profile.jpeg" alt="Abbas Usman Adamu" class="hero-photo" loading="eager" />
-      </div>
-
-    </section>
-
-    <section class="section container reveal" id="about">
-      <div class="section-head">
-        <p class="eyebrow">About</p>
-        <h2>Final-year Software Engineering student at UMT</h2>
-        <p>
-          My work focuses on backend systems, IoT applications, API integration, and full-stack development.
+        <p class="hero-desc" data-aos="fade-up" data-aos-delay="100">
+          Software Engineering student building full-stack backend systems, IoT applications, and AI-driven
+          technologies. Researching data intelligence for a smarter world.
         </p>
+
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="200" aria-label="Primary actions">
+          <a href="work.html" class="btn magnetic">Explore Work <i class="fa-solid fa-arrow-right btn-arrow"
+              aria-hidden="true"></i></a>
+          <a href="assets/Abbas-Usman-Adamu-Resume.pdf" class="btn btn-secondary btn-icon magnetic"
+            download="Abbas-Usman-Adamu-Resume.pdf">
+            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> View Resume
+          </a>
+        </div>
+
       </div>
 
-      <div class="about-grid">
-        <article class="card about-card" tabindex="0" data-signal="api.connect('Spring Boot', 'MySQL')">
-          <span class="card-kicker">&lt;api&gt;</span>
-          <h3>Backend Systems</h3>
-          <p class="muted">
-            Java, Spring Boot, JSP/Servlets, Node.js, REST APIs, and MySQL-backed application workflows.
-          </p>
-        </article>
-        <article class="card about-card" tabindex="0" data-signal="mqtt.publish('sensor/data')">
-          <span class="card-kicker">mqtt://</span>
-          <h3>IoT Applications</h3>
-          <p class="muted">
-            MicroPython, MQTT, Raspberry Pi Pico W, and ThingSpeak for real-time environmental monitoring.
-          </p>
-        </article>
-        <article class="card about-card" tabindex="0" data-signal="deploy.to('Firebase Hosting')">
-          <span class="card-kicker">{ ui }</span>
-          <h3>Full-Stack Delivery</h3>
-          <p class="muted">
-            HTML, CSS, JavaScript, Firebase Hosting, database design, JUnit, and Selenium.
-          </p>
-        </article>
+      <div class="hero-visual" data-aos="zoom-in" data-aos-delay="400" aria-hidden="true">
+        <div class="hero-image-wrapper">
+          <div class="hero-glow"></div>
+          <img src="assets/img/profile.png" alt="Professional portrait of Abbas Usman Adamu"
+            class="hero-image" id="heroImg" />
+        </div>
+
+        <div class="hero-socials" aria-label="External profile links">
+          <a href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+              class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="mailto:abbasusman561@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"
+              aria-hidden="true"></i></a>
+        </div>
       </div>
-      <div class="about-console" aria-live="polite">
-        <span>focus</span>
-        <code id="aboutSignal">hover or tap a card</code>
+
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <span class="scroll-text">Explore</span>
+        <div class="scroll-line"></div>
       </div>
     </section>
 
-    <section class="section container reveal" id="projects">
-      <div class="section-head split">
+    <!-- ═══════════════════════════════════════
+         TECH STACK MARQUEE
+    ═══════════════════════════════════════ -->
+    <section class="marquee-section" aria-label="Tech Stack" data-aos="fade-in" data-aos-delay="500">
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <span>Java</span> <span class="dot">•</span>
+          <span>JSP/Servlets</span> <span class="dot">•</span>
+          <span>MicroPython</span> <span class="dot">•</span>
+          <span>MQTT</span> <span class="dot">•</span>
+          <span>Docker</span> <span class="dot">•</span>
+          <span>MySQL</span> <span class="dot">•</span>
+          <span>REST APIs</span> <span class="dot">•</span>
+          <span>Linux</span> <span class="dot">•</span>
+          <span>Hardware Sensors</span> <span class="dot">•</span>
+          <!-- Duplicate for infinite scroll -->
+          <span>Java</span> <span class="dot">•</span>
+          <span>JSP/Servlets</span> <span class="dot">•</span>
+          <span>MicroPython</span> <span class="dot">•</span>
+          <span>MQTT</span> <span class="dot">•</span>
+          <span>Docker</span> <span class="dot">•</span>
+          <span>MySQL</span> <span class="dot">•</span>
+          <span>REST APIs</span> <span class="dot">•</span>
+          <span>Linux</span> <span class="dot">•</span>
+          <span>Hardware Sensors</span> <span class="dot">•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         OVERVIEW: SYSTEMS, DATA & INTELLIGENCE
+    ═══════════════════════════════════════ -->
+    <section class="section container">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow">How I Build</p>
+        <h2>Systems, Data &amp; Intelligence</h2>
+      </div>
+
+      <!-- Interactive connected cards -->
+      <div class="overview-connected-grid reveal">
+        <div class="connection-line" aria-hidden="true">
+          <div class="connection-flow"></div>
+        </div>
+
+        <article class="interactive-card" tabindex="0">
+          <div class="icard-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+          <h3>Software Engineering</h3>
+          <p>Java backend systems, JSP/Servlet applications, RESTful services, databases, and full-stack web
+            development.</p>
+          <div class="icard-indicator"><i class="fa-solid fa-arrow-right"></i></div>
+        </article>
+
+        <article class="interactive-card" tabindex="0">
+          <div class="icard-icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
+          <h3>IoT &amp; Connected Systems</h3>
+          <p>Raspberry Pi Pico W, sensor integration, MicroPython, MQTT communication, and connected monitoring systems.
+          </p>
+          <div class="icard-indicator"><i class="fa-solid fa-arrow-right"></i></div>
+        </article>
+
+        <article class="interactive-card" tabindex="0">
+          <div class="icard-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+          <h3>Intelligent Systems</h3>
+          <p>Exploring Artificial Intelligence, Machine Learning, and data-driven systems as a direction for
+            postgraduate study.</p>
+          <div class="icard-indicator"><i class="fa-solid fa-arrow-right"></i></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SELECTED PROJECTS
+    ═══════════════════════════════════════ -->
+    <section class="section container">
+      <div class="section-head split" data-aos="fade-up">
         <div>
-          <p class="eyebrow">Projects</p>
-          <h2>Projects.</h2>
-          <p>A selection of projects showcasing my skills in backend development, IoT systems, and full-stack web applications.</p>
+          <p class="eyebrow">Featured Work</p>
+          <h2>Selected Projects</h2>
         </div>
+        <a href="work.html" class="btn btn-secondary">View all work <i class="fa-solid fa-arrow-right btn-arrow"
+            aria-hidden="true"></i></a>
       </div>
 
-      <div class="project-toolbar">
-        <div class="filters" aria-label="Project filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="live">Live</button>
-          <button class="filter-btn" data-filter="api">API</button>
-          <button class="filter-btn" data-filter="iot">IoT</button>
-          <button class="filter-btn" data-filter="java">Java</button>
-          <button class="filter-btn" data-filter="web">Web</button>
+      <div class="featured-project-list">
+
+        <!-- Project 1: PSM ELMS -->
+        <a href="projects/psm-e-learning.html" class="feat-project" data-aos="fade-up">
+          <div class="feat-project-visual psm-visual" aria-hidden="true">
+            <div class="abstract-ui">
+              <div class="ui-nav"></div>
+              <div class="ui-body">
+                <div class="ui-card"></div>
+                <div class="ui-card"></div>
+                <div class="ui-qr"></div>
+              </div>
+            </div>
+          </div>
+          <div class="feat-project-content">
+            <div class="feat-project-meta">
+              <span class="pcard-badge pcard-badge--fyp">⭐ Final Year Project</span>
+              <span class="pcard-stack" id="gh-lang-psm">JSP / Servlet</span>
+              <span class="pcard-stack skeleton-load" id="gh-stars-psm" style="margin-left: 8px;"><i
+                  class="fa-solid fa-star"></i> --</span>
+            </div>
+            <h3>PSM E-Learning Management System</h3>
+            <p>Full-stack educational platform with role-based access workflows, secure payment gateways, and automated
+              QR-verified certificate generation.</p>
+            <div class="pcard-chips" id="gh-chips-psm"><span class="pchip">Java</span><span
+                class="pchip">MySQL</span><span class="pchip">Docker</span></div>
+            <div class="feat-project-cta">Project Details <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <!-- Project 2: IoT Campus -->
+        <a href="projects/iot-monitoring.html" class="feat-project" data-aos="fade-up" data-aos-delay="100">
+          <div class="feat-project-visual iot-visual" aria-hidden="true">
+            <div class="abstract-iot">
+              <div class="iot-node core"></div>
+              <div class="iot-connection c1"></div>
+              <div class="iot-node sensor s1"></div>
+              <div class="iot-connection c2"></div>
+              <div class="iot-node sensor s2"></div>
+              <div class="iot-wave"></div>
+            </div>
+          </div>
+          <div class="feat-project-content">
+            <div class="feat-project-meta">
+              <span class="pcard-badge pcard-badge--live">Live IoT</span>
+              <span class="pcard-stack" id="gh-lang-iot">MicroPython / MQTT</span>
+              <span class="pcard-stack skeleton-load" id="gh-stars-iot" style="margin-left: 8px;"><i
+                  class="fa-solid fa-star"></i> --</span>
+            </div>
+            <h3>Smart Campus IoT Station</h3>
+            <p>Hardware monitoring station using Raspberry Pi Pico W for environmental telemetry and security sensing,
+              streaming real-time data via MQTT to a cloud dashboard.</p>
+            <div class="pcard-chips" id="gh-chips-iot"><span class="pchip">MicroPython</span><span
+                class="pchip">MQTT</span><span class="pchip">Sensors</span></div>
+            <div class="feat-project-cta">Project Details <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         GATEWAYS & CREDENTIALS
+    ═══════════════════════════════════════ -->
+    <section class="section container">
+      <div class="gateway-grid">
+
+        <!-- Experience Node -->
+        <div class="gateway-card tilt-effect reveal-stagger">
+          <div class="gateway-head">
+            <i class="fa-solid fa-briefcase gateway-icon" aria-hidden="true"></i>
+            <span class="eyebrow">Currently</span>
+          </div>
+          <div class="gateway-body">
+            <h4>Software Engineering Intern</h4>
+            <p class="timeline-org">Eco Hydrotech Solutions Sdn. Bhd.<br>INOS &middot; Universiti Malaysia Terengganu
+            </p>
+            <p class="timeline-date">Aug 2026 — Present</p>
+          </div>
+          <a href="work.html#experience" class="gateway-link">View Experience <i
+              class="fa-solid fa-arrow-right"></i></a>
         </div>
-        <p class="project-count" id="projectCount">6 projects</p>
-      </div>
 
-      <div class="project-insight" aria-live="polite">
-        <span>active.project</span>
-        <code id="projectInsight">select a project card</code>
-      </div>
-
-      <div class="project-grid" id="projectGrid">
-
-        <!-- ── Card 1: PSM ELMS (FYP) ─────────────────────────── -->
-        <article class="pcard" tabindex="0"
-          data-tags="java web live"
-          data-summary="Final Year Project / E-learning platform / Java / MySQL / Docker / Live Demo">
-
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--fyp">⭐ Final Year Project</span>
-            <span class="pcard-stack">JSP / Servlet</span>
+        <!-- Research Node -->
+        <div class="gateway-card tilt-effect reveal-stagger">
+          <div class="gateway-head">
+            <i class="fa-solid fa-microscope gateway-icon" aria-hidden="true"></i>
+            <span class="eyebrow">Research Direction</span>
           </div>
-
-          <div class="pcard-body">
-            <h3 class="pcard-title">PSM E-Learning Management System</h3>
-            <p class="pcard-desc">Scalable e-learning platform for managing courses, student enrollment, assessments, and secure online payments.</p>
-            <ul class="pcard-points">
-              <li>Implemented authentication and role-based access for students, instructors and administrators</li>
-              <li>Developed course management system with materials, assignments, and assessments</li>
-              <li>Integrated payment gateway for secure online transactions</li>
-              <li>Built backend using Java JSP/Servlet with MySQL database</li>
-              <li>Containerized and deployed the application using Docker for improved portability and scalability</li>
-            </ul>
+          <div class="gateway-body">
+            <p class="gateway-desc">Exploring Artificial Intelligence, Machine Learning, intelligent systems, and
+              data-driven applications for postgraduate study.</p>
           </div>
-
-          <div class="pcard-footer">
-            <div class="pcard-chips">
-              <span class="pchip">Java</span>
-              <span class="pchip">JSP/Servlet</span>
-              <span class="pchip">MySQL</span>
-              <span class="pchip">Payment Gateway</span>
-              <span class="pchip pchip--docker">Docker</span>
-            </div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="https://psmels.software/landing" target="_blank" rel="noreferrer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Demo
-              </a>
-              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/psm-elms" target="_blank" rel="noreferrer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ── Card 2: IoT Monitoring ──────────────────────────── -->
-        <article class="pcard" tabindex="0"
-          data-tags="live iot"
-          data-summary="Water level, temperature, humidity, and air pressure / ThingSpeak API / Custom dashboard">
-
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--live">Live IoT</span>
-            <span class="pcard-stack">ThingSpeak API</span>
-          </div>
-
-          <div class="pcard-body">
-            <h3 class="pcard-title">IoT-Based Environmental Monitoring</h3>
-            <p class="pcard-desc">Custom dashboard for real-time sensor readings via ThingSpeak API — water level, temperature, humidity, and air pressure.</p>
-            <ul class="pcard-points">
-              <li>Tracked water level, temperature, humidity, and air pressure in real time</li>
-              <li>Sent sensor data to ThingSpeak and displayed it on a custom dashboard</li>
-            </ul>
-          </div>
-
-          <div class="pcard-footer">
-            <div class="pcard-chips">
-              <span class="pchip">MicroPython</span>
-              <span class="pchip">ThingSpeak API</span>
-              <span class="pchip">Raspberry Pi Pico W</span>
-            </div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="https://campus-iot.me/" target="_blank" rel="noreferrer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Dashboard
-              </a>
-              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/IoT-Environmental-Monitor.git" target="_blank" rel="noreferrer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ── Card 3: PKU Management ──────────────────────────── -->
-        <article class="pcard" tabindex="0"
-          data-tags="java github"
-          data-summary="Healthcare workflow / Java / MySQL">
-
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--muted">Java</span>
-            <span class="pcard-stack">JSP / MySQL</span>
-          </div>
-
-          <div class="pcard-body">
-            <h3 class="pcard-title">PKU Management System</h3>
-            <p class="pcard-desc">System for managing patients, appointments, billing, and staff with role-based access control.</p>
-            <ul class="pcard-points">
-              <li>Managed patients, appointments, billing, and staff records</li>
-              <li>Implemented role-based access workflows across user types</li>
-            </ul>
-          </div>
-
-          <div class="pcard-footer">
-            <div class="pcard-chips">
-              <span class="pchip">Java</span>
-              <span class="pchip">MySQL</span>
-              <span class="pchip">JSP/Servlets</span>
-            </div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/pkumanagementsystem.git" target="_blank" rel="noreferrer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ── Card 4: Masakjerr ───────────────────────────────── -->
-        <article class="pcard" tabindex="0"
-          data-tags="github java"
-          data-summary="Recipe CRUD / Spring Boot / MySQL">
-
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--muted">Full Stack</span>
-            <span class="pcard-stack">Spring Boot</span>
-          </div>
-
-          <div class="pcard-body">
-            <h3 class="pcard-title">Masakjerr System</h3>
-            <p class="pcard-desc">Full-stack CRUD application for managing recipes and user data with a Spring Boot backend and MySQL database.</p>
-            <ul class="pcard-points">
-              <li>Built CRUD features for recipes and user data</li>
-              <li>Designed backend services and relational database structure</li>
-            </ul>
-          </div>
-
-          <div class="pcard-footer">
-            <div class="pcard-chips">
-              <span class="pchip">Java</span>
-              <span class="pchip">Spring Boot</span>
-              <span class="pchip">MySQL</span>
-            </div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/masakjerr-project1.git" target="_blank" rel="noreferrer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ── Card 5: WeatherHub ──────────────────────────────── -->
-        <article class="pcard" tabindex="0"
-          data-tags="live api"
-          data-summary="Weather API / JavaScript / Firebase">
-
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--live">Live API</span>
-            <span class="pcard-stack">Firebase</span>
-          </div>
-
-          <div class="pcard-body">
-            <h3 class="pcard-title">WeatherHub</h3>
-            <p class="pcard-desc">Weather application fetching real-time data via REST APIs with a responsive interface deployed on Firebase Hosting.</p>
-            <ul class="pcard-points">
-              <li>Integrated REST APIs for real-time weather data retrieval</li>
-              <li>Deployed responsive interface with Firebase Hosting</li>
-            </ul>
-          </div>
-
-          <div class="pcard-footer">
-            <div class="pcard-chips">
-              <span class="pchip">JavaScript</span>
-              <span class="pchip">REST API</span>
-              <span class="pchip">Firebase</span>
-            </div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="https://weather-hub-9c3f8.web.app/" target="_blank" rel="noreferrer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Demo
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ── Card 6: Elite Soccer Feed ──────────────────────── -->
-        <article class="pcard" tabindex="0"
-          data-tags="live web github"
-          data-summary="First project / Football news homepage and player page">
-
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--live">Live Web</span>
-            <span class="pcard-stack">HTML / CSS / JS</span>
-          </div>
-
-          <div class="pcard-body">
-            <h3 class="pcard-title">Elite Soccer Feed</h3>
-            <p class="pcard-desc">Football news website — my first full project, featuring a homepage layout and detailed player pages built from scratch.</p>
-            <ul class="pcard-points">
-              <li>Created the homepage layout for football news browsing</li>
-              <li>Built a player page using HTML, CSS, and JavaScript</li>
-            </ul>
-          </div>
-
-          <div class="pcard-footer">
-            <div class="pcard-chips">
-              <span class="pchip">HTML</span>
-              <span class="pchip">CSS</span>
-              <span class="pchip">JavaScript</span>
-              <span class="pchip">Vercel</span>
-            </div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="https://elitesoccerfeed.vercel.app/" target="_blank" rel="noreferrer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Site
-              </a>
-              <a class="pcard-link pcard-link--ghost" href="https://github.com/Fagacie/ESFhomepage.git" target="_blank" rel="noreferrer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-    
-
-    <section class="section container reveal" id="skills">
-      <div class="section-head split">
-        <div>
-          <p class="eyebrow">Skills</p>
-          <h2>Skills &amp; Technologies</h2>
+          <a href="research.html" class="gateway-link">Explore Research <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-        <p>
-          Built through academic projects, personal builds, and real-world system development.
+
+      </div>
+
+      <!-- Credential micro-signals -->
+      <div class="credential-bar reveal">
+        <div class="cred-signal"><i class="fa-solid fa-building-columns"></i> Universiti Malaysia Terengganu</div>
+        <div class="cred-signal"><i class="fa-solid fa-award"></i> Dean's Award (Sem I &amp; II)</div>
+        <a href="work.html#achievements" class="cred-signal interactive" aria-label="View PAMERKOM 2026 Achievement">
+          <i class="fa-solid fa-trophy"></i> Consolation Prize &middot; PAMERKOM 2026
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT CTA
+    ═══════════════════════════════════════ -->
+    <section class="section contact-section" data-aos="fade-up" id="contact">
+      <!-- 3D Globe Backdrop -->
+      <div class="contact-globe-container">
+        <canvas id="cobe-globe" width="1600" height="1600"></canvas>
+      </div>
+
+      <!-- Content Overlay -->
+      <div class="contact-content-overlay">
+        <p class="eyebrow">Next Steps</p>
+        <h2>Let's build something useful.</h2>
+        <p class="muted">
+          Open to software engineering, research, and postgraduate opportunities.
         </p>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-group" data-category="languages">
-          <div class="skill-header">
-            <span class="skill-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
-            <h3>Languages</h3>
-          </div>
-          <div class="skill-chips">
-            <span class="skchip">Java</span>
-            <span class="skchip">JavaScript</span>
-            <span class="skchip">Python</span>
-            <span class="skchip">MicroPython</span>
-          </div>
-        </article>
-        <article class="skill-group" data-category="backend">
-          <div class="skill-header">
-            <span class="skill-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
-            <h3>Backend</h3>
-          </div>
-          <div class="skill-chips">
-            <span class="skchip">Spring Boot</span>
-            <span class="skchip">JSP/Servlets</span>
-            <span class="skchip">REST APIs</span>
-            <span class="skchip">Docker</span>
-          </div>
-        </article>
-        <article class="skill-group" data-category="frontend">
-          <div class="skill-header">
-            <span class="skill-icon"><i class="fa-solid fa-desktop" aria-hidden="true"></i></span>
-            <h3>Frontend</h3>
-          </div>
-          <div class="skill-chips">
-            <span class="skchip">HTML</span>
-            <span class="skchip">CSS</span>
-            <span class="skchip">Bootstrap</span>
-            <span class="skchip">Responsive UI</span>
-          </div>
-        </article>
-        <article class="skill-group" data-category="data">
-          <div class="skill-header">
-            <span class="skill-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
-            <h3>Data</h3>
-          </div>
-          <div class="skill-chips">
-            <span class="skchip">MySQL</span>
-            <span class="skchip">SQL</span>
-            <span class="skchip">ERD</span>
-          </div>
-        </article>
-        <article class="skill-group" data-category="iot">
-          <div class="skill-header">
-            <span class="skill-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></span>
-            <h3>IoT</h3>
-          </div>
-          <div class="skill-chips">
-            <span class="skchip">MQTT</span>
-            <span class="skchip">Raspberry Pi Pico W</span>
-            <span class="skchip">ThingSpeak</span>
-          </div>
-        </article>
-        <article class="skill-group" data-category="tools">
-          <div class="skill-header">
-            <span class="skill-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></span>
-            <h3>Tools</h3>
-          </div>
-          <div class="skill-chips">
-            <span class="skchip">Git</span>
-            <span class="skchip">Docker</span>
-            <span class="skchip">Firebase</span>
-            <span class="skchip">JUnit</span>
-            <span class="skchip">Selenium</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container reveal" id="timeline">
-  <div class="section-head">
-    <p class="eyebrow">Timeline</p>
-    <h2>Education and development.</h2>
-  </div>
-
-  <div class="timeline-wrapper">
-    <div class="timeline" id="timelineScroll">
-
-      <article class="timeline-item" tabindex="0">
-        <p class="timeline-date">2023 - Present</p>
-        <h3>BSc Computer Science (Software Engineering)</h3>
-        <p class="muted">Universiti Malaysia Terengganu</p>
-        <div class="timeline-tags">
-          <span class="tag highlight">Dean’s List</span>
-          <span class="tag">Semester 3</span>
-          <span class="tag">Semester 4</span>
-          <span class="tag">Semester 5</span>
-        </div>
-      </article>
-
-      <article class="timeline-item" tabindex="0">
-        <p class="timeline-date">2015 - 2021</p>
-        <h3>Senior Secondary School Certificate (WAEC)</h3>
-        <p class="muted">First Grade Comprehensive School, Kano, Nigeria</p>
-      </article>
-
-      <article class="timeline-item" tabindex="0">
-        <p class="timeline-date">2025 - Present</p>
-        <h3>Treasurer, Nigerian Muslim Community</h3>
-        <p class="muted">Managed financial records and supported community operations</p>
-        <div class="timeline-tags">
-          <span class="tag">Leadership</span>
-          <span class="tag">Finance</span>
-          <span class="tag">Events</span>
-        </div>
-      </article>
-
-      <article class="timeline-item" tabindex="0">
-        <p class="timeline-date">2023 - 2025</p>
-        <h3>Certifications & Programs</h3>
-        <div class="timeline-tags">
-          <span class="tag highlight">ASPIRE</span>
-          <span class="tag">IFuture</span>
-          <span class="tag">Autumn School</span>
-          <span class="tag">VCLEP</span>
-          <span class="tag">Water Survival</span>
-        </div>
-      </article>
-
-    </div>
-    <p class="timeline-hint"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i> Scroll to explore</p>
-  </div>
-</section>
-
-    <section class="section contact-section reveal" id="contact">
-      <div class="container contact-layout">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Let's work together</h2>
-          <p class="muted">
-            Open to Software Engineering internship opportunities (Aug 2026 – Feb 2027), collaborations, and innovative projects.
-          </p>
-          <div class="contact-links">
-            <a href="mailto:abbasusman561@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span>abbasusman561@gmail.com</span></a>
-            <a href="tel:+601157740062"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+60 115 774 0062</span></a>
-            <a href="https://wa.me/60115774062?text=Hello%20Abbas,%20I%20would%20like%20to%20discuss%20a%20project%20opportunity." target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Message on WhatsApp</span></a>
-          </div>
-        </div>
-
-        <div class="contact-info-box">
-          <h3>Let's build something great</h3>
-          <p>
-            I'm always interested in hearing about new projects, challenges, and opportunities. Whether you need a backend engineer, full-stack developer, or IoT specialist, I'm ready to collaborate.
-          </p>
-          <p>
-            <i class="fa-regular fa-clock" aria-hidden="true" style="color:var(--accent);margin-right:6px;"></i><strong>Response time:</strong> I typically get back within 24 hours.
-          </p>
-          <p>
-            You can also connect with me on <a href="https://github.com/Fagacie" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a> or <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>.
-          </p>
+        <div class="contact-actions center-actions">
+          <a href="mailto:abbasusman561@gmail.com" class="btn btn-primary"><i class="fa-regular fa-envelope"
+              aria-hidden="true" style="margin-right:8px;"></i> Email Me</a>
+          <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer"
+            class="btn btn-ghost btn-glass"><i class="fa-brands fa-linkedin-in" aria-hidden="true"
+              style="margin-right:8px;"></i> LinkedIn</a>
+          <a href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer"
+            class="btn btn-ghost btn-glass"><i class="fa-brands fa-github" aria-hidden="true"
+              style="margin-right:8px;"></i> GitHub</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="footer-bottom">
-        <div class="footer-credit">
-          <p>&copy; <span id="year"></span> Abbas Usman Adamu</p>
-          <p class="footer-tagline">Software Engineering Student &middot; UMT</p>
-        </div>
-        <a href="#top" class="footer-top-btn" aria-label="Back to top">
-          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-          Back to top
-        </a>
-      </div>
-    </div>
-  </footer>
+  <!-- Injected by components.js -->
+  <footer class="footer" id="site-footer"></footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/back-to-top.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js?v=11"></script>
+
+  <script type="module">
+    import createGlobe from "https://cdn.skypack.dev/cobe";
+
+    const canvas = document.getElementById("cobe-globe");
+    if (canvas) {
+      let phi = 0;
+      let scrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        scrollY = window.scrollY;
+      }, { passive: true });
+
+      const globe = createGlobe(canvas, {
+        devicePixelRatio: 1,
+        width: 1600,
+        height: 1600,
+        phi: 0,
+        theta: 0.3,
+        dark: 1,
+        diffuse: 1.2,
+        mapSamples: 16000,
+        mapBrightness: 6,
+        baseColor: [0.1, 0.1, 0.12],
+        markerColor: [0.54, 0.89, 0.83],
+        glowColor: [0.15, 0.15, 0.18],
+        markers: [
+          { location: [5.3302, 103.1408], size: 0.1 }
+        ],
+        onRender: (state) => {
+          const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+          state.dark = isLight ? 0 : 1;
+          state.baseColor = isLight ? [0.9, 0.9, 0.9] : [0.1, 0.1, 0.12];
+          state.glowColor = isLight ? [0.9, 0.9, 0.9] : [0.15, 0.15, 0.18];
+
+          state.phi = phi + (scrollY * 0.002);
+          phi += 0.002;
+        }
+      });
+
+      // Fade in once loaded
+      setTimeout(() => {
+        canvas.classList.add("is-loaded");
+      }, 500);
+    }
+  </script>
 </body>
+
 </html>

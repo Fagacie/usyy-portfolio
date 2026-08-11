@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Abbas Usman Adamu</title>
+  <meta name="description"
+    content="About Abbas Usman Adamu — Software Engineering student with experience in backend systems, IoT, and full-stack development." />
+  <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="512x512" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css?v=27" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ═══════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════ -->
+    <section class="about-hero container reveal-fade">
+      <div class="about-hero-split">
+        <div class="about-hero-text">
+          <p class="eyebrow">About Me</p>
+          <h1 style="margin-bottom: 24px; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1;">
+            Hello, I'm <br><span class="accent-text">Abbas.</span>
+          </h1>
+          <p class="muted" style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 32px;">
+            I am a Final-Year Software Engineering student at Universiti Malaysia Terengganu (UMT),
+            specializing in backend systems, IoT platforms, and full-stack web applications.
+            I bridge the gap between low-level hardware communication and resilient server-side architectures.
+          </p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn--primary">Get in Touch</a>
+            <a href="assets/Abbas-Usman-Adamu-Resume.pdf" class="btn btn--outline" download>Download Resume</a>
+          </div>
+        </div>
+        <div class="about-hero-visual">
+          <!-- Stylized placeholder since we don't have a photo yet -->
+          <div class="glass-portrait-placeholder">
+            <img src="assets/img/myimage.png" alt="Abbas Usman Adamu" class="portrait-img" />
+            <!-- Floating accent elements -->
+            <div class="float-badge" style="top: 10%; right: -20px;"><i class="fa-brands fa-java"></i></div>
+            <div class="float-badge" style="bottom: 20%; left: -20px;"><i class="fa-solid fa-microchip"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         BENTO STORY GRID
+    ═══════════════════════════════════════ -->
+    <section class="section container reveal-fade">
+      <div class="section-head split">
+        <div>
+          <p class="eyebrow">My Journey</p>
+          <h2>The Story So Far</h2>
+        </div>
+      </div>
+
+      <div class="bento-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <!-- Main Focus -->
+        <article class="pcard" tabindex="0" style="grid-column: 1 / -1; min-height: 250px; justify-content: center;">
+          <div class="pcard-header">
+            <span class="pcard-badge pcard-badge--live">{ eng }</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title" style="font-size: 1.8rem;">Development Focus</h3>
+            <p class="pcard-desc" style="font-size: 1.1rem; max-width: 800px;">
+              I enjoy building resilient backend services using Java (JSP/Servlets, Spring Boot) and
+              connecting them to real-world hardware through IoT (MicroPython, MQTT, Raspberry Pi Pico W).
+              My passion lies in creating software that seamlessly integrates with physical environments
+              to solve complex problems efficiently.
+            </p>
+          </div>
+        </article>
+
+        <!-- Academic -->
+        <article class="pcard" tabindex="0">
+          <div class="pcard-header">
+            <span class="pcard-badge pcard-badge--muted">&lt;edu&gt;</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Academic Background</h3>
+            <p class="pcard-desc">
+              Currently pursuing a BSc in Computer Science (Software Engineering) with Honours.
+              My coursework provides a strong foundation in algorithmic problem solving, database design,
+              and software architecture.
+            </p>
+          </div>
+        </article>
+
+        <!-- Leadership -->
+        <article class="pcard" tabindex="0">
+          <div class="pcard-header">
+            <span class="pcard-badge pcard-badge--muted">lead_</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Leadership & Community</h3>
+            <p class="pcard-desc">
+              Beyond code, I actively engage in community leadership, serving as Media & Publicity Officer
+              (and previously Treasurer) for the Nigerian Muslim Community in Malaysia.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         TECH ARSENAL
+    ═══════════════════════════════════════ -->
+    <section class="section container reveal-fade">
+      <div class="section-head split">
+        <div>
+          <p class="eyebrow">Skills</p>
+          <h2>Technical Arsenal</h2>
+        </div>
+      </div>
+
+      <div class="skills-grid"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+        <!-- Programming -->
+        <article class="pcard" style="padding: 32px;" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+            <div
+              style="width: 48px; height: 48px; border-radius: 12px; background: var(--glass-glow-1); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--accent);">
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
+            </div>
+            <h3 style="margin: 0;">Programming</h3>
+          </div>
+          <div class="pcard-chips">
+            <span class="pchip">Java</span>
+            <span class="pchip">JavaScript</span>
+            <span class="pchip">Python</span>
+            <span class="pchip">MicroPython</span>
+            <span class="pchip">HTML/CSS</span>
+          </div>
+        </article>
+
+        <!-- Backend & Web -->
+        <article class="pcard" style="padding: 32px;" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+            <div
+              style="width: 48px; height: 48px; border-radius: 12px; background: var(--glass-glow-1); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--accent);">
+              <i class="fa-solid fa-server" aria-hidden="true"></i>
+            </div>
+            <h3 style="margin: 0;">Backend & Web</h3>
+          </div>
+          <div class="pcard-chips">
+            <span class="pchip">Java Servlets</span>
+            <span class="pchip">JSP</span>
+            <span class="pchip">Spring Boot</span>
+            <span class="pchip">MySQL</span>
+            <span class="pchip">REST APIs</span>
+          </div>
+        </article>
+
+        <!-- Deployment -->
+        <article class="pcard" style="padding: 32px;" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+            <div
+              style="width: 48px; height: 48px; border-radius: 12px; background: var(--glass-glow-1); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--accent);">
+              <i class="fa-solid fa-gears" aria-hidden="true"></i>
+            </div>
+            <h3 style="margin: 0;">Deployment</h3>
+          </div>
+          <div class="pcard-chips">
+            <span class="pchip">Docker</span>
+            <span class="pchip">Git / GitHub</span>
+            <span class="pchip">Apache Tomcat</span>
+            <span class="pchip">Firebase</span>
+          </div>
+        </article>
+
+        <!-- IoT -->
+        <article class="pcard" style="padding: 32px;" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+            <div
+              style="width: 48px; height: 48px; border-radius: 12px; background: var(--glass-glow-1); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--accent);">
+              <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+            </div>
+            <h3 style="margin: 0;">IoT</h3>
+          </div>
+          <div class="pcard-chips">
+            <span class="pchip">Raspberry Pi Pico W</span>
+            <span class="pchip">MQTT</span>
+            <span class="pchip">ThingSpeak</span>
+            <span class="pchip">Sensors</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         EDUCATION & LEADERSHIP TIMELINE
+    ═══════════════════════════════════════ -->
+    <section class="section container reveal-fade">
+      <div class="section-head split">
+        <div>
+          <p class="eyebrow">Experience</p>
+          <h2>Roles & Education</h2>
+        </div>
+      </div>
+
+      <div class="exp-timeline">
+        <!-- Role 1: Education -->
+        <article class="exp-timeline-item">
+          <div class="exp-timeline-dot"></div>
+          <div class="exp-timeline-content">
+            <div class="exp-timeline-title-group">
+              <h3>BSc Computer Science (Software Engineering)</h3>
+              <div class="exp-timeline-company">Universiti Malaysia Terengganu (UMT)</div>
+            </div>
+            <div class="exp-timeline-date">2023 – 2027 (Expected)</div>
+            <p class="muted">
+              Pursuing a degree with Honours, focusing on scalable software architecture, algorithms, and full-stack
+              engineering.
+            </p>
+          </div>
+        </article>
+
+        <!-- Role 2: Community Leadership -->
+        <article class="exp-timeline-item">
+          <div class="exp-timeline-dot"></div>
+          <div class="exp-timeline-content">
+            <div class="exp-timeline-title-group">
+              <h3>Media & Publicity Officer</h3>
+              <div class="exp-timeline-company">Nigerian Muslim Community in Malaysia</div>
+            </div>
+            <div class="exp-timeline-date">Present</div>
+            <p class="muted">
+              Spearheading digital communications, managing community public relations, and designing publicity
+              materials for major events.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CALL TO ACTION
+    ═══════════════════════════════════════ -->
+    <section class="section container reveal-fade" style="margin-bottom: 80px;">
+      <div class="pcard"
+        style="padding: 60px 40px; text-align: center; justify-content: center; align-items: center; background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(13,20,30,0.4) 100%);">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to collaborate?</h2>
+        <p class="muted" style="max-width: 600px; margin: 0 auto 32px; font-size: 1.1rem;">
+          Whether you have a project in mind, need a resilient backend solution, or just want to chat about tech, I'm
+          always open to discussing new opportunities.
+        </p>
+        <a href="contact.html" class="btn btn--primary" style="font-size: 1.1rem; padding: 14px 32px;">
+          Let's Build Together <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
