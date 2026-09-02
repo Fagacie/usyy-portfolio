@@ -1,3 +1,13 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/resume", "destination": "/assets/Abbas-Usman-Adamu-Resume.pdf" },
+    { "source": "/cert/pamerkom", "destination": "/assets/certificates/consolation-prize.pdf" },
+    { "source": "/cert/deans-sem3", "destination": "/assets/certificates/dean-list-sem3.jpeg" },
+    { "source": "/cert/deans-sem4", "destination": "/assets/certificates/dean-list-sem4.jpeg" },
+    { "source": "/cert/aspire", "destination": "/assets/certificates/aspire-programme.jpeg" },
+    { "source": "/cert/autumn-school", "destination": "/assets/certificates/autumn-school.pdf" },
+    { "source": "/cert/ifuture", "destination": "/assets/certificates/ifuture.pdf" },
+    { "source": "/cert/water-survival", "destination": "/assets/certificates/water-survival.pdf" }
+  ]
 }

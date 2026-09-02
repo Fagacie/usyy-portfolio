@@ -68,7 +68,7 @@
 
       <!-- Actions (Resume + Theme) -->
       <div class="nav-actions" id="navActions">
-        <a href="${BASE}assets/Abbas-Usman-Adamu-Resume.pdf" class="nav-resume-btn" download="Abbas-Usman-Adamu-Resume.pdf">Resume</a>
+        <a href="${BASE}resume" class="nav-resume-btn" target="_blank">Resume</a>
       </div>
 
       <!-- Mobile Toggle -->
@@ -86,7 +86,7 @@
           ${mobileHTML}
         </ul>
         <div class="mobile-bottom-actions" id="mobileActions">
-          <a href="${BASE}assets/Abbas-Usman-Adamu-Resume.pdf" class="mobile-resume-btn" download>Download Resume</a>
+          <a href="${BASE}resume" class="mobile-resume-btn" target="_blank">View Resume</a>
         </div>
       </div>
     </div>`;
