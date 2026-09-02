@@ -27,10 +27,10 @@
     header.classList.add('floating-header-container');
 
     const navItems = [
-      { label: 'Home',     href: 'index.html',    id: 'home' },
-      { label: 'Work',     href: 'work.html',     id: 'work' },
-      { label: 'About',    href: 'about.html',    id: 'about' },
-      { label: 'Contact',  href: 'contact.html',  id: 'contact' },
+      { label: 'Home',     href: './',            id: 'home' },
+      { label: 'Work',     href: 'work',          id: 'work' },
+      { label: 'About',    href: 'about',         id: 'about' },
+      { label: 'Contact',  href: 'contact',       id: 'contact' },
     ];
 
     /* Check if we're on a project subpage */
@@ -192,10 +192,10 @@
         <div class="footer-col">
           <h3 class="footer-col-title">Navigation</h3>
           <nav class="mega-footer-nav" aria-label="Footer navigation">
-            <a href="${BASE}index.html">Home</a>
-            <a href="${BASE}work.html">Work</a>
-            <a href="${BASE}about.html">About</a>
-            <a href="${BASE}contact.html">Contact</a>
+            <a href="${BASE}./">Home</a>
+            <a href="${BASE}work">Work</a>
+            <a href="${BASE}about">About</a>
+            <a href="${BASE}contact">Contact</a>
           </nav>
         </div>
 

@@ -3437,7 +3437,7 @@ body.page-visible {
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 8vw, 4rem);
   line-height: 1.1;
   margin-bottom: 20px;
   color: var(--ink);
@@ -4538,6 +4538,18 @@ body.page-visible {
 
   .btn {
     width: 100%;
+  }
+
+  .feat-project-content {
+    padding: 20px;
+  }
+  
+  .feat-project-visual {
+    height: 200px;
+  }
+  
+  .about-hero-split {
+    padding: 40px 0;
   }
 }
 
