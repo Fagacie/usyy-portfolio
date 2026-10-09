@@ -1,360 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Abbas Usman Adamu | Software Engineer</title>
-  <meta name="description"
-    content="Portfolio of Abbas Usman Adamu — software engineering student building backend systems, full-stack web applications, and IoT platforms." />
-  <meta name="keywords"
-    content="Abbas Usman Adamu, Software Engineer, Java, JSP, Servlets, MySQL, Docker, IoT, Full-stack Developer, Backend Systems, Artificial Intelligence" />
+  <meta name="theme-color" content="#f7f8fa" />
+  <title>Abbas Usman Adamu | Software Engineering</title>
+  <meta name="description" content="Portfolio of Abbas Usman Adamu, a Software Engineering student at Universiti Malaysia Terengganu building web platforms, backend systems, and connected IoT applications." />
   <meta name="author" content="Abbas Usman Adamu" />
-  <meta name="theme-color" content="#060b14" />
-
-  <meta property="og:title" content="Abbas Usman Adamu | Software Engineer" />
-  <meta property="og:description"
-    content="Software engineering student building backend systems, IoT platforms, and full-stack web applications." />
+  <meta property="og:title" content="Abbas Usman Adamu | Software Engineering" />
+  <meta property="og:description" content="Selected software engineering projects, connected systems, and research interests." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/og-preview.png" />
-  <meta property="og:url" content="./" />
-
+  <meta property="og:url" content="https://www.usyy-portfolio.tech/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Abbas Usman Adamu | Software Engineer" />
-  <meta name="twitter:description" content="Backend systems, IoT platforms, and full-stack web applications." />
+  <meta name="twitter:title" content="Abbas Usman Adamu | Software Engineering" />
+  <meta name="twitter:description" content="Selected software engineering projects, connected systems, and research interests." />
   <meta name="twitter:image" content="assets/img/og-preview.png" />
-
   <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/style.css?v=17" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css?v=28" />
+  <link rel="stylesheet" href="css/home.css?v=1" />
   <link rel="stylesheet" href="css/print.css" media="print" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
-
-<body>
-  <!-- Ambient responsive grid background -->
-  <div class="ambient-grid" id="ambientGrid" aria-hidden="true"></div>
-
-  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-hidden="true"></div>
+<body class="home-page">
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- Injected by components.js -->
   <header class="header" id="site-header"></header>
 
   <main id="main">
-    <!-- ═══════════════════════════════════════
-         HERO (Two-column)
-    ═══════════════════════════════════════ -->
-    <section class="hero-split container" aria-labelledby="hero-heading">
-      <!-- Interactive Data Field Canvas -->
-      <canvas id="heroCanvas" class="hero-canvas-bg"></canvas>
-
-      <div class="hero-content">
-        <div class="status-badge" aria-label="Current status">
-          <span class="status-dot"></span>
-          Software Engineering Intern · EHS / INOS UMT
+    <section class="home-hero home-container" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <p class="home-eyebrow"><span class="availability-dot" aria-hidden="true"></span> Software Engineering · Universiti Malaysia Terengganu</p>
+        <h1 id="hero-heading">I build software that <span>solves real problems.</span></h1>
+        <p class="hero-intro">I'm Abbas Usman Adamu, a Software Engineering student focused on full-stack applications, backend systems, and connected IoT solutions. I care about building things that work reliably, not just look good in a demo.</p>
+        <div class="home-actions">
+          <a class="home-button home-button-primary" href="work">Explore my projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="home-button home-button-secondary" href="/resume" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> View résumé</a>
         </div>
-
-        <h1 id="hero-heading" class="split-text">Building Software Systems<br>for a More Intelligent World.</h1>
-
-        <p class="hero-desc" data-aos="fade-up" data-aos-delay="100">
-          Software Engineering student building full-stack backend systems, IoT applications, and AI-driven
-          technologies. Researching data intelligence for a smarter world.
-        </p>
-
-        <div class="hero-actions" data-aos="fade-up" data-aos-delay="200" aria-label="Primary actions">
-          <a href="work" class="btn magnetic">Explore Work <i class="fa-solid fa-arrow-right btn-arrow"
-              aria-hidden="true"></i></a>
-          <a href="/resume" class="btn btn-secondary btn-icon magnetic" target="_blank">
-            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> View Resume
-          </a>
-        </div>
-
-      </div>
-
-      <div class="hero-visual" data-aos="zoom-in" data-aos-delay="400" aria-hidden="true">
-        <div class="hero-image-wrapper">
-          <div class="hero-glow"></div>
-          <img src="assets/img/profile.png" alt="Professional portrait of Abbas Usman Adamu" class="hero-image"
-            id="heroImg" />
-        </div>
-
-        <div class="hero-socials" aria-label="External profile links">
-          <a href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
-              class="fa-brands fa-github" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-          <a href="mailto:abbasusman561@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"
-              aria-hidden="true"></i></a>
+        <div class="hero-links" aria-label="Professional links">
+          <a href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+          <a href="mailto:abbasusman561@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Email</a>
         </div>
       </div>
-
-      <div class="hero-scroll-cue" aria-hidden="true">
-        <span class="scroll-text">Explore</span>
-        <div class="scroll-line"></div>
+      <div class="hero-profile">
+        <div class="profile-frame">
+          <img src="assets/img/profile.png" alt="Portrait of Abbas Usman Adamu" width="711" height="712" fetchpriority="high" />
+        </div>
+        <div class="profile-note">
+          <span class="profile-note-label">CURRENT FOCUS</span>
+          <strong>Software engineering</strong>
+          <span>Web platforms · IoT · data-driven systems</span>
+        </div>
+        <span class="hero-index" aria-hidden="true">AA / 01</span>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         TECH STACK MARQUEE
-    ═══════════════════════════════════════ -->
-    <section class="marquee-section" aria-label="Tech Stack" data-aos="fade-in" data-aos-delay="500">
-      <div class="marquee-container">
-        <div class="marquee-content">
-          <span>Java</span> <span class="dot">•</span>
-          <span>JSP/Servlets</span> <span class="dot">•</span>
-          <span>MicroPython</span> <span class="dot">•</span>
-          <span>MQTT</span> <span class="dot">•</span>
-          <span>Docker</span> <span class="dot">•</span>
-          <span>MySQL</span> <span class="dot">•</span>
-          <span>REST APIs</span> <span class="dot">•</span>
-          <span>Linux</span> <span class="dot">•</span>
-          <span>Hardware Sensors</span> <span class="dot">•</span>
-          <!-- Duplicate for infinite scroll -->
-          <span>Java</span> <span class="dot">•</span>
-          <span>JSP/Servlets</span> <span class="dot">•</span>
-          <span>MicroPython</span> <span class="dot">•</span>
-          <span>MQTT</span> <span class="dot">•</span>
-          <span>Docker</span> <span class="dot">•</span>
-          <span>MySQL</span> <span class="dot">•</span>
-          <span>REST APIs</span> <span class="dot">•</span>
-          <span>Linux</span> <span class="dot">•</span>
-          <span>Hardware Sensors</span> <span class="dot">•</span>
-        </div>
+    <section class="home-intro-strip" aria-label="Areas of work">
+      <div class="home-container intro-strip-inner">
+        <span>Backend &amp; web applications</span><span class="strip-divider" aria-hidden="true"></span>
+        <span>Connected IoT systems</span><span class="strip-divider" aria-hidden="true"></span>
+        <span>Applied intelligent systems</span>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         OVERVIEW: SYSTEMS, DATA & INTELLIGENCE
-    ═══════════════════════════════════════ -->
-    <section class="section container">
-      <div class="section-head" data-aos="fade-up">
-        <p class="eyebrow">How I Build</p>
-        <h2>Systems, Data &amp; Intelligence</h2>
-      </div>
-
-      <!-- Interactive connected cards -->
-      <div class="overview-connected-grid reveal">
-        <div class="connection-line" aria-hidden="true">
-          <div class="connection-flow"></div>
-        </div>
-
-        <article class="interactive-card" tabindex="0">
-          <div class="icard-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
-          <h3>Software Engineering</h3>
-          <p>Java backend systems, JSP/Servlet applications, RESTful services, databases, and full-stack web
-            development.</p>
-          <div class="icard-indicator"><i class="fa-solid fa-arrow-right"></i></div>
-        </article>
-
-        <article class="interactive-card" tabindex="0">
-          <div class="icard-icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
-          <h3>IoT &amp; Connected Systems</h3>
-          <p>Raspberry Pi Pico W, sensor integration, MicroPython, MQTT communication, and connected monitoring systems.
-          </p>
-          <div class="icard-indicator"><i class="fa-solid fa-arrow-right"></i></div>
-        </article>
-
-        <article class="interactive-card" tabindex="0">
-          <div class="icard-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
-          <h3>Intelligent Systems</h3>
-          <p>Exploring Artificial Intelligence, Machine Learning, and data-driven systems as a direction for
-            postgraduate study.</p>
-          <div class="icard-indicator"><i class="fa-solid fa-arrow-right"></i></div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         SELECTED PROJECTS
-    ═══════════════════════════════════════ -->
-    <section class="section container">
-      <div class="section-head split" data-aos="fade-up">
+    <section class="home-section home-container" id="selected-work" aria-labelledby="projects-heading">
+      <div class="home-section-heading">
         <div>
-          <p class="eyebrow">Featured Work</p>
-          <h2>Selected Projects</h2>
+          <p class="home-eyebrow">Selected work</p>
+          <h2 id="projects-heading">Projects built around real use cases.</h2>
+          <p class="section-description">A small selection of projects that show how I approach application development, system integration, and problem-solving.</p>
         </div>
-        <a href="work" class="btn btn-secondary">View all work <i class="fa-solid fa-arrow-right btn-arrow"
-            aria-hidden="true"></i></a>
+        <a class="home-text-link" href="work">All projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </div>
 
-      <div class="featured-project-list">
-
-        <!-- Project 1: PSM ELMS -->
-        <a href="projects/psm-e-learning" class="feat-project" data-aos="fade-up">
-          <div class="feat-project-visual psm-visual" aria-hidden="true">
-            <div class="abstract-ui">
-              <div class="ui-nav"></div>
-              <div class="ui-body">
-                <div class="ui-card"></div>
-                <div class="ui-card"></div>
-                <div class="ui-qr"></div>
+      <div class="home-project-grid">
+        <article class="home-project-card home-project-card-featured">
+          <div class="project-card-top">
+            <span class="project-number">01</span>
+            <span class="project-type">E-learning platform</span>
+          </div>
+          <div class="project-visual project-visual-learning" aria-hidden="true">
+            <div class="learning-window">
+              <div class="mock-window-bar"><span></span><span></span><span></span><b>Learning dashboard</b></div>
+              <div class="learning-window-body">
+                <div class="learning-sidebar"><i></i><i></i><i></i><i></i></div>
+                <div class="learning-main"><span class="mock-line wide"></span><span class="mock-line"></span><div class="learning-cards"><i></i><i></i><i></i></div><div class="learning-progress"><span></span></div></div>
               </div>
             </div>
           </div>
-          <div class="feat-project-content">
-            <div class="feat-project-meta">
-              <span class="pcard-badge pcard-badge--fyp">⭐ Final Year Project</span>
-              <span class="pcard-stack" id="gh-lang-psm">JSP / Servlet</span>
-              <span class="pcard-stack skeleton-load" id="gh-stars-psm" style="margin-left: 8px;"><i
-                  class="fa-solid fa-star"></i> --</span>
-            </div>
+          <div class="project-card-content">
+            <div class="project-tags"><span>Java</span><span>JSP / Servlets</span><span>MySQL</span><span>Docker</span></div>
             <h3>PSM E-Learning Management System</h3>
-            <p>Full-stack educational platform with role-based access workflows, secure payment gateways, and automated
-              QR-verified certificate generation.</p>
-            <div class="pcard-chips" id="gh-chips-psm"><span class="pchip">Java</span><span
-                class="pchip">MySQL</span><span class="pchip">Docker</span></div>
-            <div class="feat-project-cta">Project Details <i class="fa-solid fa-arrow-right"></i></div>
+            <p>A learning platform built around course enrollment, payments, assessments, and certificate generation with QR-based verification.</p>
+            <a class="project-card-link" href="projects/psm-e-learning">Read the case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
-        </a>
+        </article>
 
-        <!-- Project 2: IoT Campus -->
-        <a href="projects/iot-monitoring" class="feat-project" data-aos="fade-up" data-aos-delay="100">
-          <div class="feat-project-visual iot-visual" aria-hidden="true">
-            <div class="abstract-iot">
-              <div class="iot-node core"></div>
-              <div class="iot-connection c1"></div>
-              <div class="iot-node sensor s1"></div>
-              <div class="iot-connection c2"></div>
-              <div class="iot-node sensor s2"></div>
-              <div class="iot-wave"></div>
+        <article class="home-project-card">
+          <div class="project-card-top">
+            <span class="project-number">02</span>
+            <span class="project-type">Connected systems</span>
+          </div>
+          <div class="project-visual project-visual-iot" aria-hidden="true">
+            <div class="iot-board">
+              <div class="iot-board-head"><span class="board-status"></span> SENSOR NETWORK <span class="board-live">MONITORING</span></div>
+              <div class="iot-board-body"><div class="iot-chip"><i class="fa-solid fa-microchip"></i><b>Pico W</b><small>Controller</small></div><div class="iot-lines"><i></i><i></i><i></i></div><div class="iot-sensors"><span><i class="fa-solid fa-temperature-half"></i> Environment</span><span><i class="fa-solid fa-person-walking"></i> Motion</span><span><i class="fa-solid fa-wave-square"></i> Distance</span></div></div>
             </div>
           </div>
-          <div class="feat-project-content">
-            <div class="feat-project-meta">
-              <span class="pcard-badge pcard-badge--live">Live IoT</span>
-              <span class="pcard-stack" id="gh-lang-iot">MicroPython / MQTT</span>
-              <span class="pcard-stack skeleton-load" id="gh-stars-iot" style="margin-left: 8px;"><i
-                  class="fa-solid fa-star"></i> --</span>
-            </div>
+          <div class="project-card-content">
+            <div class="project-tags"><span>MicroPython</span><span>MQTT</span><span>Raspberry Pi Pico W</span></div>
             <h3>Smart Campus IoT Station</h3>
-            <p>Hardware monitoring station using Raspberry Pi Pico W for environmental telemetry and security sensing,
-              streaming real-time data via MQTT to a cloud dashboard.</p>
-            <div class="pcard-chips" id="gh-chips-iot"><span class="pchip">MicroPython</span><span
-                class="pchip">MQTT</span><span class="pchip">Sensors</span></div>
-            <div class="feat-project-cta">Project Details <i class="fa-solid fa-arrow-right"></i></div>
+            <p>An environmental and security monitoring prototype combining sensor data, a microcontroller, and cloud telemetry.</p>
+            <a class="project-card-link" href="projects/iot-monitoring">Read the case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
-        </a>
+        </article>
 
+        <article class="home-project-card">
+          <div class="project-card-top">
+            <span class="project-number">03</span>
+            <span class="project-type">Information system</span>
+          </div>
+          <div class="project-visual project-visual-pku" aria-hidden="true">
+            <div class="pku-panel">
+              <div class="pku-panel-head"><span>Management overview</span><i class="fa-solid fa-ellipsis" aria-hidden="true"></i></div>
+              <div class="pku-stat-row"><div><small>Patients</small><b>Records</b></div><div><small>Appointments</small><b>Schedule</b></div></div>
+              <div class="pku-table"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="project-card-content">
+            <div class="project-tags"><span>Java</span><span>JSP / Servlets</span><span>MySQL</span></div>
+            <h3>PKU Management System</h3>
+            <p>A healthcare management application designed to organize patient records, appointments, billing, and staff information.</p>
+            <a class="project-card-link" href="projects/pku-management">Read the case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         GATEWAYS & CREDENTIALS
-    ═══════════════════════════════════════ -->
-    <section class="section container">
-      <div class="gateway-grid">
-
-        <!-- Experience Node -->
-        <div class="gateway-card tilt-effect reveal-stagger">
-          <div class="gateway-head">
-            <i class="fa-solid fa-briefcase gateway-icon" aria-hidden="true"></i>
-            <span class="eyebrow">Currently</span>
+    <section class="home-capabilities">
+      <div class="home-container">
+        <div class="home-section-heading">
+          <div>
+            <p class="home-eyebrow">How I work</p>
+            <h2>Engineering with purpose.</h2>
           </div>
-          <div class="gateway-body">
-            <h4>Software Engineering Intern</h4>
-            <p class="timeline-org">Eco Hydrotech Solutions Sdn. Bhd.<br>INOS &middot; Universiti Malaysia Terengganu
-            </p>
-            <p class="timeline-date">Aug 2026 — Present</p>
-          </div>
-          <a href="work#experience" class="gateway-link">View Experience <i
-              class="fa-solid fa-arrow-right"></i></a>
+          <p class="section-description capability-heading-note">I like understanding the whole problem, from the user-facing experience to the systems and data behind it.</p>
         </div>
-
-        <!-- Research Node -->
-        <div class="gateway-card tilt-effect reveal-stagger">
-          <div class="gateway-head">
-            <i class="fa-solid fa-microscope gateway-icon" aria-hidden="true"></i>
-            <span class="eyebrow">Research Direction</span>
-          </div>
-          <div class="gateway-body">
-            <p class="gateway-desc">Exploring Artificial Intelligence, Machine Learning, intelligent systems, and
-              data-driven applications for postgraduate study.</p>
-          </div>
-          <a href="research" class="gateway-link">Explore Research <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="capability-grid">
+          <article class="capability-item"><span class="capability-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><span class="capability-count">01 / BUILD</span><h3>Application development</h3><p>Designing and building web applications, backend workflows, database-backed features, and maintainable interfaces.</p></article>
+          <article class="capability-item"><span class="capability-icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></span><span class="capability-count">02 / CONNECT</span><h3>IoT &amp; integration</h3><p>Connecting sensors, embedded devices, communication protocols, and dashboards into useful monitoring systems.</p></article>
+          <article class="capability-item"><span class="capability-icon"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></span><span class="capability-count">03 / EXPLORE</span><h3>Research-led thinking</h3><p>Exploring intelligent systems and data-driven approaches, with an interest in practical, testable applications.</p></article>
         </div>
-
-      </div>
-
-      <!-- Credential micro-signals -->
-      <div class="credential-bar reveal">
-        <div class="cred-signal"><i class="fa-solid fa-building-columns"></i> Universiti Malaysia Terengganu</div>
-        <div class="cred-signal"><i class="fa-solid fa-award"></i> Dean's Award (Sem I &amp; II)</div>
-        <a href="work#achievements" class="cred-signal interactive" aria-label="View PAMERKOM 2026 Achievement">
-          <i class="fa-solid fa-trophy"></i> Consolation Prize &middot; PAMERKOM 2026
-        </a>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         CONTACT CTA
-    ═══════════════════════════════════════ -->
-    <section class="section contact-section" data-aos="fade-up" id="contact">
-      <!-- 3D Art Backdrop -->
-      <div class="contact-3d-container">
-        <div class="abstract-core">
-          <div class="cube cube-1">
-            <div class="face front"></div>
-            <div class="face back"></div>
-            <div class="face right"></div>
-            <div class="face left"></div>
-            <div class="face top"></div>
-            <div class="face bottom"></div>
-          </div>
-          <div class="cube cube-2">
-            <div class="face front"></div>
-            <div class="face back"></div>
-            <div class="face right"></div>
-            <div class="face left"></div>
-            <div class="face top"></div>
-            <div class="face bottom"></div>
-          </div>
-          <div class="cube cube-3">
-            <div class="face front"></div>
-            <div class="face back"></div>
-            <div class="face right"></div>
-            <div class="face left"></div>
-            <div class="face top"></div>
-            <div class="face bottom"></div>
-          </div>
-        </div>
+    <section class="home-section home-container home-current-section" aria-labelledby="current-heading">
+      <div class="current-copy">
+        <p class="home-eyebrow">Currently</p>
+        <h2 id="current-heading">Learning by building in a real engineering environment.</h2>
+        <p>I'm undertaking a Software Engineering internship with Eco Hydrotech Solutions, working in the context of INOS at Universiti Malaysia Terengganu. My focus is applying software development to practical systems and workflows.</p>
+        <a class="home-text-link" href="work#experience">Experience &amp; background <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </div>
+      <aside class="current-card">
+        <span class="current-card-label"><span class="availability-dot" aria-hidden="true"></span> CURRENT ROLE</span>
+        <h3>Software Engineering Intern</h3>
+        <p>Eco Hydrotech Solutions Sdn. Bhd.</p>
+        <span class="current-organization">INOS · Universiti Malaysia Terengganu</span>
+        <div class="current-card-rule"></div>
+        <span class="current-date">August 2026 – Present</span>
+      </aside>
+    </section>
 
-      <!-- Content Overlay -->
-      <div class="contact-content-overlay">
-        <p class="eyebrow">Next Steps</p>
-        <h2>Let's build something useful.</h2>
-        <p class="muted">
-          Open to software engineering, research, and postgraduate opportunities.
-        </p>
-        <div class="contact-actions center-actions">
-          <a href="mailto:abbasusman561@gmail.com" class="btn btn-primary"><i class="fa-regular fa-envelope"
-              aria-hidden="true" style="margin-right:8px;"></i> Email Me</a>
-          <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer"
-            class="btn btn-ghost btn-glass"><i class="fa-brands fa-linkedin-in" aria-hidden="true"
-              style="margin-right:8px;"></i> LinkedIn</a>
-          <a href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer"
-            class="btn btn-ghost btn-glass"><i class="fa-brands fa-github" aria-hidden="true"
-              style="margin-right:8px;"></i> GitHub</a>
+    <section class="home-research-band">
+      <div class="home-container research-band-inner">
+        <div class="research-band-mark" aria-hidden="true"><i class="fa-solid fa-flask"></i></div>
+        <div class="research-band-copy">
+          <p class="home-eyebrow">Research direction</p>
+          <h2>Interested in intelligent systems that solve practical problems.</h2>
+          <p>I'm exploring AI and machine learning, data analytics, IoT at the edge, and the software systems needed to turn ideas into usable tools.</p>
         </div>
+        <a class="home-button home-button-light" href="research">Explore research <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <section class="home-contact home-container" aria-labelledby="contact-heading">
+      <div>
+        <p class="home-eyebrow">Get in touch</p>
+        <h2 id="contact-heading">Have a useful problem to work on?</h2>
+        <p>I'm interested in software engineering opportunities, research conversations, and projects with a clear purpose.</p>
+      </div>
+      <div class="home-contact-actions">
+        <a class="home-button home-button-primary" href="mailto:abbasusman561@gmail.com">Contact me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="home-text-link" href="contact">More contact options</a>
       </div>
     </section>
   </main>
 
-  <!-- Injected by components.js -->
   <footer class="footer" id="site-footer"></footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-  <script src="js/components.js"></script>
-  <script src="js/main.js?v=11"></script>
-
-
+  <script src="js/components.js?v=2"></script>
+  <script src="js/main.js?v=12"></script>
 </body>
-
 </html>
