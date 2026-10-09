@@ -3,381 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work | Abbas Usman Adamu</title>
-  <meta name="description" content="Professional experience, featured projects, and selected achievements of Abbas Usman Adamu." />
+  <meta name="theme-color" content="#f7f8fa" />
+  <title>Projects &amp; Experience | Abbas Usman Adamu</title>
+  <meta name="description" content="Explore selected software projects, professional experience, leadership, and verified recognition from Abbas Usman Adamu." />
+  <meta name="author" content="Abbas Usman Adamu" />
   <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=21" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css?v=28" />
+  <link rel="stylesheet" href="css/work.css?v=1" />
 </head>
-<body>
-  <div class="scroll-progress" id="scrollProgress" role="progressbar"></div>
+<body class="work-redesign">
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="header" id="site-header"></header>
-
   <main id="main">
-    <section class="portfolio-hero container reveal-fade">
-      <div class="portfolio-hero-bg" aria-hidden="true">
-        <div class="glow-orb"></div>
-        <div class="cube cube-1"></div>
-        <div class="cube cube-2"></div>
-        <div class="cube cube-3"></div>
+    <section class="work-hero work-container">
+      <p class="work-eyebrow"><span></span> SELECTED WORK &amp; EXPERIENCE</p>
+      <h1>Built with purpose.<br /><em>Improved through practice.</em></h1>
+      <div class="work-hero-bottom">
+        <p>A selection of software projects, practical engineering work, and roles that reflect how I approach problems and learn by building.</p>
+        <a class="work-button work-button-primary" href="#projects">Explore projects <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
       </div>
-      <div class="portfolio-hero-content">
-        <p class="eyebrow">Portfolio</p>
-        <h1>Work &amp; Experience</h1>
-        <p class="muted">A comprehensive overview of my professional roles, engineering projects, and technical milestones.</p>
+      <div class="work-stat-strip" aria-label="Portfolio overview">
+        <div><strong>06</strong><span>PROJECT CASE STUDIES</span></div>
+        <div><strong>03</strong><span>ENGINEERING FOCUS AREAS</span></div>
+        <div><strong>2026</strong><span>CURRENT INDUSTRY EXPERIENCE</span></div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         SECTION 1: FEATURED PROJECTS
-    ═══════════════════════════════════════ -->
-    <section class="section container reveal-fade" id="projects" style="padding-top: 0;">
-      <h2 class="section-title">Featured Projects</h2>
-      
-      <div class="project-toolbar">
-        <div class="filters" aria-label="Project filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="live">Live</button>
-          <button class="filter-btn" data-filter="api">API</button>
-          <button class="filter-btn" data-filter="iot">IoT</button>
-          <button class="filter-btn" data-filter="java">Java</button>
-          <button class="filter-btn" data-filter="web">Web</button>
+    <section class="work-section work-container" id="projects" aria-labelledby="projects-heading">
+      <div class="work-section-head">
+        <div><p class="work-eyebrow">01 / PROJECTS</p><h2 id="projects-heading">Selected engineering work</h2><p>Start with the purpose of each project. Open a case study for its scope, implementation, and technical decisions.</p></div>
+        <span class="work-project-count" id="projectCount">6 projects</span>
+      </div>
+      <div class="work-filter-row">
+        <div class="work-filters" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All projects</button>
+          <button class="filter-btn" type="button" data-filter="live" aria-pressed="false">Live / deployed</button>
+          <button class="filter-btn" type="button" data-filter="api" aria-pressed="false">API</button>
+          <button class="filter-btn" type="button" data-filter="iot" aria-pressed="false">IoT</button>
+          <button class="filter-btn" type="button" data-filter="java" aria-pressed="false">Java</button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
         </div>
-        <p class="project-count" id="projectCount">6 projects</p>
+        <p class="work-filter-hint">Filter by technology or project type.</p>
       </div>
-
-      <div class="project-insight" aria-live="polite">
-        <span>active.project</span>
-        <code id="projectInsight">select a project card</code>
-      </div>
-
-      <div class="project-grid" id="projectGrid">
-        <!-- Card 1: PSM ELMS -->
-        <article class="pcard" tabindex="0" data-tags="java web live" data-summary="Final Year Project / E-learning platform / Java / MySQL / Docker / PAMERKOM 2026">
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--fyp">⭐ Final Year Project</span>
-            <span class="pcard-stack">JSP / Servlet</span>
-          </div>
-          <div class="pcard-body">
-            <h3 class="pcard-title">PSM E-Learning Management System</h3>
-            <p class="pcard-desc">Full-stack e-learning platform for course management, assessments, and certificate generation with QR verification.</p>
-            <div class="pcard-achievement">
-              <i class="fa-solid fa-trophy" aria-hidden="true"></i> Consolation Prize — PAMERKOM 2026
-            </div>
-          </div>
-          <div class="pcard-footer">
-            <div class="pcard-chips"><span class="pchip">Java</span><span class="pchip">MySQL</span><span class="pchip">Docker</span></div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="projects/psm-e-learning">View Project</a>
-            </div>
-          </div>
+      <div class="work-project-grid" id="projectGrid">
+        <article class="pcard work-project-card" tabindex="0" data-tags="java web" data-summary="Final Year Project / E-learning platform / Java / MySQL / Docker / PAMERKOM 2026">
+          <div class="work-project-visual visual-learning" aria-hidden="true"><span class="visual-index">01 / EDUCATION TECHNOLOGY</span><div class="visual-browser"><div class="browser-bar"><i></i><i></i><i></i><b>Learning dashboard</b></div><div class="browser-content"><span class="mock-sidebar"></span><span class="mock-main"><i></i><i></i><b></b><b></b></span></div></div></div>
+          <div class="work-project-copy"><div class="work-project-meta"><span>Final Year Project</span><span>Java · MySQL · Docker</span></div><h3>PSM E-Learning Management System</h3><p>A learning platform supporting course management, enrollment, payment processing, assessments, and QR-verifiable certificates.</p><div class="work-project-footer"><span class="work-project-note"><i class="fa-solid fa-trophy" aria-hidden="true"></i> PAMERKOM 2026 · Consolation Prize</span><a href="projects/psm-e-learning" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
         </article>
-
-        <!-- Card 2: IoT Campus -->
-        <article class="pcard" tabindex="0" data-tags="live iot" data-summary="Smart Campus Security & Environmental Monitoring / Pico W / MQTT">
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--live">Live IoT</span>
-            <span class="pcard-stack">MicroPython</span>
-          </div>
-          <div class="pcard-body">
-            <h3 class="pcard-title">Smart Campus IoT Station</h3>
-            <p class="pcard-desc">IoT monitoring station using Raspberry Pi Pico W with environmental and security sensors, transmitting via MQTT.</p>
-          </div>
-          <div class="pcard-footer">
-            <div class="pcard-chips"><span class="pchip">MicroPython</span><span class="pchip">MQTT</span><span class="pchip">ThingSpeak</span></div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="projects/iot-monitoring">View Project</a>
-            </div>
-          </div>
+        <article class="pcard work-project-card" tabindex="0" data-tags="iot" data-summary="Smart Campus IoT Station / Raspberry Pi Pico W / MicroPython / MQTT">
+          <div class="work-project-visual visual-iot" aria-hidden="true"><span class="visual-index">02 / CONNECTED SYSTEMS</span><div class="iot-visual-board"><div class="iot-visual-heading"><i></i> SENSOR NETWORK <span>MONITORING</span></div><div class="iot-visual-body"><div class="iot-visual-chip"><i class="fa-solid fa-microchip"></i><b>Pico W</b><small>Controller</small></div><div class="iot-visual-connectors"><i></i><i></i><i></i></div><div class="iot-visual-sensors"><span>AHT20</span><span>PIR</span><span>BMP280</span></div></div></div></div>
+          <div class="work-project-copy"><div class="work-project-meta"><span>IoT Prototype</span><span>MicroPython · MQTT</span></div><h3>Smart Campus IoT Station</h3><p>A campus monitoring prototype combining environmental and motion sensors with a microcontroller and connected telemetry.</p><div class="work-project-footer"><span class="work-project-note">Environmental monitoring</span><a href="projects/iot-monitoring" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
         </article>
-
-        <!-- Card 3: PKU Management -->
-        <article class="pcard" tabindex="0" data-tags="java" data-summary="Healthcare management system / Java / JSP/Servlets / MySQL">
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--muted">Java</span>
-            <span class="pcard-stack">JSP / MySQL</span>
-          </div>
-          <div class="pcard-body">
-            <h3 class="pcard-title">PKU Management System</h3>
-            <p class="pcard-desc">Healthcare management system for handling patients, appointments, billing, and staff records.</p>
-          </div>
-          <div class="pcard-footer">
-            <div class="pcard-chips"><span class="pchip">Java</span><span class="pchip">MySQL</span><span class="pchip">JSP</span></div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="projects/pku-management">View Project</a>
-            </div>
-          </div>
+        <article class="pcard work-project-card" tabindex="0" data-tags="java" data-summary="PKU Management System / Healthcare workflows / Java / JSP / MySQL">
+          <div class="work-project-visual visual-pku" aria-hidden="true"><span class="visual-index">03 / INFORMATION SYSTEMS</span><div class="pku-visual-panel"><div class="pku-visual-heading">Management overview <i class="fa-solid fa-ellipsis"></i></div><div class="pku-visual-stats"><span>Patient records</span><span>Appointments</span></div><div class="pku-visual-table"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+          <div class="work-project-copy"><div class="work-project-meta"><span>Management System</span><span>Java · JSP · MySQL</span></div><h3>PKU Management System</h3><p>A healthcare management application for organizing patient records, appointments, billing, and staff workflows.</p><div class="work-project-footer"><span class="work-project-note">Database-backed application</span><a href="projects/pku-management" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
         </article>
-
-        <!-- Card 4: WeatherHub -->
-        <article class="pcard" tabindex="0" data-tags="live api web" data-summary="Weather application / REST API / Firebase Hosting">
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--live">Live API</span>
-            <span class="pcard-stack">Firebase</span>
-          </div>
-          <div class="pcard-body">
-            <h3 class="pcard-title">WeatherHub</h3>
-            <p class="pcard-desc">Weather application fetching real-time data via REST APIs with a responsive interface deployed on Firebase.</p>
-          </div>
-          <div class="pcard-footer">
-            <div class="pcard-chips"><span class="pchip">JavaScript</span><span class="pchip">REST API</span></div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="projects/weatherhub">View Project</a>
-            </div>
-          </div>
+        <article class="pcard work-project-card" tabindex="0" data-tags="live api web" data-summary="WeatherHub / REST API / JavaScript / Firebase hosting">
+          <div class="work-project-visual visual-weather" aria-hidden="true"><span class="visual-index">04 / API INTEGRATION</span><div class="weather-visual-card"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i><strong>WeatherHub</strong><span>Live weather data</span><div><i></i><i></i><i></i></div></div></div>
+          <div class="work-project-copy"><div class="work-project-meta"><span>Web Application</span><span>JavaScript · REST API</span></div><h3>WeatherHub</h3><p>A responsive weather application that retrieves current conditions through a REST API and presents the results in a clear interface.</p><div class="work-project-footer"><span class="work-project-note">API-driven interface</span><a href="projects/weatherhub" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
         </article>
-
-        <!-- Card 5: MasakJerr -->
-        <article class="pcard" tabindex="0" data-tags="java" data-summary="Recipe management / Spring Boot / MySQL">
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--muted">Full Stack</span>
-            <span class="pcard-stack">Spring Boot</span>
-          </div>
-          <div class="pcard-body">
-            <h3 class="pcard-title">MasakJerr!</h3>
-            <p class="pcard-desc">Full-stack CRUD application for managing recipes and user data with a Spring Boot backend and MySQL.</p>
-          </div>
-          <div class="pcard-footer">
-            <div class="pcard-chips"><span class="pchip">Java</span><span class="pchip">Spring Boot</span></div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="projects/masakjerr">View Project</a>
-            </div>
-          </div>
+        <article class="pcard work-project-card" tabindex="0" data-tags="java" data-summary="MasakJerr! / Recipe sharing and management / Spring Boot / MySQL">
+          <div class="work-project-visual visual-recipe" aria-hidden="true"><span class="visual-index">05 / FULL-STACK DEVELOPMENT</span><div class="recipe-visual-card"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>RECIPE COLLECTION</span><b>MasakJerr!</b><div><i></i><i></i><i></i></div></div></div>
+          <div class="work-project-copy"><div class="work-project-meta"><span>Full-stack Application</span><span>Spring Boot · MySQL</span></div><h3>MasakJerr!</h3><p>A recipe management application built around CRUD workflows and persistent user data, using Spring Boot and MySQL.</p><div class="work-project-footer"><span class="work-project-note">CRUD · Relational data</span><a href="projects/masakjerr" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
         </article>
-
-        <!-- Card 6: Elite Soccer Feed -->
-        <article class="pcard" tabindex="0" data-tags="live web" data-summary="Football news website / HTML / CSS / JavaScript / Vercel">
-          <div class="pcard-header">
-            <span class="pcard-badge pcard-badge--live">Live Web</span>
-            <span class="pcard-stack">HTML/CSS/JS</span>
-          </div>
-          <div class="pcard-body">
-            <h3 class="pcard-title">Elite Soccer Feed</h3>
-            <p class="pcard-desc">Football news website featuring a homepage layout and detailed player pages.</p>
-          </div>
-          <div class="pcard-footer">
-            <div class="pcard-chips"><span class="pchip">HTML</span><span class="pchip">CSS</span><span class="pchip">JavaScript</span></div>
-            <div class="pcard-links">
-              <a class="pcard-link pcard-link--primary" href="projects/elite-soccer">View Project</a>
-            </div>
-          </div>
+        <article class="pcard work-project-card" tabindex="0" data-tags="live web" data-summary="Elite Soccer Feed / Football news / HTML / CSS / JavaScript">
+          <div class="work-project-visual visual-soccer" aria-hidden="true"><span class="visual-index">06 / CONTENT &amp; INTERFACE</span><div class="soccer-visual-card"><span>SPORTS / LATEST</span><b>Matchday<br />coverage.</b><i></i><i></i></div></div>
+          <div class="work-project-copy"><div class="work-project-meta"><span>Content Website</span><span>HTML · CSS · JavaScript</span></div><h3>Elite Soccer Feed</h3><p>A football news website concept with a homepage layout and detailed player pages.</p><div class="work-project-footer"><span class="work-project-note">Responsive web design</span><a href="projects/elite-soccer" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
         </article>
       </div>
+      <div class="work-filter-status" aria-live="polite"><span>ACTIVE FILTER</span><code id="projectInsight">All projects selected</code></div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         SECTION 2: PROFESSIONAL EXPERIENCE
-    ═══════════════════════════════════════ -->
-    <section class="section container reveal-fade" id="experience">
-      <h2 class="section-title">Professional Experience</h2>
-      <div class="exp-timeline">
-        
-        <!-- Role 1: Internship -->
-        <article class="exp-timeline-item">
-          <div class="exp-timeline-dot"></div>
-          <div class="exp-timeline-content">
-            <div class="exp-timeline-title-group">
-              <h3>Software Engineering Intern</h3>
-              <div class="exp-timeline-company">Eco Hydrotech Solutions Sdn. Bhd. &middot; INOS UMT</div>
-            </div>
-            <div class="exp-timeline-date">Aug 2026 – Present</div>
-            <p class="muted">
-              Currently engaged in software engineering tasks during industrial training. Building practical industry experience.
-            </p>
-            <ul>
-              <li>Active internship placement (details to be updated upon completion)</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- Role 2: NMCIM current -->
-        <article class="exp-timeline-item">
-          <div class="exp-timeline-dot"></div>
-          <div class="exp-timeline-content">
-            <div class="exp-timeline-title-group">
-              <h3>Media &amp; Publicity Officer</h3>
-              <div class="exp-timeline-company">Nigerian Muslim Community in Malaysia</div>
-            </div>
-            <div class="exp-timeline-date">Present</div>
-            <p class="muted">
-              Managing public relations, media communications, and digital presence for the community.
-            </p>
-            <ul>
-              <li>Coordinating digital communication channels and event publicity</li>
-              <li>Managing community engagement initiatives</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- Role 3: NMCIM previous -->
-        <article class="exp-timeline-item">
-          <div class="exp-timeline-dot"></div>
-          <div class="exp-timeline-content">
-            <div class="exp-timeline-title-group">
-              <h3>Treasurer</h3>
-              <div class="exp-timeline-company">Nigerian Muslim Community in Malaysia</div>
-            </div>
-            <div class="exp-timeline-date">2025</div>
-            <p class="muted">
-              Managed financial records, budgets, and supported community operations and events.
-            </p>
-            <ul>
-              <li>Maintained accurate financial records and documentation</li>
-              <li>Managed budgets for community events and operations</li>
-            </ul>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         AWARDS & CERTIFICATIONS
-    ═══════════════════════════════════════ -->
-    <section class="section container reveal-fade" id="certifications">
-      <div class="section-head split">
-        <div>
-          <p class="eyebrow">Archive</p>
-          <h2>Awards &amp; Certifications</h2>
+    <section class="work-experience-band" id="experience">
+      <div class="work-container">
+        <div class="work-section-head"><div><p class="work-eyebrow">02 / EXPERIENCE &amp; LEADERSHIP</p><h2>Work beyond the codebase</h2><p>Industry experience and community responsibilities that develop practical, organizational, and communication skills.</p></div></div>
+        <div class="experience-list">
+          <article class="experience-item"><div class="experience-marker"><span></span></div><div class="experience-content"><div class="experience-meta"><span>INDUSTRY</span><span>Aug 2026 – Present</span></div><h3>Software Engineering Intern</h3><p class="experience-organization">Eco Hydrotech Solutions Sdn. Bhd. · INOS, Universiti Malaysia Terengganu</p><p>Applying software engineering skills in an industry placement, with work connected to practical systems and workflows.</p><span class="experience-status"><i></i> Current placement</span></div></article>
+          <article class="experience-item"><div class="experience-marker"><span></span></div><div class="experience-content"><div class="experience-meta"><span>COMMUNITY LEADERSHIP</span><span>Present</span></div><h3>Media &amp; Publicity Officer</h3><p class="experience-organization">Nigerian Muslim Community in Malaysia (NMCIM)</p><p>Supporting community communications, event publicity, and digital engagement across communication channels.</p></div></article>
+          <article class="experience-item"><div class="experience-marker"><span></span></div><div class="experience-content"><div class="experience-meta"><span>FINANCE &amp; OPERATIONS</span><span>2025</span></div><h3>Treasurer</h3><p class="experience-organization">Nigerian Muslim Community in Malaysia (NMCIM)</p><p>Supported community operations through financial record keeping, event budgeting, and documentation.</p></div></article>
         </div>
       </div>
-      <div class="cert-grid">
-        
-        <!-- Cert 1 -->
-        <article class="cert-card">
-          <div class="cert-preview" style="background:var(--glass-bg); cursor:pointer;" data-cert="assets/certificates/consolation-prize.pdf" data-cert-title="PAMERKOM 2026 Consolation Prize">
-            <i class="fa-regular fa-file-pdf cert-preview-icon"></i>
-          </div>
-          <div class="cert-info">
-            <h3 class="cert-title">PAMERKOM 2026 Consolation Prize</h3>
-            <p class="cert-issuer"><i class="fa-solid fa-building-columns"></i> Universiti Malaysia Terengganu</p>
-            <div class="cert-action">
-              <span class="cert-date">2026</span>
-              <a href="/cert/pamerkom" target="_blank" class="cert-btn" title="Right click to copy link">
-                View Certificate <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Cert 2 -->
-        <article class="cert-card">
-          <div class="cert-preview" style="cursor:pointer;" data-cert="assets/certificates/dean-list-sem3.jpeg" data-cert-title="Dean's Award - Semester I 2024/2025">
-            <img src="assets/certificates/dean-list-sem3.jpeg" alt="Dean's Award Sem 3" loading="lazy" />
-          </div>
-          <div class="cert-info">
-            <h3 class="cert-title">Dean's Award — Semester I 2024/2025</h3>
-            <p class="cert-issuer"><i class="fa-solid fa-award"></i> Faculty of Computer Science, UMT</p>
-            <div class="cert-action">
-              <span class="cert-date">2024</span>
-              <a href="/cert/deans-sem3" target="_blank" class="cert-btn" title="Right click to copy link">
-                View Certificate <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Cert 3 -->
-        <article class="cert-card">
-          <div class="cert-preview" style="cursor:pointer;" data-cert="assets/certificates/dean-list-sem4.jpeg" data-cert-title="Dean's Award - Semester II 2024/2025">
-            <img src="assets/certificates/dean-list-sem4.jpeg" alt="Dean's Award Sem 4" loading="lazy" />
-          </div>
-          <div class="cert-info">
-            <h3 class="cert-title">Dean's Award — Semester II 2024/2025</h3>
-            <p class="cert-issuer"><i class="fa-solid fa-award"></i> Faculty of Computer Science, UMT</p>
-            <div class="cert-action">
-              <span class="cert-date">2025</span>
-              <a href="/cert/deans-sem4" target="_blank" class="cert-btn" title="Right click to copy link">
-                View Certificate <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Cert 4 -->
-        <article class="cert-card">
-          <div class="cert-preview" style="cursor:pointer;" data-cert="assets/certificates/aspire-programme.jpeg" data-cert-title="ASPIRE Programme 2025">
-            <img src="assets/certificates/aspire-programme.jpeg" alt="ASPIRE 2025" loading="lazy" />
-          </div>
-          <div class="cert-info">
-            <h3 class="cert-title">ASPIRE Programme</h3>
-            <p class="cert-issuer"><i class="fa-solid fa-users-viewfinder"></i> Alumni Synergy for Professionalism</p>
-            <div class="cert-action">
-              <span class="cert-date">Oct 2025</span>
-              <a href="/cert/aspire" target="_blank" class="cert-btn" title="Right click to copy link">
-                View Certificate <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-        
-        <!-- Cert 5 -->
-        <article class="cert-card">
-          <div class="cert-preview" style="background:var(--glass-bg); cursor:pointer;" data-cert="assets/certificates/autumn-school.pdf" data-cert-title="International Autumn School 2025">
-            <i class="fa-regular fa-file-pdf cert-preview-icon"></i>
-          </div>
-          <div class="cert-info">
-            <h3 class="cert-title">International Autumn School</h3>
-            <p class="cert-issuer"><i class="fa-solid fa-earth-asia"></i> Academic Exchange</p>
-            <div class="cert-action">
-              <span class="cert-date">2025</span>
-              <a href="/cert/autumn-school" target="_blank" class="cert-btn" title="Right click to copy link">
-                View Certificate <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Cert 6 -->
-        <article class="cert-card">
-          <div class="cert-preview" style="background:var(--glass-bg); cursor:pointer;" data-cert="assets/certificates/ifuture.pdf" data-cert-title="iFuture Certificate">
-            <i class="fa-regular fa-file-pdf cert-preview-icon"></i>
-          </div>
-          <div class="cert-info">
-            <h3 class="cert-title">iFuture Programme</h3>
-            <p class="cert-issuer"><i class="fa-solid fa-chalkboard-user"></i> Universiti Malaysia Terengganu</p>
-            <div class="cert-action">
-              <span class="cert-date">2025</span>
-              <a href="/cert/ifuture" target="_blank" class="cert-btn" title="Right click to copy link">
-                View Certificate <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Achievement (No Cert) -->
-        <article class="cert-card">
-          <div class="cert-preview" style="background:var(--glass-bg); display:flex; align-items:center; justify-content:center;">
-            <i class="fa-solid fa-person-swimming cert-preview-icon" style="font-size:3rem; color:var(--accent);"></i>
-          </div>
-          <div class="cert-info">
-            <h3 class="cert-title">Water Survival Programme</h3>
-            <p class="cert-issuer"><i class="fa-solid fa-star"></i> Group Leader</p>
-            <div class="cert-action">
-              <span class="cert-date">2025</span>
-              <a href="/cert/water-survival" target="_blank" class="cert-btn" title="Right click to copy link">
-                View Certificate <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
     </section>
+
+    <section class="work-section work-container" id="recognition" aria-labelledby="recognition-heading">
+      <div class="work-section-head"><div><p class="work-eyebrow">03 / RECOGNITION</p><h2 id="recognition-heading">Awards &amp; certificates</h2><p>A selected archive of programme participation and academic recognition. Select a preview to inspect the available certificate file.</p></div></div>
+      <div class="work-certificate-grid">
+        <article class="work-certificate-card"><button class="certificate-preview certificate-pdf" type="button" data-cert="assets/certificates/consolation-prize.pdf" data-cert-title="PAMERKOM 2026 Consolation Prize" aria-label="Preview PAMERKOM 2026 Consolation Prize certificate"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i><span>PDF CERTIFICATE</span></button><div class="certificate-copy"><p class="certificate-type">AWARD · 2026</p><h3>PAMERKOM 2026 Consolation Prize</h3><p>Universiti Malaysia Terengganu</p><a href="/cert/pamerkom" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
+        <article class="work-certificate-card"><button class="certificate-preview" type="button" data-cert="assets/certificates/dean-list-sem3.jpeg" data-cert-title="Dean's Award - Semester I 2024/2025" aria-label="Preview Dean's Award Semester I 2024/2025"><img src="assets/certificates/dean-list-sem3.jpeg" alt="Dean's Award certificate" loading="lazy" /><span>VIEW PREVIEW</span></button><div class="certificate-copy"><p class="certificate-type">ACADEMIC RECOGNITION · 2024</p><h3>Dean's Award — Semester I 2024/2025</h3><p>Faculty of Computer Science, UMT</p><a href="/cert/deans-sem3" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
+        <article class="work-certificate-card"><button class="certificate-preview" type="button" data-cert="assets/certificates/dean-list-sem4.jpeg" data-cert-title="Dean's Award - Semester II 2024/2025" aria-label="Preview Dean's Award Semester II 2024/2025"><img src="assets/certificates/dean-list-sem4.jpeg" alt="Dean's Award certificate" loading="lazy" /><span>VIEW PREVIEW</span></button><div class="certificate-copy"><p class="certificate-type">ACADEMIC RECOGNITION · 2025</p><h3>Dean's Award — Semester II 2024/2025</h3><p>Faculty of Computer Science, UMT</p><a href="/cert/deans-sem4" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
+        <article class="work-certificate-card"><button class="certificate-preview" type="button" data-cert="assets/certificates/aspire-programme.jpeg" data-cert-title="ASPIRE Programme 2025" aria-label="Preview ASPIRE Programme certificate"><img src="assets/certificates/aspire-programme.jpeg" alt="ASPIRE Programme certificate" loading="lazy" /><span>VIEW PREVIEW</span></button><div class="certificate-copy"><p class="certificate-type">PROGRAMME · OCT 2025</p><h3>ASPIRE Programme</h3><p>Alumni Synergy for Professionalism</p><a href="/cert/aspire" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
+        <article class="work-certificate-card"><button class="certificate-preview certificate-pdf" type="button" data-cert="assets/certificates/autumn-school.pdf" data-cert-title="International Autumn School 2025" aria-label="Preview International Autumn School certificate"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i><span>PDF CERTIFICATE</span></button><div class="certificate-copy"><p class="certificate-type">ACADEMIC PROGRAMME · 2025</p><h3>International Autumn School</h3><p>Academic exchange</p><a href="/cert/autumn-school" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
+        <article class="work-certificate-card"><button class="certificate-preview certificate-pdf" type="button" data-cert="assets/certificates/ifuture.pdf" data-cert-title="iFuture Programme Certificate" aria-label="Preview iFuture Programme certificate"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i><span>PDF CERTIFICATE</span></button><div class="certificate-copy"><p class="certificate-type">PROGRAMME · 2025</p><h3>iFuture Programme</h3><p>Universiti Malaysia Terengganu</p><a href="/cert/ifuture" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
+        <article class="work-certificate-card"><div class="certificate-preview certificate-programme" aria-hidden="true"><i class="fa-solid fa-person-swimming"></i><span>PROGRAMME PARTICIPATION</span></div><div class="certificate-copy"><p class="certificate-type">PROGRAMME · 2025</p><h3>Water Survival Programme</h3><p>Group Leader</p><span class="certificate-unavailable">Certificate link pending verification</span></div></article>
+      </div>
+      <p class="recognition-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Academic award titles are retained from the current site pending verification against the original certificates.</p>
+    </section>
+    <section class="work-contact-strip"><div class="work-container"><div><p class="work-eyebrow">NEXT STEP</p><h2>Have a project or opportunity in mind?</h2></div><a class="work-button work-button-primary" href="contact">Get in touch <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></section>
   </main>
-
   <footer class="footer" id="site-footer"></footer>
-  
-
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/components.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/components.js?v=2"></script>
+  <script src="js/main.js?v=12"></script>
 </body>
 </html>
