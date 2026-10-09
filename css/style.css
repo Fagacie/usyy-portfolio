@@ -5024,14 +5024,14 @@ body.case-study-page .mobile-overlay{
   backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);
 }
-bodybody.home-page .mobile-overlay-content,
-bodybody.work-redesign .mobile-overlay-content,
-bodybody.secondary-page .mobile-overlay-content,
-bodybody.case-study-page .mobile-overlay-content{gap:22px}
-bodybody.home-page .mobile-links,
-bodybody.work-redesign .mobile-links,
-bodybody.secondary-page .mobile-links,
-bodybody.case-study-page .mobile-links{gap:8px}
+body.home-page .mobile-overlay-content,
+body.work-redesign .mobile-overlay-content,
+body.secondary-page .mobile-overlay-content,
+body.case-study-page .mobile-overlay-content{gap:22px}
+body.home-page .mobile-links,
+body.work-redesign .mobile-links,
+body.secondary-page .mobile-links,
+body.case-study-page .mobile-links{gap:8px}
 body.home-page .mobile-link,
 body.work-redesign .mobile-link,
 body.secondary-page .mobile-link,
