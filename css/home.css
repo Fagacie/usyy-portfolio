@@ -5,7 +5,6 @@
 .home-page .hero-copy{max-width:700px}.home-page .home-eyebrow{display:flex;align-items:center;gap:10px;color:var(--h-blue);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 21px}.home-page .availability-dot{width:7px;height:7px;display:inline-block;flex:0 0 7px;background:#2f9c72;border-radius:50%;box-shadow:0 0 0 4px rgba(47,156,114,.12)}
 .home-page .hero-copy h1{font-size:clamp(42px,5.4vw,70px);font-weight:700;line-height:1.08;letter-spacing:-.06em;margin:0;max-width:720px}.home-page .hero-copy h1 span{color:var(--h-blue)}.home-page .hero-intro{font-size:16px;color:var(--h-muted);max-width:600px;line-height:1.85;margin:25px 0 29px}
 .home-page .home-actions{display:flex;flex-wrap:wrap;gap:12px}.home-page .home-button{display:inline-flex;min-height:47px;align-items:center;justify-content:center;gap:10px;padding:0 17px;border-radius:6px;font-size:12px;font-weight:700;transition:background .18s ease,border-color .18s ease,transform .18s ease}.home-page .home-button:hover{transform:translateY(-2px)}.home-page .home-button-primary{background:var(--h-blue);color:#fff;border:1px solid var(--h-blue)}.home-page .home-button-primary:hover{background:#1946b1}.home-page .home-button-secondary{color:var(--h-ink);border:1px solid #cfd6e0;background:#fff}.home-page .home-button-secondary:hover{border-color:var(--h-blue)}
-.home-page .hero-links{display:flex;flex-wrap:wrap;gap:22px;margin-top:29px}.home-page .hero-links a{color:#566274;font-size:12px;font-weight:600}.home-page .hero-links a:hover{color:var(--h-blue)}.home-page .hero-links i{margin-right:5px}
 .home-page .hero-profile{max-width:380px;width:100%;justify-self:end;position:relative;padding:0 0 26px 26px}.home-page .profile-frame{position:relative;background:#e7ebf1;aspect-ratio:1/1.05;overflow:hidden;border-radius:3px}.home-page .profile-frame::before{content:"";position:absolute;z-index:1;inset:0;border:1px solid rgba(23,33,47,.08);pointer-events:none}.home-page .profile-frame img{width:100%;height:100%;object-fit:cover;object-position:center 28%}.home-page .hero-profile::before{content:"";position:absolute;z-index:0;left:0;bottom:0;width:72%;height:75%;border-left:2px solid var(--h-blue);border-bottom:2px solid var(--h-blue)}.home-page .profile-frame,.home-page .profile-note,.home-page .hero-index{position:relative;z-index:1}
 .home-page .profile-note{position:absolute;left:0;bottom:0;display:flex;flex-direction:column;gap:2px;background:#fff;border:1px solid var(--h-line);padding:12px 16px;box-shadow:0 8px 26px rgba(23,33,47,.08)}.home-page .profile-note-label{color:var(--h-blue);font-size:8px;font-weight:700;letter-spacing:.13em}.home-page .profile-note strong{font-size:12px}.home-page .profile-note>span:last-child{color:var(--h-muted);font-size:10px}.home-page .hero-index{position:absolute;right:-22px;top:22px;writing-mode:vertical-rl;color:#798597;font-size:9px;letter-spacing:.17em}
 .home-page .home-intro-strip{background:#eef1f5;border-block:1px solid #e1e6ed}.home-page .intro-strip-inner{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:18px;color:#596678;font-size:11px;font-weight:600}.home-page .strip-divider{width:4px;height:4px;background:#9aa6b7;border-radius:50%}
@@ -26,3 +25,25 @@
 
 /* The homepage is deliberately light-only in this iteration; avoid a toggle that cannot affect its scoped palette. */
 .home-page .theme-toggle,.home-page #themeToggle,.home-page #themeToggleMobile{display:none!important}
+
+/* Homepage contrast and responsive polish */
+.home-page .hero-links{display:none}
+.home-page .home-eyebrow,
+.home-page .project-number,
+.home-page .profile-note-label{color:#214db7}
+.home-page .section-description,
+.home-page .hero-intro,
+.home-page .current-copy>p:not(.home-eyebrow),
+.home-page .research-band-copy>p:last-child,
+.home-page .home-contact>div:first-child>p:last-child,
+.home-page .capability-item p,
+.home-page .project-card-content p,
+.home-page .profile-note>span:last-child{color:#4b586b}
+.home-page .project-card-top,
+.home-page .capability-count,
+.home-page .current-card-label{color:#5b687a}
+.home-page .project-tags span{color:#465367}
+.home-page .home-intro-strip .intro-strip-inner{color:#465367}
+.home-page .hero-index{color:#5d697b}
+.home-page .home-project-card:last-child{display:block}
+@media(max-width:900px){.home-page .home-project-card:last-child{display:flex}}
