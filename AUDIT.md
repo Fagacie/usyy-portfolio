@@ -108,6 +108,30 @@ Within Projects, group project case studies separately from career experience an
 6. Clean documentation/assets only after references are verified.
 7. Run route, responsive, accessibility, console, and deployment checks; review the branch diff before merging.
 
+
+## Implementation progress
+
+### Completed on `portfolio/redesign-audit`
+
+- Added the initial source-level audit and documented the proposed information architecture and QA limits.
+- Reworked the homepage content order and added a scoped responsive stylesheet.
+- Added Research to the shared desktop/mobile navigation and footer; corrected active-state handling for all six project detail routes.
+- Replaced invalid desktop navigation nesting with a valid flex container and direct links.
+- Removed the homepage's inactive scroll-progress indicator and unused main script load from that page.
+- Rebuilt the Work page as a project index, experience/leadership timeline, and recognition archive, with scoped responsive styling and improved filter accessibility.
+- Standardized all six project-detail pages with a breadcrumb back to Projects, consistent responsive case-study styling, and previous/next project navigation.
+- Changed the WeatherHub repository action to clearly say “Browse GitHub Profile” rather than implying the profile URL is a specific source repository. A confirmed WeatherHub repository URL is still not established.
+- Kept changes on the review branch; `main` has not been changed.
+
+### Current validation status
+
+- Vercel's GitHub status check has reported successful preview deployments for recent branch commits.
+- Source-level checks found no missing local page/style/image/certificate paths in the redesigned homepage and Work page.
+- Confirmed six project cards and seven recognition entries remain in the Work page.
+- Confirmed mobile breakpoints, reduced-motion CSS, valid desktop navigation container markup, and project-filter `aria-pressed` state updates.
+- Not yet completed: visual browser inspection, real-device/viewport interaction testing, keyboard focus walkthrough, browser console/network checks, automated accessibility audit, performance measurements, and end-to-end verification of external destinations.
+- The Dean's Award semester labels still need verification against original certificates. The Water Survival certificate route remains unresolved because the expected file is absent from the tracked tree.
+
 ## Verification checklist
 
 - [ ] Confirm all internal links and clean-URL rewrites.
