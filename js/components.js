@@ -81,7 +81,7 @@
       </button>
     </nav>
 
-    <!-- Full-screen Mobile Overlay -->
+    <!-- Mobile navigation panel -->
     <div class="mobile-overlay" id="mobileOverlay">
       <div class="mobile-overlay-content">
         <ul class="mobile-links">
