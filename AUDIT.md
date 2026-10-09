@@ -120,7 +120,10 @@ Within Projects, group project case studies separately from career experience an
 - Removed the homepage's inactive scroll-progress indicator and unused main script load from that page.
 - Rebuilt the Work page as a project index, experience/leadership timeline, and recognition archive, with scoped responsive styling and improved filter accessibility.
 - Standardized all six project-detail pages with a breadcrumb back to Projects, consistent responsive case-study styling, and previous/next project navigation.
-- Changed the WeatherHub repository action to clearly say “Browse GitHub Profile” rather than implying the profile URL is a specific source repository. A confirmed WeatherHub repository URL is still not established.
+- Rebuilt About, Research, and Contact with a shared responsive layout. Research is explicitly described as interests and directions, not completed publications or studies.
+- Aligned community role chronology with the latest known information: Treasurer (2025–Present), previously Media & Publicity Officer.
+- Changed the WeatherHub repository action to clearly say “Browse GitHub Profile” rather than implying the profile URL is a specific source repository. A confirmed repository for the older portfolio WeatherHub demo is still not established.
+- Removed the `/cert/water-survival` rewrite because its target file is absent and the redesigned Work page no longer links to it. The Water Survival participation entry remains without a certificate link.
 - Kept changes on the review branch; `main` has not been changed.
 
 ### Current validation status
