@@ -276,8 +276,12 @@ function updateProjectCount() {
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
-    filterButtons.forEach((item) => item.classList.remove("active"));
+    filterButtons.forEach((item) => {
+      item.classList.remove("active");
+      item.setAttribute("aria-pressed", "false");
+    });
     button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
     projects.forEach((project) => {
       const tags = project.dataset.tags || "";
       const shouldShow = filter === "all" || tags.includes(filter);
@@ -353,23 +357,7 @@ if (projectGrid) {
   });
 })();
 
-/* ── Project card click → open external link ── */
-(function () {
-  const pcards = document.querySelectorAll('.pcard');
-  if (!pcards.length) return;
-
-  pcards.forEach((card) => {
-    card.addEventListener('click', (ev) => {
-      if (ev.target.closest('a')) return;
-      const links = Array.from(card.querySelectorAll('.pcard-links a[href]'));
-      const external = links.find(a => /https?:\/\//i.test(a.href) && !/github.com/i.test(a.href));
-      const first = external || links[0];
-      if (!first) return;
-      window.open(first.href, '_blank', 'noreferrer');
-    });
-  });
-})();
-
+/* Project cards use explicit case-study links; clicking empty card space does not hijack navigation. */
 /* ── Back to top (consolidated) ── */
 (function () {
   const backToTopLinks = document.querySelectorAll('a[href="#top"], .footer-top-btn');
