@@ -10,22 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="../css/style.css?v=18" />
+  <link rel="stylesheet" href="../css/style.css?v=29" />
+  <link rel="stylesheet" href="../css/case-study.css?v=2" />
 </head>
-<body>
-  <div class="scroll-progress" id="scrollProgress"></div>
+<body class="case-study-page case-study-elite-soccer">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="header" id="site-header"></header>
 
   <main id="main">
+    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">Elite Soccer Feed</span></nav>
     <section class="project-detail-hero container reveal">
       <div class="project-detail-grid">
         <div class="project-detail-content">
           <p class="eyebrow"><i class="fa-solid fa-futbol"></i> Web Design</p>
           <h1 class="project-detail-title">Elite Soccer Feed</h1>
           <p class="muted" style="font-size:1.25rem; max-width: 600px;">
-            A dedicated football news website featuring an immersive homepage layout and detailed player profiles, built to deliver the latest soccer updates.
+            A football website concept with a responsive homepage and dedicated player profile pages, built with HTML, CSS, and JavaScript.
           </p>
           <div class="project-detail-stack" style="justify-content: flex-start; margin-top:0;">
             <span class="pchip">HTML</span>
@@ -34,8 +35,8 @@
             <span class="pchip">Vercel</span>
           </div>
           <div style="margin-top:30px; display:flex; gap:15px;">
-            <a href="https://elitesoccerfeed.vercel.app/" target="_blank" rel="noreferrer" class="btn"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right:8px;"></i> Live Site</a>
-            <a href="https://github.com/Fagacie/ESFhomepage.git" target="_blank" rel="noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github" style="margin-right:8px;"></i> View Code</a>
+            <a href="https://elitesoccerfeed.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right:8px;"></i> Live Site</a>
+            <a href="https://github.com/Fagacie/ESFhomepage.git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github" style="margin-right:8px;"></i> View Code</a>
           </div>
         </div>
 
@@ -68,8 +69,8 @@
         <div class="bento-grid">
           <div class="bento-card bento-span-2">
             <div class="bento-icon"><i class="fa-solid fa-newspaper"></i></div>
-            <h4>Dynamic News Feed</h4>
-            <p>A structured, easy-to-read homepage layout that highlights breaking news, transfer rumors, and match recaps.</p>
+            <h4>Homepage Content Layout</h4>
+            <p>A structured homepage layout for presenting football headlines, match recaps, and featured content.</p>
           </div>
           <div class="bento-card">
             <div class="bento-icon"><i class="fa-solid fa-user-injured"></i></div>
@@ -83,14 +84,14 @@
           </div>
           <div class="bento-card bento-span-2">
             <div class="bento-icon"><i class="fa-solid fa-rocket"></i></div>
-            <h4>Vercel Edge Deployment</h4>
-            <p>Hosted on Vercel for continuous integration and lightning-fast edge delivery to end users.</p>
+            <h4>Vercel Deployment</h4>
+            <p>Deployed on Vercel so the website can be accessed as a public demonstration.</p>
           </div>
         </div>
 
         <h2 style="margin-top:80px;"><i class="fa-solid fa-code"></i> Technical Architecture</h2>
         <p class="muted" style="font-size:1.1rem; line-height:1.8;">
-          This project highlights core web technologies. By utilizing pure HTML, CSS, and vanilla JavaScript without heavy frameworks, the site achieves excellent performance scores and fast time-to-interactive metrics.
+          This project highlights core web technologies, using HTML, CSS, and vanilla JavaScript without a front-end framework.
         </p>
         
         <div class="tech-flow">
@@ -112,10 +113,15 @@
 
       </div>
     </section>
+  
+    <nav class="case-project-nav container" aria-label="Project case studies">
+      <a class="case-project-prev" href="../projects/masakjerr"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>MasakJerr!</strong></a>
+      <a class="case-project-next" href="../projects/psm-e-learning"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>PSM E-Learning</strong></a>
+    </nav>
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="../js/components.js"></script>
+  <script src="../js/components.js?v=3"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

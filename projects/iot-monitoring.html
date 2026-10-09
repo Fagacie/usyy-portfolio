@@ -10,15 +10,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="../css/style.css?v=18" />
+  <link rel="stylesheet" href="../css/style.css?v=29" />
+  <link rel="stylesheet" href="../css/case-study.css?v=2" />
 </head>
-<body>
-  <div class="scroll-progress" id="scrollProgress"></div>
+<body class="case-study-page case-study-iot-monitoring">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="header" id="site-header"></header>
 
   <main id="main">
+    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">Smart Campus IoT</span></nav>
     <section class="project-detail-hero container reveal">
       <div class="project-detail-grid">
         <div class="project-detail-content">
@@ -34,8 +35,8 @@
             <span class="pchip">ThingSpeak</span>
           </div>
           <div style="margin-top:30px; display:flex; gap:15px;">
-            <a href="https://campus-iot.me/" target="_blank" rel="noreferrer" class="btn"><i class="fa-solid fa-satellite-dish" style="margin-right:8px;"></i> Live Dashboard</a>
-            <a href="https://github.com/Fagacie/IoT-Environmental-Monitor.git" target="_blank" rel="noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github" style="margin-right:8px;"></i> View Code</a>
+            <a href="https://campus-iot.me/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-satellite-dish" style="margin-right:8px;"></i> Live Dashboard</a>
+            <a href="https://github.com/Fagacie/IoT-Environmental-Monitor.git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github" style="margin-right:8px;"></i> View Code</a>
           </div>
         </div>
 
@@ -114,10 +115,15 @@
         </div>
       </div>
     </section>
+  
+    <nav class="case-project-nav container" aria-label="Project case studies">
+      <a class="case-project-prev" href="../projects/psm-e-learning"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>PSM E-Learning</strong></a>
+      <a class="case-project-next" href="../projects/pku-management"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>PKU Management</strong></a>
+    </nav>
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="../js/components.js"></script>
+  <script src="../js/components.js?v=3"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

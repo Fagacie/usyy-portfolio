@@ -4964,3 +4964,140 @@ body.page-visible {
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
   }
 }
+/* Unified navigation and resume actions for the light editorial pages */
+body.home-page .nav-resume-btn,
+body.work-redesign .nav-resume-btn,
+body.secondary-page .nav-resume-btn,
+body.case-study-page .nav-resume-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+  padding:0 16px;
+  border:1px solid #2459d3;
+  border-radius:6px;
+  background:#2459d3;
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  line-height:1.2;
+  white-space:nowrap;
+  box-shadow:none;
+  transition:background .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+body.home-page .nav-resume-btn:hover,
+body.work-redesign .nav-resume-btn:hover,
+body.secondary-page .nav-resume-btn:hover,
+body.case-study-page .nav-resume-btn:hover{
+  background:#1946b1;
+  border-color:#1946b1;
+  color:#fff;
+  box-shadow:0 5px 14px rgba(36,89,211,.18);
+  transform:translateY(-1px);
+}
+body.home-page .nav-indicator,
+body.work-redesign .nav-indicator,
+body.secondary-page .nav-indicator,
+body.case-study-page .nav-indicator{background:#eaf0fc}
+body.home-page .nav-toggle span,
+body.work-redesign .nav-toggle span,
+body.secondary-page .nav-toggle span,
+body.case-study-page .nav-toggle span{background:#17212f}
+body.home-page .nav-toggle:focus-visible,
+body.work-redesign .nav-toggle:focus-visible,
+body.secondary-page .nav-toggle:focus-visible,
+body.case-study-page .nav-toggle:focus-visible{outline:3px solid #2459d3;outline-offset:3px}
+
+/* The redesigned pages use a light palette, including the mobile menu. */
+body.home-page .mobile-overlay,
+body.work-redesign .mobile-overlay,
+body.secondary-page .mobile-overlay,
+body.case-study-page .mobile-overlay{
+  width:calc(100% - 48px);
+  max-width:400px;
+  padding:24px 18px;
+  background:rgba(255,255,255,.98);
+  border:1px solid #dfe4eb;
+  border-radius:10px;
+  box-shadow:0 18px 44px rgba(23,33,47,.14);
+  color:#17212f;
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+body.home-page .mobile-overlay-content,
+body.work-redesign .mobile-overlay-content,
+body.secondary-page .mobile-overlay-content,
+body.case-study-page .mobile-overlay-content{gap:22px}
+body.home-page .mobile-links,
+body.work-redesign .mobile-links,
+body.secondary-page .mobile-links,
+body.case-study-page .mobile-links{gap:8px}
+body.home-page .mobile-link,
+body.work-redesign .mobile-link,
+body.secondary-page .mobile-link,
+body.case-study-page .mobile-link{
+  padding:9px 12px;
+  border-radius:5px;
+  color:#4d5868;
+  font-size:clamp(1.15rem,5vw,1.4rem);
+  font-weight:700;
+  line-height:1.25;
+  transition:background .16s ease,color .16s ease,transform .16s ease;
+}
+body.home-page .mobile-link:hover,
+body.work-redesign .mobile-link:hover,
+body.secondary-page .mobile-link:hover,
+body.case-study-page .mobile-link:hover{color:#214db7;background:#f3f6fc}
+body.home-page .mobile-link.active,
+body.work-redesign .mobile-link.active,
+body.secondary-page .mobile-link.active,
+body.case-study-page .mobile-link.active{color:#214db7;background:#eaf0fc}
+body.home-page .mobile-resume-btn,
+body.work-redesign .mobile-resume-btn,
+body.secondary-page .mobile-resume-btn,
+body.case-study-page .mobile-resume-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:0 18px;
+  border:1px solid #2459d3;
+  border-radius:6px;
+  background:#2459d3;
+  color:#fff;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.2;
+  text-decoration:none;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+body.home-page .mobile-resume-btn:hover,
+body.work-redesign .mobile-resume-btn:hover,
+body.secondary-page .mobile-resume-btn:hover,
+body.case-study-page .mobile-resume-btn:hover{background:#1946b1;border-color:#1946b1;color:#fff;transform:translateY(-1px)}
+body.home-page .nav-resume-btn:focus-visible,
+body.work-redesign .nav-resume-btn:focus-visible,
+body.secondary-page .nav-resume-btn:focus-visible,
+body.case-study-page .nav-resume-btn:focus-visible,
+body.home-page .mobile-resume-btn:focus-visible,
+body.work-redesign .mobile-resume-btn:focus-visible,
+body.secondary-page .mobile-resume-btn:focus-visible,
+body.case-study-page .mobile-resume-btn:focus-visible{outline:3px solid #2459d3;outline-offset:3px}
+
+/* Explicit link states keep navigation feedback consistent across all redesigned pages. */
+body.home-page .nav-link:hover,
+body.work-redesign .nav-link:hover,
+body.secondary-page .nav-link:hover,
+body.case-study-page .nav-link:hover{color:#214db7}
+body.home-page .nav-link.active,
+body.work-redesign .nav-link.active,
+body.secondary-page .nav-link.active,
+body.case-study-page .nav-link.active{color:#17212f;font-weight:650}
+body.home-page .nav-logo:focus-visible,
+body.work-redesign .nav-logo:focus-visible,
+body.secondary-page .nav-logo:focus-visible,
+body.case-study-page .nav-logo:focus-visible,
+body.home-page .nav-link:focus-visible,
+body.work-redesign .nav-link:focus-visible,
+body.secondary-page .nav-link:focus-visible,
+body.case-study-page .nav-link:focus-visible{outline:2px solid #2459d3;outline-offset:3px;border-radius:5px}

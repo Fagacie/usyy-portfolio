@@ -28,20 +28,22 @@
 
     const navItems = [
       { label: 'Home',     href: './',            id: 'home' },
-      { label: 'Work',     href: 'work',          id: 'work' },
+      { label: 'Projects', href: 'work',          id: 'work' },
       { label: 'About',    href: 'about',         id: 'about' },
+      { label: 'Research', href: 'research',      id: 'research' },
       { label: 'Contact',  href: 'contact',       id: 'contact' },
     ];
 
     /* Check if we're on a project subpage */
-    const isProjectPage = pageName.startsWith('psm-') || pageName.startsWith('iot-') || pageName.startsWith('pku-');
-    const activeId = isProjectPage ? 'work' : pageName;
+    const projectPages = ['psm-e-learning', 'iot-monitoring', 'pku-management', 'weatherhub', 'masakjerr', 'elite-soccer'];
+    const isProjectPage = projectPages.includes(pageName);
+    const activeId = isProjectPage ? 'work' : (pageName === 'index' ? 'home' : pageName);
 
     // Build Desktop Links
     const navHTML = navItems.map(item => {
       const isCurrent = item.id === activeId;
       const href = BASE + item.href;
-      return `<li class="nav-item"><a href="${href}" class="nav-link ${isCurrent ? 'active' : ''}" data-id="${item.id}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a></li>`;
+      return `<a href="${href}" class="nav-item nav-link ${isCurrent ? 'active' : ''}" data-id="${item.id}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a>`;
     }).join('\n        ');
 
     // Build Mobile Links
@@ -61,32 +63,32 @@
       </a>
 
       <!-- Desktop Links with Sliding Indicator -->
-      <ul class="nav-links" id="navLinks">
-        <div class="nav-indicator" id="navIndicator"></div>
+      <div class="nav-links" id="navLinks">
+        <div class="nav-indicator" id="navIndicator" aria-hidden="true"></div>
         ${navHTML}
-      </ul>
+      </div>
 
       <!-- Actions (Resume + Theme) -->
       <div class="nav-actions" id="navActions">
-        <a href="${BASE}resume" class="nav-resume-btn" target="_blank">Resume</a>
+        <a href="${BASE}resume" class="nav-resume-btn" target="_blank" rel="noopener noreferrer" aria-label="View résumé PDF in a new tab">View résumé</a>
       </div>
 
       <!-- Mobile Toggle -->
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileOverlay">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </nav>
 
-    <!-- Full-screen Mobile Overlay -->
+    <!-- Mobile navigation panel -->
     <div class="mobile-overlay" id="mobileOverlay">
       <div class="mobile-overlay-content">
         <ul class="mobile-links">
           ${mobileHTML}
         </ul>
         <div class="mobile-bottom-actions" id="mobileActions">
-          <a href="${BASE}resume" class="mobile-resume-btn" target="_blank">View Resume</a>
+          <a href="${BASE}resume" class="mobile-resume-btn" target="_blank" rel="noopener noreferrer">View résumé</a>
         </div>
       </div>
     </div>`;
@@ -98,11 +100,13 @@
       function closeMenu() {
         overlay.classList.remove('show');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
         document.body.style.overflow = '';
       }
       function openMenu() {
         overlay.classList.add('show');
         toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close menu');
         document.body.style.overflow = 'hidden';
       }
       
@@ -158,7 +162,10 @@
 
       links.forEach(link => {
         link.addEventListener('mouseenter', (e) => {
-          moveIndicator(e.target);
+          moveIndicator(e.currentTarget);
+        });
+        link.addEventListener('focus', (e) => {
+          moveIndicator(e.currentTarget);
         });
       });
 
@@ -193,8 +200,9 @@
           <h3 class="footer-col-title">Navigation</h3>
           <nav class="mega-footer-nav" aria-label="Footer navigation">
             <a href="${BASE}./">Home</a>
-            <a href="${BASE}work">Work</a>
+            <a href="${BASE}work">Projects</a>
             <a href="${BASE}about">About</a>
+            <a href="${BASE}research">Research</a>
             <a href="${BASE}contact">Contact</a>
           </nav>
         </div>
