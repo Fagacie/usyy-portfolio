@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css?v=29" />
-  <link rel="stylesheet" href="css/home.css?v=2" />
+  <link rel="stylesheet" href="css/home.css?v=3" />
   <link rel="stylesheet" href="css/print.css" media="print" />
 </head>
 <body class="home-page">
@@ -39,27 +39,74 @@
           <a class="home-button home-button-primary" href="work">Explore my projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           <a class="home-button home-button-secondary" href="/resume" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> View résumé</a>
         </div>
+        <p class="hero-proofline"><span class="hero-proofline-mark" aria-hidden="true"></span> Full-stack software <span aria-hidden="true">/</span> connected systems <span aria-hidden="true">/</span> applied research</p>
       </div>
-      <div class="hero-profile">
-        <div class="profile-frame">
-          <img src="assets/img/profile.png" alt="Portrait of Abbas Usman Adamu" width="711" height="712" fetchpriority="high" />
+
+      <div class="hero-profile hero-engineering-scene" data-engineering-scene aria-label="A visual overview of selected software and IoT projects">
+        <div class="hero-scene-topline" aria-hidden="true">
+          <span>ENGINEERING FIELD NOTES</span>
+          <span>01 / 03</span>
         </div>
-        <div class="profile-note">
-          <span class="profile-note-label">CURRENT FOCUS</span>
-          <strong>Software engineering</strong>
-          <span>Web platforms · IoT · data-driven systems</span>
+        <div class="hero-scene-grid" aria-hidden="true"></div>
+        <svg class="hero-scene-connections" viewBox="0 0 500 560" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M182 170 C226 158 250 132 289 129" />
+          <path d="M224 328 C255 353 282 379 310 416" />
+          <circle cx="289" cy="129" r="4" />
+          <circle cx="310" cy="416" r="4" />
+        </svg>
+
+        <div class="hero-portrait-wrap" data-scene-layer="portrait">
+          <div class="profile-frame">
+            <img src="assets/img/profile.png" alt="Portrait of Abbas Usman Adamu" width="711" height="712" fetchpriority="high" />
+          </div>
+          <div class="hero-portrait-tag">
+            <span>AB / 01</span>
+            <span>SOFTWARE ENGINEERING</span>
+          </div>
         </div>
-        <span class="hero-index" aria-hidden="true">AA / 01</span>
+
+        <a class="hero-evidence-card hero-evidence-workflow" href="projects/psm-e-learning" data-scene-layer="workflow" aria-label="Explore the PSM E-Learning case study and its course-to-certificate workflow">
+          <span class="hero-evidence-kicker"><span class="hero-evidence-dot" aria-hidden="true"></span> CASE STUDY / 01</span>
+          <strong class="hero-evidence-title">A complete learning workflow</strong>
+          <ol class="hero-workflow-list">
+            <li><span>01</span><b>Enrollment</b></li>
+            <li><span>02</span><b>Paystack payment</b></li>
+            <li><span>03</span><b>Learning &amp; assessment</b></li>
+            <li><span>04</span><b>QR certificate verification</b></li>
+          </ol>
+          <span class="hero-evidence-link">PSM E-Learning <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+        </a>
+
+        <a class="hero-evidence-card hero-evidence-iot" href="projects/iot-monitoring" data-scene-layer="iot" aria-label="Explore the Smart Campus IoT Station case study">
+          <span class="hero-evidence-kicker"><span class="hero-evidence-dot hero-evidence-dot--iot" aria-hidden="true"></span> CONNECTED SYSTEM / 02</span>
+          <div class="hero-iot-flow" aria-label="Sensors connect to Raspberry Pi Pico W, then MQTT and ThingSpeak">
+            <span>SENSORS</span><i aria-hidden="true"></i><span>PICO W</span><i aria-hidden="true"></i><span>MQTT</span>
+          </div>
+          <p>Sensor inputs · MicroPython · ThingSpeak telemetry</p>
+          <span class="hero-evidence-link">Smart Campus IoT <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+        </a>
       </div>
     </section>
 
-    <section class="home-intro-strip" aria-label="Areas of work">
+    <nav class="home-intro-strip" aria-label="Explore areas of work">
       <div class="home-container intro-strip-inner">
-        <span>Backend &amp; web applications</span><span class="strip-divider" aria-hidden="true"></span>
-        <span>Connected IoT systems</span><span class="strip-divider" aria-hidden="true"></span>
-        <span>Applied intelligent systems</span>
+        <a class="practice-link" href="#home-project-psm">
+          <span class="practice-index">01</span>
+          <span class="practice-copy"><strong>Applications &amp; backend</strong><small>Product logic, workflows, data</small></span>
+          <i class="fa-solid fa-arrow-down-right practice-arrow" aria-hidden="true"></i>
+        </a>
+        <a class="practice-link" href="#home-project-iot">
+          <span class="practice-index">02</span>
+          <span class="practice-copy"><strong>Connected systems</strong><small>Sensors, devices, telemetry</small></span>
+          <i class="fa-solid fa-arrow-down-right practice-arrow" aria-hidden="true"></i>
+        </a>
+        <a class="practice-link" href="#research-direction">
+          <span class="practice-index">03</span>
+          <span class="practice-copy"><strong>Intelligent systems</strong><small>Applied AI and research interests</small></span>
+          <i class="fa-solid fa-arrow-down-right practice-arrow" aria-hidden="true"></i>
+        </a>
       </div>
-    </section>
+    </nav>
 
     <section class="home-section home-container" id="selected-work" aria-labelledby="projects-heading">
       <div class="home-section-heading">
@@ -72,7 +119,7 @@
       </div>
 
       <div class="home-project-grid">
-        <article class="home-project-card home-project-card-featured">
+        <article class="home-project-card home-project-card-featured" id="home-project-psm">
           <div class="project-card-top">
             <span class="project-number">01</span>
             <span class="project-type">E-learning platform</span>
@@ -94,7 +141,7 @@
           </div>
         </article>
 
-        <article class="home-project-card">
+        <article class="home-project-card" id="home-project-iot">
           <div class="project-card-top">
             <span class="project-number">02</span>
             <span class="project-type">Connected systems</span>
@@ -169,7 +216,7 @@
       </aside>
     </section>
 
-    <section class="home-research-band">
+    <section class="home-research-band" id="research-direction">
       <div class="home-container research-band-inner">
         <div class="research-band-mark" aria-hidden="true"><i class="fa-solid fa-flask"></i></div>
         <div class="research-band-copy">
