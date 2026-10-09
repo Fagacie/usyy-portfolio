@@ -28,14 +28,16 @@
 
     const navItems = [
       { label: 'Home',     href: './',            id: 'home' },
-      { label: 'Work',     href: 'work',          id: 'work' },
+      { label: 'Projects', href: 'work',          id: 'work' },
       { label: 'About',    href: 'about',         id: 'about' },
+      { label: 'Research', href: 'research',      id: 'research' },
       { label: 'Contact',  href: 'contact',       id: 'contact' },
     ];
 
     /* Check if we're on a project subpage */
-    const isProjectPage = pageName.startsWith('psm-') || pageName.startsWith('iot-') || pageName.startsWith('pku-');
-    const activeId = isProjectPage ? 'work' : pageName;
+    const projectPages = ['psm-e-learning', 'iot-monitoring', 'pku-management', 'weatherhub', 'masakjerr', 'elite-soccer'];
+    const isProjectPage = projectPages.includes(pageName);
+    const activeId = isProjectPage ? 'work' : (pageName === 'index' ? 'home' : pageName);
 
     // Build Desktop Links
     const navHTML = navItems.map(item => {
@@ -193,8 +195,9 @@
           <h3 class="footer-col-title">Navigation</h3>
           <nav class="mega-footer-nav" aria-label="Footer navigation">
             <a href="${BASE}./">Home</a>
-            <a href="${BASE}work">Work</a>
+            <a href="${BASE}work">Projects</a>
             <a href="${BASE}about">About</a>
+            <a href="${BASE}research">Research</a>
             <a href="${BASE}contact">Contact</a>
           </nav>
         </div>
