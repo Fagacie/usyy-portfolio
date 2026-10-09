@@ -70,11 +70,11 @@
 
       <!-- Actions (Resume + Theme) -->
       <div class="nav-actions" id="navActions">
-        <a href="${BASE}resume" class="nav-resume-btn" target="_blank">Resume</a>
+        <a href="${BASE}resume" class="nav-resume-btn" target="_blank" rel="noopener noreferrer" aria-label="View résumé PDF in a new tab">View résumé</a>
       </div>
 
       <!-- Mobile Toggle -->
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileOverlay">
         <span></span>
         <span></span>
         <span></span>
@@ -88,7 +88,7 @@
           ${mobileHTML}
         </ul>
         <div class="mobile-bottom-actions" id="mobileActions">
-          <a href="${BASE}resume" class="mobile-resume-btn" target="_blank">View Resume</a>
+          <a href="${BASE}resume" class="mobile-resume-btn" target="_blank" rel="noopener noreferrer">View résumé</a>
         </div>
       </div>
     </div>`;
@@ -100,11 +100,13 @@
       function closeMenu() {
         overlay.classList.remove('show');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
         document.body.style.overflow = '';
       }
       function openMenu() {
         overlay.classList.add('show');
         toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close menu');
         document.body.style.overflow = 'hidden';
       }
       
@@ -160,7 +162,10 @@
 
       links.forEach(link => {
         link.addEventListener('mouseenter', (e) => {
-          moveIndicator(e.target);
+          moveIndicator(e.currentTarget);
+        });
+        link.addEventListener('focus', (e) => {
+          moveIndicator(e.currentTarget);
         });
       });
 
