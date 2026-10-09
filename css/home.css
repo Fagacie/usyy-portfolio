@@ -27,7 +27,6 @@
 .home-page .theme-toggle,.home-page #themeToggle,.home-page #themeToggleMobile{display:none!important}
 
 /* Homepage contrast and responsive polish */
-.home-page .hero-links{display:none}
 .home-page .home-eyebrow,
 .home-page .project-number,
 .home-page .profile-note-label{color:#214db7}
@@ -46,4 +45,3 @@
 .home-page .home-intro-strip .intro-strip-inner{color:#465367}
 .home-page .hero-index{color:#5d697b}
 .home-page .home-project-card:last-child{display:block}
-@media(max-width:900px){.home-page .home-project-card:last-child{display:flex}}
