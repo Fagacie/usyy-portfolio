@@ -43,7 +43,7 @@
     const navHTML = navItems.map(item => {
       const isCurrent = item.id === activeId;
       const href = BASE + item.href;
-      return `<li class="nav-item"><a href="${href}" class="nav-link ${isCurrent ? 'active' : ''}" data-id="${item.id}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a></li>`;
+      return `<a href="${href}" class="nav-item nav-link ${isCurrent ? 'active' : ''}" data-id="${item.id}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a>`;
     }).join('\n        ');
 
     // Build Mobile Links
@@ -63,10 +63,10 @@
       </a>
 
       <!-- Desktop Links with Sliding Indicator -->
-      <ul class="nav-links" id="navLinks">
-        <div class="nav-indicator" id="navIndicator"></div>
+      <div class="nav-links" id="navLinks">
+        <div class="nav-indicator" id="navIndicator" aria-hidden="true"></div>
         ${navHTML}
-      </ul>
+      </div>
 
       <!-- Actions (Resume + Theme) -->
       <div class="nav-actions" id="navActions">
