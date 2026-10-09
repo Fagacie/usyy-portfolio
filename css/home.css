@@ -174,9 +174,9 @@
 .home-page .hero-portrait-wrap{
   position:absolute;
   z-index:3;
-  left:20%;
-  top:78px;
-  width:61%;
+  left:7%;
+  top:94px;
+  width:56%;
   --scene-x:0px;
   --scene-y:0px;
   transform:translate3d(var(--scene-x),var(--scene-y),0);
@@ -497,7 +497,7 @@
     margin-top:0;
   }
   .home-page .hero-scene-topline{font-size:7px;letter-spacing:.12em}
-  .home-page .hero-portrait-wrap{left:21%;top:69px;width:61%}
+  .home-page .hero-portrait-wrap{left:3%;top:69px;width:53%}
   .home-page .hero-portrait-wrap .profile-frame{aspect-ratio:.82}
   .home-page .hero-portrait-tag{font-size:6px;letter-spacing:.08em}
   .home-page .hero-evidence-card{padding:11px 11px 10px;border-radius:5px}
@@ -529,7 +529,7 @@
 }
 @media(max-width:360px){
   .home-page .hero-engineering-scene{height:455px}
-  .home-page .hero-portrait-wrap{top:73px;width:59%}
+  .home-page .hero-portrait-wrap{left:2%;top:73px;width:50%}
   .home-page .hero-evidence-workflow{width:66%}
   .home-page .hero-evidence-iot{width:77%;bottom:25px}
   .home-page .hero-evidence-card{padding:9px}
