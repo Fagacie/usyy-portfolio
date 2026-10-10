@@ -53,6 +53,26 @@
       return `<li style="--delay: ${index * 0.1}s"><a href="${href}" class="mobile-link ${isCurrent ? 'active' : ''}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a></li>`;
     }).join('\n          ');
 
+    // Always-visible phone navigation: visitors should not need to open a menu
+    // just to reach a main section.
+    const mobileDockIcons = {
+      home: 'fa-house',
+      work: 'fa-diagram-project',
+      about: 'fa-user',
+      research: 'fa-flask',
+      contact: 'fa-envelope'
+    };
+
+    const mobileDockHTML = navItems.map((item) => {
+      const isCurrent = item.id === activeId;
+      const href = BASE + item.href;
+      const icon = mobileDockIcons[item.id] || 'fa-circle';
+      return '<a href="' + href + '" class="mobile-dock-link ' + (isCurrent ? 'active' : '') + '" data-id="' + item.id + '"' +
+        (isCurrent ? ' aria-current="page"' : '') + '>' +
+        '<i class="fa-solid ' + icon + '" aria-hidden="true"></i>' +
+        '<span>' + item.label + '</span></a>';
+    }).join('\n      ');
+
     header.innerHTML = `
     <nav class="floating-nav" aria-label="Primary navigation">
       <!-- Monogram Logo -->
@@ -91,7 +111,12 @@
           <a href="${BASE}resume" class="mobile-resume-btn" target="_blank" rel="noopener noreferrer">View résumé</a>
         </div>
       </div>
-    </div>`;
+    </div>
+    <nav class="mobile-bottom-nav" aria-label="Mobile primary navigation">
+      ${mobileDockHTML}
+    </nav>`;
+
+    document.body.classList.add('has-mobile-bottom-nav');
 
     /* Mobile Overlay Toggle Logic */
     const toggle = document.getElementById('navToggle');
