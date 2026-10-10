@@ -5101,3 +5101,214 @@ body.home-page .nav-link:focus-visible,
 body.work-redesign .nav-link:focus-visible,
 body.secondary-page .nav-link:focus-visible,
 body.case-study-page .nav-link:focus-visible{outline:2px solid #2459d3;outline-offset:3px;border-radius:5px}
+
+
+/* ─────────────────────────────────────────────────────────
+   Direct mobile navigation
+   Phone visitors can reach every primary route without opening
+   a hamburger menu. Desktop navigation remains unchanged.
+   ───────────────────────────────────────────────────────── */
+.mobile-bottom-nav{
+  display:none;
+}
+
+@media (max-width:800px){
+  body.has-mobile-bottom-nav{
+    padding-bottom:calc(84px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .floating-header-container{
+    z-index:1100;
+    align-items:flex-start;
+  }
+
+  .floating-nav{
+    width:calc(100% - 28px);
+    max-width:560px;
+    margin-top:10px;
+    padding:7px 9px 7px 15px;
+    gap:12px;
+    justify-content:space-between;
+    border-radius:15px;
+    background:rgba(255,255,255,.96);
+    border:1px solid rgba(23,33,47,.10);
+    box-shadow:0 7px 25px rgba(23,33,47,.09);
+    -webkit-backdrop-filter:blur(18px);
+    backdrop-filter:blur(18px);
+  }
+
+  .floating-nav .nav-links,
+  .floating-nav .nav-toggle{
+    display:none!important;
+  }
+
+  .floating-nav .nav-actions{
+    display:flex!important;
+    align-items:center;
+    gap:0;
+    margin-left:auto;
+  }
+
+  .floating-nav .theme-toggle{
+    display:none!important;
+  }
+
+  .floating-nav .nav-logo{
+    width:30px;
+    height:36px;
+    flex:0 0 30px;
+    color:#2459d3;
+  }
+
+  .floating-nav .nav-logo svg{
+    width:23px;
+    height:23px;
+  }
+
+  .floating-nav .nav-resume-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:38px;
+    padding:0 14px;
+    border:1px solid #2459d3;
+    border-radius:9px;
+    background:#2459d3;
+    color:#fff!important;
+    font-size:11px;
+    font-weight:750;
+    line-height:1;
+    white-space:nowrap;
+    text-decoration:none;
+    box-shadow:none;
+  }
+
+  .floating-nav .nav-resume-btn:hover{
+    background:#1946b1;
+    border-color:#1946b1;
+    color:#fff!important;
+    transform:translateY(-1px);
+  }
+
+  .mobile-bottom-nav{
+    position:fixed;
+    z-index:1100;
+    left:50%;
+    bottom:calc(8px + env(safe-area-inset-bottom, 0px));
+    display:flex;
+    align-items:stretch;
+    justify-content:space-between;
+    gap:3px;
+    width:calc(100% - 16px);
+    max-width:560px;
+    padding:6px;
+    border:1px solid rgba(23,33,47,.10);
+    border-radius:19px;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 8px 28px rgba(23,33,47,.14),0 1px 3px rgba(23,33,47,.04);
+    -webkit-backdrop-filter:blur(22px);
+    backdrop-filter:blur(22px);
+    transform:translateX(-50%);
+    pointer-events:auto;
+  }
+
+  .mobile-dock-link{
+    position:relative;
+    flex:1 1 20%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    min-width:0;
+    min-height:52px;
+    padding:6px 2px;
+    border-radius:13px;
+    color:#5b687a;
+    text-decoration:none;
+    font-size:9px;
+    font-weight:650;
+    line-height:1.15;
+    text-align:center;
+    white-space:nowrap;
+    transition:background .16s ease,color .16s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  .mobile-dock-link i{
+    display:block;
+    font-size:15px;
+    line-height:1;
+    pointer-events:none;
+  }
+
+  .mobile-dock-link span{
+    display:block;
+    overflow:visible;
+    text-overflow:clip;
+    pointer-events:none;
+  }
+
+  .mobile-dock-link:hover{
+    background:#f3f6fc;
+    color:#214db7;
+  }
+
+  .mobile-dock-link.active{
+    background:#eaf0fc;
+    color:#214db7;
+    font-weight:800;
+  }
+
+  .mobile-dock-link.active::before{
+    content:"";
+    position:absolute;
+    top:3px;
+    left:50%;
+    width:17px;
+    height:2px;
+    border-radius:2px;
+    background:#2459d3;
+    transform:translateX(-50%);
+  }
+
+  .mobile-dock-link:focus-visible{
+    outline:2px solid #2459d3;
+    outline-offset:-2px;
+    color:#214db7;
+  }
+
+  /* The old drawer is no longer part of the mobile navigation path. */
+  .mobile-overlay{
+    display:none!important;
+  }
+}
+
+@media (max-width:360px){
+  .mobile-bottom-nav{
+    gap:1px;
+    padding:4px;
+    border-radius:16px;
+  }
+
+  .mobile-dock-link{
+    min-height:50px;
+    gap:4px;
+    font-size:8px;
+  }
+
+  .mobile-dock-link i{
+    font-size:14px;
+  }
+
+  .floating-nav{
+    width:calc(100% - 20px);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .mobile-dock-link,
+  .floating-nav .nav-resume-btn{
+    transition:none!important;
+  }
+}
