@@ -46,13 +46,6 @@
       return `<a href="${href}" class="nav-item nav-link ${isCurrent ? 'active' : ''}" data-id="${item.id}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a>`;
     }).join('\n        ');
 
-    // Build Mobile Links
-    const mobileHTML = navItems.map((item, index) => {
-      const isCurrent = item.id === activeId;
-      const href = BASE + item.href;
-      return `<li style="--delay: ${index * 0.1}s"><a href="${href}" class="mobile-link ${isCurrent ? 'active' : ''}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a></li>`;
-    }).join('\n          ');
-
     // Always-visible phone navigation: visitors should not need to open a menu
     // just to reach a main section.
     const mobileDockIcons = {
@@ -93,68 +86,13 @@
         <a href="${BASE}resume" class="nav-resume-btn" target="_blank" rel="noopener noreferrer" aria-label="View résumé PDF in a new tab">View résumé</a>
       </div>
 
-      <!-- Mobile Toggle -->
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileOverlay">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
 
-    <!-- Mobile navigation panel -->
-    <div class="mobile-overlay" id="mobileOverlay">
-      <div class="mobile-overlay-content">
-        <ul class="mobile-links">
-          ${mobileHTML}
-        </ul>
-        <div class="mobile-bottom-actions" id="mobileActions">
-          <a href="${BASE}resume" class="mobile-resume-btn" target="_blank" rel="noopener noreferrer">View résumé</a>
-        </div>
-      </div>
-    </div>
     <nav class="mobile-bottom-nav" aria-label="Mobile primary navigation">
       ${mobileDockHTML}
     </nav>`;
 
     document.body.classList.add('has-mobile-bottom-nav');
-
-    /* Mobile Overlay Toggle Logic */
-    const toggle = document.getElementById('navToggle');
-    const overlay = document.getElementById('mobileOverlay');
-    if (toggle && overlay) {
-      function closeMenu() {
-        overlay.classList.remove('show');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
-        document.body.style.overflow = '';
-      }
-      function openMenu() {
-        overlay.classList.add('show');
-        toggle.setAttribute('aria-expanded', 'true');
-        toggle.setAttribute('aria-label', 'Close menu');
-        document.body.style.overflow = 'hidden';
-      }
-      
-      toggle.addEventListener('click', () => {
-        const isOpen = overlay.classList.contains('show');
-        if (isOpen) {
-          closeMenu();
-        } else {
-          openMenu();
-        }
-      });
-      
-      overlay.querySelectorAll('.mobile-link, .mobile-resume-btn').forEach(a => {
-        a.addEventListener('click', closeMenu);
-      });
-      
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && overlay.classList.contains('show')) {
-          closeMenu();
-          toggle.focus();
-        }
-      });
-    }
 
     /* Sliding Indicator Logic */
     const navList = document.getElementById('navLinks');
