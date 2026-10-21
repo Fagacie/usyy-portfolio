@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PKU Management System | Abbas Usman Adamu</title>
+  <title>PKU Management System | Usman Abbas Adamu</title>
   <meta name="description" content="Healthcare management system built with Java, JSP/Servlets, and MySQL." />
   <link rel="icon" href="../assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@
   <header class="header" id="site-header"></header>
 
   <main id="main">
-    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">PKU Management</span></nav>
+    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">PKU Management</span></nav>
     <section class="project-detail-hero container reveal">
       <div class="project-detail-grid">
         <div class="project-detail-content">
@@ -90,38 +90,102 @@
           </div>
         </div>
 
-        <h2 style="margin-top:80px;"><i class="fa-solid fa-code"></i> Technical Architecture</h2>
-        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
-          Developed using Java JSP and Servlets to handle the presentation and business logic layers natively within the JVM ecosystem. The system relies on a strictly typed, normalized MySQL database backend.
-        </p>
+        <div class="architecture-section">
+          <h2><i class="fa-solid fa-network-wired" style="color:var(--case-cyan); margin-right:8px;"></i> System Architecture Pipeline</h2>
+          <p class="muted" style="font-size:1.05rem; line-height:1.75; margin-top:6px;">
+            Role-based healthcare operational flow routing administrative intake, clinical care, and transactional invoicing through secure servlet controllers to normalized clinical storage.
+          </p>
 
-        <div class="tech-flow">
-          <div class="tech-node">
-            <i class="fa-brands fa-html5"></i>
-            <span>JSP Views</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-brands fa-java"></i>
-            <span>Java Backend</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-solid fa-database"></i>
-            <span>MySQL DB</span>
+          <div class="architecture-diagram" style="--diagram-accent:#c69af8;">
+            <div class="diagram-header">
+              <div class="diagram-header-left">
+                <span class="diagram-signal" style="background:#c69af8; box-shadow:0 0 10px #c69af8;"></span>
+                <h4>HEALTHCARE OPERATIONS PIPELINE</h4>
+              </div>
+              <small>Java · JSP · Servlets · MySQL · Apache Tomcat</small>
+            </div>
+            <div class="diagram-canvas">
+              <!-- Stage 1 -->
+              <div class="diagram-stage">
+                <span class="stage-label">01 / Clinical Actors</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#c69af8; color:#c69af8;">REC</span>
+                    <div><strong>Receptionist</strong><small>Patient intake &amp; bookings</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#c69af8; color:#c69af8;">DOC</span>
+                    <div><strong>Medical Doctor</strong><small>Diagnosis &amp; consultations</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#c69af8; color:#c69af8;">ADM</span>
+                    <div><strong>Administrator</strong><small>Staff &amp; billing governance</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#c69af8);"></i><b style="color:#c69af8;">→</b></div>
+              </div>
+              <!-- Stage 2 -->
+              <div class="diagram-stage">
+                <span class="stage-label">02 / Interface</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#c69af8; color:#c69af8;">JSP</span>
+                    <div><strong>JSP Clinic Portal</strong><small>Role-aware operational views</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#c69af8; color:#c69af8;">SEC</span>
+                    <div><strong>Session Filter</strong><small>Authentication &amp; boundary checks</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#c69af8);"></i><b style="color:#c69af8;">→</b></div>
+              </div>
+              <!-- Stage 3 -->
+              <div class="diagram-stage">
+                <span class="stage-label">03 / Application</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#c69af8; color:#c69af8;">SRV</span>
+                    <div><strong>Servlet Controllers</strong><small>Patient records &amp; scheduling</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#c69af8; color:#c69af8;">BIL</span>
+                    <div><strong>Billing Engine</strong><small>Treatment &amp; consultation invoices</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#c69af8);"></i><b style="color:#c69af8;">→</b></div>
+              </div>
+              <!-- Stage 4 -->
+              <div class="diagram-stage">
+                <span class="stage-label">04 / Data Store</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#c69af8; color:#c69af8;">DB</span>
+                    <div><strong>MySQL Relational</strong><small>Normalized patient &amp; billing records</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#c69af8; color:#c69af8;">ACID</span>
+                    <div><strong>Transaction Guard</strong><small>Medical history integrity</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="diagram-footer">
+              <span><i class="live-dot" style="background:#c69af8; box-shadow:0 0 8px #c69af8;"></i> Active Enterprise Architecture</span>
+              <span>Architecture Specification · PKU-CLINIC-03</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
   
     <nav class="case-project-nav container" aria-label="Project case studies">
-      <a class="case-project-prev" href="../projects/iot-monitoring"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>Smart Campus IoT</strong></a>
-      <a class="case-project-next" href="../projects/weatherhub"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>WeatherHub</strong></a>
+      <a class="case-project-prev" href="../projects/iot-monitoring.html"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>Smart Campus IoT</strong></a>
+      <a class="case-project-next" href="../projects/weatherhub.html"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>WeatherHub</strong></a>
     </nav>
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="../js/components.js?v=4"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

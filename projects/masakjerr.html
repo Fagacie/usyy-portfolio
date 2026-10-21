@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MasakJerr! | Abbas Usman Adamu</title>
+  <title>MasakJerr! | Usman Abbas Adamu</title>
   <meta name="description" content="Recipe management platform built with Java, JSP/Servlets, and MySQL." />
   <link rel="icon" href="../assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@
   <header class="header" id="site-header"></header>
 
   <main id="main">
-    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">MasakJerr!</span></nav>
+    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">MasakJerr!</span></nav>
     <section class="project-detail-hero container reveal">
       <div class="project-detail-grid">
         <div class="project-detail-content">
@@ -87,25 +87,85 @@
           </div>
         </div>
 
-        <h2 style="margin-top:80px;"><i class="fa-solid fa-code"></i> Technical Architecture</h2>
-        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
-          The application uses Java Servlets to handle request processing and business logic, with JSP pages for the web interface and MySQL for data persistence.
-        </p>
-        
-        <div class="tech-flow">
-          <div class="tech-node">
-            <i class="fa-brands fa-html5"></i>
-            <span>Client View</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-brands fa-java"></i>
-            <span>Java Servlets</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-solid fa-database"></i>
-            <span>MySQL Relational DB</span>
+        <div class="architecture-section">
+          <h2><i class="fa-solid fa-network-wired" style="color:var(--case-cyan); margin-right:8px;"></i> System Architecture Pipeline</h2>
+          <p class="muted" style="font-size:1.05rem; line-height:1.75; margin-top:6px;">
+            Full-stack MVC recipe persistence pipeline managing user authentication, CRUD operations, ingredient normalization, and relational storage.
+          </p>
+
+          <div class="architecture-diagram" style="--diagram-accent:#f3ad73;">
+            <div class="diagram-header">
+              <div class="diagram-header-left">
+                <span class="diagram-signal" style="background:#f3ad73; box-shadow:0 0 10px #f3ad73;"></span>
+                <h4>AUTHENTICATED RECIPE PIPELINE</h4>
+              </div>
+              <small>Java · JSP · Servlets · MySQL · Apache Tomcat</small>
+            </div>
+            <div class="diagram-canvas">
+              <!-- Stage 1 -->
+              <div class="diagram-stage">
+                <span class="stage-label">01 / User Session</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#f3ad73; color:#f3ad73;">USR</span>
+                    <div><strong>Registered Chef</strong><small>Private recipe collection</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#f3ad73; color:#f3ad73;">AUTH</span>
+                    <div><strong>Credential Guard</strong><small>Session-based login security</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#f3ad73);"></i><b style="color:#f3ad73;">→</b></div>
+              </div>
+              <!-- Stage 2 -->
+              <div class="diagram-stage">
+                <span class="stage-label">02 / Interface</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#f3ad73; color:#f3ad73;">JSP</span>
+                    <div><strong>Cookbook Views</strong><small>Dynamic recipe builder</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#f3ad73; color:#f3ad73;">FORM</span>
+                    <div><strong>Ingredient Forms</strong><small>Validation &amp; multipart uploads</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#f3ad73);"></i><b style="color:#f3ad73;">→</b></div>
+              </div>
+              <!-- Stage 3 -->
+              <div class="diagram-stage">
+                <span class="stage-label">03 / Application Logic</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#f3ad73; color:#f3ad73;">SRV</span>
+                    <div><strong>Servlet Logic</strong><small>CRUD state &amp; routing</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#f3ad73; color:#f3ad73;">DAO</span>
+                    <div><strong>Data Access Object</strong><small>Prepared statements &amp; pooling</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#f3ad73);"></i><b style="color:#f3ad73;">→</b></div>
+              </div>
+              <!-- Stage 4 -->
+              <div class="diagram-stage">
+                <span class="stage-label">04 / Persistence</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#f3ad73; color:#f3ad73;">DB</span>
+                    <div><strong>MySQL Relational</strong><small>Normalized recipes &amp; tags</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#f3ad73; color:#f3ad73;">SQL</span>
+                    <div><strong>Relational Schema</strong><small>Foreign-key cascading integrity</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="diagram-footer">
+              <span><i class="live-dot" style="background:#f3ad73; box-shadow:0 0 8px #f3ad73;"></i> Active CRUD Architecture</span>
+              <span>Architecture Specification · MASAK-JSP-05</span>
+            </div>
           </div>
         </div>
 
@@ -113,13 +173,13 @@
     </section>
   
     <nav class="case-project-nav container" aria-label="Project case studies">
-      <a class="case-project-prev" href="../projects/weatherhub"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>WeatherHub</strong></a>
-      <a class="case-project-next" href="../projects/elite-soccer"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>Elite Soccer Feed</strong></a>
+      <a class="case-project-prev" href="../projects/weatherhub.html"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>WeatherHub</strong></a>
+      <a class="case-project-next" href="../projects/elite-soccer.html"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>Elite Soccer Feed</strong></a>
     </nav>
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="../js/components.js?v=4"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

@@ -3,26 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f7f8fa" />
-  <title>Abbas Usman Adamu | Software Engineering</title>
-  <meta name="description" content="Portfolio of Abbas Usman Adamu, a Software Engineering student at Universiti Malaysia Terengganu building web platforms, backend systems, and connected IoT applications." />
-  <meta name="author" content="Abbas Usman Adamu" />
-  <meta property="og:title" content="Abbas Usman Adamu | Software Engineering" />
-  <meta property="og:description" content="Selected software engineering projects, connected systems, and research interests." />
+  <meta name="theme-color" content="#070b14" />
+  <script>
+    (function(){
+      try {
+        var s = localStorage.getItem('theme');
+        if (s === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <title>Usman Abbas Adamu | Software Engineering</title>
+  <meta name="description" content="Portfolio of Usman Abbas Adamu, a Software Engineering student at Universiti Malaysia Terengganu building web platforms, backend systems, and connected IoT applications." />
+  <meta name="author" content="Usman Abbas Adamu" />
+  <meta property="og:title" content="Usman Abbas Adamu | Software Engineering" />
+  <meta property="og:description" content="Selected software engineering projects, connected IoT systems, and research interests." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/og-preview.png" />
   <meta property="og:url" content="https://www.usyy-portfolio.tech/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Abbas Usman Adamu | Software Engineering" />
-  <meta name="twitter:description" content="Selected software engineering projects, connected systems, and research interests." />
+  <meta name="twitter:title" content="Usman Abbas Adamu | Software Engineering" />
+  <meta name="twitter:description" content="Selected software engineering projects, connected IoT systems, and research interests." />
   <meta name="twitter:image" content="assets/img/og-preview.png" />
   <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/style.css?v=30" />
-  <link rel="stylesheet" href="css/home.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=32" />
+  <link rel="stylesheet" href="css/home.css?v=6" />
   <link rel="stylesheet" href="css/print.css" media="print" />
 </head>
 <body class="home-page">
@@ -30,171 +38,232 @@
   <header class="header" id="site-header"></header>
 
   <main id="main">
+    <!-- ══════════════════════════════════════════
+         HERO SECTION (MINIMALIST & DIRECT)
+         ══════════════════════════════════════════ -->
     <section class="home-hero home-container" aria-labelledby="hero-heading">
+      <canvas id="networkCanvas" class="network-field-canvas" aria-hidden="true"></canvas>
       <div class="hero-copy">
-        <p class="home-eyebrow"><span class="home-eyebrow-mark" aria-hidden="true"></span> Software Engineering · Universiti Malaysia Terengganu</p>
-        <h1 id="hero-heading">I build software that <span>solves real problems.</span></h1>
-        <p class="hero-intro">I'm Abbas Usman Adamu, a Software Engineering student focused on full-stack applications, backend systems, and connected IoT solutions. I care about building things that work reliably, not just look good in a demo.</p>
+        <div class="hero-status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Available for roles</span>
+        </div>
+
+        <h1 class="hero-title" id="hero-heading">Usman Abbas Adamu</h1>
+
+        <p class="hero-role">
+          Software Engineer <span class="hero-sep" aria-hidden="true">/</span> Full-Stack &amp; IoT
+        </p>
+
+        <p class="hero-intro">
+          Building reliable web platforms, backend systems, and connected IoT devices at Universiti Malaysia Terengganu.
+        </p>
+
         <div class="home-actions">
-          <a class="home-button home-button-primary" href="work">Explore my projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          <a class="home-button home-button-secondary" href="/resume" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> View résumé</a>
+          <a class="btn-glow-primary" href="work.html">
+            Explore Work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a class="btn-glass-secondary" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Résumé
+          </a>
         </div>
       </div>
+
       <div class="hero-profile">
-        <div class="profile-frame">
-          <img src="assets/img/profile.png" alt="Portrait of Abbas Usman Adamu" width="711" height="712" fetchpriority="high" />
+        <div class="profile-card-minimal">
+          <div class="profile-card-inner">
+            <img src="assets/img/profile.png" alt="Usman Abbas Adamu" width="711" height="712" fetchpriority="high" />
+          </div>
+          <div class="profile-location-pill">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Based at <strong>UMT, Malaysia</strong></span>
+          </div>
         </div>
-        <div class="profile-note">
-          <span class="profile-note-label">CURRENT FOCUS</span>
-          <strong>Software engineering</strong>
-          <span>Web platforms · IoT · data-driven systems</span>
-        </div>
-        <span class="hero-index" aria-hidden="true">AA / 01</span>
       </div>
     </section>
 
-    <section class="home-intro-strip" aria-label="Areas of work">
-      <div class="home-container intro-strip-inner">
-        <span>Backend &amp; web applications</span><span class="strip-divider" aria-hidden="true"></span>
-        <span>Connected IoT systems</span><span class="strip-divider" aria-hidden="true"></span>
-        <span>Applied intelligent systems</span>
-      </div>
-    </section>
-
-    <section class="home-section home-container" id="selected-work" aria-labelledby="projects-heading">
-      <div class="home-section-heading">
+    <!-- ══════════════════════════════════════════
+         SELECTED WORK (3 CARDS IN A LINE)
+         ══════════════════════════════════════════ -->
+    <section class="home-container" id="selected-work" aria-labelledby="projects-heading" style="padding: 60px 0 80px;">
+      <div class="home-section-head">
         <div>
-          <p class="home-eyebrow">Selected work</p>
-          <h2 id="projects-heading">Projects built around real use cases.</h2>
-          <p class="section-description">A small selection of projects that show how I approach application development, system integration, and problem-solving.</p>
+          <span class="section-eyebrow">01 / Selected Work</span>
+          <h2 id="projects-heading">Evidence over claims.</h2>
         </div>
-        <a class="home-text-link" href="work">All projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="link-arrow" href="work.html">All Projects (6) <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </div>
 
-      <div class="home-project-grid">
-        <article class="home-project-card home-project-card-featured">
-          <div class="project-card-top">
-            <span class="project-number">01</span>
-            <span class="project-type">E-learning platform</span>
-          </div>
-          <div class="project-visual project-visual-learning" aria-hidden="true">
-            <div class="learning-window">
-              <div class="mock-window-bar"><span></span><span></span><span></span><b>Learning dashboard</b></div>
-              <div class="learning-window-body">
-                <div class="learning-sidebar"><i></i><i></i><i></i><i></i></div>
-                <div class="learning-main"><span class="mock-line wide"></span><span class="mock-line"></span><div class="learning-cards"><i></i><i></i><i></i></div><div class="learning-progress"><span></span></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-card-content">
-            <div class="project-tags"><span>Java</span><span>JSP / Servlets</span><span>MySQL</span><span>Docker</span></div>
-            <h3>PSM E-Learning Management System</h3>
-            <p>A learning platform built around course enrollment, payments, assessments, and certificate generation with QR-based verification.</p>
-            <a class="project-card-link" href="projects/psm-e-learning">Read the case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-
-        <article class="home-project-card">
-          <div class="project-card-top">
-            <span class="project-number">02</span>
-            <span class="project-type">Connected systems</span>
-          </div>
-          <div class="project-visual project-visual-iot" aria-hidden="true">
-            <div class="iot-board">
-              <div class="iot-board-head"><span class="board-status"></span> SENSOR NETWORK <span class="board-live">MONITORING</span></div>
-              <div class="iot-board-body"><div class="iot-chip"><i class="fa-solid fa-microchip"></i><b>Pico W</b><small>Controller</small></div><div class="iot-lines"><i></i><i></i><i></i></div><div class="iot-sensors"><span><i class="fa-solid fa-temperature-half"></i> Environment</span><span><i class="fa-solid fa-person-walking"></i> Motion</span><span><i class="fa-solid fa-wave-square"></i> Distance</span></div></div>
-            </div>
-          </div>
-          <div class="project-card-content">
-            <div class="project-tags"><span>MicroPython</span><span>MQTT</span><span>Raspberry Pi Pico W</span></div>
-            <h3>Smart Campus IoT Station</h3>
-            <p>An environmental and security monitoring prototype combining sensor data, a microcontroller, and cloud telemetry.</p>
-            <a class="project-card-link" href="projects/iot-monitoring">Read the case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-
-        <article class="home-project-card">
-          <div class="project-card-top">
-            <span class="project-number">03</span>
-            <span class="project-type">Information system</span>
-          </div>
-          <div class="project-visual project-visual-pku" aria-hidden="true">
-            <div class="pku-panel">
-              <div class="pku-panel-head"><span>Management overview</span><i class="fa-solid fa-ellipsis" aria-hidden="true"></i></div>
-              <div class="pku-stat-row"><div><small>Patients</small><b>Records</b></div><div><small>Appointments</small><b>Schedule</b></div></div>
-              <div class="pku-table"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-          </div>
-          <div class="project-card-content">
-            <div class="project-tags"><span>Java</span><span>JSP / Servlets</span><span>MySQL</span></div>
-            <h3>PKU Management System</h3>
-            <p>A healthcare management application designed to organize patient records, appointments, billing, and staff information.</p>
-            <a class="project-card-link" href="projects/pku-management">Read the case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="home-capabilities">
-      <div class="home-container">
-        <div class="home-section-heading">
+      <div class="projects-minimal-grid">
+        <!-- 01: PSM E-Learning -->
+        <article class="project-card-clean">
           <div>
-            <p class="home-eyebrow">How I work</p>
-            <h2>Engineering with purpose.</h2>
+            <div class="card-meta-top">
+              <span class="card-category-pill">Education Platform</span>
+              <span class="card-award-tag"><i class="fa-solid fa-trophy" aria-hidden="true"></i> PAMERKOM 2026 Winner</span>
+            </div>
+            <h3>PSM E-Learning System</h3>
+            <p>Full-stack learning platform engineered with role-based access, Paystack payments, and automated QR verification.</p>
+            <div class="card-tech-pills">
+              <span>Java</span>
+              <span>JSP / Servlets</span>
+              <span>MySQL</span>
+              <span>Docker</span>
+            </div>
           </div>
-          <p class="section-description capability-heading-note">I like understanding the whole problem, from the user-facing experience to the systems and data behind it.</p>
-        </div>
-        <div class="capability-grid">
-          <article class="capability-item"><span class="capability-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><span class="capability-count">01 / BUILD</span><h3>Application development</h3><p>Designing and building web applications, backend workflows, database-backed features, and maintainable interfaces.</p></article>
-          <article class="capability-item"><span class="capability-icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></span><span class="capability-count">02 / CONNECT</span><h3>IoT &amp; integration</h3><p>Connecting sensors, embedded devices, communication protocols, and dashboards into useful monitoring systems.</p></article>
-          <article class="capability-item"><span class="capability-icon"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></span><span class="capability-count">03 / EXPLORE</span><h3>Research-led thinking</h3><p>Exploring intelligent systems and data-driven approaches, with an interest in practical, testable applications.</p></article>
-        </div>
+          <div class="card-action-links">
+            <a class="card-link-main" href="projects/psm-e-learning.html">Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="card-link-sub" href="https://psmels.software/landing" target="_blank" rel="noopener noreferrer">Live Demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- 02: Smart Campus IoT Station -->
+        <article class="project-card-clean">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-category-pill">Connected Systems</span>
+              <span class="card-award-tag" style="color:var(--h-cyan);"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i> IoT Telemetry</span>
+            </div>
+            <h3>Smart Campus IoT Station</h3>
+            <p>Environmental telemetry network streaming sensor data from a Raspberry Pi Pico W over MQTT to live dashboards.</p>
+            <div class="card-tech-pills">
+              <span>Pico W</span>
+              <span>MicroPython</span>
+              <span>MQTT</span>
+              <span>ThingSpeak</span>
+            </div>
+          </div>
+          <div class="card-action-links">
+            <a class="card-link-main" href="projects/iot-monitoring.html">Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="card-link-sub" href="https://github.com/Fagacie/smart-campus-iot-station" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- 03: PKU Healthcare System -->
+        <article class="project-card-clean">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-category-pill">Healthcare Management</span>
+              <span class="card-award-tag" style="color:var(--h-muted);"><i class="fa-solid fa-database" aria-hidden="true"></i> Enterprise</span>
+            </div>
+            <h3>PKU Healthcare Management</h3>
+            <p>Clinic management platform organizing patient medical records, appointment scheduling, and dispensary inventory.</p>
+            <div class="card-tech-pills">
+              <span>Java</span>
+              <span>JSP / Servlets</span>
+              <span>MySQL</span>
+              <span>Apache Tomcat</span>
+            </div>
+          </div>
+          <div class="card-action-links">
+            <a class="card-link-main" href="projects/pku-management.html">Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="card-link-sub" href="https://github.com/Fagacie/PKU-Management-System" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="home-section home-container home-current-section" aria-labelledby="current-heading">
-      <div class="current-copy">
-        <p class="home-eyebrow">Currently</p>
-        <h2 id="current-heading">Learning by building in a real engineering environment.</h2>
-        <p>I'm working as a Software Engineer Intern with Eco Hydrotech Solutions Sdn. Bhd., in the context of the Institute of Oceanography and Environment (INOS) at Universiti Malaysia Terengganu. My work focuses on developing and improving software for practical engineering workflows, including application features, data handling, system integration, and testing.</p>
-        <a class="home-text-link" href="work#experience">Experience &amp; background <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-      </div>
-      <aside class="current-card">
-        <span class="current-card-label"><span class="availability-dot" aria-hidden="true"></span> CURRENT ROLE</span>
-        <h3>Software Engineer Intern</h3>
-        <p>Eco Hydrotech Solutions Sdn. Bhd.</p>
-        <span class="current-organization">INOS · Universiti Malaysia Terengganu</span>
-        <div class="current-card-rule"></div>
-        <span class="current-date">August 2026 – Present</span>
-      </aside>
-    </section>
-
-    <section class="home-research-band">
-      <div class="home-container research-band-inner">
-        <div class="research-band-mark" aria-hidden="true"><i class="fa-solid fa-flask"></i></div>
-        <div class="research-band-copy">
-          <p class="home-eyebrow">Research direction</p>
-          <h2>Interested in intelligent systems that solve practical problems.</h2>
-          <p>I'm exploring AI and machine learning, data analytics, IoT at the edge, and the software systems needed to turn ideas into usable tools.</p>
+    <!-- ══════════════════════════════════════════
+         ENGINEERING CAPABILITIES (MINIMAL & SHARP)
+         ══════════════════════════════════════════ -->
+    <section class="home-capabilities-section home-container" aria-labelledby="capabilities-heading">
+      <div class="home-section-head">
+        <div>
+          <span class="section-eyebrow">Focus</span>
+          <h2 id="capabilities-heading">Core Disciplines</h2>
         </div>
-        <a class="home-button home-button-light" href="research">Explore research <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="capabilities-clean-grid">
+        <article class="cap-card-clean">
+          <span class="cap-number">01</span>
+          <h3>Web &amp; Backend Systems</h3>
+          <p>Architecting maintainable web platforms, role-based workflows, and relational schemas in Java, Python, and JavaScript.</p>
+        </article>
+
+        <article class="cap-card-clean">
+          <span class="cap-number">02</span>
+          <h3>Connected IoT &amp; Embedded</h3>
+          <p>Connecting microcontrollers with cloud brokers using MQTT telemetry, sensor filtering, and real-time visualization.</p>
+        </article>
+
+        <article class="cap-card-clean">
+          <span class="cap-number">03</span>
+          <h3>Applied Research &amp; AI</h3>
+          <p>Investigating machine learning baselines, cybersecurity anomaly detection, and empirical testbeds.</p>
+        </article>
       </div>
     </section>
 
-    <section class="home-contact home-container" aria-labelledby="contact-heading">
-      <div>
-        <p class="home-eyebrow">Get in touch</p>
-        <h2 id="contact-heading">Have a useful problem to work on?</h2>
-        <p>I'm interested in software engineering opportunities, research conversations, and projects with a clear purpose.</p>
-      </div>
-      <div class="home-contact-actions">
-        <a class="home-button home-button-primary" href="mailto:abbasusman561@gmail.com">Contact me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-        <a class="home-text-link" href="contact">More contact options</a>
+
+    <!-- ══════════════════════════════════════════
+         CONTACT (MINIMALIST & DIRECT)
+         ══════════════════════════════════════════ -->
+    <section class="home-contact-section home-container" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-deck-clean">
+        <div>
+          <span class="section-eyebrow">Contact</span>
+          <h2 id="contact-heading">Let's connect</h2>
+          <p>
+            Open to software engineering roles, internships, and technical collaboration.
+          </p>
+        </div>
+
+        <div class="contact-clean-actions">
+          <button class="copy-email-btn" id="copyEmailBtn" type="button" aria-label="Copy email address to clipboard">
+            <span><i class="fa-regular fa-envelope" style="color:var(--h-cyan); margin-right:8px;" aria-hidden="true"></i> fagacie@gmail.com</span>
+            <i class="fa-regular fa-copy" id="copyIcon" aria-hidden="true" style="color:var(--h-muted);"></i>
+          </button>
+
+          <div class="contact-social-row">
+            <a class="social-pill-clean" href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+            <a class="social-pill-clean" href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+            </a>
+            <a class="social-pill-clean" href="https://x.com/fagacie_" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <div class="toast-notice" id="toastNotice" role="alert" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Email copied to clipboard!</span>
+  </div>
+
   <footer class="footer" id="site-footer"></footer>
-  <script src="js/components.js?v=4"></script>
+
+  <!-- Scripts: components.js + main.js -->
+  <script src="js/components.js?v=6"></script>
+  <script src="js/main.js?v=14"></script>
+
+  <!-- 1-Click Copy Email Controller -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const copyBtn = document.getElementById('copyEmailBtn');
+      const toast = document.getElementById('toastNotice');
+      const toastMsg = document.getElementById('toastMsg');
+      const email = 'fagacie@gmail.com';
+
+      if (copyBtn && toast) {
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(email).then(() => {
+            toastMsg.textContent = 'Copied ' + email + ' to clipboard! 🚀';
+            toast.classList.add('is-active');
+            setTimeout(() => {
+              toast.classList.remove('is-active');
+            }, 3000);
+          }).catch(() => {
+            window.location.href = 'mailto:' + email;
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>

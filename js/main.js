@@ -555,123 +555,90 @@ if (typeof VanillaTilt !== 'undefined') {
 })();
 
 /* ── Interactive Hero Canvas (Light Trails & ML Nodes) ── */
+/* ── Interactive Hero Canvas (Deterministic NetworkField Constellation) ── */
 (function() {
-  const canvas = document.getElementById('heroCanvas');
+  const canvas = document.getElementById('networkCanvas') || document.getElementById('heroCanvas');
   if (!canvas || prefersReducedMotion) return;
-  
+
   const ctx = canvas.getContext('2d');
-  let width, height;
-  let particles = [];
-  let mouse = { x: -1000, y: -1000, vx: 0, vy: 0 };
-  let lastMouse = { x: -1000, y: -1000 };
+  if (!ctx) return;
+
+  let frame = 0;
+  let width = 0;
+  let height = 0;
+  const pointer = { x: -1000, y: -1000 };
+
+  const isCompact = window.innerWidth < 768;
+  const pointCount = isCompact ? 22 : 38;
+  const points = Array.from({ length: pointCount }, (_, index) => ({
+    x: ((index * 137.5) % 100) / 100,
+    y: ((index * 73.7) % 100) / 100,
+    phase: index * 0.72,
+  }));
 
   function resize() {
-    width = canvas.width = canvas.parentElement.clientWidth;
-    height = canvas.height = canvas.parentElement.clientHeight;
-    initParticles();
+    const parent = canvas.parentElement;
+    const bounds = parent ? parent.getBoundingClientRect() : canvas.getBoundingClientRect();
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    width = bounds.width;
+    height = bounds.height;
+    canvas.width = width * ratio;
+    canvas.height = height * ratio;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
   }
 
-  function initParticles() {
-    particles = [];
-    const numParticles = Math.floor((width * height) / 15000);
-    for (let i = 0; i < numParticles; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 0.5,
-        baseAlpha: Math.random() * 0.5 + 0.1
-      });
-    }
+  function onPointerMove(e) {
+    const bounds = canvas.getBoundingClientRect();
+    pointer.x = e.clientX - bounds.left;
+    pointer.y = e.clientY - bounds.top;
   }
 
-  window.addEventListener('resize', resize);
-  canvas.parentElement.addEventListener('mousemove', (e) => {
-    const rect = canvas.getBoundingClientRect();
-    lastMouse.x = mouse.x;
-    lastMouse.y = mouse.y;
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
-    mouse.vx = mouse.x - lastMouse.x;
-    mouse.vy = mouse.y - lastMouse.y;
-  });
+  function onPointerLeave() {
+    pointer.x = -1000;
+    pointer.y = -1000;
+  }
 
-  canvas.parentElement.addEventListener('mouseleave', () => {
-    mouse.x = -1000;
-    mouse.y = -1000;
-  });
-
-  function draw() {
+  function draw(time = 0) {
     ctx.clearRect(0, 0, width, height);
-    
-    // Draw particles and network connections (ML abstraction)
-    ctx.lineWidth = 0.5;
-    for (let i = 0; i < particles.length; i++) {
-      const p = particles[i];
-      p.x += p.vx;
-      p.y += p.vy;
-      
-      if (p.x < 0 || p.x > width) p.vx *= -1;
-      if (p.y < 0 || p.y > height) p.vy *= -1;
-      
-      // Interaction with mouse
-      const dx = mouse.x - p.x;
-      const dy = mouse.y - p.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      let alpha = p.baseAlpha;
-      
-      if (dist < 150) {
-        alpha = p.baseAlpha + (150 - dist) / 150 * 0.5;
-        p.x -= dx * 0.01;
-        p.y -= dy * 0.01;
-        
-        // Draw energy trail line to mouse
-        ctx.beginPath();
-        ctx.strokeStyle = `rgba(139, 227, 212, ${((150 - dist) / 150) * 0.4})`;
-        ctx.moveTo(p.x, p.y);
-        ctx.lineTo(mouse.x, mouse.y);
-        ctx.stroke();
-      }
-      
-      ctx.beginPath();
-      ctx.fillStyle = `rgba(139, 227, 212, ${alpha})`;
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fill();
-      
-      // Connect nearby particles
-      for (let j = i + 1; j < particles.length; j++) {
-        const p2 = particles[j];
-        const dx2 = p.x - p2.x;
-        const dy2 = p.y - p2.y;
-        const dist2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
-        
-        if (dist2 < 100) {
+    const resolved = points.map((p) => ({
+      x: p.x * width + Math.sin(time * 0.00035 + p.phase) * 12,
+      y: p.y * height + Math.cos(time * 0.0003 + p.phase) * 10,
+    }));
+
+    // Inter-point constellation links
+    for (let i = 0; i < resolved.length; i++) {
+      for (let j = i + 1; j < resolved.length; j++) {
+        const dx = resolved[i].x - resolved[j].x;
+        const dy = resolved[i].y - resolved[j].y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 140) {
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(139, 227, 212, ${p.baseAlpha * (100 - dist2) / 100 * 0.3})`;
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(p2.x, p2.y);
+          ctx.moveTo(resolved[i].x, resolved[i].y);
+          ctx.lineTo(resolved[j].x, resolved[j].y);
+          ctx.strokeStyle = `rgba(56, 189, 248, ${0.14 * (1 - dist / 140)})`;
+          ctx.lineWidth = 1;
           ctx.stroke();
         }
       }
-    }
-    
-    // Draw mouse light trail
-    if (mouse.x > 0 && mouse.y > 0 && (Math.abs(mouse.vx) > 1 || Math.abs(mouse.vy) > 1)) {
-      const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 100);
-      gradient.addColorStop(0, 'rgba(139, 227, 212, 0.15)');
-      gradient.addColorStop(1, 'rgba(139, 227, 212, 0)');
-      ctx.fillStyle = gradient;
+
+      // Point node
+      const p = resolved[i];
+      const pDist = Math.hypot(p.x - pointer.x, p.y - pointer.y);
+      const isNear = pDist < 120;
       ctx.beginPath();
-      ctx.arc(mouse.x, mouse.y, 100, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, isNear ? 2.8 : 1.4, 0, Math.PI * 2);
+      ctx.fillStyle = isNear ? '#06b6d4' : 'rgba(129, 140, 248, 0.45)';
       ctx.fill();
     }
-    
-    requestAnimationFrame(draw);
+
+    frame = requestAnimationFrame(draw);
   }
 
   resize();
   draw();
+  window.addEventListener('resize', resize, { passive: true });
+  window.addEventListener('mousemove', onPointerMove, { passive: true });
+  document.addEventListener('mouseleave', onPointerLeave);
 })();
 
 /* 7. Contact Form Handler */

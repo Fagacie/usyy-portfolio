@@ -3,109 +3,427 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f7f8fa" />
-  <title>Projects &amp; Experience | Abbas Usman Adamu</title>
-  <meta name="description" content="Explore selected software projects, professional experience, leadership, and verified recognition from Abbas Usman Adamu." />
-  <meta name="author" content="Abbas Usman Adamu" />
+  <meta name="theme-color" content="#070b14" />
+  <script>
+    (function(){
+      try {
+        var s = localStorage.getItem('theme');
+        if (s === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <title>Projects &amp; Research | Usman Abbas Adamu</title>
+  <meta name="description" content="Explore software engineering platforms, connected IoT systems, and empirical research testbeds engineered by Usman Abbas Adamu." />
+  <meta name="author" content="Usman Abbas Adamu" />
   <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/style.css?v=30" />
-  <link rel="stylesheet" href="css/work.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=32" />
+  <link rel="stylesheet" href="css/work.css?v=4" />
 </head>
 <body class="work-redesign">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="header" id="site-header"></header>
+
   <main id="main">
+    <!-- ══════════════════════════════════════════
+         WORK HERO
+         ══════════════════════════════════════════ -->
     <section class="work-hero work-container">
-      <p class="work-eyebrow"><span></span> SELECTED WORK &amp; EXPERIENCE</p>
-      <h1>Built with purpose.<br /><em>Improved through practice.</em></h1>
+      <p class="work-eyebrow">PROJECTS &amp; APPLIED RESEARCH</p>
+      <h1>Built with purpose.<br /><em>Engineered through practice.</em></h1>
+      
       <div class="work-hero-bottom">
-        <p>A selection of software projects, practical engineering work, and roles that reflect how I approach problems and learn by building.</p>
-        <a class="work-button work-button-primary" href="#projects">Explore projects <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+        <p>A comprehensive portfolio of full-stack web platforms, connected IoT telemetry networks, and empirical research testbeds built for real-world reliability.</p>
+        <a class="btn-glow-primary" href="#projects" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:9999px; background:linear-gradient(135deg,var(--w-cyan),var(--w-blue)); color:#04101e; font-weight:700; font-size:13px;">
+          Explore Projects <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+        </a>
       </div>
+
       <div class="work-stat-strip" aria-label="Portfolio overview">
-        <div><strong>06</strong><span>PROJECT CASE STUDIES</span></div>
-        <div><strong>03</strong><span>ENGINEERING FOCUS AREAS</span></div>
-        <div><strong>24</strong><span>WEEKS OF INDUSTRIAL TRAINING</span></div>
+        <div><strong>06</strong><span>SOFTWARE PLATFORMS</span></div>
+        <div><strong>04</strong><span>RESEARCH TRACKS</span></div>
+        <div><strong>01</strong><span>PAMERKOM 1ST PRIZE</span></div>
       </div>
     </section>
 
+    <!-- ══════════════════════════════════════════
+         PROJECTS SECTION
+         ══════════════════════════════════════════ -->
     <section class="work-section work-container" id="projects" aria-labelledby="projects-heading">
-      <div class="work-section-head">
-        <div><p class="work-eyebrow">01 / PROJECTS</p><h2 id="projects-heading">Selected engineering work</h2><p>Start with the purpose of each project. Open a case study for its scope, implementation, and technical decisions.</p></div>
-        <span class="work-project-count" id="projectCount">6 projects</span>
+      <div class="home-section-head" style="margin-bottom: 25px;">
+        <div>
+          <span class="section-eyebrow" style="color:var(--w-cyan);">01 / ENGINEERING &amp; SYSTEMS</span>
+          <h2 id="projects-heading" style="font-size:clamp(28px, 3.4vw, 40px); font-weight:800; color:var(--w-ink); margin:0;">Selected Work &amp; Systems</h2>
+          <p class="section-lede" style="color:var(--w-muted); font-size:14px; margin:6px 0 0;">Filter by technical category or search stack technologies.</p>
+        </div>
+        <span class="work-project-count" id="projectCount" style="color:var(--w-cyan); font-weight:700; font-family:'JetBrains Mono', monospace; font-size:13px;">8 projects</span>
       </div>
-      <div class="work-filter-row">
+
+      <!-- Controls: Filters + Live Search -->
+      <div class="work-controls-bar">
         <div class="work-filters" role="group" aria-label="Filter projects">
-          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All projects</button>
-          <button class="filter-btn" type="button" data-filter="live" aria-pressed="false">Live / deployed</button>
-          <button class="filter-btn" type="button" data-filter="api" aria-pressed="false">API</button>
-          <button class="filter-btn" type="button" data-filter="iot" aria-pressed="false">IoT</button>
-          <button class="filter-btn" type="button" data-filter="java" aria-pressed="false">Java</button>
-          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All (8)</button>
+          <button class="filter-btn" type="button" data-filter="fullstack" aria-pressed="false">Full-Stack Web</button>
+          <button class="filter-btn" type="button" data-filter="iot" aria-pressed="false">IoT &amp; Hardware</button>
+          <button class="filter-btn" type="button" data-filter="research" aria-pressed="false">Applied Research</button>
+          <button class="filter-btn" type="button" data-filter="live" aria-pressed="false">Live Demos</button>
         </div>
-        <p class="work-filter-hint">Filter by technology or project type.</p>
+
+        <div class="work-search-box">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input class="work-search-input" id="projectSearchInput" type="text" placeholder="Search stack or name..." aria-label="Search projects" />
+        </div>
       </div>
+
+      <!-- Projects Grid -->
       <div class="work-project-grid" id="projectGrid">
-        <article class="pcard work-project-card" data-tags="java web live" data-summary="Final Year Project / E-learning platform / Java / MySQL / Docker / PAMERKOM 2026">
-          <div class="work-project-visual visual-learning" aria-hidden="true"><span class="visual-index">01 / EDUCATION TECHNOLOGY</span><div class="visual-browser"><div class="browser-bar"><i></i><i></i><i></i><b>Learning dashboard</b></div><div class="browser-content"><span class="mock-sidebar"></span><span class="mock-main"><i></i><i></i><b></b><b></b></span></div></div></div>
-          <div class="work-project-copy"><div class="work-project-meta"><span>Final Year Project</span><span>Java · MySQL · Docker</span></div><h3>PSM E-Learning Management System</h3><p>A learning platform supporting course management, enrollment, payment processing, assessments, and QR-verifiable certificates.</p><div class="work-project-footer"><span class="work-project-note"><i class="fa-solid fa-trophy" aria-hidden="true"></i> PAMERKOM 2026 · Consolation Prize</span><a href="projects/psm-e-learning" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
+        <!-- 01: PSM E-Learning -->
+        <article class="pcard work-project-card" data-tags="fullstack live" data-summary="PSM E-Learning System / Java / JSP / Servlets / MySQL / Docker / PAMERKOM 2026 Winner / Education">
+          <div class="work-card-banner">
+            <span class="card-type-pill"><i class="fa-solid fa-trophy" style="color:var(--w-amber);" aria-hidden="true"></i> PAMERKOM Winner</span>
+            <span class="card-num">01 / EDU-TECH</span>
+          </div>
+          <div class="work-card-body">
+            <h3>PSM E-Learning Management System</h3>
+            <p>Full-stack learning platform engineered with role-based access control, Paystack payment processing, dynamic assessments, and automated QR-code certificate verification.</p>
+            <div class="work-card-tags">
+              <span>Java</span>
+              <span>JSP / Servlets</span>
+              <span>MySQL</span>
+              <span>Docker</span>
+              <span>Paystack API</span>
+            </div>
+            <div class="work-card-footer">
+              <a href="projects/psm-e-learning.html" class="work-case-link">Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="https://psmels.software/landing" target="_blank" rel="noopener noreferrer" class="work-ext-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </div>
         </article>
-        <article class="pcard work-project-card" data-tags="iot" data-summary="Smart Campus IoT Station / Raspberry Pi Pico W / MicroPython / MQTT">
-          <div class="work-project-visual visual-iot" aria-hidden="true"><span class="visual-index">02 / CONNECTED SYSTEMS</span><div class="iot-visual-board"><div class="iot-visual-heading"><i></i> SENSOR NETWORK <span>MONITORING</span></div><div class="iot-visual-body"><div class="iot-visual-chip"><i class="fa-solid fa-microchip"></i><b>Pico W</b><small>Controller</small></div><div class="iot-visual-connectors"><i></i><i></i><i></i></div><div class="iot-visual-sensors"><span>AHT20</span><span>PIR</span><span>BMP280</span></div></div></div></div>
-          <div class="work-project-copy"><div class="work-project-meta"><span>IoT Prototype</span><span>MicroPython · MQTT</span></div><h3>Smart Campus IoT Station</h3><p>A campus monitoring prototype combining environmental and motion sensors with a microcontroller and connected telemetry.</p><div class="work-project-footer"><span class="work-project-note">Environmental monitoring</span><a href="projects/iot-monitoring" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
+
+        <!-- 02: Smart Campus IoT Station -->
+        <article class="pcard work-project-card" data-tags="iot research" data-summary="Smart Campus IoT Station / Raspberry Pi Pico W / MicroPython / MQTT / ThingSpeak / Hardware">
+          <div class="work-card-banner">
+            <span class="card-type-pill"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i> Connected Systems</span>
+            <span class="card-num">02 / IOT</span>
+          </div>
+          <div class="work-card-body">
+            <h3>Smart Campus IoT Station</h3>
+            <p>Microcontroller telemetry network streaming environmental and security sensor data from a Raspberry Pi Pico W over MQTT to live cloud dashboards.</p>
+            <div class="work-card-tags">
+              <span>Pico W</span>
+              <span>MicroPython</span>
+              <span>MQTT</span>
+              <span>ThingSpeak</span>
+              <span>AHT20 / PIR</span>
+            </div>
+            <div class="work-card-footer">
+              <a href="projects/iot-monitoring.html" class="work-case-link">Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="https://github.com/Fagacie/smart-campus-iot-station" target="_blank" rel="noopener noreferrer" class="work-ext-link">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
         </article>
-        <article class="pcard work-project-card" data-tags="java" data-summary="PKU Management System / Healthcare workflows / Java / JSP / MySQL">
-          <div class="work-project-visual visual-pku" aria-hidden="true"><span class="visual-index">03 / INFORMATION SYSTEMS</span><div class="pku-visual-panel"><div class="pku-visual-heading">Management overview <i class="fa-solid fa-ellipsis"></i></div><div class="pku-visual-stats"><span>Patient records</span><span>Appointments</span></div><div class="pku-visual-table"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
-          <div class="work-project-copy"><div class="work-project-meta"><span>Management System</span><span>Java · JSP · MySQL</span></div><h3>PKU Management System</h3><p>A healthcare management application for organizing patient records, appointments, billing, and staff workflows.</p><div class="work-project-footer"><span class="work-project-note">Database-backed application</span><a href="projects/pku-management" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
+
+        <!-- 03: PKU Healthcare System -->
+        <article class="pcard work-project-card" data-tags="fullstack" data-summary="PKU Management System / Healthcare Workflows / Java / JSP / MySQL / Enterprise">
+          <div class="work-card-banner">
+            <span class="card-type-pill"><i class="fa-solid fa-hospital" aria-hidden="true"></i> Enterprise Healthcare</span>
+            <span class="card-num">03 / ENTERPRISE</span>
+          </div>
+          <div class="work-card-body">
+            <h3>PKU Healthcare Management System</h3>
+            <p>Clinic management platform organizing patient medical records, appointment scheduling, dispensary inventory, and billing workflows with relational data integrity.</p>
+            <div class="work-card-tags">
+              <span>Java</span>
+              <span>JSP / Servlets</span>
+              <span>MySQL</span>
+              <span>Apache Tomcat</span>
+            </div>
+            <div class="work-card-footer">
+              <a href="projects/pku-management.html" class="work-case-link">Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="https://github.com/Fagacie/PKU-Management-System" target="_blank" rel="noopener noreferrer" class="work-ext-link">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
         </article>
-        <article class="pcard work-project-card" data-tags="live api web" data-summary="WeatherHub / REST API / JavaScript / Firebase hosting">
-          <div class="work-project-visual visual-weather" aria-hidden="true"><span class="visual-index">04 / API INTEGRATION</span><div class="weather-visual-card"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i><strong>WeatherHub</strong><span>Live weather data</span><div><i></i><i></i><i></i></div></div></div>
-          <div class="work-project-copy"><div class="work-project-meta"><span>Web Application</span><span>JavaScript · REST API</span></div><h3>WeatherHub</h3><p>A responsive weather application that retrieves current conditions through a REST API and presents the results in a clear interface.</p><div class="work-project-footer"><span class="work-project-note">API-driven interface</span><a href="projects/weatherhub" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
+
+        <!-- 04: WeatherHub -->
+        <article class="pcard work-project-card" data-tags="live" data-summary="WeatherHub / REST API / JavaScript / Firebase Hosting / OpenWeather / Weather Intelligence">
+          <div class="work-card-banner">
+            <span class="card-type-pill"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> REST API Integration</span>
+            <span class="card-num">04 / WEB</span>
+          </div>
+          <div class="work-card-body">
+            <h3>WeatherHub Live Weather Intelligence</h3>
+            <p>Responsive meteorological web application querying live weather data via OpenWeather REST APIs with dynamic condition states and local search caching.</p>
+            <div class="work-card-tags">
+              <span>JavaScript</span>
+              <span>OpenWeather API</span>
+              <span>CSS Glass</span>
+              <span>Firebase</span>
+            </div>
+            <div class="work-card-footer">
+              <a href="projects/weatherhub.html" class="work-case-link">Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="https://github.com/Fagacie/WeatherHub" target="_blank" rel="noopener noreferrer" class="work-ext-link">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
         </article>
-        <article class="pcard work-project-card" data-tags="java" data-summary="MasakJerr! / Recipe sharing and management / Spring Boot / MySQL">
-          <div class="work-project-visual visual-recipe" aria-hidden="true"><span class="visual-index">05 / FULL-STACK DEVELOPMENT</span><div class="recipe-visual-card"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>RECIPE COLLECTION</span><b>MasakJerr!</b><div><i></i><i></i><i></i></div></div></div>
-          <div class="work-project-copy"><div class="work-project-meta"><span>Full-stack Application</span><span>Java · JSP · MySQL</span></div><h3>MasakJerr!</h3><p>A recipe management application built around CRUD workflows and persistent user data, using Spring Boot and MySQL.</p><div class="work-project-footer"><span class="work-project-note">CRUD · Relational data</span><a href="projects/masakjerr" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
+
+        <!-- 05: MasakJerr! -->
+        <article class="pcard work-project-card" data-tags="fullstack" data-summary="MasakJerr! / Recipe Sharing Platform / Spring Boot / MySQL / Java">
+          <div class="work-card-banner">
+            <span class="card-type-pill"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Full-Stack Application</span>
+            <span class="card-num">05 / SPRING</span>
+          </div>
+          <div class="work-card-body">
+            <h3>MasakJerr! Culinary Sharing Platform</h3>
+            <p>Recipe management web application structured around complete CRUD workflows and user-generated recipes, engineered with Spring Boot, JPA, and MySQL storage.</p>
+            <div class="work-card-tags">
+              <span>Spring Boot</span>
+              <span>Java</span>
+              <span>JSP</span>
+              <span>MySQL</span>
+            </div>
+            <div class="work-card-footer">
+              <a href="projects/masakjerr.html" class="work-case-link">Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="https://github.com/Fagacie/MasakJerr" target="_blank" rel="noopener noreferrer" class="work-ext-link">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
         </article>
-        <article class="pcard work-project-card" data-tags="live web" data-summary="Elite Soccer Feed / Football news / HTML / CSS / JavaScript">
-          <div class="work-project-visual visual-soccer" aria-hidden="true"><span class="visual-index">06 / CONTENT &amp; INTERFACE</span><div class="soccer-visual-card"><span>SPORTS / LATEST</span><b>Matchday<br />coverage.</b><i></i><i></i></div></div>
-          <div class="work-project-copy"><div class="work-project-meta"><span>Content Website</span><span>HTML · CSS · JavaScript</span></div><h3>Elite Soccer Feed</h3><p>A football news website concept with a homepage layout and detailed player pages.</p><div class="work-project-footer"><span class="work-project-note">Responsive web design</span><a href="projects/elite-soccer" class="work-case-link">View case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div>
+
+        <!-- 06: Elite Soccer Feed -->
+        <article class="pcard work-project-card" data-tags="live" data-summary="Elite Soccer Feed / Sports Platform / HTML / CSS / JavaScript">
+          <div class="work-card-banner">
+            <span class="card-type-pill"><i class="fa-solid fa-futbol" aria-hidden="true"></i> Sports Web Platform</span>
+            <span class="card-num">06 / WEB</span>
+          </div>
+          <div class="work-card-body">
+            <h3>Elite Soccer Feed</h3>
+            <p>Modern sports news and live matchday tracking concept featuring responsive grid layouts, athlete profiles, and real-time tournament fixture presentation.</p>
+            <div class="work-card-tags">
+              <span>HTML5</span>
+              <span>Modern CSS</span>
+              <span>JavaScript</span>
+              <span>Vercel</span>
+            </div>
+            <div class="work-card-footer">
+              <a href="projects/elite-soccer.html" class="work-case-link">Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="https://github.com/Fagacie/elite-soccer" target="_blank" rel="noopener noreferrer" class="work-ext-link">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 07: Network Anomaly Detection (Research) -->
+        <article class="pcard work-project-card" data-tags="research" data-summary="Network Anomaly & Intrusion Detection / Machine Learning / Python / Threat Detection / Cybersecurity">
+          <div class="work-card-banner">
+            <span class="card-type-pill"><i class="fa-solid fa-shield-halved" style="color:var(--w-purple);" aria-hidden="true"></i> Cybersecurity ML</span>
+            <span class="card-num">07 / RESEARCH</span>
+          </div>
+          <div class="work-card-body">
+            <h3>AI Network Anomaly &amp; Intrusion Detection</h3>
+            <p>Machine learning classification pipeline analyzing network telemetry data, addressing severe class imbalance in malicious traffic, and suppressing false positive alarms.</p>
+            <div class="work-card-tags">
+              <span>Python</span>
+              <span>Scikit-Learn</span>
+              <span>Anomaly Detection</span>
+              <span>Telemetry</span>
+            </div>
+            <div class="work-card-footer">
+              <a href="#research" class="work-case-link">Research Focus <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+              <span class="work-ext-link" style="color:var(--w-cyan); font-weight:600;"><i class="fa-solid fa-flask"></i> Investigation</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 08: Edge Telemetry Protocol & Compression (Research) -->
+        <article class="pcard work-project-card" data-tags="iot research" data-summary="Edge Telemetry Protocol & Compression / MQTT / MicroPython / IoT / Sensor Networks">
+          <div class="work-card-banner">
+            <span class="card-type-pill"><i class="fa-solid fa-microchip" style="color:var(--w-emerald);" aria-hidden="true"></i> Edge Intelligence</span>
+            <span class="card-num">08 / RESEARCH</span>
+          </div>
+          <div class="work-card-body">
+            <h3>Edge Telemetry Compression &amp; Protocol Efficiency</h3>
+            <p>Empirical study comparing data compression and lightweight filtering algorithms across low-power microcontrollers using MQTT/TLS protocols under constrained bandwidth.</p>
+            <div class="work-card-tags">
+              <span>MicroPython</span>
+              <span>MQTT/TLS</span>
+              <span>Data Compression</span>
+              <span>Edge Computing</span>
+            </div>
+            <div class="work-card-footer">
+              <a href="#research" class="work-case-link">Research Focus <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+              <span class="work-ext-link" style="color:var(--w-emerald); font-weight:600;"><i class="fa-solid fa-flask"></i> Investigation</span>
+            </div>
+          </div>
         </article>
       </div>
-      <div class="work-filter-status" aria-live="polite"><span>ACTIVE FILTER</span><code id="projectInsight">All projects selected</code></div>
+
+      <div class="work-filter-status" aria-live="polite" style="margin-top:20px; padding:12px 18px; border-radius:8px; background:var(--w-paper); border:1px solid var(--w-line); font-size:12px; color:var(--w-muted); font-family:'JetBrains Mono', monospace;">
+        <span style="color:var(--w-cyan); font-weight:700;">STATUS:</span> <span id="projectInsight">Showing all 8 projects</span>
+      </div>
     </section>
 
-    <section class="work-experience-band" id="experience">
-      <div class="work-container">
-        <div class="work-section-head"><div><p class="work-eyebrow">02 / EXPERIENCE &amp; LEADERSHIP</p><h2>Work beyond the codebase</h2><p>Industry experience and community responsibilities that develop practical, organizational, and communication skills.</p></div></div>
-        <div class="experience-list">
-          <article class="experience-item"><div class="experience-marker"><span></span></div><div class="experience-content"><div class="experience-meta"><span>INDUSTRY</span><span>Aug 2026 – Present</span></div><h3>Software Engineer Intern</h3><p class="experience-organization">Eco Hydrotech Solutions Sdn. Bhd. · Host organisation<br />Institute of Oceanography and Environment (INOS), Universiti Malaysia Terengganu · Work context</p><p>Developing and improving the INOS Survey Estimation System, including survey-planning and estimation workflows, mapping features, backend and database integration, and troubleshooting calculation and interface issues.</p><span class="experience-status"><i></i> Current role</span></div></article>
-          <article class="experience-item"><div class="experience-marker"><span></span></div><div class="experience-content"><div class="experience-meta"><span>COMMUNITY COMMUNICATIONS</span><span>24 May 2026 – Present</span></div><h3>Media &amp; Publicity Officer</h3><p class="experience-organization">Nigerian Muslim Community in Malaysia (NMCIM)</p><p>Responsible for managing community communications and public image across official media platforms, coordinating event announcements, and preparing publicity materials that promote NMCIM activities.</p><span class="experience-status"><i></i> Current role</span></div></article>
-          <article class="experience-item"><div class="experience-marker"><span></span></div><div class="experience-content"><div class="experience-meta"><span>FINANCE &amp; OPERATIONS</span><span>18 June 2025 – 24 May 2026</span></div><h3>Treasurer</h3><p class="experience-organization">Nigerian Muslim Community in Malaysia (NMCIM)</p><p>Responsible for safeguarding and disbursing approved community funds, maintaining receipts and financial records, monitoring expenditures against approved limits, and supporting financial reports and budget presentations.</p></div></article>
+    <!-- ══════════════════════════════════════════
+         02 / APPLIED RESEARCH DIRECTIONS
+         ══════════════════════════════════════════ -->
+    <section class="work-research-section work-container" id="research" aria-labelledby="research-heading">
+      <div class="home-section-head">
+        <div>
+          <span class="section-eyebrow" style="color:var(--w-cyan);">02 / EMPIRICAL INVESTIGATION</span>
+          <h2 id="research-heading" style="font-size:clamp(28px, 3.4vw, 40px); font-weight:800; color:var(--w-ink); margin:0;">Research Directions &amp; Testbeds</h2>
+          <p class="section-lede" style="color:var(--w-muted); font-size:14px; margin:6px 0 0;">Turning theoretical machine learning and edge telemetry into testable, dependable tools.</p>
         </div>
       </div>
+
+      <div class="research-method-banner">
+        <div class="research-method-icon">
+          <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+        </div>
+        <div>
+          <strong>Methodological Foundation</strong>
+          <span>Formulating concrete hypotheses, benchmarking against rigorous baselines, evaluating across noisy real-world data distributions, and measuring practical latency.</span>
+        </div>
+      </div>
+
+      <div class="research-track-grid">
+        <article class="research-track-card">
+          <div class="research-track-top">
+            <span>01 / PREDICTIVE ML</span>
+            <i class="fa-solid fa-brain" aria-hidden="true"></i>
+          </div>
+          <h3>Applied Machine Learning &amp; Prediction</h3>
+          <p>Evaluating how learning-based models enhance decision support, predictive maintenance, and tabular data classification when constrained by noisy real-world conditions.</p>
+          <div class="research-track-pills">
+            <span>Model Benchmarking</span>
+            <span>Feature Engineering</span>
+            <span>Explainability</span>
+          </div>
+        </article>
+
+        <article class="research-track-card">
+          <div class="research-track-top">
+            <span>02 / CYBERSECURITY</span>
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+          </div>
+          <h3>AI for Anomaly &amp; Intrusion Detection</h3>
+          <p>Investigating machine learning pipelines for network telemetry analysis, handling extreme class imbalance in malicious traffic, and mitigating adversarial false positives.</p>
+          <div class="research-track-pills">
+            <span>Intrusion Detection</span>
+            <span>Imbalanced Learning</span>
+            <span>Threat Detection</span>
+          </div>
+        </article>
+
+        <article class="research-track-card">
+          <div class="research-track-top">
+            <span>03 / TRUSTWORTHY SYSTEMS</span>
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+          </div>
+          <h3>Trustworthy &amp; Verifiable Learning Systems</h3>
+          <p>Studying methods for human-in-the-loop validation, cryptographic credential verification, and transparent feedback mechanisms in automated educational platforms.</p>
+          <div class="research-track-pills">
+            <span>Human Oversight</span>
+            <span>QR Verification</span>
+            <span>Explainable Feedback</span>
+          </div>
+        </article>
+
+        <article class="research-track-card">
+          <div class="research-track-top">
+            <span>04 / EMBEDDED EDGE</span>
+            <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+          </div>
+          <h3>IoT &amp; Edge Intelligence</h3>
+          <p>Analyzing telemetry compression, lightweight filtering algorithms, and low-power protocol efficiency (MQTT/TLS) across microcontroller sensor clusters.</p>
+          <div class="research-track-pills">
+            <span>Sensor Networks</span>
+            <span>Edge Computing</span>
+            <span>MQTT Protocol</span>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="work-section work-container" id="recognition" aria-labelledby="recognition-heading">
-      <div class="work-section-head"><div><p class="work-eyebrow">03 / RECOGNITION</p><h2 id="recognition-heading">Awards &amp; certificates</h2><p>A selected archive of programme participation and academic recognition. Select a preview to inspect the available certificate file.</p></div></div>
-      <div class="work-certificate-grid">
-        <article class="work-certificate-card"><button class="certificate-preview certificate-pdf" type="button" data-cert="assets/certificates/consolation-prize.pdf" data-cert-title="PAMERKOM 2026 Consolation Prize" aria-label="Preview PAMERKOM 2026 Consolation Prize certificate"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i><span>PDF CERTIFICATE</span></button><div class="certificate-copy"><p class="certificate-type">AWARD · 2026</p><h3>PAMERKOM 2026 Consolation Prize</h3><p>Universiti Malaysia Terengganu</p><a href="/cert/pamerkom" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
-        <article class="work-certificate-card"><button class="certificate-preview" type="button" data-cert="assets/certificates/dean-list-sem3.jpeg" data-cert-title="Dean's Award - Semester I 2024/2025" aria-label="Preview Dean's Award Semester I 2024/2025"><img src="assets/certificates/dean-list-sem3.jpeg" alt="Dean's Award certificate" loading="lazy" /><span>VIEW PREVIEW</span></button><div class="certificate-copy"><p class="certificate-type">ACADEMIC RECOGNITION · 2024</p><h3>Dean's Award — Semester I 2024/2025</h3><p>Faculty of Computer Science, UMT</p><a href="/cert/deans-sem3" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
-        <article class="work-certificate-card"><button class="certificate-preview" type="button" data-cert="assets/certificates/dean-list-sem4.jpeg" data-cert-title="Dean's Award - Semester II 2024/2025" aria-label="Preview Dean's Award Semester II 2024/2025"><img src="assets/certificates/dean-list-sem4.jpeg" alt="Dean's Award certificate" loading="lazy" /><span>VIEW PREVIEW</span></button><div class="certificate-copy"><p class="certificate-type">ACADEMIC RECOGNITION · 2025</p><h3>Dean's Award — Semester II 2024/2025</h3><p>Faculty of Computer Science, UMT</p><a href="/cert/deans-sem4" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
-        <article class="work-certificate-card"><button class="certificate-preview" type="button" data-cert="assets/certificates/aspire-programme.jpeg" data-cert-title="ASPIRE Programme 2025" aria-label="Preview ASPIRE Programme certificate"><img src="assets/certificates/aspire-programme.jpeg" alt="ASPIRE Programme certificate" loading="lazy" /><span>VIEW PREVIEW</span></button><div class="certificate-copy"><p class="certificate-type">PROGRAMME · OCT 2025</p><h3>ASPIRE Programme</h3><p>Alumni Synergy for Professionalism</p><a href="/cert/aspire" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
-        <article class="work-certificate-card"><button class="certificate-preview certificate-pdf" type="button" data-cert="assets/certificates/autumn-school.pdf" data-cert-title="International Autumn School 2025" aria-label="Preview International Autumn School certificate"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i><span>PDF CERTIFICATE</span></button><div class="certificate-copy"><p class="certificate-type">ACADEMIC PROGRAMME · 2025</p><h3>International Autumn School</h3><p>Academic exchange</p><a href="/cert/autumn-school" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
-        <article class="work-certificate-card"><button class="certificate-preview certificate-pdf" type="button" data-cert="assets/certificates/ifuture.pdf" data-cert-title="iFuture Programme Certificate" aria-label="Preview iFuture Programme certificate"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i><span>PDF CERTIFICATE</span></button><div class="certificate-copy"><p class="certificate-type">PROGRAMME · 2025</p><h3>iFuture Programme</h3><p>Universiti Malaysia Terengganu</p><a href="/cert/ifuture" target="_blank" rel="noopener noreferrer">Open certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
-        <article class="work-certificate-card"><div class="certificate-preview certificate-programme" aria-hidden="true"><i class="fa-solid fa-person-swimming"></i><span>PROGRAMME PARTICIPATION</span></div><div class="certificate-copy"><p class="certificate-type">PROGRAMME · 2025</p><h3>Water Survival Programme</h3><p>Group Leader</p><span class="certificate-unavailable">Certificate link pending verification</span></div></article>
+    <!-- ══════════════════════════════════════════
+         CALL TO ACTION STRIP
+         ══════════════════════════════════════════ -->
+    <section class="work-container" style="padding-bottom:100px;">
+      <div style="background:var(--w-paper); border:1px solid var(--w-line); border-radius:var(--w-radius-lg); padding:40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; box-shadow:var(--w-shadow-md); backdrop-filter:blur(16px);">
+        <div>
+          <span class="section-eyebrow" style="color:var(--w-cyan);">Next Step</span>
+          <h2 style="font-size:28px; font-weight:800; color:var(--w-ink); margin:4px 0 0;">Have a project or technical challenge?</h2>
+          <p style="color:var(--w-muted); font-size:14px; margin:6px 0 0;">Open to software engineering roles, collaborative systems design, and technical discussions.</p>
+        </div>
+        <a class="btn-glow-primary" href="contact.html" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:9999px; background:linear-gradient(135deg,var(--w-cyan),var(--w-blue)); color:#04101e; font-weight:700; font-size:13px;">
+          Get in Touch <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
       </div>
-      <p class="recognition-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Academic award titles are retained from the current site pending verification against the original certificates.</p>
     </section>
-    <section class="work-contact-strip"><div class="work-container"><div><p class="work-eyebrow">NEXT STEP</p><h2>Have a project or opportunity in mind?</h2></div><a class="work-button work-button-primary" href="contact">Get in touch <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></section>
   </main>
+
   <footer class="footer" id="site-footer"></footer>
-  <script src="js/components.js?v=4"></script>
-  <script src="js/main.js?v=12"></script>
+  <script src="js/components.js?v=6"></script>
+  <script src="js/main.js?v=14"></script>
+
+  <!-- Interactive Live Search & Category Filtering -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('projectSearchInput');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.pcard');
+      const projectCountEl = document.getElementById('projectCount');
+      const projectInsightEl = document.getElementById('projectInsight');
+
+      let currentFilter = 'all';
+      let currentQuery = '';
+
+      function applyFilterAndSearch() {
+        let visibleCount = 0;
+
+        projectCards.forEach(card => {
+          const tags = card.getAttribute('data-tags') || '';
+          const summary = card.getAttribute('data-summary') || '';
+          const text = (card.textContent + ' ' + summary).toLowerCase();
+          const matchesFilter = currentFilter === 'all' || tags.includes(currentFilter);
+          const matchesSearch = !currentQuery || text.includes(currentQuery);
+
+          if (matchesFilter && matchesSearch) {
+            card.hidden = false;
+            visibleCount++;
+          } else {
+            card.hidden = true;
+          }
+        });
+
+        if (projectCountEl) {
+          projectCountEl.textContent = `${visibleCount} ${visibleCount === 1 ? 'project' : 'projects'}`;
+        }
+        if (projectInsightEl) {
+          projectInsightEl.textContent = `Showing ${visibleCount} matching project${visibleCount === 1 ? '' : 's'}`;
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-pressed', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-pressed', 'true');
+          currentFilter = btn.getAttribute('data-filter') || 'all';
+          applyFilterAndSearch();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim().toLowerCase();
+          applyFilterAndSearch();
+        });
+      }
+    });
+  </script>
 </body>
 </html>

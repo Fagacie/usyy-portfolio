@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elite Soccer Feed | Abbas Usman Adamu</title>
+  <title>Elite Soccer Feed | Usman Abbas Adamu</title>
   <meta name="description" content="Football news website featuring homepage layout and player pages." />
   <link rel="icon" href="../assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@
   <header class="header" id="site-header"></header>
 
   <main id="main">
-    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">Elite Soccer Feed</span></nav>
+    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">Elite Soccer Feed</span></nav>
     <section class="project-detail-hero container reveal">
       <div class="project-detail-grid">
         <div class="project-detail-content">
@@ -89,25 +89,85 @@
           </div>
         </div>
 
-        <h2 style="margin-top:80px;"><i class="fa-solid fa-code"></i> Technical Architecture</h2>
-        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
-          This project highlights core web technologies, using HTML, CSS, and vanilla JavaScript without a front-end framework.
-        </p>
-        
-        <div class="tech-flow">
-          <div class="tech-node">
-            <i class="fa-brands fa-html5"></i>
-            <span>Semantic HTML</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-brands fa-css3"></i>
-            <span>CSS Styling</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-solid fa-globe"></i>
-            <span>Vercel Hosting</span>
+        <div class="architecture-section">
+          <h2><i class="fa-solid fa-network-wired" style="color:var(--case-cyan); margin-right:8px;"></i> System Architecture Pipeline</h2>
+          <p class="muted" style="font-size:1.05rem; line-height:1.75; margin-top:6px;">
+            Sports editorial publishing pipeline organizing raw match statistics, player biographical profiles, and modular CSS grid layouts for zero-overhead edge delivery on Vercel.
+          </p>
+
+          <div class="architecture-diagram" style="--diagram-accent:#a8dc75;">
+            <div class="diagram-header">
+              <div class="diagram-header-left">
+                <span class="diagram-signal" style="background:#a8dc75; box-shadow:0 0 10px #a8dc75;"></span>
+                <h4>EDITORIAL CONTENT PIPELINE</h4>
+              </div>
+              <small>HTML5 Semantic · CSS Grid &amp; Flexbox · JavaScript · Vercel</small>
+            </div>
+            <div class="diagram-canvas">
+              <!-- Stage 1 -->
+              <div class="diagram-stage">
+                <span class="stage-label">01 / Content Feeds</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#a8dc75; color:#a8dc75;">NEWS</span>
+                    <div><strong>Football News</strong><small>Headlines &amp; breaking transfers</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#a8dc75; color:#a8dc75;">STAT</span>
+                    <div><strong>Match Analytics</strong><small>Scores &amp; player performance</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#a8dc75);"></i><b style="color:#a8dc75;">→</b></div>
+              </div>
+              <!-- Stage 2 -->
+              <div class="diagram-stage">
+                <span class="stage-label">02 / Structure</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#a8dc75; color:#a8dc75;">HTML</span>
+                    <div><strong>Semantic HTML5</strong><small>Accessible content hierarchy</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#a8dc75; color:#a8dc75;">SEO</span>
+                    <div><strong>Metadata Engine</strong><small>OpenGraph &amp; sports tags</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#a8dc75);"></i><b style="color:#a8dc75;">→</b></div>
+              </div>
+              <!-- Stage 3 -->
+              <div class="diagram-stage">
+                <span class="stage-label">03 / Experience</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#a8dc75; color:#a8dc75;">CSS</span>
+                    <div><strong>CSS Grid &amp; Flexbox</strong><small>Responsive multi-column layouts</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#a8dc75; color:#a8dc75;">JS</span>
+                    <div><strong>DOM Controller</strong><small>Navigation &amp; filter logic</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#a8dc75);"></i><b style="color:#a8dc75;">→</b></div>
+              </div>
+              <!-- Stage 4 -->
+              <div class="diagram-stage">
+                <span class="stage-label">04 / Global Edge</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#a8dc75; color:#a8dc75;">VCL</span>
+                    <div><strong>Vercel Edge</strong><small>Global static asset delivery</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#a8dc75; color:#a8dc75;">CDN</span>
+                    <div><strong>Zero-Latency Cache</strong><small>Instant public load performance</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="diagram-footer">
+              <span><i class="live-dot" style="background:#a8dc75; box-shadow:0 0 8px #a8dc75;"></i> Active Editorial Flow</span>
+              <span>Architecture Specification · ESF-WEB-06</span>
+            </div>
           </div>
         </div>
 
@@ -115,13 +175,13 @@
     </section>
   
     <nav class="case-project-nav container" aria-label="Project case studies">
-      <a class="case-project-prev" href="../projects/masakjerr"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>MasakJerr!</strong></a>
-      <a class="case-project-next" href="../projects/psm-e-learning"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>PSM E-Learning</strong></a>
+      <a class="case-project-prev" href="../projects/masakjerr.html"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>MasakJerr!</strong></a>
+      <a class="case-project-next" href="../projects/psm-e-learning.html"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>PSM E-Learning</strong></a>
     </nav>
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="../js/components.js?v=4"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

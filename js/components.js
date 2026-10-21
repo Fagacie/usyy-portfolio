@@ -11,6 +11,7 @@
   const depth = (location.pathname.match(/\//g) || []).length - 1;
   const isSubDir = location.pathname.includes('/projects/');
   const BASE = isSubDir ? '../' : './';
+  const ext = '.html';
 
   /* ── Current page detection ── */
   const path = location.pathname.replace(/\/$/, '').split('/').pop() || 'index';
@@ -27,11 +28,11 @@
     header.classList.add('floating-header-container');
 
     const navItems = [
-      { label: 'Home',     href: './',            id: 'home' },
-      { label: 'Projects', href: 'work',          id: 'work' },
-      { label: 'About',    href: 'about',         id: 'about' },
-      { label: 'Research', href: 'research',      id: 'research' },
-      { label: 'Contact',  href: 'contact',       id: 'contact' },
+      { label: 'Home',     href: (location.pathname.includes('/projects/') ? '../index' + ext : './index' + ext), id: 'home' },
+      { label: 'Projects', href: 'work' + ext,          id: 'work' },
+      { label: 'About',    href: 'about' + ext,         id: 'about' },
+      { label: 'Awards',   href: 'awards' + ext,        id: 'awards' },
+      { label: 'Contact',  href: 'contact' + ext,       id: 'contact' },
     ];
 
     /* Check if we're on a project subpage */
@@ -42,7 +43,7 @@
     // Build Desktop Links
     const navHTML = navItems.map(item => {
       const isCurrent = item.id === activeId;
-      const href = BASE + item.href;
+      const href = item.id === 'home' ? item.href : (BASE + item.href);
       return `<a href="${href}" class="nav-item nav-link ${isCurrent ? 'active' : ''}" data-id="${item.id}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a>`;
     }).join('\n        ');
 
@@ -52,13 +53,13 @@
       home: 'fa-house',
       work: 'fa-diagram-project',
       about: 'fa-user',
-      research: 'fa-flask',
+      awards: 'fa-award',
       contact: 'fa-envelope'
     };
 
     const mobileDockHTML = navItems.map((item) => {
       const isCurrent = item.id === activeId;
-      const href = BASE + item.href;
+      const href = item.id === 'home' ? item.href : (BASE + item.href);
       const icon = mobileDockIcons[item.id] || 'fa-circle';
       return '<a href="' + href + '" class="mobile-dock-link ' + (isCurrent ? 'active' : '') + '" data-id="' + item.id + '"' +
         (isCurrent ? ' aria-current="page"' : '') + '>' +
@@ -66,10 +67,13 @@
         '<span>' + item.label + '</span></a>';
     }).join('\n      ');
 
+    const resumeHref = BASE + 'assets/resume.pdf';
+
     header.innerHTML = `
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
     <nav class="floating-nav" aria-label="Primary navigation">
       <!-- Monogram Logo -->
-      <a href="${BASE}index.html" class="nav-logo" aria-label="Abbas Usman Adamu home">
+      <a href="${BASE}index${ext || '.html'}" class="nav-logo" aria-label="Usman Abbas Adamu home">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2L2 22H6.5L12 11L17.5 22H22L12 2Z" fill="currentColor"/>
         </svg>
@@ -83,7 +87,7 @@
 
       <!-- Actions (Resume + Theme) -->
       <div class="nav-actions" id="navActions">
-        <a href="${BASE}resume" class="nav-resume-btn" target="_blank" rel="noopener noreferrer" aria-label="View résumé PDF in a new tab">View résumé</a>
+        <a href="${resumeHref}" class="nav-resume-btn" target="_blank" rel="noopener noreferrer" aria-label="View résumé PDF in a new tab">View résumé</a>
       </div>
 
     </nav>
@@ -155,18 +159,18 @@
         <div class="footer-col footer-col-brand">
           <h3 class="footer-col-title">Let's Connect</h3>
           <p class="footer-blurb">Always exploring the intersection of design and engineering.</p>
-          <a href="mailto:abbasusman561@gmail.com" class="footer-email-link">abbasusman561@gmail.com</a>
+          <a href="mailto:fagacie@gmail.com" class="footer-email-link">fagacie@gmail.com</a>
         </div>
         
         <!-- Col 2: Navigation -->
         <div class="footer-col">
           <h3 class="footer-col-title">Navigation</h3>
           <nav class="mega-footer-nav" aria-label="Footer navigation">
-            <a href="${BASE}./">Home</a>
-            <a href="${BASE}work">Projects</a>
-            <a href="${BASE}about">About</a>
-            <a href="${BASE}research">Research</a>
-            <a href="${BASE}contact">Contact</a>
+            <a href="${BASE}index${ext || '.html'}">Home</a>
+            <a href="${BASE}work${ext}">Projects</a>
+            <a href="${BASE}about${ext}">About</a>
+            <a href="${BASE}awards${ext}">Awards</a>
+            <a href="${BASE}contact${ext}">Contact</a>
           </nav>
         </div>
 
@@ -194,7 +198,7 @@
     
     <!-- The Massive Bottom Anchor -->
     <div class="mega-footer-text-container">
-      <span class="mega-footer-text" aria-hidden="true">ABBAS USMAN</span>
+      <span class="mega-footer-text" aria-hidden="true">USMAN ABBAS</span>
       <div class="mega-footer-copyright">
         &copy; ${new Date().getFullYear()} &middot; All Rights Reserved.
       </div>
@@ -202,15 +206,11 @@
   }
 
   /* ══════════════════════════════════════════
-     PAGE TRANSITION (fade-in)
+     PAGE TRANSITION (clean, instant render)
   ══════════════════════════════════════════ */
   function initTransition(){
-    document.body.classList.add('page-enter');
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        document.body.classList.add('page-visible');
-      });
-    });
+    // Kept instant and clean to prevent dark flashing on navigation
+    document.body.classList.add('page-visible');
   }
 
   /* ══════════════════════════════════════════
@@ -220,6 +220,8 @@
     const saved = localStorage.getItem('theme');
     if (saved === 'light') {
       document.documentElement.setAttribute('data-theme', 'light');
+    } else if (saved === 'dark') {
+      document.documentElement.removeAttribute('data-theme');
     }
 
     /* Inject toggle button into Desktop and Mobile navs */
@@ -336,13 +338,19 @@
   /* ══════════════════════════════════════════
      INIT
   ══════════════════════════════════════════ */
-  document.addEventListener('DOMContentLoaded', () => {
+  function initAll() {
     buildHeader();
     buildFooter();
     initTransition();
     initTheme();
     initScrollProgress();
     initCertViewer();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
+  }
 
 })();

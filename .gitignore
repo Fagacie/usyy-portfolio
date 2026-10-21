@@ -29,3 +29,17 @@ build/
 *.tmp
 *.bak
 *.cache
+
+# Figma Make local prototype files (prevent interfering with static deployment)
+.figma/
+.mise.toml
+src/
+public/
+package.json
+pnpm-lock.yaml
+vite.config.ts
+tsconfig.json
+CLAUDE.md
+AGENTS.md
+.gitattributes
+

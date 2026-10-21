@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Campus IoT | Abbas Usman Adamu</title>
+  <title>Smart Campus IoT | Usman Abbas Adamu</title>
   <meta name="description" content="IoT Environmental Monitoring System built with Raspberry Pi Pico W, MicroPython, and MQTT." />
   <link rel="icon" href="../assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@
   <header class="header" id="site-header"></header>
 
   <main id="main">
-    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">Smart Campus IoT</span></nav>
+    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">Smart Campus IoT</span></nav>
     <section class="project-detail-hero container reveal">
       <div class="project-detail-grid">
         <div class="project-detail-content">
@@ -92,38 +92,102 @@
           </div>
         </div>
 
-        <h2 style="margin-top:80px;"><i class="fa-solid fa-network-wired"></i> Architecture &amp; Data Flow</h2>
-        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
-          The firmware is written in MicroPython, designed for lightweight execution. Telemetry is published using the MQTT protocol, routed to ThingSpeak where it is aggregated and visualized on a custom web dashboard.
-        </p>
+        <div class="architecture-section">
+          <h2><i class="fa-solid fa-network-wired" style="color:var(--case-cyan); margin-right:8px;"></i> System Architecture Pipeline</h2>
+          <p class="muted" style="font-size:1.05rem; line-height:1.75; margin-top:6px;">
+            Edge-to-cloud telemetry pipeline routing multi-sensor environmental acquisition over MQTT to persistent cloud storage and live monitoring dashboards.
+          </p>
 
-        <div class="tech-flow">
-          <div class="tech-node">
-            <i class="fa-solid fa-microchip"></i>
-            <span>Pico W + Sensors</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-solid fa-wifi"></i>
-            <span>MQTT Protocol</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-solid fa-chart-line"></i>
-            <span>ThingSpeak UI</span>
+          <div class="architecture-diagram" style="--diagram-accent:#63d7d0;">
+            <div class="diagram-header">
+              <div class="diagram-header-left">
+                <span class="diagram-signal" style="background:#63d7d0; box-shadow:0 0 10px #63d7d0;"></span>
+                <h4>EDGE-TO-CLOUD TELEMETRY MAP</h4>
+              </div>
+              <small>MicroPython · Pico W · MQTT · I²C · ThingSpeak</small>
+            </div>
+            <div class="diagram-canvas">
+              <!-- Stage 1 -->
+              <div class="diagram-stage">
+                <span class="stage-label">01 / Sensing Array</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#63d7d0; color:#63d7d0;">ENV</span>
+                    <div><strong>AHT20 / BMP280</strong><small>Temperature, humidity &amp; pressure</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#63d7d0; color:#63d7d0;">PIR</span>
+                    <div><strong>Motion Sensor</strong><small>Movement anomaly detection</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#63d7d0; color:#63d7d0;">DST</span>
+                    <div><strong>HC-SR04 Ultrasonic</strong><small>Security zone distance alerts</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#63d7d0);"><style>.diagram-connector i::after{background:#63d7d0;}</style></i><b style="color:#63d7d0;">→</b></div>
+              </div>
+              <!-- Stage 2 -->
+              <div class="diagram-stage">
+                <span class="stage-label">02 / Edge Controller</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#63d7d0; color:#63d7d0;">PICO</span>
+                    <div><strong>Raspberry Pi Pico W</strong><small>Dual ARM Cortex-M0+ @ 133MHz</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#63d7d0; color:#63d7d0;">μPY</span>
+                    <div><strong>MicroPython Kernel</strong><small>Sensor polling loop &amp; JSON packaging</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#63d7d0);"></i><b style="color:#63d7d0;">→</b></div>
+              </div>
+              <!-- Stage 3 -->
+              <div class="diagram-stage">
+                <span class="stage-label">03 / Transport Layer</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#63d7d0; color:#63d7d0;">WIFI</span>
+                    <div><strong>On-Board Wi-Fi</strong><small>CYW43439 802.11n wireless</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#63d7d0; color:#63d7d0;">MQTT</span>
+                    <div><strong>MQTT Protocol</strong><small>Lightweight publish/subscribe broker</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#63d7d0);"></i><b style="color:#63d7d0;">→</b></div>
+              </div>
+              <!-- Stage 4 -->
+              <div class="diagram-stage">
+                <span class="stage-label">04 / Cloud &amp; Visuals</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#63d7d0; color:#63d7d0;">TS</span>
+                    <div><strong>ThingSpeak Cloud</strong><small>Time-series telemetry archive</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#63d7d0; color:#63d7d0;">UI</span>
+                    <div><strong>Live Web Dashboard</strong><small>Real-time gauges &amp; alert triggers</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="diagram-footer">
+              <span><i class="live-dot" style="background:#63d7d0; box-shadow:0 0 8px #63d7d0;"></i> Active Hardware Loop</span>
+              <span>Telemetry Architecture · IOT-NODE-02</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
   
     <nav class="case-project-nav container" aria-label="Project case studies">
-      <a class="case-project-prev" href="../projects/psm-e-learning"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>PSM E-Learning</strong></a>
-      <a class="case-project-next" href="../projects/pku-management"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>PKU Management</strong></a>
+      <a class="case-project-prev" href="../projects/psm-e-learning.html"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>PSM E-Learning</strong></a>
+      <a class="case-project-next" href="../projects/pku-management.html"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>PKU Management</strong></a>
     </nav>
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="../js/components.js?v=4"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

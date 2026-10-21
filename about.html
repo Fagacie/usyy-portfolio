@@ -1,72 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f7f8fa" />
-  <title>About | Abbas Usman Adamu</title>
-  <meta name="description" content="Learn about Abbas Usman Adamu, a Software Engineering student at Universiti Malaysia Terengganu interested in backend development, connected systems, and applied AI." />
-  <meta name="author" content="Abbas Usman Adamu" />
+  <meta name="theme-color" content="#070b14" />
+  <script>
+    (function(){
+      try {
+        var s = localStorage.getItem('theme');
+        if (s === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <title>About — Usman Abbas Adamu</title>
+  <meta name="description"
+    content="Software engineer specializing in backend systems, relational database architecture, and connected IoT telemetry at Universiti Malaysia Terengganu and Eco Hydrotech Solutions." />
+  <meta name="author" content="Usman Abbas Adamu" />
   <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/style.css?v=30" />
-  <link rel="stylesheet" href="css/secondary-pages.css?v=2" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css?v=32" />
+  <link rel="stylesheet" href="css/secondary-pages.css?v=13" />
   <link rel="stylesheet" href="css/print.css" media="print" />
 </head>
-<body class="secondary-page profile-page">
+
+<body class="secondary-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="header" id="site-header"></header>
+
   <main id="main">
-    <section class="secondary-hero secondary-container profile-hero">
-      <div class="profile-copy">
-        <p class="secondary-eyebrow"><span></span> ABOUT</p>
-        <h1>Software engineering, grounded in <em>real problems.</em></h1>
-        <p class="secondary-lede">I'm Abbas Usman Adamu, a Software Engineering student at Universiti Malaysia Terengganu. I enjoy building useful web systems, working through backend and data problems, and exploring how software connects with the physical world.</p>
-        <div class="profile-facts"><div><span>EDUCATION</span><strong>Universiti Malaysia Terengganu</strong></div><div><span>FOCUS</span><strong>Software systems &amp; connected devices</strong></div></div>
-      </div>
-      <div class="profile-hero-actions" aria-label="Explore my work">
-        <a class="secondary-button secondary-button-primary" href="work#projects">Explore projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-        <a class="secondary-button" href="/resume" target="_blank" rel="noopener noreferrer">View resume <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-      </div>
-    </section>
-
-    <section class="secondary-section secondary-container">
-      <div class="secondary-section-heading"><div><p class="secondary-eyebrow">01 / APPROACH</p><h2>How I like to work</h2></div><p>I care about systems that are understandable, useful, and reliable, not just interfaces that look good in a screenshot.</p></div>
-      <div class="approach-grid">
-        <article class="approach-card"><span class="approach-number">01</span><i class="fa-solid fa-diagram-project" aria-hidden="true"></i><h3>Understand the system</h3><p>Start with the workflow, user needs, constraints, and data model before choosing an implementation.</p></article>
-        <article class="approach-card"><span class="approach-number">02</span><i class="fa-solid fa-code" aria-hidden="true"></i><h3>Build deliberately</h3><p>Turn requirements into maintainable components, clear backend logic, and interfaces that support the task.</p></article>
-        <article class="approach-card"><span class="approach-number">03</span><i class="fa-solid fa-vial-circle-check" aria-hidden="true"></i><h3>Validate the result</h3><p>Check the important flows, edge cases, and deployment assumptions instead of treating a successful build as the finish line.</p></article>
-      </div>
-    </section>
-
-    <section class="secondary-section secondary-section-muted">
-      <div class="secondary-container">
-        <div class="secondary-section-heading"><div><p class="secondary-eyebrow">02 / TECHNICAL FOCUS</p><h2>Tools I work with</h2></div><p>A practical overview of the technologies used across my projects. The relevant tool depends on the problem, not the trend of the week.</p></div>
-        <div class="profile-skills-grid">
-          <article class="profile-skill-card"><div class="profile-skill-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></div><div><h3>Programming &amp; interfaces</h3><p>Java · JavaScript · Python · MicroPython · HTML · CSS</p></div></article>
-          <article class="profile-skill-card"><div class="profile-skill-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div><div><h3>Web &amp; backend</h3><p>Java Servlets · JSP · Spring Boot · REST APIs · MySQL</p></div></article>
-          <article class="profile-skill-card"><div class="profile-skill-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div><div><h3>Connected systems</h3><p>Raspberry Pi Pico W · MQTT · ThingSpeak · sensor integration</p></div></article>
-          <article class="profile-skill-card"><div class="profile-skill-icon"><i class="fa-brands fa-docker" aria-hidden="true"></i></div><div><h3>Development &amp; deployment</h3><p>Git · GitHub · Docker · Apache Tomcat · Firebase</p></div></article>
+    <!-- ══════════════════════════════════════════
+         ABOUT HERO
+         ══════════════════════════════════════════ -->
+    <section class="about-hero-section secondary-container">
+      <div class="about-hero-copy">
+        <div class="about-hero-badge">
+          <span class="editorial-status-dot" aria-hidden="true"></span>
+          <span>Software Engineer · Based at UMT, Malaysia</span>
+        </div>
+        <h1>Software engineering,<br />grounded in <em>real problems.</em></h1>
+        <p class="about-hero-lede">
+          I am a final-year Software Engineering honors student at Universiti Malaysia Terengganu and software engineer intern at Eco Hydrotech Solutions. I specialize in backend architectures, normalized relational database design, and connected IoT telemetry.
+        </p>
+        <div class="about-hero-actions">
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="about-btn-primary">
+            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> View Résumé
+          </a>
+          <a href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer" class="about-btn-secondary">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer" class="about-btn-secondary">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+          <a href="contact.html" class="about-btn-secondary">
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Get in Touch
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="secondary-section secondary-container">
-      <div class="secondary-section-heading"><div><p class="secondary-eyebrow">03 / BACKGROUND</p><h2>Education &amp; community</h2></div><p>My work outside individual projects also shapes how I communicate, organize work, and collaborate.</p></div>
-      <div class="background-list">
-        <article class="background-item"><div class="background-date">2023 – 2027 <span>EXPECTED</span></div><div><h3>Software Engineering degree</h3><p>Universiti Malaysia Terengganu (UMT)</p><p class="background-description">Coursework and project work in software development, algorithms, database design, and system architecture.</p></div></article>
-        <article class="background-item"><div class="background-date">24 MAY 2026 – PRESENT <span>CURRENT ROLE</span></div><div><h3>Media &amp; Publicity Officer</h3><p>Nigerian Muslim Community in Malaysia (NMCIM)</p><p class="background-description">Responsible for community communications and public image across official channels, including event announcements, publicity materials, and consistent promotion of NMCIM activities.</p></div></article>
-        <article class="background-item"><div class="background-date">18 JUN 2025 – 24 MAY 2026 <span>PREVIOUS ROLE</span></div><div><h3>Treasurer</h3><p>Nigerian Muslim Community in Malaysia (NMCIM)</p><p class="background-description">Responsible for safeguarding and disbursing approved community funds, maintaining transaction records, and supporting budget preparation, financial reporting, and expenditure oversight.</p></div></article>
+    <!-- ══════════════════════════════════════════
+         SECTION 01: ENGINEERING APPROACH (3 CARDS IN A LINE)
+         ══════════════════════════════════════════ -->
+    <section class="about-section secondary-container">
+      <div class="about-section-header">
+        <span class="about-section-num">01 / ENGINEERING APPROACH</span>
+        <h2>Understand. Build. Validate.</h2>
+        <p>A disciplined methodology focused on maintainable software, clear data models, and verified execution.</p>
       </div>
-      <p class="secondary-inline-link"><a href="work#experience">See experience details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+
+      <div class="about-approach-grid">
+        <div class="about-card approach-card">
+          <div>
+            <span class="approach-step">01</span>
+            <h3>Understand the System</h3>
+            <p>Start with the operational workflow, user constraints, domain models, and performance requirements before writing code.</p>
+          </div>
+          <div class="approach-pill">Domain &amp; Data Modeling</div>
+        </div>
+
+        <div class="about-card approach-card">
+          <div>
+            <span class="approach-step">02</span>
+            <h3>Build Deliberately</h3>
+            <p>Translate requirements into modular backend services, 3NF normalized relational schemas, and responsive interfaces.</p>
+          </div>
+          <div class="approach-pill">Clean Modular Architecture</div>
+        </div>
+
+        <div class="about-card approach-card">
+          <div>
+            <span class="approach-step">03</span>
+            <h3>Validate Relentlessly</h3>
+            <p>Verify edge cases, stress test query performance, validate payload security, and test with actual users in real workflows.</p>
+          </div>
+          <div class="approach-pill">Reliability &amp; Stress Testing</div>
+        </div>
+      </div>
     </section>
 
-    <section class="secondary-cta"><div class="secondary-container secondary-cta-inner"><div><p class="secondary-eyebrow">LET'S CONNECT</p><h2>Good work starts with a clear problem.</h2><p>I'm interested in thoughtful engineering projects, practical collaboration, and opportunities to keep learning.</p></div><a class="secondary-button secondary-button-primary" href="contact">Contact me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></section>
+    <!-- ══════════════════════════════════════════
+         SECTION 02: TECHNICAL FOCUS (4 STRUCTURED CARDS)
+         ══════════════════════════════════════════ -->
+    <section class="about-section secondary-container" id="stack">
+      <div class="about-section-header">
+        <span class="about-section-num">02 / TECHNICAL FOCUS</span>
+        <h2>Tools chosen with intent.</h2>
+        <p>Selected technologies applied across backend services, relational databases, connected IoT, and infrastructure.</p>
+      </div>
+
+      <div class="about-stack-grid">
+        <!-- 01: Backend -->
+        <div class="about-card stack-card">
+          <div class="stack-card-top">
+            <i class="fa-solid fa-server stack-icon" aria-hidden="true"></i>
+            <span class="stack-num">01 / BACKEND</span>
+          </div>
+          <h3>Backend &amp; Distributed Logic</h3>
+          <p>Server-side engineering with strong OOP patterns, RESTful interfaces, and clean MVC separation.</p>
+          <div class="stack-chips">
+            <span>Java (Core &amp; SE)</span>
+            <span>Spring Boot</span>
+            <span>Java Servlets &amp; JSP</span>
+            <span>Python</span>
+            <span>RESTful APIs</span>
+            <span>JavaScript (ES6+)</span>
+          </div>
+        </div>
+
+        <!-- 02: Relational Databases -->
+        <div class="about-card stack-card">
+          <div class="stack-card-top">
+            <i class="fa-solid fa-database stack-icon" aria-hidden="true"></i>
+            <span class="stack-num">02 / DATA</span>
+          </div>
+          <h3>Database Architecture</h3>
+          <p>Relational data modeling with rigorous normalization, ACID compliance, and query performance tuning.</p>
+          <div class="stack-chips">
+            <span>MySQL</span>
+            <span>3NF Normalization</span>
+            <span>Compound Indexing</span>
+            <span>Query Optimization</span>
+            <span>ACID Transactions</span>
+            <span>Relational Integrity</span>
+          </div>
+        </div>
+
+        <!-- 03: Hardware & IoT -->
+        <div class="about-card stack-card">
+          <div class="stack-card-top">
+            <i class="fa-solid fa-microchip stack-icon" aria-hidden="true"></i>
+            <span class="stack-num">03 / HARDWARE</span>
+          </div>
+          <h3>Connected IoT &amp; Telemetry</h3>
+          <p>Direct microcontroller sensor telemetry streaming over lightweight network protocols to cloud dashboards.</p>
+          <div class="stack-chips">
+            <span>Raspberry Pi Pico W</span>
+            <span>MicroPython</span>
+            <span>MQTT Protocol</span>
+            <span>ThingSpeak Cloud</span>
+            <span>I²C / SPI Protocols</span>
+            <span>AHT20 / BMP280 / PIR</span>
+          </div>
+        </div>
+
+        <!-- 04: Infrastructure & Tooling -->
+        <div class="about-card stack-card">
+          <div class="stack-card-top">
+            <i class="fa-solid fa-gears stack-icon" aria-hidden="true"></i>
+            <span class="stack-num">04 / DEVOPS</span>
+          </div>
+          <h3>Infrastructure &amp; Tooling</h3>
+          <p>Modern version control, containerized runtimes, payment gateway integrations, and API testing.</p>
+          <div class="stack-chips">
+            <span>Git &amp; GitHub</span>
+            <span>Docker</span>
+            <span>Linux / Bash CLI</span>
+            <span>Paystack Gateway</span>
+            <span>Apache Tomcat</span>
+            <span>Postman Testing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 03: PROFESSIONAL EXPERIENCE
+         ══════════════════════════════════════════ -->
+    <section class="about-section secondary-container" id="experience">
+      <div class="about-section-header">
+        <span class="about-section-num">03 / INDUSTRY EXPERIENCE</span>
+        <h2>Applied software engineering.</h2>
+        <p>Building real operational tools and spatial mapping systems in direct technical collaboration with marine scientists.</p>
+      </div>
+
+      <div class="about-exp-card">
+        <div class="about-exp-top">
+          <div>
+            <span class="exp-role-badge">CURRENT ROLE</span>
+            <h3>Software Engineer Intern</h3>
+            <strong class="exp-company">Eco Hydrotech Solutions · In technical collaboration with INOS, Universiti Malaysia Terengganu</strong>
+          </div>
+          <span class="exp-period">Aug 2026 – Present</span>
+        </div>
+
+        <p class="exp-summary">
+          Developing internal operational software, dynamic quotation calculation engines, and spatial GIS mapping tools used by marine survey crews and oceanographic research teams in Kuala Terengganu.
+        </p>
+
+        <div class="exp-highlights-grid">
+          <div class="exp-highlight-item">
+            <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+            <div>
+              <strong>INOS Survey Estimation Engine</strong>
+              <p>Engineered an automated calculation engine factoring dynamic fuel consumption, crew logistics, equipment wear, and vessel charter costs for marine expeditions.</p>
+            </div>
+          </div>
+
+          <div class="exp-highlight-item">
+            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+            <div>
+              <strong>Hydrographic Spatial GIS Mapping</strong>
+              <p>Integrated interactive map interfaces with geospatial coordinate APIs to plot survey lanes, vessel paths, and coastal research station boundaries in real time.</p>
+            </div>
+          </div>
+
+          <div class="exp-highlight-item">
+            <i class="fa-solid fa-table-cells" aria-hidden="true"></i>
+            <div>
+              <strong>3NF Relational Schemas &amp; Query Tuning</strong>
+              <p>Modeled and normalized MySQL relational databases with compound indexing to query multi-gigabyte marine survey datasets with sub-second response times.</p>
+            </div>
+          </div>
+
+          <div class="exp-highlight-item">
+            <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+            <div>
+              <strong>Scientific Workflow Translation</strong>
+              <p>Collaborated directly with oceanographers, marine researchers, and GIS leads to translate domain survey specifications into dependable web workflows.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-tech-strip">
+          <span>Stack:</span> Java · Spring Boot · MySQL (3NF) · Leaflet GIS · REST APIs · Docker · Git &amp; GitHub
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 04: EDUCATION & COMMUNITY SERVICE
+         ══════════════════════════════════════════ -->
+    <section class="about-section secondary-container" id="education">
+      <div class="about-section-header">
+        <span class="about-section-num">04 / EDUCATION &amp; SERVICE</span>
+        <h2>Academic rigor &amp; community stewardship.</h2>
+        <p>Formal computer science foundations paired with real organizational leadership responsibility.</p>
+      </div>
+
+      <div class="about-split-grid">
+        <!-- Left: Education & Recognition -->
+        <div class="about-card edu-lead-card">
+          <div class="card-icon-header">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <span>ACADEMIC FOUNDATION</span>
+          </div>
+          <h3>Universiti Malaysia Terengganu</h3>
+          <p class="edu-degree">Bachelor of Software Engineering (Honours)</p>
+          <span class="edu-date">2023 – 2027 (Expected Graduation)</span>
+
+          <div class="edu-points">
+            <div class="edu-point">
+              <i class="fa-solid fa-award" aria-hidden="true"></i>
+              <div>
+                <strong>Two-Time Dean's List Award Recipient</strong>
+                <p>Recognized for sustained academic excellence in algorithms, systems architecture, and distributed databases.</p>
+              </div>
+            </div>
+            <div class="edu-point">
+              <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+              <div>
+                <strong>PAMERKOM 2026 Gold Award Winner</strong>
+                <p>Awarded top faculty innovation honors for developing the full-stack PSM E-Learning System.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--s-line);">
+            <a href="awards.html" class="about-card-link">
+              View all 7 verified awards &amp; certifications <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Community Leadership -->
+        <div class="about-card edu-lead-card">
+          <div class="card-icon-header">
+            <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+            <span>COMMUNITY LEADERSHIP</span>
+          </div>
+          <h3>Nigerian Muslim Community in Malaysia</h3>
+          <p class="edu-degree">Executive Committee Member (NMCIM)</p>
+          <span class="edu-date">2025 – Present</span>
+
+          <div class="edu-points">
+            <div class="edu-point">
+              <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+              <div>
+                <strong>Media &amp; Publicity Officer (May 2026 – Present)</strong>
+                <p>Directing national digital communications, event publicity, media assets, and official announcements for 1,000+ members.</p>
+              </div>
+            </div>
+            <div class="edu-point">
+              <i class="fa-solid fa-coins" aria-hidden="true"></i>
+              <div>
+                <strong>Former Treasurer (Jun 2025 – May 2026)</strong>
+                <p>Supervised organizational accounts, maintained digital ledgers, approved disbursements, and prepared audited fiscal balance sheets.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--s-line);">
+            <a href="contact.html" class="about-card-link">
+              Get in touch for collaborations <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 05: CALL TO ACTION
+         ══════════════════════════════════════════ -->
+    <section class="about-cta-section secondary-container">
+      <div class="about-cta-box">
+        <div>
+          <span class="about-section-num">LOOKING AHEAD</span>
+          <h2>Interested in engineering something useful together?</h2>
+          <p>Available for full-time software engineering roles starting in 2027 and technical collaborations.</p>
+        </div>
+        <div class="about-cta-actions">
+          <a href="contact.html" class="about-btn-primary">Let's Talk <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="work.html" class="about-btn-secondary">Explore Projects</a>
+        </div>
+      </div>
+    </section>
   </main>
+
   <footer class="footer" id="site-footer"></footer>
-  <script src="js/components.js?v=4"></script>
+  <script src="js/components.js?v=6"></script>
+  <script src="js/main.js?v=14"></script>
 </body>
+
 </html>

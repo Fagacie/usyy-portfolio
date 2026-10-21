@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070b14" />
+  <script>
+    (function(){
+      try {
+        var s = localStorage.getItem('theme');
+        if (s === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <title>Awards &amp; Certificates | Usman Abbas Adamu</title>
+  <meta name="description" content="Verified awards, dean's list honors, leadership credentials, and professional certifications earned by Usman Abbas Adamu." />
+  <meta name="author" content="Usman Abbas Adamu" />
+  <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="512x512" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css?v=32" />
+  <link rel="stylesheet" href="css/secondary-pages.css?v=13" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+</head>
+<body class="secondary-page awards-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ══════════════════════════════════════════
+         HERO SECTION
+         ══════════════════════════════════════════ -->
+    <section class="secondary-hero secondary-container">
+      <p class="secondary-eyebrow">HONORS &amp; CREDENTIALS</p>
+      <h1>Awards &amp; <em>Certifications</em></h1>
+      <p class="secondary-lede">
+        Verified milestones across competitive software exhibitions, academic dean's list honors, specialized technical programs, and community leadership.
+      </p>
+
+      <div style="margin-top:28px; background:var(--s-paper); border:1px solid var(--s-line); border-radius:var(--s-radius-md); padding:18px 24px; display:flex; gap:16px; align-items:center; max-width:680px; box-shadow:var(--s-shadow-sm);">
+        <i class="fa-solid fa-certificate" style="color:var(--s-cyan); font-size:22px;" aria-hidden="true"></i>
+        <div>
+          <strong style="color:var(--s-ink); font-size:13.5px; display:block; margin-bottom:2px;">Interactive Credential Verification</strong>
+          <span style="color:var(--s-muted); font-size:12.5px; line-height:1.6;">Click "View Document" on any certificate to inspect the authenticated document in the built-in lightbox viewer.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         AWARDS GALLERY & FILTER
+         ══════════════════════════════════════════ -->
+    <section class="secondary-section secondary-container" style="padding-top:20px;">
+      <!-- Filter Bar -->
+      <div class="awards-filter-bar" role="tablist" aria-label="Filter credentials by category">
+        <button class="award-filter-btn active" data-filter="all" type="button" role="tab" aria-selected="true">All (7)</button>
+        <button class="award-filter-btn" data-filter="competition" type="button" role="tab" aria-selected="false">Competitions &amp; Awards</button>
+        <button class="award-filter-btn" data-filter="academic" type="button" role="tab" aria-selected="false">Academic Honors</button>
+        <button class="award-filter-btn" data-filter="training" type="button" role="tab" aria-selected="false">Specialized Programs</button>
+        <button class="award-filter-btn" data-filter="leadership" type="button" role="tab" aria-selected="false">Leadership</button>
+      </div>
+
+      <!-- Awards Grid -->
+      <div class="awards-grid" id="awardsGrid">
+        <!-- 01: PAMERKOM 2026 Winner -->
+        <article class="award-card" data-category="competition">
+          <div>
+            <div class="award-preview-thumb" data-cert="assets/certificates/pamerkom-2026.pdf" data-cert-title="PAMERKOM 2026 Project Showcase Winner Certificate">
+              <img src="assets/certificates/consolation-prize-preview.jpg" alt="PAMERKOM 2026 Certificate Preview" loading="lazy" />
+              <span class="preview-overlay-btn"><i class="fa-regular fa-eye" aria-hidden="true"></i> Inspect Certificate</span>
+            </div>
+            <div class="award-card-header">
+              <div class="award-badge-icon gold">
+                <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+              </div>
+              <div class="award-meta-top">
+                <span class="award-cat-tag">Competition Winner</span>
+                <span class="award-date">January 2026</span>
+              </div>
+            </div>
+            <h3>PAMERKOM 2026 Project Showcase Winner</h3>
+            <p class="award-issuer">Faculty of Computer Science and Mathematics, Universiti Malaysia Terengganu</p>
+            <p class="award-desc">
+              Awarded 1st Prize for the <strong>PSM E-Learning Management System</strong> among all final-year software engineering and computing capstone projects for technical architecture and UX rigor.
+            </p>
+          </div>
+          <div class="award-actions">
+            <button class="award-btn-view" data-cert="assets/certificates/pamerkom-2026.pdf" data-cert-title="PAMERKOM 2026 Award Winner Certificate" type="button">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i> View Document
+            </button>
+            <a class="award-btn-download" href="assets/certificates/pamerkom-2026.pdf" download="PAMERKOM-2026-Certificate.pdf">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF
+            </a>
+          </div>
+        </article>
+
+        <!-- 02: Dean's List Sem 4 -->
+        <article class="award-card" data-category="academic">
+          <div>
+            <div class="award-preview-thumb" data-cert="assets/certificates/dean-list-sem4.jpeg" data-cert-title="Dean's List Award - Semester 4 Certificate">
+              <img src="assets/certificates/dean-list-sem4.jpeg" alt="Dean's List Semester 4 Certificate Preview" loading="lazy" />
+              <span class="preview-overlay-btn"><i class="fa-regular fa-eye" aria-hidden="true"></i> Inspect Certificate</span>
+            </div>
+            <div class="award-card-header">
+              <div class="award-badge-icon emerald">
+                <i class="fa-solid fa-award" aria-hidden="true"></i>
+              </div>
+              <div class="award-meta-top">
+                <span class="award-cat-tag">Academic Honor</span>
+                <span class="award-date">Semester 4 (2024/2025)</span>
+              </div>
+            </div>
+            <h3>Dean's List Award — Semester 4</h3>
+            <p class="award-issuer">Faculty of Computer Science and Mathematics, Universiti Malaysia Terengganu</p>
+            <p class="award-desc">
+              Conferred for exceptional academic distinction, maintaining top-tier GPA/CGPA across core software engineering coursework, algorithms, and distributed systems.
+            </p>
+          </div>
+          <div class="award-actions">
+            <button class="award-btn-view" data-cert="assets/certificates/dean-list-sem4.jpeg" data-cert-title="Dean's List Award - Semester 4" type="button">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i> View Document
+            </button>
+            <a class="award-btn-download" href="assets/certificates/dean-list-sem4.jpeg" download="Deans-List-Semester-4.jpeg">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download JPEG
+            </a>
+          </div>
+        </article>
+
+        <!-- 03: Dean's List Sem 3 -->
+        <article class="award-card" data-category="academic">
+          <div>
+            <div class="award-preview-thumb" data-cert="assets/certificates/dean-list-sem3.jpeg" data-cert-title="Dean's List Award - Semester 3 Certificate">
+              <img src="assets/certificates/dean-list-sem3.jpeg" alt="Dean's List Semester 3 Certificate Preview" loading="lazy" />
+              <span class="preview-overlay-btn"><i class="fa-regular fa-eye" aria-hidden="true"></i> Inspect Certificate</span>
+            </div>
+            <div class="award-card-header">
+              <div class="award-badge-icon emerald">
+                <i class="fa-solid fa-award" aria-hidden="true"></i>
+              </div>
+              <div class="award-meta-top">
+                <span class="award-cat-tag">Academic Honor</span>
+                <span class="award-date">Semester 3 (2023/2024)</span>
+              </div>
+            </div>
+            <h3>Dean's List Award — Semester 3</h3>
+            <p class="award-issuer">Faculty of Computer Science and Mathematics, Universiti Malaysia Terengganu</p>
+            <p class="award-desc">
+              Recognized on the Dean's Honor Roll for academic excellence in computer science fundamentals, data structures, and object-oriented application design.
+            </p>
+          </div>
+          <div class="award-actions">
+            <button class="award-btn-view" data-cert="assets/certificates/dean-list-sem3.jpeg" data-cert-title="Dean's List Award - Semester 3" type="button">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i> View Document
+            </button>
+            <a class="award-btn-download" href="assets/certificates/dean-list-sem3.jpeg" download="Deans-List-Semester-3.jpeg">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download JPEG
+            </a>
+          </div>
+        </article>
+
+        <!-- 04: Autumn School on Marine Robotics -->
+        <article class="award-card" data-category="training">
+          <div>
+            <div class="award-preview-thumb" data-cert="assets/certificates/autumn-school.pdf" data-cert-title="Autumn School on Marine Robotics Certificate">
+              <img src="assets/certificates/autumn-school-preview.jpg" alt="Autumn School on Marine Robotics Certificate Preview" loading="lazy" />
+              <span class="preview-overlay-btn"><i class="fa-regular fa-eye" aria-hidden="true"></i> Inspect Certificate</span>
+            </div>
+            <div class="award-card-header">
+              <div class="award-badge-icon">
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              </div>
+              <div class="award-meta-top">
+                <span class="award-cat-tag">Technical Program</span>
+                <span class="award-date">October 2025</span>
+              </div>
+            </div>
+            <h3>Autumn School: Marine Robotics &amp; Sensing</h3>
+            <p class="award-issuer">Institute of Oceanography and Environment (INOS) &amp; UMT</p>
+            <p class="award-desc">
+              Completed advanced training covering autonomous underwater vehicles (AUVs), marine acoustic telemetry, embedded sensor communications, and ocean data acquisition.
+            </p>
+          </div>
+          <div class="award-actions">
+            <button class="award-btn-view" data-cert="assets/certificates/autumn-school.pdf" data-cert-title="Autumn School on Marine Robotics Certificate" type="button">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i> View Document
+            </button>
+            <a class="award-btn-download" href="assets/certificates/autumn-school.pdf" download="Autumn-School-Certificate.pdf">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF
+            </a>
+          </div>
+        </article>
+
+        <!-- 05: iFuture Conference -->
+        <article class="award-card" data-category="training">
+          <div>
+            <div class="award-preview-thumb" data-cert="assets/certificates/ifuture.pdf" data-cert-title="iFuture Conference Certificate">
+              <img src="assets/certificates/ifuture-preview.jpg" alt="iFuture Conference Certificate Preview" loading="lazy" />
+              <span class="preview-overlay-btn"><i class="fa-regular fa-eye" aria-hidden="true"></i> Inspect Certificate</span>
+            </div>
+            <div class="award-card-header">
+              <div class="award-badge-icon purple">
+                <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+              </div>
+              <div class="award-meta-top">
+                <span class="award-cat-tag">Innovation Conference</span>
+                <span class="award-date">2025</span>
+              </div>
+            </div>
+            <h3>iFuture Tech Conference &amp; Hackathon</h3>
+            <p class="award-issuer">Ministry of Higher Education (KPT) &amp; Industry Partners</p>
+            <p class="award-desc">
+              Certificate of achievement in future-ready software development, tech entrepreneurship, and applied cloud architectures for high-growth digital ecosystems.
+            </p>
+          </div>
+          <div class="award-actions">
+            <button class="award-btn-view" data-cert="assets/certificates/ifuture.pdf" data-cert-title="iFuture Conference Certificate" type="button">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i> View Document
+            </button>
+            <a class="award-btn-download" href="assets/certificates/ifuture.pdf" download="iFuture-Certificate.pdf">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF
+            </a>
+          </div>
+        </article>
+
+        <!-- 06: ASPIRE Programme -->
+        <article class="award-card" data-category="training">
+          <div>
+            <div class="award-preview-thumb" data-cert="assets/certificates/aspire-programme.jpeg" data-cert-title="ASPIRE Leadership Programme Certificate">
+              <img src="assets/certificates/aspire-programme.jpeg" alt="ASPIRE Leadership Programme Certificate Preview" loading="lazy" />
+              <span class="preview-overlay-btn"><i class="fa-regular fa-eye" aria-hidden="true"></i> Inspect Certificate</span>
+            </div>
+            <div class="award-card-header">
+              <div class="award-badge-icon purple">
+                <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+              </div>
+              <div class="award-meta-top">
+                <span class="award-cat-tag">Talent Development</span>
+                <span class="award-date">2024</span>
+              </div>
+            </div>
+            <h3>ASPIRE Leadership &amp; Talent Program</h3>
+            <p class="award-issuer">Universiti Malaysia Terengganu Career &amp; Leadership Centre</p>
+            <p class="award-desc">
+              Selected for competitive leadership and professional readiness training, focusing on complex conflict resolution, agile cross-functional collaboration, and communication.
+            </p>
+          </div>
+          <div class="award-actions">
+            <button class="award-btn-view" data-cert="assets/certificates/aspire-programme.jpeg" data-cert-title="ASPIRE Leadership Programme Certificate" type="button">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i> View Document
+            </button>
+            <a class="award-btn-download" href="assets/certificates/aspire-programme.jpeg" download="ASPIRE-Programme.jpeg">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download JPEG
+            </a>
+          </div>
+        </article>
+
+        <!-- 07: Media & Publicity Officer Appointment -->
+        <article class="award-card" data-category="leadership">
+          <div>
+            <div class="award-preview-thumb" data-cert="assets/certificates/media-publicity-officer.pdf" data-cert-title="Media &amp; Publicity Officer Appointment Letter">
+              <div style="height:100%; display:grid; place-items:center; background:linear-gradient(135deg, rgba(6,182,212,0.1), rgba(129,140,248,0.1)); color:var(--s-cyan);">
+                <div style="text-align:center;">
+                  <i class="fa-solid fa-file-contract" style="font-size:38px; margin-bottom:8px; display:block;"></i>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--s-muted);">Official Executive Appointment</span>
+                </div>
+              </div>
+              <span class="preview-overlay-btn"><i class="fa-regular fa-eye" aria-hidden="true"></i> Inspect Appointment Letter</span>
+            </div>
+            <div class="award-card-header">
+              <div class="award-badge-icon">
+                <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+              </div>
+              <div class="award-meta-top">
+                <span class="award-cat-tag">Leadership Credential</span>
+                <span class="award-date">May 2026 – Present</span>
+              </div>
+            </div>
+            <h3>Media &amp; Publicity Officer Appointment</h3>
+            <p class="award-issuer">Nigerian Muslim Community in Malaysia (NMCIM)</p>
+            <p class="award-desc">
+              Official executive appointment letter credentialing national-level organizational media stewardship, brand assets curation, and community public relations.
+            </p>
+          </div>
+          <div class="award-actions">
+            <button class="award-btn-view" data-cert="assets/certificates/media-publicity-officer.pdf" data-cert-title="Media &amp; Publicity Officer Appointment" type="button">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i> View Document
+            </button>
+            <a class="award-btn-download" href="assets/certificates/media-publicity-officer.pdf" download="Media-Publicity-Officer-Appointment.pdf">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CALL TO ACTION STRIP
+         ══════════════════════════════════════════ -->
+    <section class="secondary-cta secondary-container">
+      <div class="secondary-cta-inner">
+        <div>
+          <span class="secondary-eyebrow">Academic &amp; Professional Verification</span>
+          <h2>Need official transcripts or verification?</h2>
+          <p>Official academic transcripts and letters of recommendation are available upon request.</p>
+        </div>
+        <a class="btn-glow-primary" href="contact.html" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:9999px; background:linear-gradient(135deg,var(--s-cyan),var(--s-blue)); color:#04101e; font-weight:700; font-size:13px;">
+          Request Credentials <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="js/components.js?v=6"></script>
+  <script src="js/main.js?v=14"></script>
+
+  <!-- Interactive Category Filtering -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.award-filter-btn');
+      const cards = document.querySelectorAll('.award-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          const category = btn.getAttribute('data-filter');
+
+          cards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.classList.remove('is-hidden');
+            } else {
+              card.classList.add('is-hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

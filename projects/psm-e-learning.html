@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PSM E-Learning System | Abbas Usman Adamu</title>
+  <title>PSM E-Learning System | Usman Abbas Adamu</title>
   <meta name="description" content="Final Year Project: A full-stack e-learning platform built with Java JSP/Servlets and MySQL." />
   <link rel="icon" href="../assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@
   <header class="header" id="site-header"></header>
 
   <main id="main">
-    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">PSM E-Learning</span></nav>
+    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">PSM E-Learning</span></nav>
     <section class="project-detail-hero container reveal">
       <div class="project-detail-grid">
         <div class="project-detail-content">
@@ -93,25 +93,93 @@
           </div>
         </div>
 
-        <h2 style="margin-top:80px;"><i class="fa-solid fa-code"></i> Technical Architecture</h2>
-        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
-          The backend architecture relies on Java Servlets and JSP running on Apache Tomcat. The application is containerized with Docker and packaged for deployment to Apache Tomcat.
-        </p>
-        
-        <div class="tech-flow">
-          <div class="tech-node">
-            <i class="fa-brands fa-html5"></i>
-            <span>JSP Views</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-brands fa-java"></i>
-            <span>Java Servlets</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-solid fa-database"></i>
-            <span>MySQL DB</span>
+        <div class="architecture-section">
+          <h2><i class="fa-solid fa-network-wired" style="color:var(--case-cyan); margin-right:8px;"></i> System Architecture Pipeline</h2>
+          <p class="muted" style="font-size:1.05rem; line-height:1.75; margin-top:6px;">
+            End-to-end data flow mapping user actors, presentation interfaces, servlet business workflows, and transactional persistence with Paystack and QR verification.
+          </p>
+
+          <div class="architecture-diagram" style="--diagram-accent:#829fff;">
+            <div class="diagram-header">
+              <div class="diagram-header-left">
+                <span class="diagram-signal"></span>
+                <h4>SYSTEM PIPELINE MAP</h4>
+              </div>
+              <small>Java · JSP · Servlets · MySQL · Paystack · Docker</small>
+            </div>
+            <div class="diagram-canvas">
+              <!-- Stage 1 -->
+              <div class="diagram-stage">
+                <span class="stage-label">01 / Actors</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span>STU</span>
+                    <div><strong>Students</strong><small>Enroll, learn &amp; take exams</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span>INS</span>
+                    <div><strong>Instructors</strong><small>Publish courses &amp; grade tests</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span>ADM</span>
+                    <div><strong>Administrators</strong><small>Platform control &amp; audits</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i></i><b>→</b></div>
+              </div>
+              <!-- Stage 2 -->
+              <div class="diagram-stage">
+                <span class="stage-label">02 / Interface</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span>JSP</span>
+                    <div><strong>JSP Dashboards</strong><small>Role-tailored dynamic views</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span>CSS</span>
+                    <div><strong>Responsive UI</strong><small>Modular modern design system</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i></i><b>→</b></div>
+              </div>
+              <!-- Stage 3 -->
+              <div class="diagram-stage">
+                <span class="stage-label">03 / Application</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span>SRV</span>
+                    <div><strong>Java Servlets</strong><small>Session &amp; business controllers</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span>TC</span>
+                    <div><strong>Apache Tomcat</strong><small>Servlet container &amp; runtime</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i></i><b>→</b></div>
+              </div>
+              <!-- Stage 4 -->
+              <div class="diagram-stage">
+                <span class="stage-label">04 / Services &amp; Data</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span>DB</span>
+                    <div><strong>MySQL Relational</strong><small>Normalized ACID data store</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span>PAY</span>
+                    <div><strong>Paystack Gateway</strong><small>Live tuition payment checkout</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span>QR</span>
+                    <div><strong>PDF + QR Engine</strong><small>Cryptographic certificate output</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="diagram-footer">
+              <span><i class="live-dot"></i> Active Production Flow</span>
+              <span>Architecture Specification · PSM-ELMS-01</span>
+            </div>
           </div>
         </div>
 
@@ -126,13 +194,13 @@
     </section>
   
     <nav class="case-project-nav container" aria-label="Project case studies">
-      <a class="case-project-prev" href="../projects/elite-soccer"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>Elite Soccer Feed</strong></a>
-      <a class="case-project-next" href="../projects/iot-monitoring"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>Smart Campus IoT</strong></a>
+      <a class="case-project-prev" href="../projects/elite-soccer.html"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>Elite Soccer Feed</strong></a>
+      <a class="case-project-next" href="../projects/iot-monitoring.html"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>Smart Campus IoT</strong></a>
     </nav>
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="../js/components.js?v=4"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WeatherHub | Abbas Usman Adamu</title>
+  <title>WeatherHub | Usman Abbas Adamu</title>
   <meta name="description" content="Weather application fetching real-time data via REST APIs." />
   <link rel="icon" href="../assets/img/logo.png" type="image/png" sizes="512x512" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@
   <header class="header" id="site-header"></header>
 
   <main id="main">
-    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">WeatherHub</span></nav>
+    <nav class="case-breadcrumb container" aria-label="Breadcrumb"><a href="../work.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a><span aria-hidden="true">/</span><span aria-current="page">WeatherHub</span></nav>
     <section class="project-detail-hero container reveal">
       <div class="project-detail-grid">
         <div class="project-detail-content">
@@ -88,25 +88,85 @@
           </div>
         </div>
 
-        <h2 style="margin-top:80px;"><i class="fa-solid fa-code"></i> Technical Architecture</h2>
-        <p class="muted" style="font-size:1.1rem; line-height:1.8;">
-          The frontend logic is written purely in Vanilla JavaScript, utilizing the Fetch API for asynchronous networking. The UI is constructed with HTML/CSS and styled for maximum legibility.
-        </p>
-        
-        <div class="tech-flow">
-          <div class="tech-node">
-            <i class="fa-brands fa-js"></i>
-            <span>Vanilla JS UI</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-solid fa-network-wired"></i>
-            <span>REST API</span>
-          </div>
-          <div class="tech-connector"></div>
-          <div class="tech-node">
-            <i class="fa-solid fa-fire"></i>
-            <span>Firebase Edge</span>
+        <div class="architecture-section">
+          <h2><i class="fa-solid fa-network-wired" style="color:var(--case-cyan); margin-right:8px;"></i> System Architecture Pipeline</h2>
+          <p class="muted" style="font-size:1.05rem; line-height:1.75; margin-top:6px;">
+            Client-to-cloud asynchronous weather pipeline handling user search input, client caching, third-party REST telemetry, and global edge delivery via Firebase.
+          </p>
+
+          <div class="architecture-diagram" style="--diagram-accent:#69b8ff;">
+            <div class="diagram-header">
+              <div class="diagram-header-left">
+                <span class="diagram-signal" style="background:#69b8ff; box-shadow:0 0 10px #69b8ff;"></span>
+                <h4>CLIENT-TO-API WEATHER PIPELINE</h4>
+              </div>
+              <small>JavaScript ES6+ · Fetch API · REST · Firebase Hosting</small>
+            </div>
+            <div class="diagram-canvas">
+              <!-- Stage 1 -->
+              <div class="diagram-stage">
+                <span class="stage-label">01 / User Input</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#69b8ff; color:#69b8ff;">LOC</span>
+                    <div><strong>City Search</strong><small>Query &amp; geolocation coords</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#69b8ff; color:#69b8ff;">DEB</span>
+                    <div><strong>Debounce Engine</strong><small>Optimized rate limiting</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#69b8ff);"></i><b style="color:#69b8ff;">→</b></div>
+              </div>
+              <!-- Stage 2 -->
+              <div class="diagram-stage">
+                <span class="stage-label">02 / Client Runtime</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#69b8ff; color:#69b8ff;">JS</span>
+                    <div><strong>JavaScript Core</strong><small>Asynchronous fetch &amp; state</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#69b8ff; color:#69b8ff;">DOM</span>
+                    <div><strong>DOM Renderer</strong><small>Adaptive temperature &amp; forecast</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#69b8ff);"></i><b style="color:#69b8ff;">→</b></div>
+              </div>
+              <!-- Stage 3 -->
+              <div class="diagram-stage">
+                <span class="stage-label">03 / Weather Services</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#69b8ff; color:#69b8ff;">API</span>
+                    <div><strong>Weather REST API</strong><small>Live conditions &amp; forecasts</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#69b8ff; color:#69b8ff;">GEO</span>
+                    <div><strong>Geocoding Service</strong><small>Reverse coordinate lookup</small></div>
+                  </div>
+                </div>
+                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#69b8ff);"></i><b style="color:#69b8ff;">→</b></div>
+              </div>
+              <!-- Stage 4 -->
+              <div class="diagram-stage">
+                <span class="stage-label">04 / Edge Delivery</span>
+                <div class="stage-nodes">
+                  <div class="diagram-node">
+                    <span style="border-color:#69b8ff; color:#69b8ff;">FB</span>
+                    <div><strong>Firebase Hosting</strong><small>Global edge CDN caching</small></div>
+                  </div>
+                  <div class="diagram-node">
+                    <span style="border-color:#69b8ff; color:#69b8ff;">SSL</span>
+                    <div><strong>HTTPS Endpoint</strong><small>Encrypted mobile-ready web app</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="diagram-footer">
+              <span><i class="live-dot" style="background:#69b8ff; box-shadow:0 0 8px #69b8ff;"></i> Active Public Delivery</span>
+              <span>Architecture Specification · WHUB-API-04</span>
+            </div>
           </div>
         </div>
 
@@ -114,13 +174,13 @@
     </section>
   
     <nav class="case-project-nav container" aria-label="Project case studies">
-      <a class="case-project-prev" href="../projects/pku-management"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>PKU Management</strong></a>
-      <a class="case-project-next" href="../projects/masakjerr"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>MasakJerr!</strong></a>
+      <a class="case-project-prev" href="../projects/pku-management.html"><span><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> PREVIOUS PROJECT</span><strong>PKU Management</strong></a>
+      <a class="case-project-next" href="../projects/masakjerr.html"><span>NEXT PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><strong>MasakJerr!</strong></a>
     </nav>
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="../js/components.js?v=4"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>
