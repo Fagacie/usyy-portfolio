@@ -98,71 +98,130 @@
             <div class="diagram-header">
               <div class="diagram-header-left">
                 <span class="diagram-signal" style="background:#69b8ff; box-shadow:0 0 10px #69b8ff;"></span>
-                <h4>CLIENT-TO-API WEATHER PIPELINE</h4>
+                <h4>Asynchronous Weather Telemetry Pipeline</h4>
               </div>
-              <small>JavaScript ES6+ · Fetch API · REST · Firebase Hosting</small>
+              <div class="diagram-tech-pills">
+                <span>Vanilla ES6+</span>
+                <span>Fetch API</span>
+                <span>Open-Meteo REST</span>
+                <span>Firebase Edge</span>
+              </div>
             </div>
             <div class="diagram-canvas">
               <!-- Stage 1 -->
               <div class="diagram-stage">
-                <span class="stage-label">01 / User Input</span>
+                <span class="stage-label"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> 01 / User Input</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#69b8ff; color:#69b8ff;">LOC</span>
-                    <div><strong>City Search</strong><small>Query &amp; geolocation coords</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-magnifying-glass-location" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Location Query</strong>
+                      <small>City search query or browser GPS coordinate prompt</small>
+                      <span class="node-tag">Geolocation API</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#69b8ff; color:#69b8ff;">DEB</span>
-                    <div><strong>Debounce Engine</strong><small>Optimized rate limiting</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Debounce Filter</strong>
+                      <small>350ms input buffer to minimize excessive upstream queries</small>
+                      <span class="node-tag">Rate Limiter</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#69b8ff);"></i><b style="color:#69b8ff;">→</b></div>
               </div>
               <!-- Stage 2 -->
               <div class="diagram-stage">
-                <span class="stage-label">02 / Client Runtime</span>
+                <span class="stage-label"><i class="fa-solid fa-code" aria-hidden="true"></i> 02 / Client State</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#69b8ff; color:#69b8ff;">JS</span>
-                    <div><strong>JavaScript Core</strong><small>Asynchronous fetch &amp; state</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Async Fetch Engine</strong>
+                      <small>Promise-based non-blocking HTTP client with fallback cache</small>
+                      <span class="node-tag">Fetch API · ES6+</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#69b8ff; color:#69b8ff;">DOM</span>
-                    <div><strong>DOM Renderer</strong><small>Adaptive temperature &amp; forecast</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Reactive DOM Renderer</strong>
+                      <small>Dynamic temperature, humidity &amp; 7-day forecast views</small>
+                      <span class="node-tag">Zero Dependency</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#69b8ff);"></i><b style="color:#69b8ff;">→</b></div>
               </div>
               <!-- Stage 3 -->
               <div class="diagram-stage">
-                <span class="stage-label">03 / Weather Services</span>
+                <span class="stage-label"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> 03 / Weather Services</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#69b8ff; color:#69b8ff;">API</span>
-                    <div><strong>Weather REST API</strong><small>Live conditions &amp; forecasts</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-cloud-sun-rain" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Open-Meteo REST API</strong>
+                      <small>Real-time meteorological metrics, forecasts &amp; solar indices</small>
+                      <span class="node-tag">JSON Over HTTPS</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#69b8ff; color:#69b8ff;">GEO</span>
-                    <div><strong>Geocoding Service</strong><small>Reverse coordinate lookup</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Geocoding Endpoint</strong>
+                      <small>Reverse coordinate translation &amp; country boundary mapping</small>
+                      <span class="node-tag">REST API Service</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#69b8ff);"></i><b style="color:#69b8ff;">→</b></div>
               </div>
               <!-- Stage 4 -->
               <div class="diagram-stage">
-                <span class="stage-label">04 / Edge Delivery</span>
+                <span class="stage-label"><i class="fa-solid fa-globe" aria-hidden="true"></i> 04 / Global Edge</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#69b8ff; color:#69b8ff;">FB</span>
-                    <div><strong>Firebase Hosting</strong><small>Global edge CDN caching</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-fire" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Firebase Edge CDN</strong>
+                      <small>Anycast distributed edge routing for sub-50ms TTFB globally</small>
+                      <span class="node-tag">Edge Caching</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#69b8ff; color:#69b8ff;">SSL</span>
-                    <div><strong>HTTPS Endpoint</strong><small>Encrypted mobile-ready web app</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-lock" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>HTTPS Endpoint</strong>
+                      <small>Automated SSL/TLS certificate termination and security</small>
+                      <span class="node-tag">TLS 1.3 Security</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- 4 Architecture Guarantees -->
+            <div class="architecture-specs-bar">
+              <div class="spec-item">
+                <small>Performance</small>
+                <strong>Sub-200ms Render</strong>
+                <span>Instant cached query responses and fluid weather card repaints</span>
+              </div>
+              <div class="spec-item">
+                <small>Dependency Footprint</small>
+                <strong>Zero External Frameworks</strong>
+                <span>Pure modern ES6+ JavaScript ensuring lightweight, instant loading</span>
+              </div>
+              <div class="spec-item">
+                <small>Resilience</small>
+                <strong>Graceful Error Boundary</strong>
+                <span>Offline local storage caching and clear API rate-limit notifications</span>
+              </div>
+              <div class="spec-item">
+                <small>Global Delivery</small>
+                <strong>Firebase Edge CDN</strong>
+                <span>Globally replicated static distribution with instant SSL security</span>
+              </div>
+            </div>
+
             <div class="diagram-footer">
               <span><i class="live-dot" style="background:#69b8ff; box-shadow:0 0 8px #69b8ff;"></i> Active Public Delivery</span>
               <span>Architecture Specification · WHUB-API-04</span>

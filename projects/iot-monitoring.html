@@ -102,75 +102,139 @@
             <div class="diagram-header">
               <div class="diagram-header-left">
                 <span class="diagram-signal" style="background:#63d7d0; box-shadow:0 0 10px #63d7d0;"></span>
-                <h4>EDGE-TO-CLOUD TELEMETRY MAP</h4>
+                <h4>Edge-to-Cloud Hardware Telemetry Pipeline</h4>
               </div>
-              <small>MicroPython · Pico W · MQTT · I²C · ThingSpeak</small>
+              <div class="diagram-tech-pills">
+                <span>MicroPython</span>
+                <span>RP2040 Pico W</span>
+                <span>MQTT Broker</span>
+                <span>Hardware I²C</span>
+                <span>ThingSpeak</span>
+              </div>
             </div>
             <div class="diagram-canvas">
               <!-- Stage 1 -->
               <div class="diagram-stage">
-                <span class="stage-label">01 / Sensing Array</span>
+                <span class="stage-label"><i class="fa-solid fa-microchip" aria-hidden="true"></i> 01 / Sensor Array</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#63d7d0; color:#63d7d0;">ENV</span>
-                    <div><strong>AHT20 / BMP280</strong><small>Temperature, humidity &amp; pressure</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-temperature-half" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>AHT20 / BMP280</strong>
+                      <small>Calibrated temperature, humidity &amp; atmospheric baro pressure</small>
+                      <span class="node-tag">Hardware I²C Bus · 400kHz</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#63d7d0; color:#63d7d0;">PIR</span>
-                    <div><strong>Motion Sensor</strong><small>Movement anomaly detection</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-person-walking" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>PIR Motion Sensor</strong>
+                      <small>Infrared anomaly detection with digital latch triggers</small>
+                      <span class="node-tag">GPIO Digital Interrupt</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#63d7d0; color:#63d7d0;">DST</span>
-                    <div><strong>HC-SR04 Ultrasonic</strong><small>Security zone distance alerts</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>HC-SR04 Ultrasonic</strong>
+                      <small>Microsecond sonic pulse distance measurement &amp; perimeter alerts</small>
+                      <span class="node-tag">Trigger / Echo Timing</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#63d7d0);"><style>.diagram-connector i::after{background:#63d7d0;}</style></i><b style="color:#63d7d0;">→</b></div>
               </div>
               <!-- Stage 2 -->
               <div class="diagram-stage">
-                <span class="stage-label">02 / Edge Controller</span>
+                <span class="stage-label"><i class="fa-solid fa-gears" aria-hidden="true"></i> 02 / Edge Controller</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#63d7d0; color:#63d7d0;">PICO</span>
-                    <div><strong>Raspberry Pi Pico W</strong><small>Dual ARM Cortex-M0+ @ 133MHz</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Raspberry Pi Pico W</strong>
+                      <small>Dual ARM Cortex-M0+ running low-power polling loops</small>
+                      <span class="node-tag">RP2040 @ 133MHz</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#63d7d0; color:#63d7d0;">μPY</span>
-                    <div><strong>MicroPython Kernel</strong><small>Sensor polling loop &amp; JSON packaging</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>MicroPython Kernel</strong>
+                      <small>Asynchronous sensor scheduler, JSON payload pack &amp; watchdog</small>
+                      <span class="node-tag">uasyncio Runtime</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#63d7d0);"></i><b style="color:#63d7d0;">→</b></div>
               </div>
               <!-- Stage 3 -->
               <div class="diagram-stage">
-                <span class="stage-label">03 / Transport Layer</span>
+                <span class="stage-label"><i class="fa-solid fa-wifi" aria-hidden="true"></i> 03 / Transport Layer</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#63d7d0; color:#63d7d0;">WIFI</span>
-                    <div><strong>On-Board Wi-Fi</strong><small>CYW43439 802.11n wireless</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>CYW43439 Wi-Fi</strong>
+                      <small>Direct 2.4GHz 802.11n wireless telemetry without gateway</small>
+                      <span class="node-tag">Station Mode · WPA2</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#63d7d0; color:#63d7d0;">MQTT</span>
-                    <div><strong>MQTT Protocol</strong><small>Lightweight publish/subscribe broker</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-arrows-split-up-and-left" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>MQTT Telemetry</strong>
+                      <small>Lightweight publish/subscribe payload streaming to broker</small>
+                      <span class="node-tag">MQTT QoS-1 · JSON Pack</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#63d7d0);"></i><b style="color:#63d7d0;">→</b></div>
               </div>
               <!-- Stage 4 -->
               <div class="diagram-stage">
-                <span class="stage-label">04 / Cloud &amp; Visuals</span>
+                <span class="stage-label"><i class="fa-solid fa-cloud" aria-hidden="true"></i> 04 / Cloud &amp; Visuals</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#63d7d0; color:#63d7d0;">TS</span>
-                    <div><strong>ThingSpeak Cloud</strong><small>Time-series telemetry archive</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>ThingSpeak Cloud</strong>
+                      <small>Persistent time-series telemetry storage &amp; historical trend DB</small>
+                      <span class="node-tag">REST API / Ingest</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#63d7d0; color:#63d7d0;">UI</span>
-                    <div><strong>Live Web Dashboard</strong><small>Real-time gauges &amp; alert triggers</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Live Web Dashboard</strong>
+                      <small>Live gauges, environmental charts &amp; immediate threshold alerts</small>
+                      <span class="node-tag">Real-Time Web UI</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- 4 Architecture Guarantees -->
+            <div class="architecture-specs-bar">
+              <div class="spec-item">
+                <small>Edge Compute</small>
+                <strong>Dual ARM Cortex-M0+</strong>
+                <span>Bare-metal MicroPython event loops with zero gateway overhead</span>
+              </div>
+              <div class="spec-item">
+                <small>Hardware Bus</small>
+                <strong>I²C Multi-Drop Bus</strong>
+                <span>Direct hardware bus polling with precision microsecond timing</span>
+              </div>
+              <div class="spec-item">
+                <small>Network Protocol</small>
+                <strong>MQTT Publish / Subscribe</strong>
+                <span>Low-bandwidth telemetry streaming with automatic reconnect watchdog</span>
+              </div>
+              <div class="spec-item">
+                <small>Cloud Telemetry</small>
+                <strong>ThingSpeak Time-Series DB</strong>
+                <span>15s telemetry cadences and live threshold alerting pipeline</span>
+              </div>
+            </div>
+
             <div class="diagram-footer">
               <span><i class="live-dot" style="background:#63d7d0; box-shadow:0 0 8px #63d7d0;"></i> Active Hardware Loop</span>
               <span>Telemetry Architecture · IOT-NODE-02</span>

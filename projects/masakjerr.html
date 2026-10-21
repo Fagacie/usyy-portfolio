@@ -97,71 +97,131 @@
             <div class="diagram-header">
               <div class="diagram-header-left">
                 <span class="diagram-signal" style="background:#f3ad73; box-shadow:0 0 10px #f3ad73;"></span>
-                <h4>AUTHENTICATED RECIPE PIPELINE</h4>
+                <h4>Authenticated Recipe Persistence Pipeline</h4>
               </div>
-              <small>Java · JSP · Servlets · MySQL · Apache Tomcat</small>
+              <div class="diagram-tech-pills">
+                <span>Java 17</span>
+                <span>JSP &amp; Servlets</span>
+                <span>MySQL 8.0</span>
+                <span>DAO Layer</span>
+                <span>Tomcat</span>
+              </div>
             </div>
             <div class="diagram-canvas">
               <!-- Stage 1 -->
               <div class="diagram-stage">
-                <span class="stage-label">01 / User Session</span>
+                <span class="stage-label"><i class="fa-solid fa-user-lock" aria-hidden="true"></i> 01 / Identity Tier</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#f3ad73; color:#f3ad73;">USR</span>
-                    <div><strong>Registered Chef</strong><small>Private recipe collection</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-user-check" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Registered Chef</strong>
+                      <small>User account onboarding, personalized cookbook curation</small>
+                      <span class="node-tag">Web Browser · HTTPS</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#f3ad73; color:#f3ad73;">AUTH</span>
-                    <div><strong>Credential Guard</strong><small>Session-based login security</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-key" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Credential Guard</strong>
+                      <small>Session-based authentication &amp; encrypted user credentials</small>
+                      <span class="node-tag">Stateful HTTPS Session</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#f3ad73);"></i><b style="color:#f3ad73;">→</b></div>
               </div>
               <!-- Stage 2 -->
               <div class="diagram-stage">
-                <span class="stage-label">02 / Interface</span>
+                <span class="stage-label"><i class="fa-solid fa-desktop" aria-hidden="true"></i> 02 / Presentation</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#f3ad73; color:#f3ad73;">JSP</span>
-                    <div><strong>Cookbook Views</strong><small>Dynamic recipe builder</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>JSP Recipe Views</strong>
+                      <small>Dynamic recipe builder, step-by-step cooking checklists</small>
+                      <span class="node-tag">JSTL Templates</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#f3ad73; color:#f3ad73;">FORM</span>
-                    <div><strong>Ingredient Forms</strong><small>Validation &amp; multipart uploads</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Ingredient Form Matrix</strong>
+                      <small>Multi-field ingredient row creation and form validation</small>
+                      <span class="node-tag">Multipart Form Handling</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#f3ad73);"></i><b style="color:#f3ad73;">→</b></div>
               </div>
               <!-- Stage 3 -->
               <div class="diagram-stage">
-                <span class="stage-label">03 / Application Logic</span>
+                <span class="stage-label"><i class="fa-solid fa-gears" aria-hidden="true"></i> 03 / App Controller</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#f3ad73; color:#f3ad73;">SRV</span>
-                    <div><strong>Servlet Logic</strong><small>CRUD state &amp; routing</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Servlet Logic Routing</strong>
+                      <small>CRUD action dispatching, ownership checks &amp; redirects</small>
+                      <span class="node-tag">HTTP Servlet API</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#f3ad73; color:#f3ad73;">DAO</span>
-                    <div><strong>Data Access Object</strong><small>Prepared statements &amp; pooling</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-cubes-stacked" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>DAO Layer &amp; Pooling</strong>
+                      <small>Data access objects with parameterized query mapping</small>
+                      <span class="node-tag">PreparedStatements</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#f3ad73);"></i><b style="color:#f3ad73;">→</b></div>
               </div>
               <!-- Stage 4 -->
               <div class="diagram-stage">
-                <span class="stage-label">04 / Persistence</span>
+                <span class="stage-label"><i class="fa-solid fa-database" aria-hidden="true"></i> 04 / Data Store</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#f3ad73; color:#f3ad73;">DB</span>
-                    <div><strong>MySQL Relational</strong><small>Normalized recipes &amp; tags</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>MySQL Relational DB</strong>
+                      <small>Normalized recipes, ingredients, categories &amp; tags</small>
+                      <span class="node-tag">1:N Relational Mapping</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#f3ad73; color:#f3ad73;">SQL</span>
-                    <div><strong>Relational Schema</strong><small>Foreign-key cascading integrity</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-link" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Foreign Key Safeguards</strong>
+                      <small>Referential constraints preventing orphaned recipe ingredients</small>
+                      <span class="node-tag">ACID Integrity Guard</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- 4 Architecture Guarantees -->
+            <div class="architecture-specs-bar">
+              <div class="spec-item">
+                <small>Design Pattern</small>
+                <strong>Model-View-Controller (MVC)</strong>
+                <span>Strict separation of JSP presentation, servlet control, and data model</span>
+              </div>
+              <div class="spec-item">
+                <small>Data Security</small>
+                <strong>Scoped Ownership</strong>
+                <span>Private recipe isolation ensuring users only access their personal recipes</span>
+              </div>
+              <div class="spec-item">
+                <small>Schema Normalization</small>
+                <strong>Relational 3NF Integrity</strong>
+                <span>Normalized recipe-ingredient tables with automated cascading updates</span>
+              </div>
+              <div class="spec-item">
+                <small>Server Platform</small>
+                <strong>Apache Tomcat Deployment</strong>
+                <span>Enterprise servlet runtime with reliable connection pooling</span>
+              </div>
+            </div>
+
             <div class="diagram-footer">
               <span><i class="live-dot" style="background:#f3ad73; box-shadow:0 0 8px #f3ad73;"></i> Active CRUD Architecture</span>
               <span>Architecture Specification · MASAK-JSP-05</span>

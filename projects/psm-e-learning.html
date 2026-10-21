@@ -102,82 +102,150 @@
           <div class="architecture-diagram" style="--diagram-accent:#829fff;">
             <div class="diagram-header">
               <div class="diagram-header-left">
-                <span class="diagram-signal"></span>
-                <h4>SYSTEM PIPELINE MAP</h4>
+                <span class="diagram-signal" style="background:#829fff; box-shadow:0 0 10px #829fff;"></span>
+                <h4>Role-Based E-Learning Architecture Pipeline</h4>
               </div>
-              <small>Java · JSP · Servlets · MySQL · Paystack · Docker</small>
+              <div class="diagram-tech-pills">
+                <span>Java 17</span>
+                <span>JSP &amp; Servlets</span>
+                <span>MySQL 8.0</span>
+                <span>Paystack API</span>
+                <span>Docker</span>
+              </div>
             </div>
             <div class="diagram-canvas">
               <!-- Stage 1 -->
               <div class="diagram-stage">
-                <span class="stage-label">01 / Actors</span>
+                <span class="stage-label"><i class="fa-solid fa-users" aria-hidden="true"></i> 01 / User Actors</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span>STU</span>
-                    <div><strong>Students</strong><small>Enroll, learn &amp; take exams</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Student Tier</strong>
+                      <small>Course enrollment, assessments &amp; exam execution</small>
+                      <span class="node-tag">Web Browser · HTTPS</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span>INS</span>
-                    <div><strong>Instructors</strong><small>Publish courses &amp; grade tests</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Instructor Tier</strong>
+                      <small>Syllabus publishing, exam authoring &amp; gradebook</small>
+                      <span class="node-tag">Instructor Dashboard</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span>ADM</span>
-                    <div><strong>Administrators</strong><small>Platform control &amp; audits</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-user-shield" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Administrator Tier</strong>
+                      <small>Role governance, financial auditing &amp; system health</small>
+                      <span class="node-tag">Privileged Console</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i></i><b>→</b></div>
               </div>
               <!-- Stage 2 -->
               <div class="diagram-stage">
-                <span class="stage-label">02 / Interface</span>
+                <span class="stage-label"><i class="fa-solid fa-desktop" aria-hidden="true"></i> 02 / Presentation</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span>JSP</span>
-                    <div><strong>JSP Dashboards</strong><small>Role-tailored dynamic views</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>JSP Dynamic Views</strong>
+                      <small>Role-tailored dynamic templates &amp; JSTL rendering</small>
+                      <span class="node-tag">Server-Side Render</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span>CSS</span>
-                    <div><strong>Responsive UI</strong><small>Modular modern design system</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Modular Responsive UI</strong>
+                      <small>Fluid desktop, tablet &amp; mobile student experience</small>
+                      <span class="node-tag">CSS Flex &amp; Grid</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i></i><b>→</b></div>
               </div>
               <!-- Stage 3 -->
               <div class="diagram-stage">
-                <span class="stage-label">03 / Application</span>
+                <span class="stage-label"><i class="fa-solid fa-gears" aria-hidden="true"></i> 03 / App Services</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span>SRV</span>
-                    <div><strong>Java Servlets</strong><small>Session &amp; business controllers</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Java Servlets</strong>
+                      <small>Authentication filters &amp; business dispatchers</small>
+                      <span class="node-tag">Servlet 4.0 API</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span>TC</span>
-                    <div><strong>Apache Tomcat</strong><small>Servlet container &amp; runtime</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Session &amp; Security Guard</strong>
+                      <small>Stateful RBAC validation &amp; request sanitization</small>
+                      <span class="node-tag">HTTPS Session / Cookie</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i></i><b>→</b></div>
               </div>
               <!-- Stage 4 -->
               <div class="diagram-stage">
-                <span class="stage-label">04 / Services &amp; Data</span>
+                <span class="stage-label"><i class="fa-solid fa-database" aria-hidden="true"></i> 04 / Persistence &amp; Gateways</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span>DB</span>
-                    <div><strong>MySQL Relational</strong><small>Normalized ACID data store</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>MySQL Relational Store</strong>
+                      <small>Normalized 3NF schema for users, grades &amp; courses</small>
+                      <span class="node-tag">JDBC / ACID Transactions</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span>PAY</span>
-                    <div><strong>Paystack Gateway</strong><small>Live tuition payment checkout</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Paystack Payment Engine</strong>
+                      <small>Live tuition checkout &amp; automated webhook receipt</small>
+                      <span class="node-tag">Webhook / TLS 1.3</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span>QR</span>
-                    <div><strong>PDF + QR Engine</strong><small>Cryptographic certificate output</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-qrcode" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>PDF + QR Verification</strong>
+                      <small>Cryptographically verifiable completion certificates</small>
+                      <span class="node-tag">SHA-256 Checksum</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- 4 Architecture Guarantees -->
+            <div class="architecture-specs-bar">
+              <div class="spec-item">
+                <small>Architecture</small>
+                <strong>Multi-Tier Enterprise MVC</strong>
+                <span>Clear separation of presentation, servlet logic, and ACID store</span>
+              </div>
+              <div class="spec-item">
+                <small>Data Model</small>
+                <strong>3NF Normalized Schema</strong>
+                <span>Referential integrity with foreign key cascade guards</span>
+              </div>
+              <div class="spec-item">
+                <small>Security</small>
+                <strong>Role-Based Access Control</strong>
+                <span>Session boundary isolation &amp; PreparedStatements against injection</span>
+              </div>
+              <div class="spec-item">
+                <small>Verification</small>
+                <strong>QR Certificate Pipeline</strong>
+                <span>Instant employer verification via cryptographic QR links</span>
+              </div>
+            </div>
+
             <div class="diagram-footer">
-              <span><i class="live-dot"></i> Active Production Flow</span>
+              <span><i class="live-dot" style="background:#829fff; box-shadow:0 0 8px #829fff;"></i> Active Enterprise System</span>
               <span>Architecture Specification · PSM-ELMS-01</span>
             </div>
           </div>

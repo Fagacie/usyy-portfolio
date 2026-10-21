@@ -100,75 +100,139 @@
             <div class="diagram-header">
               <div class="diagram-header-left">
                 <span class="diagram-signal" style="background:#c69af8; box-shadow:0 0 10px #c69af8;"></span>
-                <h4>HEALTHCARE OPERATIONS PIPELINE</h4>
+                <h4>Clinical Operations &amp; Billing Pipeline</h4>
               </div>
-              <small>Java · JSP · Servlets · MySQL · Apache Tomcat</small>
+              <div class="diagram-tech-pills">
+                <span>Java 17</span>
+                <span>JSP &amp; Servlets</span>
+                <span>MySQL 8.0</span>
+                <span>Session Security</span>
+                <span>Tomcat</span>
+              </div>
             </div>
             <div class="diagram-canvas">
               <!-- Stage 1 -->
               <div class="diagram-stage">
-                <span class="stage-label">01 / Clinical Actors</span>
+                <span class="stage-label"><i class="fa-solid fa-hospital-user" aria-hidden="true"></i> 01 / Clinical Actors</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#c69af8; color:#c69af8;">REC</span>
-                    <div><strong>Receptionist</strong><small>Patient intake &amp; bookings</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-id-card-clip" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Receptionist</strong>
+                      <small>Patient intake, registration &amp; doctor appointment queue</small>
+                      <span class="node-tag">Front Desk Portal</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#c69af8; color:#c69af8;">DOC</span>
-                    <div><strong>Medical Doctor</strong><small>Diagnosis &amp; consultations</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Medical Doctor</strong>
+                      <small>Clinical examination, diagnostic history &amp; prescription entry</small>
+                      <span class="node-tag">Consultation Room</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#c69af8; color:#c69af8;">ADM</span>
-                    <div><strong>Administrator</strong><small>Staff &amp; billing governance</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-user-shield" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Clinic Admin</strong>
+                      <small>Billing audits, staff privilege oversight &amp; analytics</small>
+                      <span class="node-tag">Executive Audit</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#c69af8);"></i><b style="color:#c69af8;">→</b></div>
               </div>
               <!-- Stage 2 -->
               <div class="diagram-stage">
-                <span class="stage-label">02 / Interface</span>
+                <span class="stage-label"><i class="fa-solid fa-desktop" aria-hidden="true"></i> 02 / Presentation</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#c69af8; color:#c69af8;">JSP</span>
-                    <div><strong>JSP Clinic Portal</strong><small>Role-aware operational views</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-browser" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Role-Gated JSP Views</strong>
+                      <small>Strict privilege boundary rendering across staff portals</small>
+                      <span class="node-tag">JSTL Templates</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#c69af8; color:#c69af8;">SEC</span>
-                    <div><strong>Session Filter</strong><small>Authentication &amp; boundary checks</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Session Guard Filter</strong>
+                      <small>Interception filter preventing unauthorized URL escalation</small>
+                      <span class="node-tag">HTTP Servlet Filter</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#c69af8);"></i><b style="color:#c69af8;">→</b></div>
               </div>
               <!-- Stage 3 -->
               <div class="diagram-stage">
-                <span class="stage-label">03 / Application</span>
+                <span class="stage-label"><i class="fa-solid fa-gears" aria-hidden="true"></i> 03 / App Dispatcher</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#c69af8; color:#c69af8;">SRV</span>
-                    <div><strong>Servlet Controllers</strong><small>Patient records &amp; scheduling</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Servlet Controllers</strong>
+                      <small>Patient record dispatching &amp; appointment state machines</small>
+                      <span class="node-tag">Java Servlets</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#c69af8; color:#c69af8;">BIL</span>
-                    <div><strong>Billing Engine</strong><small>Treatment &amp; consultation invoices</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Billing Ledger Engine</strong>
+                      <small>Multi-item treatment, consultation &amp; medication invoice calculation</small>
+                      <span class="node-tag">Atomic Ledger</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#c69af8);"></i><b style="color:#c69af8;">→</b></div>
               </div>
               <!-- Stage 4 -->
               <div class="diagram-stage">
-                <span class="stage-label">04 / Data Store</span>
+                <span class="stage-label"><i class="fa-solid fa-database" aria-hidden="true"></i> 04 / Relational Store</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#c69af8; color:#c69af8;">DB</span>
-                    <div><strong>MySQL Relational</strong><small>Normalized patient &amp; billing records</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>MySQL Healthcare DB</strong>
+                      <small>Relational patient records, medical visits &amp; invoices</small>
+                      <span class="node-tag">ACID Compliant</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#c69af8; color:#c69af8;">ACID</span>
-                    <div><strong>Transaction Guard</strong><small>Medical history integrity</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-lock" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Referential Integrity</strong>
+                      <small>Foreign key cascading safeguards preventing orphan records</small>
+                      <span class="node-tag">3NF Integrity Guard</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- 4 Architecture Guarantees -->
+            <div class="architecture-specs-bar">
+              <div class="spec-item">
+                <small>Privilege Model</small>
+                <strong>Role Separation (RBAC)</strong>
+                <span>Distinct view trees and authorization boundaries for Doctors, Staff &amp; Admin</span>
+              </div>
+              <div class="spec-item">
+                <small>Record Integrity</small>
+                <strong>Relational Consistency</strong>
+                <span>Foreign key enforcement preserving clinical consultations &amp; histories</span>
+              </div>
+              <div class="spec-item">
+                <small>Financial Engine</small>
+                <strong>Atomic Multi-Line Billing</strong>
+                <span>Direct itemized tallying of medicines, tests, and consultation tariffs</span>
+              </div>
+              <div class="spec-item">
+                <small>Container Runtime</small>
+                <strong>Apache Tomcat Deployment</strong>
+                <span>High-throughput connection-pooled servlet execution container</span>
+              </div>
+            </div>
+
             <div class="diagram-footer">
               <span><i class="live-dot" style="background:#c69af8; box-shadow:0 0 8px #c69af8;"></i> Active Enterprise Architecture</span>
               <span>Architecture Specification · PKU-CLINIC-03</span>

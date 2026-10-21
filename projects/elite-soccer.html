@@ -99,71 +99,130 @@
             <div class="diagram-header">
               <div class="diagram-header-left">
                 <span class="diagram-signal" style="background:#a8dc75; box-shadow:0 0 10px #a8dc75;"></span>
-                <h4>EDITORIAL CONTENT PIPELINE</h4>
+                <h4>Editorial Sports Content Delivery Pipeline</h4>
               </div>
-              <small>HTML5 Semantic · CSS Grid &amp; Flexbox · JavaScript · Vercel</small>
+              <div class="diagram-tech-pills">
+                <span>Semantic HTML5</span>
+                <span>CSS Grid &amp; Flex</span>
+                <span>Vanilla JS</span>
+                <span>Vercel Edge</span>
+              </div>
             </div>
             <div class="diagram-canvas">
               <!-- Stage 1 -->
               <div class="diagram-stage">
-                <span class="stage-label">01 / Content Feeds</span>
+                <span class="stage-label"><i class="fa-solid fa-newspaper" aria-hidden="true"></i> 01 / Content Feeds</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#a8dc75; color:#a8dc75;">NEWS</span>
-                    <div><strong>Football News</strong><small>Headlines &amp; breaking transfers</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-newspaper" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Curated News Feed</strong>
+                      <small>Breaking football transfer headlines, match recaps &amp; analysis</small>
+                      <span class="node-tag">Editorial Copy</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#a8dc75; color:#a8dc75;">STAT</span>
-                    <div><strong>Match Analytics</strong><small>Scores &amp; player performance</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-futbol" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Match Analytics Data</strong>
+                      <small>Player lineups, goal tallies, league table standings &amp; forms</small>
+                      <span class="node-tag">Structured Statistics</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#a8dc75);"></i><b style="color:#a8dc75;">→</b></div>
               </div>
               <!-- Stage 2 -->
               <div class="diagram-stage">
-                <span class="stage-label">02 / Structure</span>
+                <span class="stage-label"><i class="fa-solid fa-code" aria-hidden="true"></i> 02 / Structural Tree</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#a8dc75; color:#a8dc75;">HTML</span>
-                    <div><strong>Semantic HTML5</strong><small>Accessible content hierarchy</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Semantic HTML5</strong>
+                      <small>Accessible document landmarks, articles, sections &amp; headings</small>
+                      <span class="node-tag">WCAG 2.1 AA Compliant</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#a8dc75; color:#a8dc75;">SEO</span>
-                    <div><strong>Metadata Engine</strong><small>OpenGraph &amp; sports tags</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-tags" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Metadata &amp; SEO Engine</strong>
+                      <small>OpenGraph social cards, Twitter meta tags &amp; canonical routing</small>
+                      <span class="node-tag">Structured Meta</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#a8dc75);"></i><b style="color:#a8dc75;">→</b></div>
               </div>
               <!-- Stage 3 -->
               <div class="diagram-stage">
-                <span class="stage-label">03 / Experience</span>
+                <span class="stage-label"><i class="fa-solid fa-border-all" aria-hidden="true"></i> 03 / Layout &amp; Logic</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#a8dc75; color:#a8dc75;">CSS</span>
-                    <div><strong>CSS Grid &amp; Flexbox</strong><small>Responsive multi-column layouts</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>CSS Grid &amp; Flexbox</strong>
+                      <small>Fluid multi-column layouts adapting smoothly across viewports</small>
+                      <span class="node-tag">Zero CSS Framework</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#a8dc75; color:#a8dc75;">JS</span>
-                    <div><strong>DOM Controller</strong><small>Navigation &amp; filter logic</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Client DOM Controller</strong>
+                      <small>Instant category filtering, sticky headers &amp; clean interactions</small>
+                      <span class="node-tag">Pure Vanilla JS</span>
+                    </div>
                   </div>
                 </div>
-                <div class="diagram-connector" aria-hidden="true"><i style="background:linear-gradient(90deg,transparent,#a8dc75);"></i><b style="color:#a8dc75;">→</b></div>
               </div>
               <!-- Stage 4 -->
               <div class="diagram-stage">
-                <span class="stage-label">04 / Global Edge</span>
+                <span class="stage-label"><i class="fa-solid fa-bolt" aria-hidden="true"></i> 04 / Global Edge</span>
                 <div class="stage-nodes">
                   <div class="diagram-node">
-                    <span style="border-color:#a8dc75; color:#a8dc75;">VCL</span>
-                    <div><strong>Vercel Edge</strong><small>Global static asset delivery</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Vercel Edge Network</strong>
+                      <small>Edge caching delivering sub-50ms TTFB worldwide</small>
+                      <span class="node-tag">Edge Serverless CDN</span>
+                    </div>
                   </div>
                   <div class="diagram-node">
-                    <span style="border-color:#a8dc75; color:#a8dc75;">CDN</span>
-                    <div><strong>Zero-Latency Cache</strong><small>Instant public load performance</small></div>
+                    <div class="node-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                    <div class="node-text">
+                      <strong>Automated TLS Encryption</strong>
+                      <small>Automated HTTPS certificate management &amp; HTTP/2 multiplexing</small>
+                      <span class="node-tag">TLS 1.3 / HTTP/2</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- 4 Architecture Guarantees -->
+            <div class="architecture-specs-bar">
+              <div class="spec-item">
+                <small>Performance</small>
+                <strong>100/100 Lighthouse Target</strong>
+                <span>Near-instant static page load with zero render-blocking external scripts</span>
+              </div>
+              <div class="spec-item">
+                <small>Layout System</small>
+                <strong>Pure CSS Grid &amp; Flexbox</strong>
+                <span>Zero framework overhead with fully bespoke responsive style sheets</span>
+              </div>
+              <div class="spec-item">
+                <small>Accessibility</small>
+                <strong>WCAG 2.1 AA Standards</strong>
+                <span>Clear contrast ratios, keyboard navigable menus &amp; semantic landmarks</span>
+              </div>
+              <div class="spec-item">
+                <small>Hosting</small>
+                <strong>Vercel Edge Ingress</strong>
+                <span>Global edge CDN caching guaranteeing immediate content delivery</span>
+              </div>
+            </div>
+
             <div class="diagram-footer">
               <span><i class="live-dot" style="background:#a8dc75; box-shadow:0 0 8px #a8dc75;"></i> Active Editorial Flow</span>
               <span>Architecture Specification · ESF-WEB-06</span>

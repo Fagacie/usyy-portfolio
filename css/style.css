@@ -39,6 +39,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -1493,6 +1494,9 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 .mega-footer-container {
@@ -1653,6 +1657,7 @@ h3 {
 /* Massive Anchor Typography */
 .mega-footer-text-container {
   width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -1662,13 +1667,15 @@ h3 {
 }
 
 .mega-footer-text {
-  font-size: clamp(3rem, 10vw, 15rem);
+  font-size: clamp(2.5rem, 8.8vw, 15rem);
   font-weight: 900;
   line-height: 1.1;
   white-space: nowrap;
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
   user-select: none;
+  max-width: 100%;
+  text-align: center;
 }
 
 [data-theme="light"] .mega-footer-text {
@@ -1677,7 +1684,8 @@ h3 {
 
 @media (max-width: 768px) {
   .mega-footer-text {
-    font-size: 15vw; /* Perfectly scale to viewport width */
+    font-size: clamp(1.8rem, 9.8vw, 2.8rem); /* Scales safely on mobile without breaking 375px width */
+    letter-spacing: -0.01em;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
   }
   
