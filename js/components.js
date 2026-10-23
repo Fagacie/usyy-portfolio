@@ -67,7 +67,7 @@
         '<span>' + item.label + '</span></a>';
     }).join('\n      ');
 
-    const resumeHref = BASE + 'assets/resume.pdf';
+    const resumeHref = '/resume';
 
     header.innerHTML = `
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
