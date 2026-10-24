@@ -391,8 +391,14 @@ p { margin-top: 0; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
 }
 @media (max-width: 360px) {
-  .brand-name { max-width: 126px; overflow: hidden; text-overflow: ellipsis; }
-  .header-resume { padding-inline: 8px; }
+  .site-header { width: calc(100% - 20px); gap: 6px; }
+  .brand { gap: 8px; }
+  .brand-mark { width: 32px; height: 32px; border-radius: 9px; }
+  .brand-name { max-width: 110px; overflow: hidden; text-overflow: ellipsis; font-size: 10px; }
+  .brand-subtitle { display: none; }
+  .header-actions { gap: 5px; }
+  .theme-toggle { width: 32px; height: 32px; }
+  .header-resume { padding-inline: 6px; gap: 5px; font-size: 10px; }
   .mobile-dock { width: calc(100% - 14px); min-height: 62px; padding: 4px; gap: 1px; }
   .mobile-dock-link { min-height: 50px; gap: 4px; font-size: 10px; }
   .mobile-dock-link svg { width: 17px; height: 17px; }
