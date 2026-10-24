@@ -5,10 +5,12 @@ import type { Project } from '../data/projects';
 type Props = { project: Project; compact?: boolean };
 const { project, compact = false } = Astro.props;
 const categoryName = project.category === 'iot' ? 'Connected systems' : project.category === 'research' ? 'Applied research' : 'Software project';
+const projectOrder = ['psm-e-learning', 'iot-monitoring', 'pku-management', 'weatherhub', 'masakjerr', 'elite-soccer'];
+const projectIndex = projectOrder.indexOf(project.slug) + 1;
 ---
 <article class:list={['project-card', compact && 'project-card-compact']} data-project-card data-category={project.category} data-search={`${project.title} ${project.description} ${project.stack.join(' ')} ${project.categoryLabel}`.toLowerCase()}>
   <div class="project-cover" aria-label={`${project.title} project summary`}>
-    <span class="project-cover-index">{String(projectsIndex(project.slug)).padStart(2, '0')}</span>
+    <span class="project-cover-index">{String(projectIndex).padStart(2, '0')}</span>
     <div class="project-cover-copy">
       <span class="project-cover-type">{categoryName}</span>
       <strong>{project.shortTitle}</strong>
@@ -32,8 +34,3 @@ const categoryName = project.category === 'iot' ? 'Connected systems' : project.
     </div>
   </div>
 </article>
----
-function projectsIndex(slug: string) {
-  const order = ['psm-e-learning', 'iot-monitoring', 'pku-management', 'weatherhub', 'masakjerr', 'elite-soccer'];
-  return order.indexOf(slug) + 1;
-}
