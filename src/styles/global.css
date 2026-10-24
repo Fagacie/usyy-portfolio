@@ -464,3 +464,6 @@ p { margin-top: 0; }
   .project-cover-status { top: 12px; right: 12px; max-width: 52%; font-size: 9px; }
   .project-cover-copy { max-width: 82%; }
 }
+
+.case-evidence-note { padding: 18px 20px; border: 1px dashed var(--line-strong); border-radius: var(--radius-md); background: var(--surface-muted); }
+.case-evidence-note p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
