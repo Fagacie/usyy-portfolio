@@ -1,5 +1,5 @@
 ---
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Code2, ExternalLink } from '@lucide/astro';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, CodeXml, ExternalLink } from '@lucide/astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { projects } from '../../data/projects';
 
@@ -28,7 +28,7 @@ const next = projects[(index + 1) % projects.length];
           <div class="tag-list" style="margin:22px 0 0">{project.stack.map((technology) => <span class="tag">{technology}</span>)}</div>
           <div class="case-actions">
             {project.demoUrl && <a class="button button-primary" href={project.demoUrl} target="_blank" rel="noopener noreferrer">Open live demo <ExternalLink size={15} aria-hidden="true" /></a>}
-            {project.repoUrl && <a class="button button-secondary" href={project.repoUrl} target="_blank" rel="noopener noreferrer"><Code2 size={15} aria-hidden="true" /> {project.repoLabel || 'View source'}</a>}
+            {project.repoUrl && <a class="button button-secondary" href={project.repoUrl} target="_blank" rel="noopener noreferrer"><CodeXml size={15} aria-hidden="true" /> {project.repoLabel || 'View source'}</a>}
           </div>
         </div>
         <dl class="case-summary">

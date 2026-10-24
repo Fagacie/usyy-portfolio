@@ -44,7 +44,7 @@ const mobileItems = navItems.filter((item) => ['home', 'work', 'about', 'researc
   <nav class="mobile-dock" aria-label="Mobile primary navigation">
     {mobileItems.map(({ label, href, key, Icon }) => (
       <a href={href} class:list={['mobile-dock-link', current === key && 'is-active']} aria-current={current === key ? 'page' : undefined}>
-        <Icon size={18} strokeWidth={1.8} aria-hidden="true" />
+        <Icon size={18} stroke-width={1.8} aria-hidden="true" />
         <span>{label}</span>
       </a>
     ))}

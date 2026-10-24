@@ -1,5 +1,5 @@
 ---
-import { ArrowUpRight, Code2, Database, GraduationCap, Layers3, MapPinned } from '@lucide/astro';
+import { ArrowUpRight, CodeXml, Database, Layers, MapPinned } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 ---
@@ -27,35 +27,42 @@ import SectionHeading from '../components/SectionHeading.astro';
           </div>
         </div>
         <aside class="about-note">
-          <div class="capability-icon"><Layers3 size={21} aria-hidden="true" /></div>
+          <div class="capability-icon"><Layers size={21} aria-hidden="true" /></div>
           <h2>My engineering principles</h2>
           <p>Understand the workflow before choosing the stack. Make data relationships explicit. Keep interactions accessible. Test important paths end to end. Prefer clear, maintainable code over unnecessary effects.</p>
         </aside>
       </div>
+    </div>
+  </section>
 
-      <section class="section" aria-labelledby="skills-heading">
-        <SectionHeading id="skills-heading" eyebrow="Technical focus" title="Skills I use in practice" description="A practical grouping of the technologies and disciplines represented across the projects in this portfolio." />
-        <div class="skills-grid">
-          <article class="skill-group"><h3><Code2 size={19} aria-hidden="true" /> Application development</h3><p>HTML · CSS · JavaScript · Java · JSP / Servlets · Laravel · PHP</p></article>
-          <article class="skill-group"><h3><Database size={19} aria-hidden="true" /> Data and integration</h3><p>MySQL · Relational data modelling · JDBC · REST APIs · Paystack integration</p></article>
-          <article class="skill-group"><h3><MapPinned size={19} aria-hidden="true" /> Connected systems</h3><p>MicroPython · Raspberry Pi Pico W · MQTT · Mapping workflows · Telemetry</p></article>
-        </div>
-      </section>
+  <section class="section" aria-labelledby="skills-heading">
+    <div class="container">
+      <SectionHeading id="skills-heading" eyebrow="Technical focus" title="Skills I use in practice" description="A practical grouping of the technologies and disciplines represented across the projects in this portfolio." />
+      <div class="skills-grid">
+        <article class="skill-group"><h3><CodeXml size={19} aria-hidden="true" /> Application development</h3><p>HTML · CSS · JavaScript · Java · JSP / Servlets · Laravel · PHP</p></article>
+        <article class="skill-group"><h3><Database size={19} aria-hidden="true" /> Data and integration</h3><p>MySQL · Relational data modelling · JDBC · REST APIs · Paystack integration</p></article>
+        <article class="skill-group"><h3><MapPinned size={19} aria-hidden="true" /> Connected systems</h3><p>MicroPython · Raspberry Pi Pico W · MQTT · Mapping workflows · Telemetry</p></article>
+      </div>
+    </div>
+  </section>
 
-      <section class="section section-muted" aria-labelledby="education-heading">
-        <div class="container">
-          <SectionHeading id="education-heading" eyebrow="Education & leadership" title="A foundation built through study and service" />
-          <div class="timeline">
-            <article class="timeline-item"><time>Current</time><div><h3>Bachelor of Software Engineering</h3><p>Universiti Malaysia Terengganu (UMT). Coursework and independent projects across application development, databases, systems analysis, and software engineering.</p></div></article>
-            <article class="timeline-item"><time>May 2026 – Present</time><div><h3>Media & Publicity Officer</h3><p>Nigerian Muslims Community in Malaysia (NMCIM), supporting community communications and publicity.</p></div></article>
-            <article class="timeline-item"><time>Jun 2025 – May 2026</time><div><h3>Treasurer</h3><p>Nigerian Muslims Community in Malaysia (NMCIM), supporting financial administration and record-keeping.</p></div></article>
-          </div>
-        </div>
-      </section>
-      <section class="cta-panel">
+  <section class="section section-muted" aria-labelledby="education-heading">
+    <div class="container">
+      <SectionHeading id="education-heading" eyebrow="Education & leadership" title="A foundation built through study and service" />
+      <div class="timeline">
+        <article class="timeline-item"><time>Current</time><div><h3>Bachelor of Software Engineering</h3><p>Universiti Malaysia Terengganu (UMT). Coursework and independent projects across application development, databases, systems analysis, and software engineering.</p></div></article>
+        <article class="timeline-item"><time>May 2026 – Present</time><div><h3>Media & Publicity Officer</h3><p>Nigerian Muslims Community in Malaysia (NMCIM), supporting community communications and publicity.</p></div></article>
+        <article class="timeline-item"><time>Jun 2025 – May 2026</time><div><h3>Treasurer</h3><p>Nigerian Muslims Community in Malaysia (NMCIM), supporting financial administration and record-keeping.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-panel">
         <div><p class="eyebrow">Next step</p><h2>Interested in what I’m building?</h2><p>Explore the case studies or contact me to discuss a project, internship, or engineering opportunity.</p></div>
         <div class="cta-actions"><a class="button button-primary" href="/work">Explore projects</a><a class="button button-secondary" href="/contact">Contact <ArrowUpRight size={15} aria-hidden="true" /></a></div>
-      </section>
+      </div>
     </div>
   </section>
 </BaseLayout>

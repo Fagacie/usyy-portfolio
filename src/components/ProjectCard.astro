@@ -1,5 +1,5 @@
 ---
-import { ArrowUpRight, Code2, ExternalLink, Star } from '@lucide/astro';
+import { ArrowUpRight, CodeXml, ExternalLink, Star } from '@lucide/astro';
 import type { Project } from '../data/projects';
 import { githubMetadata } from '../data/github-metadata';
 
@@ -32,7 +32,7 @@ const meta = githubMetadata[project.slug];
       <a class="text-link" href={`/projects/${project.slug}`}>Read case study <ArrowUpRight size={15} aria-hidden="true" /></a>
       <div class="project-source-meta">
         {project.repoUrl && meta && project.repoLabel !== 'Browse GitHub profile' && <span title="Repository stars"><Star size={13} aria-hidden="true" /> {meta.stars}</span>}
-        {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.repoLabel || 'Open source'} for ${project.title}`} title={project.repoLabel || 'Open source'}><Code2 size={16} aria-hidden="true" /></a>}
+        {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.repoLabel || 'Open source'} for ${project.title}`} title={project.repoLabel || 'Open source'}><CodeXml size={16} aria-hidden="true" /></a>}
         {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} demo`} title="Open live demo"><ExternalLink size={15} aria-hidden="true" /></a>}
       </div>
     </div>

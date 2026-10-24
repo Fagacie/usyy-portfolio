@@ -1,5 +1,5 @@
 ---
-import { ArrowUpRight, Github, Linkedin, Mail, MapPinned, Send } from '@lucide/astro';
+import { ArrowUpRight, CodeXml, Mail, MapPinned, Network, Send } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const formEndpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT || '';
 ---
@@ -17,8 +17,8 @@ const formEndpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT || '';
           <p class="section-description">A little context about the project, goal, or opportunity helps me respond with a useful next step.</p>
           <div class="contact-methods">
             <a class="contact-method" href="mailto:fagacie@gmail.com"><span class="contact-method-icon"><Mail size={18} aria-hidden="true" /></span><span><strong>Email</strong><span>fagacie@gmail.com</span></span></a>
-            <a class="contact-method" href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer"><span class="contact-method-icon"><Linkedin size={18} aria-hidden="true" /></span><span><strong>LinkedIn</strong><span>Professional profile</span></span><ArrowUpRight size={15} aria-hidden="true" /></a>
-            <a class="contact-method" href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer"><span class="contact-method-icon"><Github size={18} aria-hidden="true" /></span><span><strong>GitHub</strong><span>Projects and source links</span></span><ArrowUpRight size={15} aria-hidden="true" /></a>
+            <a class="contact-method" href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer"><span class="contact-method-icon"><Network size={18} aria-hidden="true" /></span><span><strong>LinkedIn</strong><span>Professional profile</span></span><ArrowUpRight size={15} aria-hidden="true" /></a>
+            <a class="contact-method" href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer"><span class="contact-method-icon"><CodeXml size={18} aria-hidden="true" /></span><span><strong>GitHub</strong><span>Projects and source links</span></span><ArrowUpRight size={15} aria-hidden="true" /></a>
             <div class="contact-method"><span class="contact-method-icon"><MapPinned size={18} aria-hidden="true" /></span><span><strong>Location</strong><span>Malaysia · Universiti Malaysia Terengganu</span></span></div>
           </div>
         </div>
