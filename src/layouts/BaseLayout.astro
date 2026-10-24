@@ -1,0 +1,64 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/global.css';
+
+type Props = {
+  title?: string;
+  description?: string;
+  active?: string;
+  noIndex?: boolean;
+};
+
+const {
+  title = 'Usman Abbas Adamu | Software Engineer',
+  description = 'Software engineering portfolio of Usman Abbas Adamu: web platforms, backend systems, connected IoT projects, and applied research.',
+  active = 'home',
+  noIndex = false
+} = Astro.props;
+
+const cleanPath = Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '') || '/';
+const canonical = new URL(cleanPath, Astro.site ?? 'https://www.usyy-portfolio.tech').toString();
+---
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f8fb" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Usman Abbas Adamu" />
+    <link rel="canonical" href={canonical} />
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://www.usyy-portfolio.tech/assets/img/og-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script is:inline>
+      try {
+        const saved = localStorage.getItem('portfolio-theme');
+        if (saved === 'dark' || saved === 'light') document.documentElement.dataset.theme = saved;
+        else if (window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark';
+      } catch (_) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader active={active} />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+    <script>
+      import '../scripts/site';
+    </script>
+  </body>
+</html>

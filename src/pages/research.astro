@@ -1,0 +1,43 @@
+---
+import { ArrowUpRight, Compass, Database, MapPinned, RadioTower } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+const tracks = [
+  { id: '01', title: 'Survey planning and geospatial workflows', status: 'Applied engineering context', Icon: MapPinned, description: 'Exploring how mapping interfaces, spatial boundaries, and clear estimation logic can support planning workflows for hydrographic survey work.', topics: ['Mapping UX', 'Spatial geometry', 'Estimation logic'] },
+  { id: '02', title: 'Reliable web systems and data workflows', status: 'Engineering interest', Icon: Database, description: 'Studying the design of maintainable web applications, relational data structures, role-based access, integrations, and workflow-level testing.', topics: ['Data modelling', 'Application architecture', 'Validation'] },
+  { id: '03', title: 'Connected devices and telemetry', status: 'Project-based exploration', Icon: RadioTower, description: 'Investigating how device readings move through connectivity layers into a useful monitoring experience, and how to diagnose sensor or communication failures.', topics: ['IoT telemetry', 'MQTT', 'Device reliability'] },
+  { id: '04', title: 'Digital learning and verifiable credentials', status: 'Project-based exploration', Icon: Compass, description: 'Considering how digital learning workflows, role-aware access, payments, and certificate verification fit into a coherent educational platform.', topics: ['E-learning workflows', 'Access control', 'Credential verification'] }
+];
+---
+<BaseLayout title="Research directions | Usman Abbas Adamu" description="Current engineering and research interests in survey planning, web systems, IoT telemetry, and digital learning." active="research">
+  <section class="page-shell">
+    <div class="container">
+      <div class="page-hero">
+        <p class="eyebrow">Research & exploration</p>
+        <h1>Questions worth <span style="color:var(--accent)">building around.</span></h1>
+        <p class="lede">These are current interests and applied engineering directions, not a list of published papers. I use projects to explore how software, data, and physical systems can work together reliably.</p>
+      </div>
+
+      <div class="research-grid">
+        {tracks.map(({ id, title, status, Icon, description, topics }) => (
+          <article class="research-card">
+            <div class="research-card-top"><span>{id} /</span><Icon size={20} aria-hidden="true" /></div>
+            <span class="research-status"><span class="status-dot" aria-hidden="true"></span>{status}</span>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <div class="tag-list" style="margin-top:20px; margin-bottom:0">{topics.map((topic) => <span class="tag">{topic}</span>)}</div>
+          </article>
+        ))}
+      </div>
+
+      <section class="section" aria-labelledby="current-work-heading">
+        <SectionHeading eyebrow="Applied context" title="From interest to implementation" description="The INOS Survey Estimation System is the current engineering context connecting mapping, estimation, interface design, and data workflows." />
+        <div class="experience-card">
+          <div class="experience-date">Current internship</div>
+          <div><h3 class="experience-role" id="current-work-heading">INOS Survey Estimation System</h3><p>Contributing to survey-planning and estimation workflows, mapping features, backend/database integration, and troubleshooting. This is presented as engineering work rather than a research publication.</p><div class="hero-actions" style="margin-top:18px"><a class="button button-secondary" href="/work">View project portfolio <ArrowUpRight size={15} aria-hidden="true" /></a></div></div>
+        </div>
+      </section>
+      <section class="cta-panel"><div><p class="eyebrow">Research conversation</p><h2>Have a related problem to explore?</h2><p>I’m open to conversations about practical software engineering, geospatial workflows, connected systems, and applied computing.</p></div><div class="cta-actions"><a class="button button-primary" href="/contact">Start a conversation <ArrowUpRight size={16} aria-hidden="true" /></a></div></section>
+    </div>
+  </section>
+</BaseLayout>

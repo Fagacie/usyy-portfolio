@@ -1,0 +1,69 @@
+---
+import { ArrowUpRight, Search } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { projects } from '../data/projects';
+
+const filters = [
+  { label: 'All projects', value: 'all' },
+  { label: 'Full-stack & web', value: 'web' },
+  { label: 'IoT & hardware', value: 'iot' }
+];
+---
+<BaseLayout
+  title="Projects | Usman Abbas Adamu"
+  description="Selected software engineering projects across full-stack web platforms, API integrations, and connected IoT systems."
+  active="work"
+>
+  <section class="page-shell">
+    <div class="container">
+      <div class="page-hero-row">
+        <div class="page-hero">
+          <p class="eyebrow">Projects & engineering</p>
+          <h1>Work shaped by <span style="color:var(--accent)">real requirements.</span></h1>
+          <p class="lede">A selected portfolio of full-stack applications, API-driven interfaces, and connected systems. Project pages describe their scope and technical decisions without inventing usage metrics or outcomes.</p>
+        </div>
+        <div class="page-hero-note">Six case studies · Source links where verified · Honest project status</div>
+      </div>
+
+      <div class="work-controls" aria-label="Project search and filters">
+        <div class="filter-list" role="group" aria-label="Filter projects">
+          {filters.map((filter) => <button class="filter-button" type="button" data-project-filter={filter.value} aria-pressed={filter.value === 'all' ? 'true' : 'false'}>{filter.label}</button>)}
+        </div>
+        <label class="project-search">
+          <Search size={16} aria-hidden="true" />
+          <span class="visually-hidden">Search projects</span>
+          <input type="search" placeholder="Search by name or technology" data-project-search />
+        </label>
+      </div>
+      <p class="project-results" data-project-results aria-live="polite">6 projects shown</p>
+      <div class="project-grid" data-project-grid>
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+
+      <section class="section" aria-labelledby="experience-heading">
+        <SectionHeading id="experience-heading" eyebrow="Experience & leadership" title="Work beyond project repositories" description="Professional and community roles that complement technical project work." />
+        <div class="experience-list">
+          <article class="experience-row">
+            <time>Aug 2026 – Present</time>
+            <div><h3>Software Engineer Intern</h3><p class="org">Eco Hydrotech Solutions · INOS / UMT project context</p><p>Supporting survey-planning and estimation workflows, mapping features, backend/database integration, and troubleshooting for the INOS Survey Estimation System.</p></div>
+          </article>
+          <article class="experience-row">
+            <time>May 2026 – Present</time>
+            <div><h3>Media & Publicity Officer</h3><p class="org">Nigerian Muslims Community in Malaysia (NMCIM)</p><p>Supporting community communications, announcements, and publicity materials.</p></div>
+          </article>
+          <article class="experience-row">
+            <time>Jun 2025 – May 2026</time>
+            <div><h3>Treasurer</h3><p class="org">Nigerian Muslims Community in Malaysia (NMCIM)</p><p>Supported financial record-keeping and community financial administration.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-panel">
+        <div><p class="eyebrow">Have a project in mind?</p><h2>Let’s talk about the problem first.</h2><p>I’m interested in practical software problems where clear workflows and careful implementation matter.</p></div>
+        <div class="cta-actions"><a class="button button-primary" href="/contact">Contact me <ArrowUpRight size={16} aria-hidden="true" /></a></div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

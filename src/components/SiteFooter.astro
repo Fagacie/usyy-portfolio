@@ -1,0 +1,34 @@
+---
+import { ArrowUpRight, Github, Linkedin, Mail, MoveUpRight } from '@lucide/astro';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-intro">
+      <a class="brand footer-brand" href="/">
+        <span class="brand-mark" aria-hidden="true">UA</span>
+        <span class="brand-name">Usman Abbas Adamu<span class="brand-subtitle">Software Engineer</span></span>
+      </a>
+      <p>Building useful digital products with thoughtful engineering, clear interfaces, and maintainable systems.</p>
+      <a class="footer-email" href="mailto:fagacie@gmail.com"><Mail size={16} aria-hidden="true" /> fagacie@gmail.com <ArrowUpRight size={14} aria-hidden="true" /></a>
+    </div>
+    <div class="footer-column">
+      <h2>Explore</h2>
+      <a href="/work">Projects</a>
+      <a href="/about">About</a>
+      <a href="/research">Research</a>
+      <a href="/awards">Awards & recognition</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="footer-column">
+      <h2>Elsewhere</h2>
+      <a href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer"><Github size={15} aria-hidden="true" /> GitHub <MoveUpRight size={12} aria-hidden="true" /></a>
+      <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer"><Linkedin size={15} aria-hidden="true" /> LinkedIn <MoveUpRight size={12} aria-hidden="true" /></a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {year} Usman Abbas Adamu</span>
+    <span>Designed with clarity. Built with care.</span>
+    <button type="button" class="back-to-top" data-back-to-top>Back to top ↑</button>
+  </div>
+</footer>

@@ -1,0 +1,52 @@
+---
+import { ArrowUpRight, Award, FlaskConical, FolderKanban, House, Mail, Moon, Sun, UserRound } from '@lucide/astro';
+
+type Props = { active?: string };
+const { active = 'home' } = Astro.props;
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const pageKey = path.startsWith('/projects/') ? 'work' : (path === '/' ? 'home' : path.slice(1));
+const current = active || pageKey;
+const navItems = [
+  { label: 'Home', href: '/', key: 'home', Icon: House },
+  { label: 'Projects', href: '/work', key: 'work', Icon: FolderKanban },
+  { label: 'About', href: '/about', key: 'about', Icon: UserRound },
+  { label: 'Research', href: '/research', key: 'research', Icon: FlaskConical },
+  { label: 'Awards', href: '/awards', key: 'awards', Icon: Award },
+  { label: 'Contact', href: '/contact', key: 'contact', Icon: Mail }
+];
+const mobileItems = navItems.filter((item) => ['home', 'work', 'about', 'research', 'contact'].includes(item.key));
+---
+<header class="site-header-wrap">
+  <div class="site-header">
+    <a class="brand" href="/" aria-label="Usman Abbas Adamu home">
+      <span class="brand-mark" aria-hidden="true">UA</span>
+      <span class="brand-name">Usman Abbas Adamu<span class="brand-subtitle">Software Engineer</span></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {navItems.map(({ label, href, key }) => (
+        <a href={href} class:list={['nav-link', current === key && 'is-active']} aria-current={current === key ? 'page' : undefined}>{label}</a>
+      ))}
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme" title="Switch colour theme">
+        <Sun size={17} class="theme-sun" aria-hidden="true" />
+        <Moon size={17} class="theme-moon" aria-hidden="true" />
+      </button>
+      <a class="button button-small button-primary header-resume" href="/resume" target="_blank" rel="noopener noreferrer">
+        Résumé <ArrowUpRight size={15} aria-hidden="true" />
+      </a>
+    </div>
+  </div>
+
+  <nav class="mobile-dock" aria-label="Mobile primary navigation">
+    {mobileItems.map(({ label, href, key, Icon }) => (
+      <a href={href} class:list={['mobile-dock-link', current === key && 'is-active']} aria-current={current === key ? 'page' : undefined}>
+        <Icon size={18} strokeWidth={1.8} aria-hidden="true" />
+        <span>{label}</span>
+      </a>
+    ))}
+  </nav>
+</header>

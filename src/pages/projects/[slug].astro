@@ -1,0 +1,79 @@
+---
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Code2, ExternalLink } from '@lucide/astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { projects } from '../../data/projects';
+
+export function getStaticPaths() {
+  return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const index = projects.findIndex((item) => item.slug === project.slug);
+const previous = projects[(index - 1 + projects.length) % projects.length];
+const next = projects[(index + 1) % projects.length];
+---
+<BaseLayout title={`${project.title} | Usman Abbas Adamu`} description={project.description} active="work">
+  <div class="container">
+    <nav class="case-breadcrumb" aria-label="Breadcrumb">
+      <a href="/work"><ArrowLeft size={14} aria-hidden="true" /> All projects</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{project.shortTitle}</span>
+    </nav>
+    <section class="case-study-hero">
+      <div class="case-study-grid">
+        <div>
+          <p class="eyebrow">{project.categoryLabel}</p>
+          <h1 class="case-study-title">{project.title}</h1>
+          <p class="case-study-description">{project.description}</p>
+          <div class="tag-list" style="margin:22px 0 0">{project.stack.map((technology) => <span class="tag">{technology}</span>)}</div>
+          <div class="case-actions">
+            {project.demoUrl && <a class="button button-primary" href={project.demoUrl} target="_blank" rel="noopener noreferrer">Open live demo <ExternalLink size={15} aria-hidden="true" /></a>}
+            {project.repoUrl && <a class="button button-secondary" href={project.repoUrl} target="_blank" rel="noopener noreferrer"><Code2 size={15} aria-hidden="true" /> {project.repoLabel || 'View source'}</a>}
+          </div>
+        </div>
+        <dl class="case-summary">
+          <div><dt>My role</dt><dd>{project.role}</dd></div>
+          <div><dt>Timeline</dt><dd>{project.period}</dd></div>
+          <div><dt>Status</dt><dd>{project.status}</dd></div>
+          <div><dt>Project category</dt><dd>{project.categoryLabel}</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="case-content-section">
+      <div class="case-content-grid">
+        <div><p class="eyebrow">01 / Overview</p><h2>Purpose and context</h2></div>
+        <div><p>{project.overview}</p><p>{project.problem}</p></div>
+      </div>
+    </section>
+    <section class="case-content-section">
+      <div class="case-content-grid">
+        <div><p class="eyebrow">02 / Implementation</p><h2>Key features</h2></div>
+        <ul class="case-feature-list">
+          {project.features.map((feature) => <li><Check size={16} aria-hidden="true" /> <span>{feature}</span></li>)}
+        </ul>
+      </div>
+    </section>
+    <section class="case-content-section">
+      <div class="case-content-grid">
+        <div><p class="eyebrow">03 / Architecture</p><h2>How the system is organised</h2></div>
+        <div>
+          <div class="architecture-flow">
+            {project.architecture.map((step, i) => <div class="architecture-step"><span>STEP {String(i + 1).padStart(2, '0')}</span><strong>{step}</strong></div>)}
+          </div>
+          <p style="margin-top:20px">{project.engineeringNotes}</p>
+        </div>
+      </div>
+    </section>
+    <section class="case-content-section">
+      <div class="case-content-grid">
+        <div><p class="eyebrow">04 / Reflection</p><h2>Engineering perspective</h2></div>
+        <div><p>This case study is deliberately focused on verified scope and technical choices. Project-specific performance measures or user outcomes are not published here unless reliable evidence is available.</p><div class="cta-actions"><a class="button button-primary" href="/contact">Discuss this work <ArrowUpRight size={15} aria-hidden="true" /></a><a class="button button-secondary" href="/work">All projects <ArrowRight size={15} aria-hidden="true" /></a></div></div>
+      </div>
+    </section>
+    <div class="case-next-grid" style="margin-bottom:80px">
+      <a class="case-next-link" href={`/projects/${previous.slug}`}><span><ArrowLeft size={13} aria-hidden="true" /> Previous project</span><strong>{previous.shortTitle}</strong></a>
+      <a class="case-next-link" href={`/projects/${next.slug}`}><span>Next project <ArrowRight size={13} aria-hidden="true" /></span><strong>{next.shortTitle}</strong></a>
+    </div>
+  </div>
+</BaseLayout>

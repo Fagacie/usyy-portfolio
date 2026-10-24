@@ -1,45 +1,36 @@
-# OS Files
+# Dependencies
+node_modules/
+.astro/
+dist/
+build/
+
+# Test and coverage output
+playwright-report/
+test-results/
+coverage/
+
+# Environment and local-only files
+.env
+.env.*
+!.env.example
 .DS_Store
 Thumbs.db
 desktop.ini
 *.swp
 *.swo
 *~
+*.tmp
+*.bak
+*.cache
+*.log
 
-# IDE/Editor Files
+# Editors
 .vscode/
 .idea/
 *.sublime-*
 
-# Dependencies (if you add npm later)
-node_modules/
-package-lock.json
-yarn.lock
-
-# Build outputs (if you add build process)
-dist/
-build/
-*.log
-
-# Environment variables
-.env
-.env.local
-
-# Temporary files
-*.tmp
-*.bak
-*.cache
-
-# Figma Make local prototype files (prevent interfering with static deployment)
+# Design-tool exports / local notes
 .figma/
 .mise.toml
-src/
-public/
-package.json
-pnpm-lock.yaml
-vite.config.ts
-tsconfig.json
 CLAUDE.md
 AGENTS.md
-.gitattributes
-
