@@ -1,0 +1,134 @@
+---
+import { Picture } from 'astro:assets';
+import { ArrowRight, ArrowUpRight, BriefcaseBusiness, CodeXml, Database, GraduationCap, MapPinned, ShieldCheck, Sparkles } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import profileImage from '../assets/profile.png';
+import { projects } from '../data/projects';
+import { recognition } from '../data/recognition';
+
+const featured = projects.slice(0, 3);
+const featuredRecognition = recognition.slice(0, 3);
+---
+<BaseLayout
+  title="Usman Abbas Adamu | Software Engineer"
+  description="Software engineering portfolio of Usman Abbas Adamu, focused on full-stack web platforms, backend systems, and connected IoT applications."
+  active="home"
+>
+  <section class="home-hero">
+    <div class="container home-hero-grid">
+      <div class="hero-copy">
+        <p class="hero-overline"><span class="status-dot" aria-hidden="true"></span> Software Engineering · Malaysia</p>
+        <h1>Building software that <span>solves real problems.</span></h1>
+        <p class="hero-role">Full-stack web systems · Backend engineering · Connected applications</p>
+        <p class="hero-intro">I’m Usman Abbas Adamu, a Software Engineering student and software engineer intern. I build practical web platforms and connected systems, with a focus on clear workflows, reliable data, and maintainable implementation.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/work">Explore projects <ArrowRight size={16} aria-hidden="true" /></a>
+          <a class="button button-secondary" href="/resume" target="_blank" rel="noopener noreferrer">View résumé <ArrowUpRight size={16} aria-hidden="true" /></a>
+        </div>
+        <div class="hero-meta">
+          <span><MapPinned size={15} aria-hidden="true" /> Universiti Malaysia Terengganu</span>
+          <span><BriefcaseBusiness size={15} aria-hidden="true" /> Software Engineer Intern</span>
+        </div>
+      </div>
+      <div class="hero-profile">
+        <div class="profile-frame">
+          <Picture src={profileImage} formats={['avif', 'webp']} widths={[320, 520, 700]} sizes="(max-width: 680px) 85vw, (max-width: 900px) 38vw, 390px" alt="Portrait of Usman Abbas Adamu" loading="eager" />
+        </div>
+        <div class="profile-caption"><span>Usman Abbas Adamu</span><strong>Software Engineering</strong></div>
+      </div>
+    </div>
+    <div class="container hero-rule" aria-hidden="true"></div>
+  </section>
+
+  <section class="section" aria-labelledby="featured-work-title">
+    <div class="container">
+      <div class="section-topline">
+        <SectionHeading id="featured-work-title" eyebrow="Selected work" title="Projects built with purpose" description="A selection of web platforms and connected systems. Each case study explains its scope, implementation, and technical decisions." />
+        <a class="all-link" href="/work">View all projects <ArrowUpRight size={15} aria-hidden="true" /></a>
+      </div>
+      <div class="project-grid">
+        {featured.map((project) => <ProjectCard project={project} compact />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-muted" aria-labelledby="capabilities-title">
+    <div class="container">
+      <SectionHeading id="capabilities-title" eyebrow="How I work" title="Engineering fundamentals first" description="The focus is on making systems understandable, dependable, and useful—not adding complexity for its own sake." />
+      <div class="capability-grid">
+        <article class="capability-card">
+          <div class="capability-icon"><CodeXml size={21} aria-hidden="true" /></div>
+          <h3>Web applications</h3>
+          <p>Building responsive interfaces, server-side workflows, and full-stack applications with clear separation of concerns.</p>
+        </article>
+        <article class="capability-card">
+          <div class="capability-icon"><Database size={21} aria-hidden="true" /></div>
+          <h3>Data and integrations</h3>
+          <p>Designing relational data models and connecting application workflows to APIs, payments, and persistent storage.</p>
+        </article>
+        <article class="capability-card">
+          <div class="capability-icon"><ShieldCheck size={21} aria-hidden="true" /></div>
+          <h3>Connected systems</h3>
+          <p>Working across device telemetry, web interfaces, and backend logic while treating failures and reliability as part of the design.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="experience-title">
+    <div class="container">
+      <SectionHeading id="experience-title" eyebrow="Current experience" title="Software engineering in practice" description="Applying software engineering skills to real planning and estimation workflows." />
+      <article class="experience-card">
+        <div class="experience-date">August 2026 – Present</div>
+        <div>
+          <h3 class="experience-role">Software Engineer Intern</h3>
+          <p class="experience-org">Eco Hydrotech Solutions · INOS / UMT project context</p>
+          <p>Contributing to the INOS Survey Estimation System, including survey-planning and estimation workflows, mapping features, backend/database integration, and system troubleshooting.</p>
+          <div class="inline-credential-list">
+            <span class="credential-chip"><MapPinned size={14} aria-hidden="true" /> Survey planning</span>
+            <span class="credential-chip"><Database size={14} aria-hidden="true" /> Backend and data</span>
+            <span class="credential-chip"><Sparkles size={14} aria-hidden="true" /> Product refinement</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-muted" aria-labelledby="recognition-title">
+    <div class="container">
+      <div class="section-topline">
+        <SectionHeading id="recognition-title" eyebrow="Selected recognition" title="Learning beyond the classroom" description="Academic recognition, technical programmes, and project-related credentials." />
+        <a class="all-link" href="/awards">All recognition <ArrowUpRight size={15} aria-hidden="true" /></a>
+      </div>
+      <div class="recognition-grid">
+        {featuredRecognition.map((item) => (
+          <article class="recognition-card">
+            <div class="recognition-icon">{item.visual === 'award' ? <Sparkles size={20} aria-hidden="true" /> : <GraduationCap size={20} aria-hidden="true" />}</div>
+            <p class="recognition-kind">{item.kind}</p>
+            <h3>{item.title}</h3>
+            <p>{item.subtitle}</p>
+            {item.href && <a class="text-link" href={item.href} target="_blank" rel="noopener noreferrer">View credential <ArrowUpRight size={15} aria-hidden="true" /></a>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="research-preview-title">
+    <div class="container">
+      <div class="cta-panel">
+        <div>
+          <p class="eyebrow">Research directions</p>
+          <h2 id="research-preview-title">Curious about systems in the real world.</h2>
+          <p>My current interests include dependable web systems, applied mapping and survey planning, and telemetry-driven applications. These are areas of exploration, not a claim of published research.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="button button-primary" href="/research">Explore research <ArrowRight size={16} aria-hidden="true" /></a>
+          <a class="button button-secondary" href="/contact">Get in touch <ArrowUpRight size={16} aria-hidden="true" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+import { ArrowLeft, House } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page not found | Usman Abbas Adamu" description="The page you requested could not be found." active="home" noIndex>
+  <section class="page-shell">
+    <div class="container">
+      <div class="page-hero">
+        <p class="eyebrow">404 / Page not found</p>
+        <h1>This page took a <span style="color:var(--accent)">different route.</span></h1>
+        <p class="lede">The link may be old or the page may have moved. Use the navigation or return to a known section.</p>
+        <div class="hero-actions" style="margin-top:24px">
+          <a class="button button-primary" href="/"><House size={16} aria-hidden="true" /> Back to home</a>
+          <a class="button button-secondary" href="/work"><ArrowLeft size={16} aria-hidden="true" /> Browse projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
