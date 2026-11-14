@@ -1643,6 +1643,7 @@ body.case-study-page .case-project-nav strong {
     border-radius: 3px;
     background: var(--rd-charcoal);
     box-shadow: none;
+    pointer-events: auto;
   }
 
   .mobile-nav-panel[hidden] {
