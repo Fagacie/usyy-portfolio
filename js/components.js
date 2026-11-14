@@ -67,7 +67,7 @@
 
       <!-- Actions (Resume + Theme) -->
       <div class="nav-actions" id="navActions">
-        <a href="${resumeHref}" class="nav-resume-btn" target="_blank" rel="noopener noreferrer" aria-label="View résumé PDF in a new tab">View résumé</a>
+        <a href="${resumeHref}" class="nav-resume-btn" aria-label="View résumé PDF">View résumé</a>
         <button class="nav-menu-toggle" id="navMenuToggle" type="button" aria-expanded="false" aria-controls="mobileNavPanel" aria-label="Open navigation menu">
           <span></span><span></span><span></span>
         </button>

@@ -1458,7 +1458,7 @@ body.case-study-page .case-project-nav strong {
   }
 
   .floating-nav .nav-logo {
-    color: var(--rd-accent) !important;
+    color: var(--rd-white) !important;
   }
 
   .floating-nav .nav-resume-btn {
@@ -1467,6 +1467,9 @@ body.case-study-page .case-project-nav strong {
     background: var(--rd-white) !important;
     color: var(--rd-obsidian) !important;
     box-shadow: none !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1;
   }
 
   .mobile-bottom-nav {
@@ -1680,6 +1683,55 @@ body.case-study-page .case-project-nav strong {
   .mobile-nav-panel .nav-link:focus-visible {
     color: var(--rd-accent) !important;
     background: transparent !important;
+  }
+
+  .mega-footer {
+    padding: 3rem 1.25rem 1.25rem !important;
+  }
+
+  .mega-footer .mega-footer-container {
+    width: 100% !important;
+  }
+
+  .mega-footer .footer-grid {
+    gap: 2.25rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .mega-footer .footer-col {
+    min-width: 0;
+  }
+
+  .mega-footer .footer-col-title {
+    margin-bottom: 0.65rem !important;
+  }
+
+  .mega-footer .footer-blurb {
+    max-width: 18rem;
+    line-height: 1.6;
+  }
+
+  .mega-footer .footer-email-link,
+  .mega-footer-nav a,
+  .mega-footer-social a {
+    display: block;
+    padding: 0.35rem 0;
+    color: var(--rd-white) !important;
+  }
+
+  .mega-footer .mega-footer-nav,
+  .mega-footer .mega-footer-social {
+    gap: 0 !important;
+  }
+
+  .mega-footer .footer-bottom-bar {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .mega-footer > .mega-footer-copyright {
+    margin: 1rem 0 0;
+    padding-top: 0.25rem;
   }
 }
 
