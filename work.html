@@ -22,8 +22,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css?v=32" />
   <link rel="stylesheet" href="css/work.css?v=4" />
+  <link rel="stylesheet" href="css/redesign.css?v=14" />
+  <link rel="stylesheet" href="css/research-redesign.css?v=1" />
 </head>
-<body class="work-redesign">
+<body class="work-redesign work-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="header" id="site-header"></header>
 
@@ -36,7 +38,6 @@
       <h1>Built with purpose.<br /><em>Engineered through practice.</em></h1>
       
       <div class="work-hero-bottom">
-        <p>A comprehensive portfolio of full-stack web platforms, connected IoT telemetry networks, and empirical research testbeds built for real-world reliability.</p>
         <a class="btn-glow-primary" href="#projects" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:9999px; background:linear-gradient(135deg,var(--w-cyan),var(--w-blue)); color:#04101e; font-weight:700; font-size:13px;">
           Explore Projects <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
         </a>
@@ -59,16 +60,15 @@
           <h2 id="projects-heading" style="font-size:clamp(28px, 3.4vw, 40px); font-weight:800; color:var(--w-ink); margin:0;">Selected Work &amp; Systems</h2>
           <p class="section-lede" style="color:var(--w-muted); font-size:14px; margin:6px 0 0;">Filter by technical category or search stack technologies.</p>
         </div>
-        <span class="work-project-count" id="projectCount" style="color:var(--w-cyan); font-weight:700; font-family:'JetBrains Mono', monospace; font-size:13px;">8 projects</span>
+        <span class="work-project-count" id="projectCount" style="color:var(--w-cyan); font-weight:700; font-family:'JetBrains Mono', monospace; font-size:13px;">6 projects</span>
       </div>
 
       <!-- Controls: Filters + Live Search -->
       <div class="work-controls-bar">
         <div class="work-filters" role="group" aria-label="Filter projects">
-          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All (8)</button>
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All (6)</button>
           <button class="filter-btn" type="button" data-filter="fullstack" aria-pressed="false">Full-Stack Web</button>
           <button class="filter-btn" type="button" data-filter="iot" aria-pressed="false">IoT &amp; Hardware</button>
-          <button class="filter-btn" type="button" data-filter="research" aria-pressed="false">Applied Research</button>
           <button class="filter-btn" type="button" data-filter="live" aria-pressed="false">Live Demos</button>
         </div>
 
@@ -214,53 +214,10 @@
           </div>
         </article>
 
-        <!-- 07: Network Anomaly Detection (Research) -->
-        <article class="pcard work-project-card" data-tags="research" data-summary="Network Anomaly & Intrusion Detection / Machine Learning / Python / Threat Detection / Cybersecurity">
-          <div class="work-card-banner">
-            <span class="card-type-pill"><i class="fa-solid fa-shield-halved" style="color:var(--w-purple);" aria-hidden="true"></i> Cybersecurity ML</span>
-            <span class="card-num">07 / RESEARCH</span>
-          </div>
-          <div class="work-card-body">
-            <h3>AI Network Anomaly &amp; Intrusion Detection</h3>
-            <p>Machine learning classification pipeline analyzing network telemetry data, addressing severe class imbalance in malicious traffic, and suppressing false positive alarms.</p>
-            <div class="work-card-tags">
-              <span>Python</span>
-              <span>Scikit-Learn</span>
-              <span>Anomaly Detection</span>
-              <span>Telemetry</span>
-            </div>
-            <div class="work-card-footer">
-              <a href="#research" class="work-case-link">Research Focus <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
-              <span class="work-ext-link" style="color:var(--w-cyan); font-weight:600;"><i class="fa-solid fa-flask"></i> Investigation</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 08: Edge Telemetry Protocol & Compression (Research) -->
-        <article class="pcard work-project-card" data-tags="iot research" data-summary="Edge Telemetry Protocol & Compression / MQTT / MicroPython / IoT / Sensor Networks">
-          <div class="work-card-banner">
-            <span class="card-type-pill"><i class="fa-solid fa-microchip" style="color:var(--w-emerald);" aria-hidden="true"></i> Edge Intelligence</span>
-            <span class="card-num">08 / RESEARCH</span>
-          </div>
-          <div class="work-card-body">
-            <h3>Edge Telemetry Compression &amp; Protocol Efficiency</h3>
-            <p>Empirical study comparing data compression and lightweight filtering algorithms across low-power microcontrollers using MQTT/TLS protocols under constrained bandwidth.</p>
-            <div class="work-card-tags">
-              <span>MicroPython</span>
-              <span>MQTT/TLS</span>
-              <span>Data Compression</span>
-              <span>Edge Computing</span>
-            </div>
-            <div class="work-card-footer">
-              <a href="#research" class="work-case-link">Research Focus <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
-              <span class="work-ext-link" style="color:var(--w-emerald); font-weight:600;"><i class="fa-solid fa-flask"></i> Investigation</span>
-            </div>
-          </div>
-        </article>
       </div>
 
       <div class="work-filter-status" aria-live="polite" style="margin-top:20px; padding:12px 18px; border-radius:8px; background:var(--w-paper); border:1px solid var(--w-line); font-size:12px; color:var(--w-muted); font-family:'JetBrains Mono', monospace;">
-        <span style="color:var(--w-cyan); font-weight:700;">STATUS:</span> <span id="projectInsight">Showing all 8 projects</span>
+        <span style="color:var(--w-cyan); font-weight:700;">STATUS:</span> <span id="projectInsight">Showing all 6 projects</span>
       </div>
     </section>
 
@@ -272,17 +229,6 @@
         <div>
           <span class="section-eyebrow" style="color:var(--w-cyan);">02 / EMPIRICAL INVESTIGATION</span>
           <h2 id="research-heading" style="font-size:clamp(28px, 3.4vw, 40px); font-weight:800; color:var(--w-ink); margin:0;">Research Directions &amp; Testbeds</h2>
-          <p class="section-lede" style="color:var(--w-muted); font-size:14px; margin:6px 0 0;">Turning theoretical machine learning and edge telemetry into testable, dependable tools.</p>
-        </div>
-      </div>
-
-      <div class="research-method-banner">
-        <div class="research-method-icon">
-          <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
-        </div>
-        <div>
-          <strong>Methodological Foundation</strong>
-          <span>Formulating concrete hypotheses, benchmarking against rigorous baselines, evaluating across noisy real-world data distributions, and measuring practical latency.</span>
         </div>
       </div>
 
@@ -290,57 +236,33 @@
         <article class="research-track-card">
           <div class="research-track-top">
             <span>01 / PREDICTIVE ML</span>
-            <i class="fa-solid fa-brain" aria-hidden="true"></i>
           </div>
           <h3>Applied Machine Learning &amp; Prediction</h3>
-          <p>Evaluating how learning-based models enhance decision support, predictive maintenance, and tabular data classification when constrained by noisy real-world conditions.</p>
-          <div class="research-track-pills">
-            <span>Model Benchmarking</span>
-            <span>Feature Engineering</span>
-            <span>Explainability</span>
-          </div>
+          <p>Evaluating predictive models for noisy tabular data and decision support.</p>
         </article>
 
         <article class="research-track-card">
           <div class="research-track-top">
             <span>02 / CYBERSECURITY</span>
-            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
           </div>
           <h3>AI for Anomaly &amp; Intrusion Detection</h3>
-          <p>Investigating machine learning pipelines for network telemetry analysis, handling extreme class imbalance in malicious traffic, and mitigating adversarial false positives.</p>
-          <div class="research-track-pills">
-            <span>Intrusion Detection</span>
-            <span>Imbalanced Learning</span>
-            <span>Threat Detection</span>
-          </div>
+          <p>Testing anomaly detection for imbalanced network telemetry.</p>
         </article>
 
         <article class="research-track-card">
           <div class="research-track-top">
             <span>03 / TRUSTWORTHY SYSTEMS</span>
-            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
           </div>
           <h3>Trustworthy &amp; Verifiable Learning Systems</h3>
-          <p>Studying methods for human-in-the-loop validation, cryptographic credential verification, and transparent feedback mechanisms in automated educational platforms.</p>
-          <div class="research-track-pills">
-            <span>Human Oversight</span>
-            <span>QR Verification</span>
-            <span>Explainable Feedback</span>
-          </div>
+          <p>Exploring transparent validation and verifiable credentials in learning systems.</p>
         </article>
 
         <article class="research-track-card">
           <div class="research-track-top">
             <span>04 / EMBEDDED EDGE</span>
-            <i class="fa-solid fa-microchip" aria-hidden="true"></i>
           </div>
           <h3>IoT &amp; Edge Intelligence</h3>
-          <p>Analyzing telemetry compression, lightweight filtering algorithms, and low-power protocol efficiency (MQTT/TLS) across microcontroller sensor clusters.</p>
-          <div class="research-track-pills">
-            <span>Sensor Networks</span>
-            <span>Edge Computing</span>
-            <span>MQTT Protocol</span>
-          </div>
+          <p>Studying efficient telemetry and filtering for constrained devices.</p>
         </article>
       </div>
     </section>
@@ -363,7 +285,7 @@
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="js/components.js?v=7"></script>
+  <script src="js/components.js?v=10"></script>
   <script src="js/main.js?v=14"></script>
 
   <!-- Interactive Live Search & Category Filtering -->

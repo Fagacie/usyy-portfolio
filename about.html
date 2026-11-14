@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#070b14" />
+  <meta name="theme-color" content="#0B0B0C" />
   <script>
     (function(){
       try {
@@ -28,6 +28,8 @@
   <link rel="stylesheet" href="css/style.css?v=32" />
   <link rel="stylesheet" href="css/secondary-pages.css?v=13" />
   <link rel="stylesheet" href="css/print.css" media="print" />
+  <link rel="stylesheet" href="css/redesign.css?v=14" />
+  <link rel="stylesheet" href="css/about-redesign.css?v=8" />
 </head>
 
 <body class="secondary-page">
@@ -40,34 +42,14 @@
          ══════════════════════════════════════════ -->
     <section class="about-hero-section secondary-container">
       <div class="about-hero-copy">
-        <div class="about-hero-badge">
-          <span class="editorial-status-dot" aria-hidden="true"></span>
-          <span>Software Engineer · Based at UMT, Malaysia</span>
-        </div>
-        <h1>Software engineering,<br />grounded in <em>real problems.</em></h1>
-        <p class="about-hero-lede">
-          I am a final-year Software Engineering honors student at Universiti Malaysia Terengganu and software engineer intern at Eco Hydrotech Solutions. I specialize in backend architectures, normalized relational database design, and connected IoT telemetry.
-        </p>
-        <div class="about-hero-actions">
-          <a href="/resume" target="_blank" rel="noopener noreferrer" class="about-btn-primary">
-            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> View Résumé
-          </a>
-          <a href="https://github.com/Fagacie" target="_blank" rel="noopener noreferrer" class="about-btn-secondary">
-            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/fagacie" target="_blank" rel="noopener noreferrer" class="about-btn-secondary">
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
-          </a>
-          <a href="contact.html" class="about-btn-secondary">
-            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Get in Touch
-          </a>
-        </div>
+        <span class="about-hero-kicker">ABOUT / SOFTWARE ENGINEERING</span>
+        <h1>Building software<br />for <em>real-world systems.</em></h1>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         SECTION 01: ENGINEERING APPROACH (3 CARDS IN A LINE)
-         ══════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════════============
+         SECTION ONE: USMAN'S ENGINEERING APPROACH (3 CARDS IN A LINE)
+         ══════════════════════════════════════════ =========-->
     <section class="about-section secondary-container">
       <div class="about-section-header">
         <span class="about-section-num">01 / ENGINEERING APPROACH</span>
@@ -106,8 +88,8 @@
     </section>
 
     <!-- ══════════════════════════════════════════
-         SECTION 02: TECHNICAL FOCUS (4 STRUCTURED CARDS)
-         ══════════════════════════════════════════ -->
+         SECTION 02: USMANS' TECHNICAL FOCUS (4 STRUCTURED CARDS)
+         ══════════════════════════════════════════ -->    
     <section class="about-section secondary-container" id="stack">
       <div class="about-section-header">
         <span class="about-section-num">02 / TECHNICAL FOCUS</span>
@@ -195,9 +177,9 @@
          ══════════════════════════════════════════ -->
     <section class="about-section secondary-container" id="experience">
       <div class="about-section-header">
-        <span class="about-section-num">03 / INDUSTRY EXPERIENCE</span>
-        <h2>Applied software engineering.</h2>
-        <p>Building real operational tools and spatial mapping systems in direct technical collaboration with marine scientists.</p>
+        <span class="about-section-num">03 / EXPERIENCE</span>
+        <h2>Engineering in practice.</h2>
+        <p>Turning operational requirements into dependable tools for teams working with marine and spatial data.</p>
       </div>
 
       <div class="about-exp-card">
@@ -210,46 +192,8 @@
           <span class="exp-period">Aug 2026 – Present</span>
         </div>
 
-        <p class="exp-summary">
-          Developing internal operational software, dynamic quotation calculation engines, and spatial GIS mapping tools used by marine survey crews and oceanographic research teams in Kuala Terengganu.
-        </p>
-
-        <div class="exp-highlights-grid">
-          <div class="exp-highlight-item">
-            <i class="fa-solid fa-calculator" aria-hidden="true"></i>
-            <div>
-              <strong>INOS Survey Estimation Engine</strong>
-              <p>Engineered an automated calculation engine factoring dynamic fuel consumption, crew logistics, equipment wear, and vessel charter costs for marine expeditions.</p>
-            </div>
-          </div>
-
-          <div class="exp-highlight-item">
-            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
-            <div>
-              <strong>Hydrographic Spatial GIS Mapping</strong>
-              <p>Integrated interactive map interfaces with geospatial coordinate APIs to plot survey lanes, vessel paths, and coastal research station boundaries in real time.</p>
-            </div>
-          </div>
-
-          <div class="exp-highlight-item">
-            <i class="fa-solid fa-table-cells" aria-hidden="true"></i>
-            <div>
-              <strong>3NF Relational Schemas &amp; Query Tuning</strong>
-              <p>Modeled and normalized MySQL relational databases with compound indexing to query multi-gigabyte marine survey datasets with sub-second response times.</p>
-            </div>
-          </div>
-
-          <div class="exp-highlight-item">
-            <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
-            <div>
-              <strong>Scientific Workflow Translation</strong>
-              <p>Collaborated directly with oceanographers, marine researchers, and GIS leads to translate domain survey specifications into dependable web workflows.</p>
-            </div>
-          </div>
-        </div>
-
         <div class="exp-tech-strip">
-          <span>Stack:</span> Java · Spring Boot · MySQL (3NF) · Leaflet GIS · REST APIs · Docker · Git &amp; GitHub
+          <span>Working across:</span> operational software · data modelling · spatial interfaces · API-driven services
         </div>
       </div>
     </section>
@@ -279,7 +223,7 @@
             <div class="edu-point">
               <i class="fa-solid fa-award" aria-hidden="true"></i>
               <div>
-                <strong>Two-Time Dean's List Award Recipient</strong>
+                <strong>Three-Time Dean's List Award Recipient</strong>
                 <p>Recognized for sustained academic excellence in algorithms, systems architecture, and distributed databases.</p>
               </div>
             </div>
@@ -354,7 +298,7 @@
   </main>
 
   <footer class="footer" id="site-footer"></footer>
-  <script src="js/components.js?v=7"></script>
+  <script src="js/components.js?v=10"></script>
   <script src="js/main.js?v=14"></script>
 </body>
 

@@ -4346,14 +4346,11 @@ body.page-visible {
 .gateway-card:hover .gateway-body {
   transform: translateZ(30px);
 }
-}
 
 .timeline-item {
   position: relative;
   padding-left: 20px;
 }
-
-
 
 .credential-bar {
   display: flex;
@@ -5254,12 +5251,6 @@ body.case-study-page .nav-link:focus-visible{outline:2px solid #2459d3;outline-o
   [data-theme="light"] .mobile-dock-link.active{
     color:#0284c7;
     background:rgba(2, 132, 199, 0.1);
-  }
-    line-height:1.15;
-    text-align:center;
-    white-space:nowrap;
-    transition:background .16s ease,color .16s ease;
-    -webkit-tap-highlight-color:transparent;
   }
 
   .mobile-dock-link i{

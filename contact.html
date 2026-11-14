@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#070b14" />
+  <meta name="theme-color" content="#0B0B0C" />
   <script>
     (function(){
       try {
@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="css/style.css?v=32" />
   <link rel="stylesheet" href="css/secondary-pages.css?v=13" />
   <link rel="stylesheet" href="css/print.css" media="print" />
+  <link rel="stylesheet" href="css/redesign.css?v=14" />
+  <link rel="stylesheet" href="css/contact-redesign.css?v=2" />
 </head>
 <body class="secondary-page contact-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -39,9 +41,6 @@
           <span>GET IN TOUCH</span>
         </div>
         <h1>Let's start with a <em>conversation.</em></h1>
-        <p class="contact-hero-lead">
-          For software engineering roles starting in 2027, backend architecture challenges, or technical collaborations, feel free to reach out directly.
-        </p>
 
         <!-- Prominent Direct Email Row with 1-Click Copy -->
         <div class="contact-primary-email-card">
@@ -89,7 +88,7 @@
         </a>
 
         <!-- 03: Résumé -->
-        <a class="channel-card" href="/resume" target="_blank" rel="noopener noreferrer">
+        <a class="channel-card" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
           <div class="channel-icon resume-icon"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i></div>
           <div class="channel-body">
             <h3>Verified Résumé</h3>
@@ -153,7 +152,7 @@
             </div>
 
             <button type="submit" class="composer-submit-btn" id="submitBtn">
-              <span>Send Message</span>
+              <span>Prepare Email</span>
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </button>
 
@@ -169,48 +168,6 @@
           </form>
         </div>
 
-        <!-- Right: Location, Timezone, and Availability -->
-        <div class="contact-sidebar-deck">
-          <!-- Card 1: Location & Time -->
-          <div class="about-card location-card">
-            <div class="card-chip-top">
-              <span class="chip-label">BASE LOCATION</span>
-              <span class="chip-status"><span class="editorial-status-dot" aria-hidden="true"></span> ACTIVE</span>
-            </div>
-
-            <h3>Terengganu, Malaysia</h3>
-            <p class="location-detail">Faculty of Computer Science and Mathematics, Universiti Malaysia Terengganu.</p>
-
-            <div class="clock-display-box">
-              <div class="clock-icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></div>
-              <div>
-                <span class="clock-label">Current Local Time</span>
-                <strong class="clock-time" id="localTimeDisplay">--:--:-- MYT</strong>
-                <small class="clock-zone">Malaysia Time (UTC+8)</small>
-              </div>
-            </div>
-
-            <div class="response-note">
-              <i class="fa-solid fa-bolt" style="color:var(--s-cyan);" aria-hidden="true"></i>
-              <span><strong>Prompt Turnaround:</strong> Typically replying within 24 hours on weekdays.</span>
-            </div>
-          </div>
-
-          <!-- Card 2: Employment Status -->
-          <div class="about-card status-card">
-            <div class="card-chip-top">
-              <span class="chip-label">EMPLOYMENT OUTLOOK</span>
-            </div>
-            <h3>Available for Roles (2027)</h3>
-            <p style="font-size:13.5px; line-height:1.6; color:var(--s-muted); margin:0 0 16px;">Completing final-year Software Engineering honors degree at UMT. Seeking backend, full-stack, and systems engineering positions with forward-thinking teams.</p>
-            <div class="status-tags">
-              <span>Full-Time</span>
-              <span>Backend Engineering</span>
-              <span>Relational Databases</span>
-              <span>Remote / Relocation</span>
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
@@ -224,7 +181,7 @@
 
   <footer class="footer" id="site-footer"></footer>
 
-  <script src="js/components.js?v=7"></script>
+  <script src="js/components.js?v=10"></script>
   <script src="js/main.js?v=14"></script>
 
   <!-- Interactive Contact Functionality -->

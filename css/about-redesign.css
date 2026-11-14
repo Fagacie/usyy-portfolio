@@ -1,0 +1,431 @@
+/* Editorial layout for the About page. */
+body.secondary-page {
+  --s-bg: #0b0b0c !important;
+  --s-paper: #171719 !important;
+  --s-ink: #f5f5f2 !important;
+  --s-ink-secondary: rgba(245, 245, 242, 0.78) !important;
+  --s-muted: rgba(245, 245, 242, 0.58) !important;
+  --s-cyan: #f5f5f2 !important;
+  --s-blue: #f5f5f2 !important;
+  --s-purple: #f5f5f2 !important;
+  --s-emerald: #f5f5f2 !important;
+  --s-amber: #f5f5f2 !important;
+  --about-line: rgba(245, 245, 242, 0.14);
+  --about-muted: rgba(245, 245, 242, 0.58);
+  --about-soft: rgba(245, 245, 242, 0.78);
+  background: #0b0b0c !important;
+  color: #f5f5f2 !important;
+}
+
+body.secondary-page::before,
+body.secondary-page::after {
+  display: none !important;
+}
+
+body.secondary-page .header,
+body.secondary-page .footer,
+body.secondary-page .about-hero-section,
+body.secondary-page .about-section,
+body.secondary-page .about-cta-section {
+  background: #0b0b0c !important;
+}
+
+body.secondary-page .about-hero-section {
+  max-width: 70rem !important;
+  min-height: 56vh !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+  border-bottom: 1px solid var(--about-line);
+}
+
+body.secondary-page .about-hero-copy {
+  max-width: 52rem !important;
+}
+
+body.secondary-page .about-hero-kicker {
+  display: block;
+  margin-bottom: 1.75rem;
+  color: var(--about-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+body.secondary-page .about-hero-badge {
+  display: none !important;
+}
+
+body.secondary-page .about-hero-copy h1 {
+  max-width: 48rem !important;
+  margin-bottom: 1.5rem !important;
+  font-size: clamp(2.8rem, 7vw, 5.5rem) !important;
+  line-height: 0.98 !important;
+}
+
+body.secondary-page .about-hero-copy h1 em {
+  color: #f5f5f2 !important;
+  background: none !important;
+  -webkit-text-fill-color: #f5f5f2 !important;
+  font-style: normal;
+}
+
+body.secondary-page .secondary-hero h1 em {
+  color: #f5f5f2 !important;
+  background: none !important;
+  -webkit-text-fill-color: #f5f5f2 !important;
+}
+
+body.secondary-page .about-hero-lede {
+  max-width: 44rem !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
+}
+
+body.secondary-page .about-hero-actions {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.65rem !important;
+  margin-top: 2rem !important;
+}
+
+body.secondary-page .about-hero-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 0.4rem;
+}
+
+body.secondary-page .about-hero-links a {
+  color: var(--about-muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--about-line);
+  padding-bottom: 0.2rem;
+}
+
+body.secondary-page .about-hero-links a:hover {
+  color: var(--rd-white);
+  border-color: var(--rd-white);
+}
+
+body.secondary-page .about-btn-primary,
+body.secondary-page .about-btn-secondary {
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
+
+body.secondary-page .about-section {
+  max-width: 70rem !important;
+  padding-top: 6rem !important;
+  padding-bottom: 2rem !important;
+}
+
+body.secondary-page .about-section-header {
+  max-width: 46rem !important;
+  margin-bottom: 2.5rem !important;
+  padding-bottom: 1.25rem !important;
+  border-bottom: 1px solid var(--about-line) !important;
+}
+
+body.secondary-page .about-section-header h2 {
+  margin: 0.7rem 0 0.65rem !important;
+  font-size: clamp(1.7rem, 3vw, 2.5rem) !important;
+  letter-spacing: -0.045em !important;
+}
+
+body.secondary-page .about-section-header p {
+  max-width: 38rem;
+  color: var(--about-muted) !important;
+  line-height: 1.65;
+}
+
+body.secondary-page .about-approach-grid,
+body.secondary-page .about-stack-grid {
+  gap: 0 !important;
+  background: transparent !important;
+}
+
+body.secondary-page .about-approach-grid {
+  display: block !important;
+}
+
+body.secondary-page .about-card,
+body.secondary-page .about-exp-card {
+  border: 0 !important;
+  border-top: 1px solid var(--about-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.secondary-page .approach-card {
+  display: grid !important;
+  grid-template-columns: 3rem minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 1rem;
+  padding: 1.25rem 0 !important;
+}
+
+body.secondary-page .approach-card > div:first-child {
+  display: contents;
+}
+
+body.secondary-page .approach-step {
+  grid-column: 1;
+  color: var(--about-muted) !important;
+  font-family: "JetBrains Mono", monospace;
+}
+
+body.secondary-page .approach-card h3,
+body.secondary-page .approach-card p {
+  grid-column: 2;
+}
+
+body.secondary-page .approach-card h3 {
+  margin: 0 0 0.35rem !important;
+  color: var(--rd-white) !important;
+  font-size: 1rem !important;
+}
+
+body.secondary-page .approach-card p {
+  margin: 0 !important;
+  color: var(--about-muted) !important;
+  line-height: 1.6;
+}
+
+body.secondary-page .approach-pill {
+  grid-column: 3;
+  color: var(--about-muted) !important;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.secondary-page .about-stack-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  column-gap: 2rem;
+}
+
+body.secondary-page .stack-card {
+  display: grid !important;
+  grid-template-columns: 12rem minmax(0, 1fr) !important;
+  column-gap: 2rem;
+  padding: 1.75rem 0 !important;
+}
+
+body.secondary-page .stack-card-top {
+  grid-row: 1 / span 3;
+  display: block;
+  margin: 0;
+}
+
+body.secondary-page .stack-icon {
+  display: none;
+}
+
+body.secondary-page .stack-card h3 {
+  grid-column: 2;
+  margin-bottom: 0.5rem !important;
+  color: var(--rd-white) !important;
+  font-size: 1.05rem !important;
+}
+
+body.secondary-page .stack-card p {
+  grid-column: 2;
+  max-width: 30rem;
+  color: var(--about-muted) !important;
+  line-height: 1.6;
+}
+
+body.secondary-page .stack-chips {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem !important;
+  margin-top: 1rem;
+}
+
+body.secondary-page .stack-chips span {
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--about-muted) !important;
+  font-size: 0.78rem;
+}
+
+body.secondary-page .about-exp-card {
+  padding: 2rem 0 !important;
+}
+
+body.secondary-page .about-exp-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+body.secondary-page .about-exp-top h3 {
+  margin: 0.5rem 0 !important;
+  color: var(--rd-white) !important;
+}
+
+body.secondary-page .exp-company,
+body.secondary-page .exp-period {
+  color: var(--about-muted) !important;
+}
+
+body.secondary-page .exp-summary {
+  max-width: 48rem;
+  margin: 2rem 0 !important;
+  color: var(--about-soft) !important;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+body.secondary-page .exp-tech-strip {
+  max-width: 48rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--about-line);
+  color: var(--about-muted) !important;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+body.secondary-page .about-split-grid {
+  display: block !important;
+  background: transparent !important;
+}
+
+body.secondary-page .edu-lead-card {
+  max-width: 52rem;
+  padding: 2.5rem 0 !important;
+  border-top: 1px solid var(--about-line) !important;
+}
+
+body.secondary-page .edu-lead-card:first-child {
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+
+body.secondary-page .card-icon-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--about-muted) !important;
+}
+
+body.secondary-page .edu-lead-card h3 {
+  margin: 1rem 0 0.35rem !important;
+  color: var(--rd-white) !important;
+}
+
+body.secondary-page .edu-degree,
+body.secondary-page .edu-date,
+body.secondary-page .edu-point p {
+  color: var(--about-muted) !important;
+}
+
+body.secondary-page .edu-points {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--about-line);
+}
+
+body.secondary-page .edu-point {
+  padding: 1rem 0 !important;
+  border-bottom: 1px solid var(--about-line);
+}
+
+body.secondary-page .edu-point i {
+  color: var(--rd-white) !important;
+}
+
+body.secondary-page .about-cta-section {
+  max-width: 70rem !important;
+  margin-top: 5rem !important;
+  padding-top: 3rem !important;
+  padding-bottom: 5rem !important;
+}
+
+body.secondary-page .about-cta-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.secondary-page .about-cta-box h2 {
+  max-width: 36rem;
+  margin: 0.75rem 0 !important;
+  color: var(--rd-white) !important;
+}
+
+body.secondary-page .about-cta-box p {
+  color: var(--about-muted) !important;
+}
+
+@media (max-width: 800px) {
+  body.secondary-page .about-hero-section {
+    min-height: 0 !important;
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+
+  body.secondary-page .about-hero-copy h1 {
+    font-size: clamp(2.5rem, 13vw, 4rem) !important;
+  }
+
+  body.secondary-page .approach-card {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  body.secondary-page .approach-pill {
+    grid-column: 2;
+    margin-top: 0.35rem;
+  }
+
+  body.secondary-page .about-stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.secondary-page .stack-card {
+    display: block !important;
+  }
+
+  body.secondary-page .stack-card-top {
+    margin-bottom: 1rem;
+  }
+
+  body.secondary-page .about-exp-top,
+  body.secondary-page .about-cta-box {
+    display: block;
+  }
+
+  body.secondary-page .exp-period {
+    display: block;
+    margin-top: 0.75rem;
+  }
+
+  body.secondary-page .about-cta-actions {
+    margin-top: 1.5rem;
+  }
+
+  body.secondary-page .about-hero-links {
+    width: 100%;
+    margin: 0.25rem 0 0;
+  }
+
+  body.secondary-page .about-hero-actions {
+    justify-content: flex-start;
+  }
+}

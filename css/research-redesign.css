@@ -1,0 +1,77 @@
+/* Compact research section for the Projects page. */
+body.work-page .work-research-section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  border-top: 1px solid rgba(245, 245, 242, 0.14);
+  background: #0b0b0c !important;
+}
+
+body.work-page .work-research-section .home-section-head {
+  margin-bottom: 2rem !important;
+  border-bottom: 0 !important;
+}
+
+body.work-page .work-research-section .section-eyebrow {
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+body.work-page .work-research-section h2 {
+  color: #f5f5f2 !important;
+  font-size: clamp(1.8rem, 4vw, 3rem) !important;
+  letter-spacing: -0.05em;
+}
+
+body.work-page .research-track-grid {
+  display: block !important;
+  background: transparent !important;
+}
+
+body.work-page .research-track-card {
+  display: grid !important;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  column-gap: 2rem;
+  padding: 1.4rem 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.work-page .research-track-top {
+  grid-row: 1 / span 2;
+  display: block !important;
+}
+
+body.work-page .research-track-top span {
+  color: rgba(245, 245, 242, 0.56) !important;
+  font-size: 0.67rem !important;
+  letter-spacing: 0.12em;
+}
+
+body.work-page .research-track-top i,
+body.work-page .research-track-pills {
+  display: none !important;
+}
+
+body.work-page .research-track-card h3 {
+  margin: 0 0 0.35rem !important;
+  color: #f5f5f2 !important;
+  font-size: 1.05rem !important;
+}
+
+body.work-page .research-track-card p {
+  margin: 0 !important;
+  color: rgba(245, 245, 242, 0.58) !important;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  body.work-page .research-track-card {
+    display: block !important;
+  }
+
+  body.work-page .research-track-top {
+    margin-bottom: 0.65rem;
+  }
+}

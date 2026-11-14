@@ -47,27 +47,7 @@
       return `<a href="${href}" class="nav-item nav-link ${isCurrent ? 'active' : ''}" data-id="${item.id}" ${isCurrent ? 'aria-current="page"' : ''}>${item.label}</a>`;
     }).join('\n        ');
 
-    // Always-visible phone navigation: visitors should not need to open a menu
-    // just to reach a main section.
-    const mobileDockIcons = {
-      home: 'fa-house',
-      work: 'fa-diagram-project',
-      about: 'fa-user',
-      awards: 'fa-award',
-      contact: 'fa-envelope'
-    };
-
-    const mobileDockHTML = navItems.map((item) => {
-      const isCurrent = item.id === activeId;
-      const href = item.id === 'home' ? item.href : (BASE + item.href);
-      const icon = mobileDockIcons[item.id] || 'fa-circle';
-      return '<a href="' + href + '" class="mobile-dock-link ' + (isCurrent ? 'active' : '') + '" data-id="' + item.id + '"' +
-        (isCurrent ? ' aria-current="page"' : '') + '>' +
-        '<i class="fa-solid ' + icon + '" aria-hidden="true"></i>' +
-        '<span>' + item.label + '</span></a>';
-    }).join('\n      ');
-
-    const resumeHref = '/resume';
+    const resumeHref = BASE + 'assets/resume.pdf';
 
     header.innerHTML = `
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
@@ -88,15 +68,16 @@
       <!-- Actions (Resume + Theme) -->
       <div class="nav-actions" id="navActions">
         <a href="${resumeHref}" class="nav-resume-btn" target="_blank" rel="noopener noreferrer" aria-label="View résumé PDF in a new tab">View résumé</a>
+        <button class="nav-menu-toggle" id="navMenuToggle" type="button" aria-expanded="false" aria-controls="mobileNavPanel" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-
     </nav>
-
-    <nav class="mobile-bottom-nav" aria-label="Mobile primary navigation">
-      ${mobileDockHTML}
-    </nav>`;
-
-    document.body.classList.add('has-mobile-bottom-nav');
+    <div class="mobile-nav-panel" id="mobileNavPanel" hidden>
+      <nav aria-label="Mobile primary navigation">
+        ${navHTML}
+      </nav>
+    </div>`;
 
     /* Sliding Indicator Logic */
     const navList = document.getElementById('navLinks');
@@ -139,6 +120,32 @@
       navList.addEventListener('mouseleave', () => {
         if (activeLink) moveIndicator(activeLink);
         else indicator.style.opacity = '0';
+      });
+    }
+
+    const menuToggle = document.getElementById('navMenuToggle');
+    const mobilePanel = document.getElementById('mobileNavPanel');
+    if (menuToggle && mobilePanel) {
+      const closeMenu = () => {
+        mobilePanel.hidden = true;
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation menu');
+      };
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+        mobilePanel.hidden = isOpen;
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+        if (!isOpen) mobilePanel.querySelector('a')?.focus();
+      });
+
+      mobilePanel.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !mobilePanel.hidden) {
+          closeMenu();
+          menuToggle.focus();
+        }
       });
     }
   }
@@ -195,13 +202,8 @@
         </button>
       </div>
     </div>
-    
-    <!-- The Massive Bottom Anchor -->
-    <div class="mega-footer-text-container">
-      <span class="mega-footer-text" aria-hidden="true">USMAN ABBAS</span>
-      <div class="mega-footer-copyright">
-        &copy; ${new Date().getFullYear()} &middot; All Rights Reserved.
-      </div>
+    <div class="mega-footer-copyright">
+      &copy; ${new Date().getFullYear()} &middot; All Rights Reserved.
     </div>`;
   }
 
@@ -223,36 +225,6 @@
     } else if (saved === 'dark') {
       document.documentElement.removeAttribute('data-theme');
     }
-
-    /* Inject toggle button into Desktop and Mobile navs */
-    const navActions = document.getElementById('navActions');
-    const mobileActions = document.getElementById('mobileActions');
-
-    const toggleHTML = `<button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
-      <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
-      <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
-    </button>`;
-
-    if (navActions) {
-      navActions.insertAdjacentHTML('afterbegin', toggleHTML);
-    }
-    
-    // For mobile, we need a separate ID or just querySelector so they don't clash, 
-    // but the original logic uses 'themeToggle' ID. Let's make it work for multiple.
-    if (mobileActions) {
-      mobileActions.insertAdjacentHTML('afterbegin', toggleHTML.replace('id="themeToggle"', 'id="themeToggleMobile"'));
-    }
-
-    const toggles = [document.getElementById('themeToggle'), document.getElementById('themeToggleMobile')].filter(Boolean);
-    
-    toggles.forEach(toggleBtn => {
-      toggleBtn.addEventListener('click', () => {
-        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-        const next = isLight ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-      });
-    });
   }
 
   /* ══════════════════════════════════════════

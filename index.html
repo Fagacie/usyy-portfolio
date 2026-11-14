@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/style.css?v=32" />
   <link rel="stylesheet" href="css/home.css?v=6" />
   <link rel="stylesheet" href="css/print.css" media="print" />
+  <link rel="stylesheet" href="css/redesign.css?v=14" />
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -44,26 +45,21 @@
     <section class="home-hero home-container" aria-labelledby="hero-heading">
       <canvas id="networkCanvas" class="network-field-canvas" aria-hidden="true"></canvas>
       <div class="hero-copy">
-        <div class="hero-status-pill">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span>Available for roles</span>
-        </div>
-
-        <h1 class="hero-title" id="hero-heading">Usman Abbas Adamu</h1>
+        <h1 class="hero-title" id="hero-heading">Software Engineer</h1>
 
         <p class="hero-role">
-          Software Engineer <span class="hero-sep" aria-hidden="true">/</span> Full-Stack &amp; IoT
+          Full-Stack <span class="hero-sep" aria-hidden="true">/</span> IoT Systems
         </p>
 
         <p class="hero-intro">
-          Building reliable web platforms, backend systems, and connected IoT devices at Universiti Malaysia Terengganu.
+          Building reliable web platforms, backend systems, and connected IoT devices.
         </p>
 
         <div class="home-actions">
           <a class="btn-glow-primary" href="work.html">
             Explore Work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
-          <a class="btn-glass-secondary" href="/resume" target="_blank" rel="noopener noreferrer">
+          <a class="btn-glass-secondary" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
             <i class="fa-solid fa-download" aria-hidden="true"></i> Résumé
           </a>
         </div>
@@ -75,8 +71,7 @@
             <img src="assets/img/profile.png" alt="Usman Abbas Adamu" width="711" height="712" fetchpriority="high" />
           </div>
           <div class="profile-location-pill">
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            <span>Based at <strong>UMT, Malaysia</strong></span>
+            <span><strong>Usman Abbas Adamu</strong></span>
           </div>
         </div>
       </div>
@@ -85,11 +80,11 @@
     <!-- ══════════════════════════════════════════
          SELECTED WORK (3 CARDS IN A LINE)
          ══════════════════════════════════════════ -->
-    <section class="home-container" id="selected-work" aria-labelledby="projects-heading" style="padding: 60px 0 80px;">
+    <section class="home-container home-work-section" id="selected-work" aria-labelledby="projects-heading">
       <div class="home-section-head">
         <div>
           <span class="section-eyebrow">01 / Selected Work</span>
-          <h2 id="projects-heading">Evidence over claims.</h2>
+          <h2 id="projects-heading">Selected work</h2>
         </div>
         <a class="link-arrow" href="work.html">All Projects (6) <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </div>
@@ -122,7 +117,7 @@
           <div>
             <div class="card-meta-top">
               <span class="card-category-pill">Connected Systems</span>
-              <span class="card-award-tag" style="color:var(--h-cyan);"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i> IoT Telemetry</span>
+              <span class="card-award-tag"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i> IoT Telemetry</span>
             </div>
             <h3>Smart Campus IoT Station</h3>
             <p>Environmental telemetry network streaming sensor data from a Raspberry Pi Pico W over MQTT to live dashboards.</p>
@@ -144,7 +139,7 @@
           <div>
             <div class="card-meta-top">
               <span class="card-category-pill">Healthcare Management</span>
-              <span class="card-award-tag" style="color:var(--h-muted);"><i class="fa-solid fa-database" aria-hidden="true"></i> Enterprise</span>
+              <span class="card-award-tag"><i class="fa-solid fa-database" aria-hidden="true"></i> Enterprise</span>
             </div>
             <h3>PKU Healthcare Management</h3>
             <p>Clinic management platform organizing patient medical records, appointment scheduling, and dispensary inventory.</p>
@@ -169,8 +164,8 @@
     <section class="home-capabilities-section home-container" aria-labelledby="capabilities-heading">
       <div class="home-section-head">
         <div>
-          <span class="section-eyebrow">Focus</span>
-          <h2 id="capabilities-heading">Core Disciplines</h2>
+          <span class="section-eyebrow">Approach</span>
+          <h2 id="capabilities-heading">What I work on</h2>
         </div>
       </div>
 
@@ -203,16 +198,16 @@
       <div class="contact-deck-clean">
         <div>
           <span class="section-eyebrow">Contact</span>
-          <h2 id="contact-heading">Let's connect</h2>
+          <h2 id="contact-heading">Have a technical challenge?</h2>
           <p>
-            Open to software engineering roles, internships, and technical collaboration.
+            I’m open to software engineering roles, internships, and thoughtful technical collaboration.
           </p>
         </div>
 
         <div class="contact-clean-actions">
           <button class="copy-email-btn" id="copyEmailBtn" type="button" aria-label="Copy email address to clipboard">
-            <span><i class="fa-regular fa-envelope" style="color:var(--h-cyan); margin-right:8px;" aria-hidden="true"></i> fagacie@gmail.com</span>
-            <i class="fa-regular fa-copy" id="copyIcon" aria-hidden="true" style="color:var(--h-muted);"></i>
+            <span><i class="fa-regular fa-envelope" aria-hidden="true"></i> fagacie@gmail.com</span>
+            <i class="fa-regular fa-copy" id="copyIcon" aria-hidden="true"></i>
           </button>
 
           <div class="contact-social-row">
@@ -239,7 +234,7 @@
   <footer class="footer" id="site-footer"></footer>
 
   <!-- Scripts: components.js + main.js -->
-  <script src="js/components.js?v=7"></script>
+  <script src="js/components.js?v=10"></script>
   <script src="js/main.js?v=14"></script>
 
   <!-- 1-Click Copy Email Controller -->

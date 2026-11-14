@@ -1,0 +1,380 @@
+/* Shared editorial styling for project detail pages. */
+body.case-study-page {
+  --case-bg: #0b0b0c;
+  --case-bg-secondary: #171719;
+  --case-paper: #171719;
+  --case-paper-solid: #171719;
+  --case-paper-hover: #202022;
+  --case-ink: #f5f5f2;
+  --case-ink-secondary: rgba(245, 245, 242, 0.72);
+  --case-muted: rgba(245, 245, 242, 0.56);
+  --case-line: rgba(245, 245, 242, 0.14);
+  --case-cyan: #f5f5f2;
+  --case-blue: #f5f5f2;
+  --case-purple: #f5f5f2;
+  --case-emerald: #f5f5f2;
+  --case-amber: #f5f5f2;
+}
+
+body.case-study-page .floating-nav {
+  background: #171719 !important;
+  border-color: rgba(245, 245, 242, 0.14) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.case-study-page .nav-logo,
+body.case-study-page .nav-link.active {
+  color: #f5f5f2 !important;
+}
+
+body.case-study-page .nav-link {
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+body.case-study-page .nav-resume-btn {
+  border: 1px solid #f5f5f2 !important;
+  border-radius: 6px !important;
+  background: #f5f5f2 !important;
+  color: #0b0b0c !important;
+  box-shadow: none !important;
+}
+
+body.case-study-page .case-breadcrumb {
+  padding-top: 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+body.case-study-page .case-breadcrumb a,
+body.case-study-page .case-breadcrumb [aria-current="page"],
+body.case-study-page .project-detail-content .eyebrow {
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+body.case-study-page .project-detail-hero {
+  padding-top: 0 !important;
+  padding-bottom: 3.5rem !important;
+  border-bottom: 1px solid rgba(245, 245, 242, 0.14);
+}
+
+body.case-study-page .project-detail-grid {
+  grid-template-columns: minmax(0, 1.5fr) minmax(15rem, 0.5fr) !important;
+  gap: 3.5rem !important;
+}
+
+body.case-study-page .project-detail-title {
+  color: #f5f5f2 !important;
+  font-size: clamp(2.35rem, 5vw, 4.5rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.055em !important;
+}
+
+body.case-study-page .project-detail-content > p.muted {
+  max-width: 38rem !important;
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+  color: rgba(245, 245, 242, 0.72) !important;
+}
+
+body.case-study-page .pchip {
+  padding: 0.35rem 0 !important;
+  margin-right: 0.75rem;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+body.case-study-page .btn {
+  border: 1px solid #f5f5f2 !important;
+  border-radius: 6px !important;
+  background: #f5f5f2 !important;
+  color: #0b0b0c !important;
+  box-shadow: none !important;
+}
+
+body.case-study-page .btn.btn-secondary {
+  background: transparent !important;
+  color: #f5f5f2 !important;
+}
+
+body.case-study-page .project-stats-card {
+  align-self: end;
+  padding: 0 0 0 1.5rem !important;
+  border: 0 !important;
+  border-left: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.case-study-page .stat-item {
+  padding: 1rem 0 !important;
+  border-color: rgba(245, 245, 242, 0.14) !important;
+}
+
+body.case-study-page .stat-item .label {
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+body.case-study-page .stat-item .value {
+  color: #f5f5f2 !important;
+}
+
+body.case-study-page .project-content-section {
+  padding-top: 3.5rem !important;
+  padding-bottom: 4rem !important;
+}
+
+body.case-study-page .project-content-section > div {
+  max-width: 52rem !important;
+}
+
+body.case-study-page .project-content-section > div > h2:first-child {
+  margin-top: 0 !important;
+  margin-bottom: 1.25rem !important;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(245, 245, 242, 0.14);
+  border-bottom: 0 !important;
+  color: rgba(245, 245, 242, 0.56) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  line-height: 1.4 !important;
+  text-transform: uppercase;
+}
+
+body.case-study-page .project-content-section > div > h2:first-child i {
+  display: none;
+}
+
+body.case-study-page .project-content-section > div > h2:first-child + p {
+  max-width: 46rem;
+  margin: 0 !important;
+  color: rgba(245, 245, 242, 0.8) !important;
+  font-size: clamp(1.15rem, 2vw, 1.45rem) !important;
+  line-height: 1.65 !important;
+  letter-spacing: -0.02em;
+}
+
+body.case-study-page .project-content-section h2:not(:first-child) {
+  margin-top: 4rem !important;
+  margin-bottom: 1rem !important;
+  color: #f5f5f2 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+
+body.case-study-page .project-content-section h2 i,
+body.case-study-page .bento-icon {
+  color: #f5f5f2 !important;
+}
+
+body.case-study-page .project-content-section h2:not(:first-child) i {
+  display: none;
+}
+
+body.case-study-page .project-content-section p.muted,
+body.case-study-page .bento-card p {
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+body.case-study-page .bento-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2rem;
+  row-gap: 0;
+  background: transparent !important;
+}
+
+body.case-study-page .bento-card {
+  min-height: 0 !important;
+  display: block !important;
+  padding: 1.1rem 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-bottom: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.case-study-page .bento-card h4 {
+  margin-bottom: 0.4rem !important;
+  color: #f5f5f2 !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+}
+
+body.case-study-page .bento-card p {
+  margin-bottom: 0 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+}
+
+body.case-study-page .bento-card .bento-icon {
+  display: none !important;
+}
+
+body.case-study-page .architecture-section {
+  margin-top: 4rem !important;
+  padding: 1.25rem 0 0 1.25rem;
+  border-top: 1px solid rgba(245, 245, 242, 0.14);
+  border-left: 2px solid rgba(245, 245, 242, 0.32);
+}
+
+body.case-study-page .architecture-section > h2 {
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase;
+}
+
+body.case-study-page .architecture-section > p {
+  max-width: 48rem;
+  margin-bottom: 0 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+}
+
+body.case-study-page .architecture-diagram {
+  display: none !important;
+}
+
+body.case-study-page .architecture-section + .pcard {
+  margin-top: 3rem !important;
+  padding: 1.25rem 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-bottom: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.case-study-page .architecture-section + .pcard .bento-icon {
+  display: none !important;
+}
+
+body.case-study-page .architecture-section + .pcard h3 {
+  margin: 0 0 0.35rem !important;
+  color: #f5f5f2 !important;
+  font-size: 1rem !important;
+}
+
+body.case-study-page .architecture-section + .pcard p {
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+body.case-study-page .case-project-nav {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgba(245, 245, 242, 0.14) !important;
+  padding: 4.5rem 0 5rem !important;
+  gap: 2rem 3rem !important;
+}
+
+body.case-study-page .case-project-nav > a {
+  position: relative;
+  align-items: flex-start;
+  gap: 0.65rem !important;
+  min-height: 7rem;
+  padding: 1.25rem 1.35rem !important;
+  border: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-radius: 6px !important;
+  background: #171719 !important;
+  box-shadow: none !important;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease !important;
+  grid-row: 2;
+}
+
+body.case-study-page .case-project-nav .case-project-next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+body.case-study-page .case-project-nav span {
+  color: rgba(245, 245, 242, 0.56) !important;
+  font-size: 0.62rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+}
+
+body.case-study-page .case-project-nav strong {
+  color: #f5f5f2 !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+}
+
+body.case-study-page .case-project-nav > a:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(245, 245, 242, 0.42) !important;
+  background: #202022 !important;
+}
+
+body.case-study-page .case-project-nav > a:hover span,
+body.case-study-page .case-project-nav > a:hover strong {
+  color: #f5f5f2 !important;
+}
+
+body.case-study-page .case-project-nav-label {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 100%;
+  color: rgba(245, 245, 242, 0.56);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  body.case-study-page .case-breadcrumb {
+    padding-top: 0.75rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  body.case-study-page .project-detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  body.case-study-page .project-stats-card {
+    border-left: 0 !important;
+    border-top: 1px solid rgba(245, 245, 242, 0.14) !important;
+    padding: 1rem 0 0 !important;
+  }
+
+  body.case-study-page .project-content-section {
+    padding-top: 3rem !important;
+  }
+
+  body.case-study-page .bento-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.case-study-page .case-project-nav {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+    padding-top: 4rem !important;
+  }
+
+  body.case-study-page .case-project-nav > a {
+    grid-row: auto;
+    min-height: 0;
+  }
+
+  body.case-study-page .case-project-next {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+}

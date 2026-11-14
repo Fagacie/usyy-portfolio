@@ -1,0 +1,228 @@
+/* Simple direct-contact layout without a message form. */
+body.contact-page {
+  --s-bg: #0b0b0c !important;
+  --s-paper: #171719 !important;
+  --s-ink: #f5f5f2 !important;
+  --s-ink-secondary: rgba(245, 245, 242, 0.78) !important;
+  --s-muted: rgba(245, 245, 242, 0.58) !important;
+  --s-cyan: #f5f5f2 !important;
+  --s-blue: #f5f5f2 !important;
+  --s-purple: #f5f5f2 !important;
+  --s-emerald: #f5f5f2 !important;
+  background: #0b0b0c !important;
+  color: #f5f5f2 !important;
+}
+
+body.contact-page::before,
+body.contact-page::after {
+  display: none !important;
+}
+
+body.contact-page .header,
+body.contact-page .footer,
+body.contact-page .contact-hero-wrap,
+body.contact-page .contact-channels-section,
+body.contact-page .contact-interactive-section {
+  background: #0b0b0c !important;
+}
+
+body.contact-page .contact-hero-wrap {
+  max-width: 70rem !important;
+  padding-top: 5rem !important;
+  padding-bottom: 4.5rem !important;
+  border-bottom: 1px solid rgba(245, 245, 242, 0.14);
+}
+
+body.contact-page .contact-eyebrow-pill {
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: rgba(245, 245, 242, 0.58) !important;
+}
+
+body.contact-page .contact-hero-content h1 {
+  max-width: 48rem;
+  margin: 1.5rem 0 !important;
+  color: #f5f5f2 !important;
+  font-size: clamp(2.8rem, 7vw, 5rem) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.06em !important;
+}
+
+body.contact-page .contact-hero-content h1 em {
+  color: #f5f5f2 !important;
+  background: none !important;
+  -webkit-text-fill-color: #f5f5f2 !important;
+}
+
+body.contact-page .contact-hero-lead {
+  max-width: 40rem !important;
+  color: rgba(245, 245, 242, 0.72) !important;
+}
+
+body.contact-page .contact-primary-email-card {
+  max-width: 44rem !important;
+  display: flex !important;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2rem !important;
+  padding: 1rem 0 !important;
+  border-top: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-bottom: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.contact-page .email-address,
+body.contact-page .email-label {
+  color: #f5f5f2 !important;
+}
+
+body.contact-page .email-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: rgba(245, 245, 242, 0.56) !important;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+body.contact-page .email-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+body.contact-page .email-btn {
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #f5f5f2 !important;
+  font-size: 0.78rem !important;
+}
+
+body.contact-page .contact-channels-section {
+  max-width: 70rem !important;
+  padding-top: 3rem !important;
+}
+
+body.contact-page .contact-channels-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 2rem !important;
+  background: transparent !important;
+}
+
+body.contact-page .channel-card {
+  position: relative;
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-columns: 2.75rem minmax(0, 1fr) !important;
+  gap: 1rem !important;
+  padding: 1.25rem !important;
+  border: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-radius: 6px !important;
+  background: #171719 !important;
+  box-shadow: none !important;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease !important;
+}
+
+body.contact-page .channel-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid !important;
+  place-items: center;
+  border: 1px solid rgba(245, 245, 242, 0.18);
+  border-radius: 5px;
+  color: #f5f5f2 !important;
+  font-size: 1.1rem;
+}
+
+body.contact-page .channel-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(245, 245, 242, 0.42) !important;
+  background: #202022 !important;
+}
+
+body.contact-page .channel-card:focus-visible {
+  outline: 2px solid #f5f5f2;
+  outline-offset: 3px;
+}
+
+body.contact-page .channel-body h3 {
+  margin: 0 0 0.3rem !important;
+  color: #f5f5f2 !important;
+}
+
+body.contact-page .channel-body p,
+body.contact-page .channel-action {
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+body.contact-page .channel-body p {
+  margin-bottom: 0.65rem !important;
+}
+
+body.contact-page .channel-action {
+  font-size: 0.75rem !important;
+  letter-spacing: 0.04em;
+}
+
+body.contact-page .contact-interactive-section {
+  max-width: 70rem !important;
+  padding-top: 4rem !important;
+}
+
+body.contact-page .composer-card {
+  display: none !important;
+}
+
+body.contact-page .contact-dual-grid {
+  display: block !important;
+}
+
+body.contact-page .contact-sidebar-deck {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem !important;
+}
+
+body.contact-page .contact-sidebar-deck .about-card {
+  padding: 1.5rem 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(245, 245, 242, 0.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.contact-page .contact-sidebar-deck h3 {
+  color: #f5f5f2 !important;
+}
+
+body.contact-page .contact-sidebar-deck p,
+body.contact-page .clock-label,
+body.contact-page .clock-zone {
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+body.contact-page .status-tags span {
+  border-color: rgba(245, 245, 242, 0.14) !important;
+  background: transparent !important;
+  color: rgba(245, 245, 242, 0.56) !important;
+}
+
+@media (max-width: 800px) {
+  body.contact-page .contact-primary-email-card {
+    display: block !important;
+  }
+
+  body.contact-page .email-buttons {
+    margin-top: 1rem;
+  }
+
+  body.contact-page .contact-channels-grid,
+  body.contact-page .contact-sidebar-deck {
+    grid-template-columns: 1fr;
+  }
+}

@@ -640,35 +640,3 @@ if (typeof VanillaTilt !== 'undefined') {
   window.addEventListener('mousemove', onPointerMove, { passive: true });
   document.addEventListener('mouseleave', onPointerLeave);
 })();
-
-/* 7. Contact Form Handler */
-(function() {
-  const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-  
-  if (contactForm && formStatus) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const btn = contactForm.querySelector('button[type="submit"]');
-      const originalText = btn.innerHTML;
-      
-      // Simulating network request
-      btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
-      btn.style.pointerEvents = 'none';
-      
-      setTimeout(() => {
-        contactForm.reset();
-        btn.innerHTML = originalText;
-        btn.style.pointerEvents = 'auto';
-        
-        formStatus.textContent = 'Message sent successfully! I will get back to you soon.';
-        formStatus.style.opacity = '1';
-        
-        setTimeout(() => {
-          formStatus.style.opacity = '0';
-        }, 5000);
-      }, 1500);
-    });
-  }
-})();
