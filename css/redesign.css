@@ -1223,6 +1223,166 @@ body.case-study-page .case-project-nav strong {
   }
 }
 
+/* Project index cards: match the homepage card system without losing filters. */
+.work-redesign .work-project-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+.work-redesign .work-project-card {
+  min-width: 0;
+  min-height: 31rem;
+  overflow: hidden !important;
+  background: var(--rd-charcoal) !important;
+  border: 1px solid var(--rd-white-14) !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
+
+.work-redesign .work-project-card:hover {
+  border-color: var(--rd-accent) !important;
+  box-shadow: none !important;
+  transform: translateY(-2px);
+}
+
+.work-redesign .work-card-banner {
+  min-height: 4.25rem;
+  padding: 1rem 1.15rem !important;
+  align-items: flex-start !important;
+  gap: 0.75rem;
+  background: var(--rd-white-08) !important;
+  border-bottom: 1px solid var(--rd-white-14) !important;
+}
+
+.work-redesign .card-type-pill {
+  color: var(--rd-accent) !important;
+  font-size: 0.68rem !important;
+  line-height: 1.4;
+}
+
+.work-redesign .card-num {
+  flex: 0 0 auto;
+  color: var(--rd-white-56) !important;
+  font-size: 0.66rem !important;
+}
+
+.work-redesign .work-card-body {
+  min-width: 0;
+  padding: 1.35rem !important;
+}
+
+.work-redesign .work-card-body h3 {
+  min-height: 3.2rem;
+  margin: 0 0 0.75rem !important;
+  color: var(--rd-white) !important;
+  font-size: 1.25rem !important;
+  line-height: 1.25 !important;
+}
+
+.work-redesign .work-card-body p {
+  min-height: 6rem;
+  margin: 0 0 1.25rem !important;
+  color: var(--rd-white-72) !important;
+  font-size: 0.86rem !important;
+  line-height: 1.65 !important;
+}
+
+.work-redesign .work-card-tags {
+  min-height: 3.5rem;
+  align-content: flex-start;
+  margin: 0 0 1.5rem !important;
+}
+
+.work-redesign .work-card-tags span {
+  border-color: var(--rd-white-14) !important;
+  border-radius: 3px !important;
+  background: var(--rd-white-08) !important;
+  color: var(--rd-white-72) !important;
+}
+
+.work-redesign .work-card-footer {
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 1rem !important;
+  border-top: 1px solid var(--rd-white-14) !important;
+}
+
+.work-redesign .work-case-link,
+.work-redesign .work-ext-link {
+  min-height: 2.45rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--rd-white-28);
+  border-radius: 3px;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+}
+
+.work-redesign .work-case-link {
+  flex: 1 1 auto;
+  border-color: var(--rd-white) !important;
+  background: var(--rd-white) !important;
+  color: var(--rd-obsidian) !important;
+}
+
+.work-redesign .work-ext-link {
+  flex: 0 0 auto;
+  color: var(--rd-white) !important;
+}
+
+.work-redesign .work-case-link:hover {
+  border-color: var(--rd-accent) !important;
+  background: var(--rd-accent) !important;
+  color: var(--rd-obsidian) !important;
+  transform: none !important;
+}
+
+.work-redesign .work-ext-link:hover {
+  border-color: var(--rd-accent) !important;
+  background: var(--rd-white-08) !important;
+  color: var(--rd-accent) !important;
+}
+
+@media (max-width: 1024px) {
+  .work-redesign .work-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .work-redesign .work-project-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .work-redesign .work-project-card {
+    min-height: 0;
+  }
+
+  .work-redesign .work-card-body h3,
+  .work-redesign .work-card-body p {
+    min-height: 0;
+  }
+
+  .work-redesign .work-card-footer {
+    flex-wrap: wrap;
+  }
+
+  .work-redesign .work-case-link {
+    flex-basis: 100%;
+  }
+
+  .work-redesign .work-ext-link {
+    flex: 1 1 8rem;
+    min-height: 2.7rem;
+  }
+}
+
 /* Homepage editorial layout */
 .home-page .home-hero {
   min-height: auto !important;
@@ -2224,6 +2384,159 @@ body.case-study-page .nav-logo {
 
   .home-page .project-card-clean .card-link-main,
   .home-page .project-card-clean .card-link-sub {
+    min-height: 2.7rem;
+  }
+}
+
+/* Final project-index card overrides. */
+.work-redesign .work-project-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+.work-redesign .work-project-card {
+  min-height: 31rem;
+  overflow: hidden !important;
+  background: var(--rd-charcoal) !important;
+  border: 1px solid var(--rd-white-14) !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
+
+.work-redesign .work-project-card:hover {
+  border-color: var(--rd-accent) !important;
+  box-shadow: none !important;
+  transform: translateY(-2px);
+}
+
+.work-redesign .work-card-banner {
+  min-height: 4.25rem;
+  padding: 1rem 1.15rem !important;
+  align-items: flex-start !important;
+  background: var(--rd-white-08) !important;
+  border-bottom-color: var(--rd-white-14) !important;
+}
+
+.work-redesign .card-type-pill {
+  color: var(--rd-accent) !important;
+  font-size: 0.68rem !important;
+  line-height: 1.4;
+}
+
+.work-redesign .card-num {
+  color: var(--rd-white-56) !important;
+  font-size: 0.66rem !important;
+}
+
+.work-redesign .work-card-body {
+  min-width: 0;
+  padding: 1.35rem !important;
+}
+
+.work-redesign .work-card-body h3 {
+  min-height: 3.2rem;
+  margin: 0 0 0.75rem !important;
+  color: var(--rd-white) !important;
+  font-size: 1.25rem !important;
+  line-height: 1.25 !important;
+}
+
+.work-redesign .work-card-body p {
+  min-height: 6rem;
+  margin: 0 0 1.25rem !important;
+  color: var(--rd-white-72) !important;
+  font-size: 0.86rem !important;
+  line-height: 1.65 !important;
+}
+
+.work-redesign .work-card-tags {
+  min-height: 3.5rem;
+  margin: 0 0 1.5rem !important;
+}
+
+.work-redesign .work-card-tags span {
+  border-color: var(--rd-white-14) !important;
+  background: var(--rd-white-08) !important;
+  color: var(--rd-white-72) !important;
+}
+
+.work-redesign .work-card-footer {
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 1rem !important;
+  border-top: 1px solid var(--rd-white-14) !important;
+}
+
+.work-redesign .work-case-link,
+.work-redesign .work-ext-link {
+  min-height: 2.45rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--rd-white-28);
+  border-radius: 3px;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+}
+
+.work-redesign .work-case-link {
+  flex: 1 1 auto;
+  border-color: var(--rd-white) !important;
+  background: var(--rd-white) !important;
+  color: var(--rd-obsidian) !important;
+}
+
+.work-redesign .work-ext-link {
+  color: var(--rd-white) !important;
+}
+
+.work-redesign .work-case-link:hover {
+  border-color: var(--rd-accent) !important;
+  background: var(--rd-accent) !important;
+  color: var(--rd-obsidian) !important;
+  transform: none !important;
+}
+
+.work-redesign .work-ext-link:hover {
+  border-color: var(--rd-accent) !important;
+  background: var(--rd-white-08) !important;
+  color: var(--rd-accent) !important;
+}
+
+@media (max-width: 1024px) {
+  .work-redesign .work-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .work-redesign .work-project-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .work-redesign .work-project-card {
+    min-height: 0;
+  }
+
+  .work-redesign .work-card-body h3,
+  .work-redesign .work-card-body p {
+    min-height: 0;
+  }
+
+  .work-redesign .work-card-footer {
+    flex-wrap: wrap;
+  }
+
+  .work-redesign .work-case-link {
+    flex-basis: 100%;
+  }
+
+  .work-redesign .work-ext-link {
+    flex: 1 1 8rem;
     min-height: 2.7rem;
   }
 }
