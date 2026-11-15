@@ -1581,6 +1581,177 @@ body.case-study-page .case-project-nav strong {
   }
 }
 
+/* Final cross-page polish: one navigation surface and editorial project layouts. */
+.home-page .floating-nav,
+.work-redesign .floating-nav,
+body.secondary-page .floating-nav,
+body.case-study-page .floating-nav {
+  background: var(--rd-charcoal) !important;
+  border: 1px solid var(--rd-white-14) !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-page .nav-link,
+.work-redesign .nav-link,
+body.secondary-page .nav-link,
+body.case-study-page .nav-link {
+  color: var(--rd-white) !important;
+}
+
+.home-page .nav-link:hover,
+.home-page .nav-link.active,
+.work-redesign .nav-link:hover,
+.work-redesign .nav-link.active,
+body.secondary-page .nav-link:hover,
+body.secondary-page .nav-link.active,
+body.case-study-page .nav-link:hover,
+body.case-study-page .nav-link.active {
+  color: var(--rd-white) !important;
+  background: transparent !important;
+}
+
+.home-page .nav-logo,
+.work-redesign .nav-logo,
+body.secondary-page .nav-logo,
+body.case-study-page .nav-logo {
+  color: var(--rd-white) !important;
+}
+
+.home-page .home-contact-section {
+  background: var(--rd-obsidian) !important;
+}
+
+.home-page .contact-deck-clean {
+  background: var(--rd-charcoal) !important;
+  border: 1px solid var(--rd-white-14) !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-page .contact-deck-clean h2,
+.home-page .contact-deck-clean p,
+.home-page .copy-email-btn {
+  color: var(--rd-white) !important;
+}
+
+.home-page .copy-email-btn {
+  border-color: var(--rd-white-14) !important;
+  background: transparent !important;
+}
+
+.home-page .project-card-clean,
+.work-redesign .work-project-card {
+  background: var(--rd-charcoal) !important;
+  border: 1px solid var(--rd-white-14) !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-page .project-card-clean:hover,
+.work-redesign .work-project-card:hover {
+  border-color: var(--rd-accent) !important;
+  box-shadow: none !important;
+  transform: translateY(-2px);
+}
+
+.home-page .project-card-clean h3,
+.work-redesign .work-card-body h3 {
+  color: var(--rd-white) !important;
+}
+
+.home-page .project-card-clean p,
+.work-redesign .work-card-body p {
+  color: var(--rd-white-72) !important;
+}
+
+.home-page .card-action-links,
+.work-redesign .work-card-footer {
+  border-color: var(--rd-white-14) !important;
+}
+
+.home-page .card-link-main,
+.home-page .card-link-sub,
+.work-redesign .work-case-link,
+.work-redesign .work-ext-link {
+  color: var(--rd-white) !important;
+}
+
+.home-page .card-link-main:hover,
+.home-page .card-link-sub:hover,
+.work-redesign .work-case-link:hover,
+.work-redesign .work-ext-link:hover {
+  color: var(--rd-accent) !important;
+}
+
+@media (max-width: 800px) {
+  .home-page .floating-nav,
+  .work-redesign .floating-nav,
+  body.secondary-page .floating-nav,
+  body.case-study-page .floating-nav {
+    background: var(--rd-charcoal) !important;
+    border-radius: 5px !important;
+  }
+
+  .home-page .mobile-nav-panel,
+  .work-redesign .mobile-nav-panel,
+  body.secondary-page .mobile-nav-panel,
+  body.case-study-page .mobile-nav-panel {
+    background: var(--rd-charcoal) !important;
+    border-color: var(--rd-white-14) !important;
+  }
+
+  .home-page .mobile-nav-panel .nav-link,
+  .work-redesign .mobile-nav-panel .nav-link,
+  body.secondary-page .mobile-nav-panel .nav-link,
+  body.case-study-page .mobile-nav-panel .nav-link {
+    color: var(--rd-white) !important;
+  }
+
+  .home-page .mobile-nav-panel .nav-link:hover,
+  .home-page .mobile-nav-panel .nav-link:focus-visible,
+  .work-redesign .mobile-nav-panel .nav-link:hover,
+  .work-redesign .mobile-nav-panel .nav-link:focus-visible,
+  body.secondary-page .mobile-nav-panel .nav-link:hover,
+  body.secondary-page .mobile-nav-panel .nav-link:focus-visible,
+  body.case-study-page .mobile-nav-panel .nav-link:hover,
+  body.case-study-page .mobile-nav-panel .nav-link:focus-visible {
+    color: var(--rd-white) !important;
+  }
+
+  .home-page .projects-minimal-grid,
+  .work-redesign .work-project-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .home-page .project-card-clean,
+  .work-redesign .work-project-card {
+    display: flex !important;
+    min-width: 0;
+  }
+
+  .home-page .card-action-links,
+  .work-redesign .work-card-footer {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .home-page .home-contact-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .home-page .contact-deck-clean {
+    padding: 1.5rem !important;
+  }
+}
+
 @media (max-width: 800px) {
   body.has-mobile-bottom-nav {
     padding-bottom: 0 !important;
