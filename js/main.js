@@ -248,7 +248,7 @@ if (aboutCards.length && aboutSignal) {
 
 /* ── Project filtering ── */
 const filterButtons = document.querySelectorAll(".filter-btn");
-const projects = document.querySelectorAll(".pcard");
+const projects = document.querySelectorAll(".pcard, .work-project-card");
 const projectCount = document.getElementById("projectCount");
 const projectInsight = document.getElementById("projectInsight");
 const defaultProjectInsight = projectInsight?.textContent || "";
