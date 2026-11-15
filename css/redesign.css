@@ -229,12 +229,12 @@ button {
     from 0deg,
     transparent 0deg,
     transparent 245deg,
-    var(--rd-accent) 285deg,
-    #2563eb 315deg,
+    var(--rd-white) 285deg,
+    var(--rd-white-72) 315deg,
     transparent 350deg
   );
   opacity: 0.95;
-  filter: drop-shadow(0 0 12px rgba(125, 211, 252, 0.5));
+  filter: drop-shadow(0 0 12px rgba(245, 245, 242, 0.38));
   animation: profile-orbit 3.8s linear infinite;
 }
 
@@ -272,8 +272,8 @@ button {
   pointer-events: none;
   background: radial-gradient(
     circle at var(--profile-glow-x, 50%) var(--profile-glow-y, 50%),
-    rgba(125, 211, 252, 0.42),
-    rgba(37, 99, 235, 0.12) 24%,
+    rgba(245, 245, 242, 0.3),
+    rgba(245, 245, 242, 0.1) 24%,
     transparent 48%
   );
   mix-blend-mode: screen;
@@ -291,9 +291,9 @@ button {
     linear-gradient(
       105deg,
       transparent 0%,
-      rgba(125, 211, 252, 0.38) 46%,
-      rgba(255, 255, 255, 0.5) 50%,
-      rgba(125, 211, 252, 0.12) 54%,
+      rgba(245, 245, 242, 0.24) 46%,
+      rgba(255, 255, 255, 0.75) 50%,
+      rgba(245, 245, 242, 0.1) 54%,
       transparent 100%
     );
   transform: translateX(-120%);
