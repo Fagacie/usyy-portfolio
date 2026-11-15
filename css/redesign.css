@@ -1140,6 +1140,8 @@ body.case-study-page .case-project-nav strong {
   display: flex !important;
   align-items: stretch !important;
   justify-content: flex-start !important;
+  width: 100%;
+  min-width: 0;
   gap: 0.6rem !important;
   padding-top: 1rem !important;
   border-top: 1px solid var(--rd-white-14) !important;
@@ -1152,6 +1154,8 @@ body.case-study-page .case-project-nav strong {
   border: 1px solid var(--rd-white-28);
   border-radius: 3px;
   justify-content: center;
+  white-space: nowrap;
+  text-decoration: none !important;
   font-size: 0.72rem !important;
   font-weight: 600 !important;
   line-height: 1 !important;
@@ -1204,6 +1208,18 @@ body.case-study-page .case-project-nav strong {
   .home-page .project-card-clean .card-link-main,
   .home-page .project-card-clean .card-link-sub {
     min-height: 2.7rem;
+  }
+
+  .home-page .project-card-clean .card-action-links {
+    flex-wrap: wrap;
+  }
+
+  .home-page .project-card-clean .card-link-main {
+    flex-basis: 100%;
+  }
+
+  .home-page .project-card-clean .card-link-sub {
+    flex: 1 1 8rem;
   }
 }
 
@@ -2093,10 +2109,19 @@ body.case-study-page .nav-logo {
 .home-page .project-card-clean {
   min-height: 27rem;
   padding: 1.35rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: stretch !important;
   background: var(--rd-charcoal) !important;
   border: 1px solid var(--rd-white-14) !important;
   border-radius: 5px !important;
   box-shadow: none !important;
+}
+
+.home-page .project-card-clean > div:first-child {
+  display: block !important;
+  flex: 1 1 auto !important;
 }
 
 .home-page .project-card-clean .card-meta-top {
@@ -2118,12 +2143,21 @@ body.case-study-page .nav-logo {
 
 .home-page .project-card-clean h3 {
   min-height: 3.2rem;
+  margin: 0 0 0.75rem !important;
   color: var(--rd-white) !important;
 }
 
 .home-page .project-card-clean p {
   min-height: 5.2rem;
+  margin: 0 0 1.25rem !important;
   color: var(--rd-white-72) !important;
+}
+
+.home-page .project-card-clean .card-tech-pills {
+  display: flex !important;
+  align-items: center;
+  min-height: 2rem;
+  margin: 0 0 1.5rem !important;
 }
 
 .home-page .project-card-clean .card-tech-pills span {
