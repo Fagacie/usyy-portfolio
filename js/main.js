@@ -273,6 +273,32 @@ function updateProjectCount() {
   projectCount.textContent = `${visibleCount} ${visibleCount === 1 ? "project" : "projects"}`;
 }
 
+const profileFrame = document.querySelector(".home-page .profile-card-inner");
+
+if (profileFrame && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  profileFrame.addEventListener("pointermove", (event) => {
+    const bounds = profileFrame.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width;
+    const y = (event.clientY - bounds.top) / bounds.height;
+    const tiltX = (0.5 - y) * 4;
+    const tiltY = (x - 0.5) * 4;
+
+    profileFrame.style.setProperty("--profile-glow-x", `${x * 100}%`);
+    profileFrame.style.setProperty("--profile-glow-y", `${y * 100}%`);
+    profileFrame.style.setProperty("--profile-tilt-x", `${tiltX}deg`);
+    profileFrame.style.setProperty("--profile-tilt-y", `${tiltY}deg`);
+    profileFrame.classList.add("is-interactive");
+  });
+
+  profileFrame.addEventListener("pointerleave", () => {
+    profileFrame.style.removeProperty("--profile-glow-x");
+    profileFrame.style.removeProperty("--profile-glow-y");
+    profileFrame.style.removeProperty("--profile-tilt-x");
+    profileFrame.style.removeProperty("--profile-tilt-y");
+    profileFrame.classList.remove("is-interactive");
+  });
+}
+
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;

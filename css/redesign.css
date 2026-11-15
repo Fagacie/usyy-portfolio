@@ -211,6 +211,54 @@ button {
 
 .profile-card-minimal {
   border-radius: var(--rd-radius) !important;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.profile-card-inner {
+  position: relative;
+  overflow: hidden;
+  transform: perspective(900px) rotateX(var(--profile-tilt-x, 0deg)) rotateY(var(--profile-tilt-y, 0deg));
+  transition: transform 180ms ease, border-color 180ms ease;
+  will-change: transform;
+}
+
+.profile-card-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--profile-glow-x, 50%) var(--profile-glow-y, 50%),
+    rgba(125, 211, 252, 0.22),
+    transparent 34%
+  );
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.profile-card-inner.is-interactive::after {
+  opacity: 1;
+}
+
+.profile-card-inner img {
+  display: block;
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+.profile-card-inner.is-interactive img {
+  transform: scale(1.025);
+  filter: saturate(1.04) contrast(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-card-inner,
+  .profile-card-inner img {
+    transition: none;
+    transform: none !important;
+  }
 }
 
 .architecture-diagram {
