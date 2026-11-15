@@ -1383,6 +1383,41 @@ body.case-study-page .case-project-nav strong {
   }
 }
 
+/* Homepage approach cards: restore readable accent hierarchy. */
+.home-page .capabilities-clean-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1px !important;
+  background: var(--rd-white-14) !important;
+}
+
+.home-page .cap-card-clean {
+  background: var(--rd-charcoal) !important;
+  color: var(--rd-white) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.home-page .cap-card-clean .cap-number {
+  color: var(--rd-accent) !important;
+  opacity: 1 !important;
+}
+
+.home-page .cap-card-clean h3 {
+  color: var(--rd-white) !important;
+}
+
+.home-page .cap-card-clean p {
+  color: var(--rd-white-72) !important;
+}
+
+@media (max-width: 800px) {
+  .home-page .capabilities-clean-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* Final project-card interaction cleanup. */
 .work-redesign .work-project-card::before,
 .work-redesign .work-project-card:hover::before,
@@ -1649,12 +1684,17 @@ body.case-study-page .case-project-nav strong {
 }
 
 .home-page .cap-card-clean .cap-number {
-  color: var(--rd-white-56) !important;
+  color: var(--rd-accent) !important;
+  opacity: 1 !important;
 }
 
 .home-page .cap-card-clean h3,
 .home-page .cap-card-clean p {
   margin: 0 !important;
+}
+
+.home-page .cap-card-clean h3 {
+  color: var(--rd-white) !important;
 }
 
 .home-page .cap-card-clean p {
