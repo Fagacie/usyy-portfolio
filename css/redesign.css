@@ -2445,6 +2445,9 @@ body.case-study-page .nav-logo {
 }
 
 .work-redesign .work-project-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
   min-height: 31rem;
   overflow: hidden !important;
   background: var(--rd-charcoal) !important;
@@ -2460,6 +2463,8 @@ body.case-study-page .nav-logo {
 }
 
 .work-redesign .work-card-banner {
+  display: flex !important;
+  flex: 0 0 auto !important;
   min-height: 4.25rem;
   padding: 1rem 1.15rem !important;
   align-items: flex-start !important;
@@ -2479,6 +2484,9 @@ body.case-study-page .nav-logo {
 }
 
 .work-redesign .work-card-body {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
   min-width: 0;
   padding: 1.35rem !important;
 }
