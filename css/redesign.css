@@ -1383,6 +1383,56 @@ body.case-study-page .case-project-nav strong {
   }
 }
 
+/* Final project-card interaction cleanup. */
+.work-redesign .work-project-card::before,
+.work-redesign .work-project-card:hover::before,
+.work-redesign .work-project-card.is-active::before {
+  display: none !important;
+}
+
+.work-redesign .work-card-body {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+}
+
+.work-redesign .work-card-footer {
+  width: 100% !important;
+  min-width: 0;
+}
+
+.work-redesign .work-case-link,
+.work-redesign .work-ext-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
+/* Neutralize legacy .pcard decoration on the redesigned project index. */
+.work-redesign .work-project-card::before,
+.work-redesign .work-project-card:hover::before,
+.work-redesign .work-project-card.is-active::before {
+  display: none !important;
+}
+
+.work-redesign .work-card-body {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+}
+
+.work-redesign .work-card-footer {
+  width: 100% !important;
+  min-width: 0;
+}
+
+.work-redesign .work-case-link,
+.work-redesign .work-ext-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
 /* Homepage editorial layout */
 .home-page .home-hero {
   min-height: auto !important;
