@@ -212,8 +212,49 @@ button {
 .profile-card-minimal {
   border-radius: var(--rd-radius) !important;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   isolation: isolate;
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.profile-card-minimal::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 245deg,
+    var(--rd-accent) 285deg,
+    #2563eb 315deg,
+    transparent 350deg
+  );
+  opacity: 0.95;
+  filter: drop-shadow(0 0 12px rgba(125, 211, 252, 0.5));
+  animation: profile-orbit 3.8s linear infinite;
+}
+
+.profile-card-minimal::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  z-index: -1;
+  border-radius: calc(var(--rd-radius) - 3px);
+  background: var(--rd-charcoal);
+}
+
+@keyframes profile-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .profile-card-inner {
@@ -231,16 +272,47 @@ button {
   pointer-events: none;
   background: radial-gradient(
     circle at var(--profile-glow-x, 50%) var(--profile-glow-y, 50%),
-    rgba(125, 211, 252, 0.22),
-    transparent 34%
+    rgba(125, 211, 252, 0.42),
+    rgba(37, 99, 235, 0.12) 24%,
+    transparent 48%
   );
   mix-blend-mode: screen;
   opacity: 0;
   transition: opacity 180ms ease;
 }
 
+.profile-card-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      105deg,
+      transparent 0%,
+      rgba(125, 211, 252, 0.38) 46%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(125, 211, 252, 0.12) 54%,
+      transparent 100%
+    );
+  transform: translateX(-120%);
+  opacity: 0;
+}
+
 .profile-card-inner.is-interactive::after {
   opacity: 1;
+}
+
+.profile-card-inner.is-interactive::before {
+  opacity: 1;
+  animation: profile-scan 1.15s ease-out forwards;
+}
+
+@keyframes profile-scan {
+  to {
+    transform: translateX(120%);
+  }
 }
 
 .profile-card-inner img {
@@ -249,15 +321,24 @@ button {
 }
 
 .profile-card-inner.is-interactive img {
-  transform: scale(1.025);
-  filter: saturate(1.04) contrast(1.02);
+  transform: scale(1.055);
+  filter: saturate(1.12) contrast(1.06);
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .profile-card-minimal::before {
+    animation: none;
+  }
+
   .profile-card-inner,
   .profile-card-inner img {
     transition: none;
     transform: none !important;
+  }
+
+  .profile-card-inner.is-interactive::before {
+    animation: none;
+    opacity: 0;
   }
 }
 

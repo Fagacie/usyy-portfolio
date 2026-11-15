@@ -280,8 +280,8 @@ if (profileFrame && !window.matchMedia("(prefers-reduced-motion: reduce)").match
     const bounds = profileFrame.getBoundingClientRect();
     const x = (event.clientX - bounds.left) / bounds.width;
     const y = (event.clientY - bounds.top) / bounds.height;
-    const tiltX = (0.5 - y) * 4;
-    const tiltY = (x - 0.5) * 4;
+    const tiltX = (0.5 - y) * 7;
+    const tiltY = (x - 0.5) * 7;
 
     profileFrame.style.setProperty("--profile-glow-x", `${x * 100}%`);
     profileFrame.style.setProperty("--profile-glow-y", `${y * 100}%`);
