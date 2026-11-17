@@ -1,0 +1,9 @@
+# Static portfolio assets (images, PDFs, icons) must be stored directly in Git
+# so GitHub Pages and Vercel serve the actual binary files instead of LFS pointers.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
