@@ -3588,9 +3588,9 @@ body.page-visible {
   background-size: 200% 200%;
   opacity: 0;
   animation: scanLines 5s infinite;
-  mask-image: url('../assets/img/profile.png');
+  mask-image: url('../assets/img/usman-abbas-adamu.png');
   mask-size: 100% 100%;
-  -webkit-mask-image: url('../assets/img/profile.png');
+  -webkit-mask-image: url('../assets/img/usman-abbas-adamu.png');
   -webkit-mask-size: 100% 100%;
 }
 
